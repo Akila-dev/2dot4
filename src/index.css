@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--bg: #010101;
+	--white: #fff;
+	--grey: #dfdfdf;
+	--border: rgba(255, 255, 255, 0.4);
+	--font: 'Montserrat';
+
+	--sidebar-w: 225px;
+	--sidebar-w-sm: 50px;
+}
+
+body {
+	background: var(--bg);
+	color: var(--white);
+	font-family: 'Montserrat';
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	@apply font-semibold text-[9vw] sm:text-[28px] md:text-[2rem] leading-[130%] uppercase text-[--white];
+}
+
+h3 {
+	@apply text-xl font-medium;
+}
+
+p {
+	@apply text-[--grey] text-[4.2vw] sm:text-sm !leading-[170%] font-medium;
+}
+
+h1,
+h2,
+h3,
+button {
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+p {
+	text-shadow: 1px 1px 1px rgba(234, 234, 234, 0.1);
+}
+
+.btn {
+	@apply text-[10px] md:text-xs text-[--white] w-[90%] max-w-[250px] md:min-w-[300px] md:max-w-[300px] py-[14px] md:py-4 border border-[--border] font-medium;
+}
+
+.container {
+	@apply w-full p-5 flex justify-center;
+}
+
+.lines {
+	@apply block border-[--border] absolute w-full pointer-events-none;
+}
+
+.layout-text {
+	@apply text-[10px] md:text-xs text-[--white] font-medium;
+}
+
+.layout-sidebars {
+	@apply min-w-[--sidebar-w-sm] md:min-w-[--sidebar-w] px-5 md:px-10 uppercase h-full flex items-center;
+}
+
+.layout-sidebar-l {
+	@apply flex gap-2 justify-start;
+}
+
+.layout-sidebar-r {
+	@apply flex gap-2 justify-end;
+}
+
+.social-icons {
+	@apply text-[--white] text-2xl;
+}
