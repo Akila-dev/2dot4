@@ -16,8 +16,9 @@ import {
 	BiSolidMessageRoundedDetail,
 	BiLogoLinkedinSquare,
 	BiLogoFacebookCircle,
+	BiSolidPaperPlane,
 } from 'react-icons/bi';
-import { PiInstagramLogoFill } from 'react-icons/pi';
+import { PiInstagramLogoFill, PiDotsThreeOutlineFill } from 'react-icons/pi';
 
 const Main = ({ data }) => {
 	const topLine = useRef(null);
@@ -65,7 +66,7 @@ const Main = ({ data }) => {
 					<div className="layout-sidebars layout-sidebar-r">
 						<Link to="/contact" className="flex gap-[6px] items-center">
 							<span className="hidden md:inline">Contact</span>{' '}
-							<BiSolidMessageRoundedDetail className="text-base" />
+							<BiSolidMessageRoundedDetail className="text-xl md:text-lg" />
 						</Link>{' '}
 					</div>
 				</div>
@@ -90,16 +91,24 @@ const Main = ({ data }) => {
 			{/* BOTTOM */}
 			<div className="h-[56.5px] flex items-center justify-center w-full">
 				<div className="flex justify-between items-center w-full layout-text h-full">
-					<div className="layout-sidebars layout-sidebar-l">Discover</div>
+					<div className="layout-sidebars layout-sidebar-l">
+						<BiSolidPaperPlane className="text-xl" />
+						<span className="hidden md:inline">Discover</span>
+					</div>
 					<div className="w-full border-x border-[--lines] md:border-none flex items-center justify-center h-full">
 						<ArrowDown onClick={() => scrollDown()} />
 					</div>
-					<div className="layout-sidebars layout-sidebar-r">
-						{contact.socials.map((link, id) => (
-							<a href={link} key={id}>
-								{socialIcons[id]}
-							</a>
-						))}
+					<div>
+						<div className="!hidden md:!flex layout-sidebars layout-sidebar-r">
+							{contact.socials.map((link, id) => (
+								<a href={link} key={id}>
+									{socialIcons[id]}
+								</a>
+							))}
+						</div>
+						<div className="!flex md:!hidden layout-sidebars layout-sidebar-r">
+							<PiDotsThreeOutlineFill className="text-xl" />
+						</div>
 					</div>
 				</div>
 			</div>

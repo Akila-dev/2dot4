@@ -14,7 +14,7 @@
 
 	--sidebar-w: 225px;
 	--sidebar-w-md: 180px;
-	--sidebar-w-sm: 100px;
+	--sidebar-w-sm: 70px;
 }
 
 body {
@@ -73,11 +73,11 @@ p {
 }
 
 .layout-sidebar-l {
-	@apply flex gap-2 justify-start;
+	@apply flex gap-2 justify-center md:justify-start;
 }
 
 .layout-sidebar-r {
-	@apply flex gap-2 justify-end;
+	@apply flex gap-2 justify-center md:justify-end;
 }
 
 .social-icons {
