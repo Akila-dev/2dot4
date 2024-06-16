@@ -7,7 +7,7 @@ import {
 	CTA,
 	ArrowDown,
 	MenuButton,
-	SideNav,
+	SideNavLink,
 	ImgWithFallback,
 } from '../components';
 
@@ -38,18 +38,28 @@ const Main = ({ data }) => {
 		console.log('scroll down');
 	};
 
-	// *ANIMATION CODES
+	// !ANIMATION CODES
+	// !ANIMATION CODES
+	// !ANIMATION CODES
+	// !ANIMATION CODES
 	// eslint-disable-next-line no-unused-vars
 	const [dataIndex, setDataIndex] = useState(0);
+	const [displayedData, setDisplayedData] = useState(() => data[dataIndex]);
+
+	const scrollToSection = (id) => {
+		console.log(id);
+		setDataIndex(id);
+		setDisplayedData(() => data[id]);
+	};
 
 	return (
 		<div className="flex flex-col justify-between h-screen w-full items-center relative overflow-hidden">
 			{/* BG IMAGE */}
 			<div className="absolute top-0 left-0 w-full h-full object-cover overflow-hidden z-[-10]">
 				<ImgWithFallback
-					img={data[dataIndex].imgWebp}
-					fallback={data[dataIndex].img}
-					alt={data[dataIndex].link}
+					img={displayedData.imgWebp}
+					fallback={displayedData.img}
+					alt={displayedData.link}
 				/>
 				<div className="bg-overlay absolute top-0 left-0"></div>
 			</div>
@@ -75,13 +85,23 @@ const Main = ({ data }) => {
 			{/* MIDDLE */}
 			<div className="w-full flex-1 flex justify-between items-center">
 				<div className="!hidden md:!flex layout-sidebars !p-0 md:!pl-8 lg:!pl-10">
-					<SideNav data={data} active={0} />
+					<div className="md:space-y-3">
+						{data.map((item, id) => (
+							<SideNavLink
+								data={item}
+								id={id}
+								key={id}
+								active={dataIndex}
+								onClick={() => scrollToSection(id)}
+							/>
+						))}
+					</div>
 				</div>
 				<div className="w-full flex items-center justify-center flex-1">
 					<CTA
-						title="A NEW STANDARD"
-						text="2DOT4 leads a revolutionary shift in diamond industry. Setting elevated standards, fostering innovation through a robust ecosystem and diverse collaboration."
-						btnText="ENTER OUR WORLD"
+						title={displayedData.title}
+						text={displayedData.text}
+						btnText={displayedData.buttonText}
 						short
 					/>
 				</div>

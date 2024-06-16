@@ -33,7 +33,7 @@ body {
 }
 
 h1 {
-	@apply font-semibold text-[9vw] sm:text-[28px] md:text-[2rem] leading-[130%] uppercase text-[--white];
+	@apply font-semibold text-[9vw] sm:text-[25px] md:text-[2rem] leading-[130%] uppercase text-[--white];
 }
 
 h3 {
@@ -41,7 +41,7 @@ h3 {
 }
 
 p {
-	@apply text-[--grey] text-[4.2vw] sm:text-sm !leading-[170%] font-medium;
+	@apply text-[--grey] text-[4.2vw] sm:text-xs md:text-sm !leading-[170%] font-medium;
 }
 
 h1,
@@ -51,9 +51,9 @@ button {
 	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.1);
 }
 
-p {
+/* p {
 	text-shadow: 1px 1px 1px rgba(234, 234, 234, 0.1);
-}
+} */
 
 .btn {
 	@apply text-[10px] md:text-xs text-[--white] w-[90%] max-w-[250px] md:min-w-[300px] md:max-w-[300px] py-[14px] md:py-4 border border-[--border] font-medium;
