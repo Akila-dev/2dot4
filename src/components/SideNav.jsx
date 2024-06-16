@@ -4,11 +4,11 @@ const SideNav = ({ data, active }) => {
 		<div className="md:space-y-3">
 			{data.map((item, id) => (
 				<button
-					className="block uppercase text-lg font-medium text-[--grey]"
+					className="block uppercase text-base xl:text-[1.1rem] font-medium text-[--grey]"
 					key={id}
 				>
 					{active === id && (
-						<span className="hidden md:block absolute left-0 mt-3 h-[20px] w-[1.75rem] border-t-[1.5px] border-[--lines]"></span>
+						<span className="hidden md:block absolute left-0 mt-3 h-[20px] md:w-[1.35rem] lg:w-[1.75rem] border-t-[1.5px] border-[--lines]"></span>
 					)}
 					<span className={active === id ? 'text-[--white] font-semibold' : ''}>
 						{item.link}

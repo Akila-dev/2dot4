@@ -13,7 +13,8 @@
 	--font: 'Montserrat';
 
 	--sidebar-w: 225px;
-	--sidebar-w-sm: 50px;
+	--sidebar-w-md: 180px;
+	--sidebar-w-sm: 100px;
 }
 
 body {
@@ -68,7 +69,7 @@ p {
 }
 
 .layout-sidebars {
-	@apply min-w-[--sidebar-w-sm] md:min-w-[--sidebar-w] px-5 md:px-10 uppercase h-full flex items-center;
+	@apply min-w-[--sidebar-w-sm] md:min-w-[--sidebar-w-md]  lg:min-w-[--sidebar-w] max-w-[--sidebar-w-sm] md:max-w-[--sidebar-w-md]  lg:max-w-[--sidebar-w] px-5 md:px-10 uppercase h-full flex items-center;
 }
 
 .layout-sidebar-l {

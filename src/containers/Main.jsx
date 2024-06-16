@@ -44,7 +44,7 @@ const Main = ({ data }) => {
 	return (
 		<div className="flex flex-col justify-between h-screen w-full items-center relative">
 			{/* BG IMAGE */}
-			<div className="absolute top-0 left-0 w-full h-screen overflow-hidden z-[-10]">
+			<div className="absolute top-0 left-0 w-full h-full object-cover overflow-hidden z-[-10]">
 				<ImgWithFallback
 					img={data[dataIndex].imgWebp}
 					fallback={data[dataIndex].img}
@@ -59,7 +59,9 @@ const Main = ({ data }) => {
 					<div className="layout-sidebars layout-sidebar-l">
 						<MenuButton />
 					</div>
-					<h3 className="uppercase">{contact.brandName}</h3>
+					<h3 className="uppercase w-full border-x border-[--lines] md:border-none flex items-center justify-center h-full">
+						{contact.brandName}
+					</h3>
 					<div className="layout-sidebars layout-sidebar-r">
 						<Link to="/contact" className="flex gap-[6px] items-center">
 							<span className="hidden md:inline">Contact</span>{' '}
@@ -71,7 +73,7 @@ const Main = ({ data }) => {
 			{/* MIDDLE */}
 			{/* MIDDLE */}
 			<div className="w-full flex-1 h-full flex justify-between items-center">
-				<div className="layout-sidebars">
+				<div className="!hidden md:!flex layout-sidebars !p-0 md:!pl-8 lg:!pl-10">
 					<SideNav data={data} active={0} />
 				</div>
 				<div className="w-full flex items-center justify-center flex-1">
@@ -82,14 +84,16 @@ const Main = ({ data }) => {
 						short
 					/>
 				</div>
-				<div className="layout-sidebars"></div>
+				<div className="!hidden md:!flex layout-sidebars"></div>
 			</div>
 			{/* BOTTOM */}
 			{/* BOTTOM */}
 			<div className="h-[56.5px] flex items-center justify-center w-full">
 				<div className="flex justify-between items-center w-full layout-text h-full">
 					<div className="layout-sidebars layout-sidebar-l">Discover</div>
-					<ArrowDown onClick={() => scrollDown()} />
+					<div className="w-full border-x border-[--lines] md:border-none flex items-center justify-center h-full">
+						<ArrowDown onClick={() => scrollDown()} />
+					</div>
 					<div className="layout-sidebars layout-sidebar-r">
 						{contact.socials.map((link, id) => (
 							<a href={link} key={id}>
@@ -111,11 +115,11 @@ const Main = ({ data }) => {
 			></span>
 			<span
 				ref={leftLine}
-				className="lines border-r top-0 left-0 !h-screen !w-[--sidebar-w]"
+				className="lines border-r top-0 left-0 !h-screen md:w-[--sidebar-w-md]  lg:w-[--sidebar-w]"
 			></span>
 			<span
 				ref={rightLine}
-				className="lines border-l top-0 right-0 !h-screen !w-[--sidebar-w]"
+				className="lines border-l top-0 right-0 !h-screen md:w-[--sidebar-w-md]  lg:w-[--sidebar-w]"
 			></span>
 		</div>
 	);
