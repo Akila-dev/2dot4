@@ -20,6 +20,7 @@ const Intro = ({ closeIntro }) => {
 					title="A NEW STANDARD"
 					text="2DOT4 leads a revolutionary shift in diamond industry. Setting elevated standards, fostering innovation through a robust ecosystem and diverse collaboration."
 					btnText="ENTER OUR WORLD"
+					onClick={() => scrollDown()}
 					short
 				/>
 			</div>
