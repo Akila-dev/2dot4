@@ -43,7 +43,7 @@ const Main = ({ data }) => {
 	const [dataIndex, setDataIndex] = useState(0);
 
 	return (
-		<div className="flex flex-col justify-between h-screen w-full items-center relative">
+		<div className="flex flex-col justify-between h-screen w-full items-center relative overflow-hidden">
 			{/* BG IMAGE */}
 			<div className="absolute top-0 left-0 w-full h-full object-cover overflow-hidden z-[-10]">
 				<ImgWithFallback

@@ -21,6 +21,9 @@ body {
 	background: var(--bg);
 	color: var(--white);
 	font-family: 'Montserrat';
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
 }
 
 * {

@@ -8,7 +8,7 @@ import { DATA } from '../utils/data';
 const Home = () => {
 	const [showIntro, setShowIntro] = useState(true);
 	return (
-		<div>
+		<div className="!h-full">
 			{showIntro ? (
 				<Intro closeIntro={() => setShowIntro(false)} />
 			) : (
