@@ -6,7 +6,7 @@ import { Intro, Main } from '../containers';
 import { DATA } from '../utils/data';
 
 const Home = () => {
-	const [showIntro, setShowIntro] = useState(false);
+	const [showIntro, setShowIntro] = useState(true);
 	return (
 		<div>
 			{showIntro ? (

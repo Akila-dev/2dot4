@@ -9,7 +9,9 @@ const Intro = ({ closeIntro }) => {
 		closeIntro();
 	};
 	return (
-		<div className="flex flex-col justify-between h-screen w-full items-center">
+		<div className="flex flex-col justify-between h-screen w-full items-center relative">
+			<div className="bg-overlay absolute top-0 left-0 z-[-1]"></div>
+
 			<div className="h-[56.5px] flex items-center justify-center border-b border-[--border] w-full">
 				<h3 className="uppercase">{contact.brandName}</h3>
 			</div>
