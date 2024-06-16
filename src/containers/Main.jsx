@@ -73,7 +73,7 @@ const Main = ({ data }) => {
 			</div>
 			{/* MIDDLE */}
 			{/* MIDDLE */}
-			<div className="w-full flex-1 h-full flex justify-between items-center">
+			<div className="w-full flex-1 flex justify-between items-center">
 				<div className="!hidden md:!flex layout-sidebars !p-0 md:!pl-8 lg:!pl-10">
 					<SideNav data={data} active={0} />
 				</div>
