@@ -6,3 +6,4 @@ export { default as MenuButton } from './MenuButton';
 export { default as SideNav } from './SideNav';
 export { default as SideNavLink } from './SideNavLink';
 export { default as Slider } from './Slider';
+export { default as SliderSubPage } from './SliderSubPage';

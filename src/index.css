@@ -55,7 +55,7 @@ button {
 } */
 
 .btn {
-	@apply text-[10px] md:text-xs text-[--white] w-[90%] max-w-[250px] md:min-w-[300px] md:max-w-[300px] py-[14px] md:py-4 border border-[--border] font-medium;
+	@apply text-[10px] md:text-xs text-[--white] w-[90%] max-w-[250px] md:min-w-[300px] md:max-w-[300px] py-[14px] md:py-4 border border-[--border] font-medium block mx-auto;
 }
 
 .container {

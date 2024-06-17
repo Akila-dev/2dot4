@@ -7,15 +7,6 @@ import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(useGSAP);
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/effect-creative';
-
-import { Mousewheel, EffectCreative } from 'swiper/modules';
-
 const Slide = ({ data, id }) => {
 	return (
 		<div
@@ -38,7 +29,6 @@ const Slide = ({ data, id }) => {
 						btnText={data.buttonText}
 						href={data.link}
 						short
-						// short={data.short}
 					/>
 				</div>
 			</div>
@@ -64,12 +54,10 @@ const SubpageSlide = ({ data, id }) => {
 				<div className="w-full h-full flex items-center justify-center flex-1">
 					<CTA
 						title={data.content[0].title}
-						text={data.content[0].text[0]}
+						text={data.content[0].text}
 						btnText={data.buttonText}
 						href={data.link}
 						short
-                        
-						// short={data.short}
 					/>
 				</div>
 			</div>
@@ -90,55 +78,62 @@ const Slider = ({ data, subpage }) => {
 
 	const { contextSafe } = useGSAP({ scope: container });
 
+	// const slideUp = contextSafe((idPrev, idNext) => {
+	// 	console.log('slide up');
+	// 	gsap.to('#slide' + idPrev, { height: '0%' });
+	// 	// .to('#slide' + idNext, { height: '100%' });
+	// });
+
+	// const slideUp = contextSafe((idPrev, idNext) => {
+	// 	console.log('slide up');
+	// 	gsap.to('#slide' + idPrev, { height: '0%' });
+	// 	gsap.to('#slide' + idPrev, { height: '100%' });
+	// });
+
+	// const slideDown = (idPrev, idNext) => {
+	// 	return idPrev;
+	// };
+
+	// useEffect(() => {
+	// 	const handleNavigation = () => {
+	// 		if (scrollDir === 'up') {
+	// 			console.log('up');
+	// 			if (current + 1 >= 0) {
+	// 				slideUp(current, current - 1);
+	// 				setCurrent((prev) => prev - 1);
+	// 			}
+	// 		} else if (scrollDir === 'down') {
+	// 			console.log('down');
+
+	// 			// if (current < data.length - 1) {
+	// 			// 	slideDown(current, current - 1);
+	// 			// 	setCurrent((prev) => prev - 1);
+	// 			// }
+	// 		} else {
+	// 			setCurrent((prev) => prev + 0);
+	// 		}
+	// 	};
+
+	// 	window.addEventListener('scroll', handleNavigation);
+
+	// 	return () => {
+	// 		window.removeEventListener('scroll', handleNavigation);
+	// 	};
+	// }, [current, data.length, scrollDir, slideUp]);
+
 	return (
 		<div className="absolute top-0 left-0 w-full h-full object-cover overflow-hidden">
-            <Swiper
-				// direction={'vertical'}
-				grabCursor={false}
-				mousewheel={true}
-				effect={'creative'}
-				centeredSlides={true}
-				creativeEffect={{
-					prev: {
-						shadow: true,
-						translate: [0, '-20%', -1],
-					},
-					next: {
-						translate: [0, '100%', 0],
-					},
-				}}
-				modules={[Mousewheel, EffectCreative]}
-				className="mySwiper"
-			>
-                {data.map((item, index) => (
-					<SwiperSlide key={index}>
-
-					<div id={'slide' + index} className="h-full">
-						{subpage ? (
-							<SubpageSlide
-								data={item}
-								id={index}
-								// changeSlide={changeSlide}
-								// direction={scrollDir}
-								// container={container}
-							/>
-						) : (
-							<Slide
-								data={item}
-								id={index}
-								// changeSlide={changeSlide}
-								// direction={scrollDir}
-								// container={container}
-							/>
-						)}
-					</div>
-                    </SwiperSlide>
-				))}
-                </Swiper>
-			{/* <div
+			<div
 				ref={container}
 				className="fixed top-0 left-0 w-full h-screen object-cover overflow-hidden scroll-container"
 			>
+				{/* {scrollDir} */}
+				{/* <Slide
+					data={currentData}
+					changeSlide={changeSlide}
+					direction={scrollDir}
+					container={container}
+				/> */}
 				{data.map((item, index) => (
 					<div id={'slide' + index} className="h-full" key={index}>
 						{subpage ? (
@@ -160,7 +155,7 @@ const Slider = ({ data, subpage }) => {
 						)}
 					</div>
 				))}
-			</div> */}
+			</div>
 		</div>
 	);
 };

@@ -2,7 +2,7 @@
 const SideNavLink = ({ data, active, id, onClick }) => {
 	return (
 		<button
-			className="block uppercase text-base xl:text-[1.1rem] font-medium text-[--grey] hover:font-medium hover:text-[--white]"
+			className="block uppercase text-base xl:text-[1.1rem] font-medium text-[--grey] hover:font-medium hover:text-[--white] pointer-events-auto"
 			onClick={onClick}
 		>
 			{active === id && (

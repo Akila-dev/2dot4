@@ -27,22 +27,24 @@ const Cta = ({ title, text, btnText, href, onClick, short }) => {
 		<div ref={container} className="container">
 			<div
 				className={`${
-					short ? 'max-w-[500px] text-center' : 'max-w-[900px]'
-				} flex flex-col items-center justify-center gap-5 px-[2.5%]`}
+					short ? 'max-w-[500px]' : 'max-w-[900px]'
+				} flex flex-col items-center justify-center gap-5 px-[2.5%] text-center`}
 			>
 				<h1 className="gsap-show">{title}</h1>
 				<p className="gsap-show">{text}</p>
-				<div className="pt-2 w-full gsap-show">
-					{href ? (
-						<Link to={href} className="btn">
-							{btnText}
-						</Link>
-					) : (
-						<button onClick={onClick} className="btn">
-							{btnText}
-						</button>
-					)}
-				</div>
+				{btnText && (
+					<div className="pt-2 w-full gsap-show">
+						{href ? (
+							<Link to={"./"+href} className="btn">
+								{btnText}
+							</Link>
+						) : (
+							<button onClick={onClick} className="btn">
+								{btnText}
+							</button>
+						)}
+					</div>
+				)}
 			</div>
 		</div>
 	);

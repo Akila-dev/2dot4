@@ -21,7 +21,7 @@ import {
 } from 'react-icons/bi';
 import { PiInstagramLogoFill, PiDotsThreeOutlineFill } from 'react-icons/pi';
 
-const Main = ({ data }) => {
+const Main = ({ data, subpage }) => {
 	const topLine = useRef(null);
 	const bottomLine = useRef(null);
 	const leftLine = useRef(null);
@@ -48,7 +48,7 @@ const Main = ({ data }) => {
 		<div className="fixed top-0 left-0 w-full h-screen">
 			<div className="flex flex-col justify-between h-screen w-full items-center relative overflow-hidden scroll-snap">
 				{/* CONTENT */}
-				<Slider data={data} />
+				<Slider data={data} subpage={subpage} />
 				{/* TOP */}
 				{/* TOP */}
 				<div className="h-[56.5px] flex items-center justify-center relative w-full z-10 pointer-events-none">
@@ -56,11 +56,13 @@ const Main = ({ data }) => {
 						<div className="layout-sidebars layout-sidebar-l">
 							<MenuButton />
 						</div>
-						<h3 className="uppercase w-full border-x border-[--lines] md:border-none flex items-center justify-center h-full">
+						<Link to="/">
+						<h3 className="uppercase w-full border-x border-[--lines] md:border-none flex items-center justify-center h-full pointer-events-auto">
 							{contact.brandName}
 						</h3>
+						</Link>
 						<div className="layout-sidebars layout-sidebar-r">
-							<Link to="/contact" className="flex gap-[6px] items-center">
+							<Link to="/contact" className="flex gap-[6px] items-center pointer-events-auto">
 								<span className="hidden md:inline">Contact</span>{' '}
 								<BiSolidMessageRoundedDetail className="text-xl md:text-lg" />
 							</Link>{' '}
@@ -97,7 +99,7 @@ const Main = ({ data }) => {
 				{/* BOTTOM */}
 				<div className="h-[56.5px] flex items-center justify-center w-full z-10 pointer-events-none ">
 					<div className="flex justify-between items-center w-full layout-text h-full">
-						<div className="layout-sidebars layout-sidebar-l">
+						<div className="layout-sidebars layout-sidebar-l pointer-events-auto">
 							<BiSolidPaperPlane className="text-xl" />
 							<span className="hidden md:inline">Discover</span>
 						</div>
@@ -107,13 +109,13 @@ const Main = ({ data }) => {
 						<div>
 							<div className="!hidden md:!flex layout-sidebars layout-sidebar-r">
 								{contact.socials.map((link, id) => (
-									<a href={link} key={id}>
+									<a href={link} key={id} className="pointer-events-auto">
 										{socialIcons[id]}
 									</a>
 								))}
 							</div>
 							<div className="!flex md:!hidden layout-sidebars layout-sidebar-r">
-								<PiDotsThreeOutlineFill className="text-xl" />
+								<PiDotsThreeOutlineFill className="text-xl pointer-events-auto" />
 							</div>
 						</div>
 					</div>

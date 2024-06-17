@@ -34,7 +34,7 @@ const ArrowDown = ({ onClick }) => {
 	);
 
 	return (
-		<div ref={container} className="relative h-full flex items-center">
+		<div ref={container} className="relative h-full flex items-center pointer-events-auto">
 			<button
 				// ref={circle}
 				onClick={onClick}

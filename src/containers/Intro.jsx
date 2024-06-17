@@ -9,7 +9,7 @@ const Intro = ({ closeIntro }) => {
 		closeIntro();
 	};
 	return (
-		<div className="flex flex-col justify-between h-screen w-full items-center relative overflow-hidden">
+		<div className="flex flex-col justify-between h-screen w-full items-center overflow-hidden fixed top-0">
 			<div className="bg-overlay absolute top-0 left-0 z-[-1]"></div>
 
 			<div className="h-[56.5px] flex items-center justify-center border-b border-[--border] w-full">
