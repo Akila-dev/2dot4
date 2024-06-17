@@ -82,6 +82,12 @@ const Slider = ({ data }) => {
 				className="fixed top-0 left-0 w-full h-screen object-cover overflow-hidden scroll-container"
 			>
 				{/* {scrollDir} */}
+				{/* <Slide
+					data={currentData}
+					changeSlide={changeSlide}
+					direction={scrollDir}
+					container={container}
+				/> */}
 				<Slide
 					data={currentData}
 					changeSlide={changeSlide}
