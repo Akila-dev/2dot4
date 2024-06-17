@@ -6,7 +6,7 @@ import { Intro, Main } from '../containers';
 import { DATA } from '../utils/data';
 
 const Home = () => {
-	const [showIntro, setShowIntro] = useState(true);
+	const [showIntro, setShowIntro] = useState(false);
 	return (
 		<div className="!h-full">
 			{showIntro ? (

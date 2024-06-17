@@ -21,9 +21,8 @@ body {
 	background: var(--bg);
 	color: var(--white);
 	font-family: 'Montserrat';
-	height: 100vh;
+	height: 200vh;
 	width: 100%;
-	overflow: hidden;
 }
 
 * {
@@ -64,7 +63,7 @@ button {
 }
 
 .lines {
-	@apply block border-[--border] absolute w-full pointer-events-none;
+	@apply block border-[--border] absolute w-full pointer-events-none z-10;
 }
 
 .layout-text {

@@ -13,32 +13,32 @@ import about3Webp from '../assets/sectionImgs/1/3.webp';
 import about4Webp from '../assets/sectionImgs/1/4.webp';
 
 //* SECTION 2: TECHNOLOGY SECTION
-import technologyHero from '../assets/sectionImgs/1/hero.jpg';
-import technology1 from '../assets/sectionImgs/1/1.jpg';
-import technology2 from '../assets/sectionImgs/1/2.jpg';
-import technologyHeroWebp from '../assets/sectionImgs/1/hero.webp';
-import technology1Webp from '../assets/sectionImgs/1/1.webp';
-import technology2Webp from '../assets/sectionImgs/1/2.webp';
+import technologyHero from '../assets/sectionImgs/2/hero.jpg';
+import technology1 from '../assets/sectionImgs/2/1.jpg';
+import technology2 from '../assets/sectionImgs/2/2.jpg';
+import technologyHeroWebp from '../assets/sectionImgs/2/hero.webp';
+import technology1Webp from '../assets/sectionImgs/2/1.webp';
+import technology2Webp from '../assets/sectionImgs/2/2.webp';
 
 //* SECTION 3: DIAMOND SECTION
-import diamondHero from '../assets/sectionImgs/1/hero.jpg';
-import diamond1 from '../assets/sectionImgs/1/1.jpg';
-import diamond2 from '../assets/sectionImgs/1/2.jpg';
-import diamondHeroWebp from '../assets/sectionImgs/1/hero.webp';
-import diamond1Webp from '../assets/sectionImgs/1/1.webp';
-import diamond2Webp from '../assets/sectionImgs/1/2.webp';
+import diamondHero from '../assets/sectionImgs/3/hero.jpg';
+import diamond1 from '../assets/sectionImgs/3/1.jpg';
+import diamond2 from '../assets/sectionImgs/3/2.jpg';
+import diamondHeroWebp from '../assets/sectionImgs/3/hero.webp';
+import diamond1Webp from '../assets/sectionImgs/3/1.webp';
+import diamond2Webp from '../assets/sectionImgs/3/2.webp';
 
 //* SECTION 4: APPLICATION SECTION
-import applicationHero from '../assets/sectionImgs/1/hero.jpg';
-import application1 from '../assets/sectionImgs/1/1.jpg';
-import application2 from '../assets/sectionImgs/1/2.jpg';
-import application3 from '../assets/sectionImgs/1/3.jpg';
-import application4 from '../assets/sectionImgs/1/4.jpg';
-import applicationHeroWebp from '../assets/sectionImgs/1/hero.webp';
-import application1Webp from '../assets/sectionImgs/1/1.webp';
-import application2Webp from '../assets/sectionImgs/1/2.webp';
-import application3Webp from '../assets/sectionImgs/1/3.webp';
-import application4Webp from '../assets/sectionImgs/1/4.webp';
+import applicationHero from '../assets/sectionImgs/4/hero.jpg';
+import application1 from '../assets/sectionImgs/4/1.jpg';
+import application2 from '../assets/sectionImgs/4/2.jpg';
+import application3 from '../assets/sectionImgs/4/3.jpg';
+import application4 from '../assets/sectionImgs/4/4.jpg';
+import applicationHeroWebp from '../assets/sectionImgs/4/hero.webp';
+import application1Webp from '../assets/sectionImgs/4/1.webp';
+import application2Webp from '../assets/sectionImgs/4/2.webp';
+import application3Webp from '../assets/sectionImgs/4/3.webp';
+import application4Webp from '../assets/sectionImgs/4/4.webp';
 
 // export const DATA = [
 // {
@@ -66,7 +66,7 @@ import application4Webp from '../assets/sectionImgs/1/4.webp';
 
 export const DATA = [
 	{
-		link: 'About',
+		link: 'about',
 		title: 'IT STARTED WITH A DREAM!',
 		text: 'Fueled by the passion to grow and set a new standard in the diamond material without any compromise.',
 		buttonText: 'EXPLORE NOW',
@@ -146,7 +146,7 @@ export const DATA = [
 		],
 	},
 	{
-		link: 'Technology',
+		link: 'technology',
 		title: 'Technology',
 		text: 'Our multidisciplinary approach combines cutting-edge technology, rigorous research methodologies, and a deep understanding of diamond materials, positioning us at the forefront of the industry.',
 		buttonText: 'Explore Now',
@@ -190,7 +190,7 @@ export const DATA = [
 		],
 	},
 	{
-		link: 'Diamond',
+		link: 'diamond',
 		title: 'FROM SEED TO POLISHED STONE',
 		text: 'Our Lab-grown Diamonds',
 		buttonText: 'Explore Now',
@@ -251,7 +251,7 @@ export const DATA = [
 		],
 	},
 	{
-		link: 'Application',
+		link: 'application',
 		title: 'Application',
 		text: 'The Applications',
 		buttonText: 'Explore Now',
