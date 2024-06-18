@@ -7,19 +7,10 @@ import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(useGSAP);
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/effect-creative';
-
-import { Mousewheel, EffectCreative } from 'swiper/modules';
-
 const Slide = ({ data, id }) => {
 	return (
 		<div
-			className={`"w-full h-full object-cover overflow-hidden relative scroll-content transition"`}
+			className={`slide w-full h-full object-cover overflow-hidden relative scroll-content transition`}
 		>
 			<div className="absolute top-0 left-0 w-full h-full object-cover ">
 				<ImgWithFallback
@@ -49,7 +40,7 @@ const Slide = ({ data, id }) => {
 const SubpageSlide = ({ data, id }) => {
 	return (
 		<div
-			className={`"w-full h-full object-cover overflow-hidden relative scroll-content transition"`}
+			className={`slide w-full h-full object-cover overflow-hidden relative scroll-content transition`}
 		>
 			<div className="absolute top-0 left-0 w-full h-full object-cover ">
 				<ImgWithFallback
@@ -68,7 +59,7 @@ const SubpageSlide = ({ data, id }) => {
 						btnText={data.buttonText}
 						href={data.link}
 						short
-                        
+
 						// short={data.short}
 					/>
 				</div>
@@ -78,6 +69,7 @@ const SubpageSlide = ({ data, id }) => {
 };
 
 const Slider = ({ data, subpage }) => {
+	// const swiper = useSwiper();
 	const [current, setCurrent] = useState(0);
 	const [currentData, setCurrentData] = useState(data[current]);
 	const [changeSlide, setChangeSlide] = useState(false);
@@ -88,79 +80,33 @@ const Slider = ({ data, subpage }) => {
 
 	const { scrollDir } = useDetectScroll();
 
-	const { contextSafe } = useGSAP({ scope: container });
-
 	return (
 		<div className="absolute top-0 left-0 w-full h-full object-cover overflow-hidden">
-            <Swiper
-				// direction={'vertical'}
-				grabCursor={false}
-				mousewheel={true}
-				effect={'creative'}
-				centeredSlides={true}
-				creativeEffect={{
-					prev: {
-						shadow: true,
-						translate: [0, '-20%', -1],
-					},
-					next: {
-						translate: [0, '100%', 0],
-					},
-				}}
-				modules={[Mousewheel, EffectCreative]}
-				className="mySwiper"
-			>
-                {data.map((item, index) => (
-					<SwiperSlide key={index}>
-
-					<div id={'slide' + index} className="h-full">
-						{subpage ? (
-							<SubpageSlide
-								data={item}
-								id={index}
-								// changeSlide={changeSlide}
-								// direction={scrollDir}
-								// container={container}
-							/>
-						) : (
-							<Slide
-								data={item}
-								id={index}
-								// changeSlide={changeSlide}
-								// direction={scrollDir}
-								// container={container}
-							/>
-						)}
-					</div>
-                    </SwiperSlide>
-				))}
-                </Swiper>
-			{/* <div
-				ref={container}
-				className="fixed top-0 left-0 w-full h-screen object-cover overflow-hidden scroll-container"
-			>
+			<div className="scroll-container">
 				{data.map((item, index) => (
-					<div id={'slide' + index} className="h-full" key={index}>
-						{subpage ? (
-							<SubpageSlide
-								data={item}
-								id={index}
-								// changeSlide={changeSlide}
-								// direction={scrollDir}
-								// container={container}
-							/>
-						) : (
-							<Slide
-								data={item}
-								id={index}
-								// changeSlide={changeSlide}
-								// direction={scrollDir}
-								// container={container}
-							/>
-						)}
+					<div className="scroll-item" key={index}>
+						<div id={'slide' + index} className="h-full">
+							{subpage ? (
+								<SubpageSlide
+									data={item}
+									id={index}
+									// changeSlide={changeSlide}
+									// direction={scrollDir}
+									// container={container}
+								/>
+							) : (
+								<Slide
+									data={item}
+									id={index}
+									// changeSlide={changeSlide}
+									// direction={scrollDir}
+									// container={container}
+								/>
+							)}
+						</div>
 					</div>
 				))}
-			</div> */}
+			</div>
 		</div>
 	);
 };

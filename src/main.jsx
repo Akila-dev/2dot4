@@ -4,7 +4,15 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import './App.css';
 
-import { Home, About, Technology,Diamond, Application, ErrorPage } from './pages';
+import {
+	Home,
+	About,
+	Technology,
+	Diamond,
+	Application,
+	Contact,
+	ErrorPage,
+} from './pages';
 
 const router = createBrowserRouter([
 	{
@@ -25,6 +33,11 @@ const router = createBrowserRouter([
 	{
 		path: '/diamond',
 		element: <Diamond />,
+		errorElement: <ErrorPage />,
+	},
+	{
+		path: '/contact',
+		element: <Contact />,
 		errorElement: <ErrorPage />,
 	},
 	{

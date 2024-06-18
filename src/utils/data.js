@@ -72,7 +72,7 @@ export const DATA = [
 		buttonText: 'EXPLORE NOW',
 		img: aboutHero,
 		imgWebp: aboutHeroWebp,
-		short:true,
+		short: true,
 		subContent: [
 			{
 				link: '2dot4',
@@ -99,8 +99,8 @@ export const DATA = [
 				buttonText: '',
 				img: about1,
 				imgWebp: about1Webp,
-		short:false,
-		// video: '',
+				short: false,
+				// video: '',
 			},
 			{
 				link: 'Laboratory',
@@ -115,8 +115,8 @@ export const DATA = [
 				buttonText: '',
 				img: about2,
 				imgWebp: about2Webp,
-		short:false,
-		// video: '',
+				short: false,
+				// video: '',
 			},
 			{
 				link: 'Education',
@@ -129,8 +129,8 @@ export const DATA = [
 				buttonText: 'Contact Us',
 				img: about3,
 				imgWebp: about3Webp,
-		short:true,
-		// video: '',
+				short: true,
+				// video: '',
 			},
 			{
 				link: 'Sustainability',
@@ -145,8 +145,8 @@ export const DATA = [
 				buttonText: '',
 				img: about4,
 				imgWebp: about4Webp,
-		short:false,
-		// video: '',
+				short: false,
+				// video: '',
 			},
 		],
 	},
@@ -157,7 +157,7 @@ export const DATA = [
 		buttonText: 'Explore Now',
 		img: technologyHero,
 		imgWebp: technologyHeroWebp,
-		short:true,
+		short: true,
 		subContent: [
 			{
 				link: 'State of the Art Reactors',
@@ -174,8 +174,8 @@ export const DATA = [
 				buttonText: '',
 				img: technology1,
 				imgWebp: technology1Webp,
-		short:false,
-		// video: '',
+				short: false,
+				// video: '',
 			},
 			{
 				link: 'CVD Technology',
@@ -192,8 +192,8 @@ export const DATA = [
 				buttonText: '',
 				img: technology2,
 				imgWebp: technology2Webp,
-		short:false,
-		// video: '',
+				short: false,
+				// video: '',
 			},
 		],
 	},
@@ -204,7 +204,7 @@ export const DATA = [
 		buttonText: 'Explore Now',
 		img: diamondHero,
 		imgWebp: diamondHeroWebp,
-		short:true,
+		short: true,
 		subContent: [
 			{
 				link: 'FROM SEED TO POLISHED STONE',
@@ -237,8 +237,8 @@ export const DATA = [
 				buttonText: 'Contact Us',
 				img: diamond1,
 				imgWebp: diamond1Webp,
-		short:false,
-		// video: '',
+				short: false,
+				// video: '',
 			},
 			{
 				link: 'Our Standard',
@@ -256,8 +256,8 @@ export const DATA = [
 				buttonText: 'Contact Us',
 				img: diamond2,
 				imgWebp: diamond2Webp,
-		short:false,
-		// video: '',
+				short: false,
+				// video: '',
 			},
 		],
 	},
@@ -268,7 +268,7 @@ export const DATA = [
 		buttonText: 'Explore Now',
 		img: applicationHero,
 		imgWebp: applicationHeroWebp,
-		short:true,
+		short: true,
 		subContent: [
 			{
 				link: 'Diamond substrate',
@@ -284,8 +284,8 @@ export const DATA = [
 				buttonText: '',
 				img: application1,
 				imgWebp: application1Webp,
-		short:false,
-		// video: '',
+				short: false,
+				// video: '',
 			},
 			{
 				link: 'Thermal Management',
@@ -301,8 +301,8 @@ export const DATA = [
 				buttonText: '',
 				img: application2,
 				imgWebp: application2Webp,
-		short:false,
-		// video: '',
+				short: false,
+				// video: '',
 			},
 			{
 				link: 'Diamond Cutting Tools',
@@ -318,8 +318,8 @@ export const DATA = [
 				buttonText: '',
 				img: application3,
 				imgWebp: application3Webp,
-		short:false,
-		// video: '',
+				short: false,
+				// video: '',
 			},
 			{
 				link: 'Semiconductor Diamonds',
@@ -335,8 +335,8 @@ export const DATA = [
 				buttonText: '',
 				img: application4,
 				imgWebp: application4Webp,
-		short:false,
-		// video: '',
+				short: false,
+				// video: '',
 			},
 		],
 	},
@@ -383,3 +383,30 @@ export const CONTACT = {
 	phoneNo: ['08067586986'],
 	mail: ['rhemarx-dev@email.com'],
 };
+
+export const FOOTERLINKLIST = [
+	{
+		link: 'career',
+		label: 'career',
+	},
+	{
+		link: 'contact',
+		label: 'contact',
+	},
+	{
+		link: 'faq',
+		label: 'FAQ',
+	},
+	{
+		link: 'privacy',
+		label: 'Privacy Policy',
+	},
+	{
+		link: 'atelier',
+		label: 'Atelier Program',
+	},
+	{
+		link: 'terms',
+		label: 'Terms & Conditions',
+	},
+];

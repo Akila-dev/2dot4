@@ -9,19 +9,51 @@ gsap.registerPlugin(useGSAP);
 
 const Cta = ({ title, text, btnText, href, onClick, short }) => {
 	const container = useRef();
+	const { contextSafe } = useGSAP({ scope: container });
 
 	useGSAP(
 		() => {
 			gsap.from('.gsap-show', {
 				opacity: 0,
-				y: 10,
-				duration: 1.2,
-				stagger: 0.15,
-				ease: 'power4.out',
+				y: 15,
+				duration: 0.75,
+				stagger: 0.175,
+				ease: 'power2.out',
+				delay: 0.5,
 			});
 		},
 		{ scope: container }
 	);
+
+	const hovering = contextSafe(() => {
+		gsap
+			.timeline()
+			// .set('.clip-bg', {
+			// 	top: '200px',
+			// 	opacity: 0,
+			// 	scale: 0,
+			// 	duration: 1,
+			// 	stagger: 0.175,
+			// 	ease: 'power2.out',
+			// })
+			.to('.clip-bg', {
+				top: '50%',
+				opacity: 1,
+				scale: 1,
+				duration: 1,
+				// stagger: 0.175,
+				ease: 'power2.out',
+			});
+	});
+	const hoverOut = contextSafe(() => {
+		gsap.to('.clip-bg', {
+			top: '200px',
+			scale: 0,
+			duration: 1,
+			// stagger: 0.175,
+			ease: 'power2.out',
+		});
+	});
 
 	return (
 		<div ref={container} className="container">
@@ -35,12 +67,28 @@ const Cta = ({ title, text, btnText, href, onClick, short }) => {
 				{btnText && (
 					<div className="pt-2 w-full gsap-show">
 						{href ? (
-							<Link to={"./"+href} className="btn">
-								{btnText}
+							<Link
+								onMouseEnter={() => hovering()}
+								onMouseLeave={() => hoverOut()}
+								to={'./' + href}
+								className="btn relative group overflow-hidden"
+							>
+								<span className="clip-bg"></span>
+								<span className="relative z-1 group-hover:text-[--bg] duration-700">
+									{btnText}
+								</span>
 							</Link>
 						) : (
-							<button onClick={onClick} className="btn">
-								{btnText}
+							<button
+								onMouseEnter={() => hovering()}
+								onMouseLeave={() => hoverOut()}
+								onClick={onClick}
+								className="btn relative group overflow-hidden"
+							>
+								<span className="clip-bg"></span>
+								<span className="relative z-1 group-hover:text-[--bg] duration-700">
+									{btnText}
+								</span>
 							</button>
 						)}
 					</div>

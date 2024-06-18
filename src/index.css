@@ -21,8 +21,10 @@ body {
 	background: var(--bg);
 	color: var(--white);
 	font-family: 'Montserrat';
-	height: 200vh;
+	height: 100vh;
+	/* height: 200vh; */
 	width: 100%;
+	scroll-padding-top: 800%;
 }
 
 * {
@@ -84,4 +86,16 @@ button {
 
 .social-icons {
 	@apply text-[--white] text-2xl;
+}
+
+.clip-bg {
+	@apply absolute translate-y-[-50%] translate-x-[-50%] top-[200px] left-[50%] w-[400px] h-[400px] rounded-full bg-[--white] scale-0;
+}
+
+.link {
+	@apply hover:opacity-70 transition duration-500;
+}
+
+.text-input {
+	@apply block w-full py-2 bg-transparent border-b border-[--border] outline-none focus:outline-none text-[--grey] text-sm;
 }

@@ -1,13 +1,37 @@
-// import React from 'react';
-import { CgMenuRightAlt } from 'react-icons/cg';
+import { useRef, useState } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
-const BenuButton = () => {
+gsap.registerPlugin(useGSAP);
+
+// eslint-disable-next-line react/prop-types
+const MenuButton = ({ onClick }) => {
+	const container = useRef();
+	const { contextSafe } = useGSAP({ scope: container });
+	const animateIcon = contextSafe(() => {
+		gsap.from('.menu-lines', {
+			width: 0,
+			duration: 1,
+			stagger: 0.175,
+			ease: 'power2.out',
+			// clearProps: 'width',
+		});
+	});
 	return (
-		<button className="flex items-center uppercase gap-1 pointer-events-auto">
-			<CgMenuRightAlt className="text-xl md:text-lg" />
-			<span className="hidden md:inline">Menu</span>
+		<button
+			ref={container}
+			onMouseEnter={() => animateIcon()}
+			onClick={onClick}
+			className="flex items-center uppercase gap-2 pointer-events-auto"
+		>
+			<div className="flex flex-col gap-0 w-[20px]">
+				<span className="menu-lines block h-[4px] w-[20px] border-t border-[--white]"></span>
+				<span className="menu-lines block h-[3px] w-[20px] border-t border-[--white]"></span>
+				<span className="menu-lines block h-[2px] w-[20px] border-b border-[--white]"></span>
+			</div>
+			<span className="hidden md:block">Menu</span>
 		</button>
 	);
 };
 
-export default BenuButton;
+export default MenuButton;
