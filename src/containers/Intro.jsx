@@ -24,7 +24,7 @@ const Intro = ({ closeIntro }) => {
 					short
 				/>
 			</div>
-			<div className="h-[56.5px] flex items-center justify-centerw-full">
+			<div className="h-[66.5px] flex items-center justify-centerw-full">
 				<ArrowDown onClick={() => scrollDown()} />
 			</div>
 		</div>

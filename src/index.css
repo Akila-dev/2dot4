@@ -101,5 +101,5 @@ button {
 }
 
 .text-input {
-	@apply block w-full py-2 bg-transparent border-b border-[--border] outline-none focus:outline-none text-[--grey] text-sm;
+	@apply block w-full py-2 bg-transparent border-b border-[--border] outline-none focus:outline-none text-[--grey] text-sm placeholder:text-[--grey] placeholder:font-light;
 }

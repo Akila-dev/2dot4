@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { BsDot } from 'react-icons/bs';
 
 gsap.registerPlugin(useGSAP);
 
@@ -135,10 +136,15 @@ const ContactForm = () => {
 					/>
 				</div>
 			</div>
-			<p className="text-center py-7 opacity-80 font-light text-xs">
+			<p className="text-center py-7 text-[--grey] font-light text-sm">
 				I have read and agree to the{' '}
-				<span className="border-b">Terms & Conditions</span>{' '}
-				<span className="border-b">PRivacy Policy</span>
+				<span className="border-b border-[--lines] !text-[--lines] inline-block font-medium cursor-pointer">
+					Terms & Conditions
+				</span>
+				<BsDot className="inline-block" />
+				<span className="border-b border-[--lines] !text-[--lines] inline-block font-medium cursor-pointer">
+					Privacy Policy
+				</span>
 			</p>
 			<div className="pb-5">
 				<button
