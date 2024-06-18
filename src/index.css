@@ -17,11 +17,15 @@
 	--sidebar-w-sm: 70px;
 }
 
+html,
+body {
+	height: 100%;
+}
 body {
 	background: var(--bg);
 	color: var(--white);
 	font-family: 'Montserrat';
-	height: 100vh;
+	/* height: 100vh; */
 	/* height: 200vh; */
 	width: 100%;
 	scroll-padding-top: 800%;

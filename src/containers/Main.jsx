@@ -70,9 +70,9 @@ const MenuPopup = ({ close, data, container }) => {
 	return (
 		<div
 			ref={container}
-			className="fixed top-0 left-0 w-full sm:max-w-[375px] !z-[100]"
+			className="fixed top-0 left-0 w-full sm:max-w-[375px] !z-[100] h-full"
 		>
-			<div className="gsap-menu-container bg-[--white] text-[--bg] w-full h-screen overflow-y-auto flex flex-col gap-10 justify-between px-5 md:px-[2rem] text-xs">
+			<div className="gsap-menu-container bg-[--white] text-[--bg] w-full h-full overflow-y-auto flex flex-col gap-10 justify-between px-5 md:px-[2rem] text-xs">
 				<CloseBtn onClick={() => close()} />
 
 				<div>
@@ -170,8 +170,8 @@ const Main = ({ data, subpage }) => {
 	});
 
 	return (
-		<div ref={container} className="fixed top-0 left-0 w-full h-screen">
-			<div className="flex flex-col justify-between h-screen w-full items-center relative overflow-hidden scroll-snap">
+		<div ref={container} className="fixed top-0 left-0 w-full h-full">
+			<div className="flex flex-col justify-between h-full w-full items-center relative overflow-hidden scroll-snap">
 				{/* CONTENT */}
 				<Slider data={data} subpage={subpage} />
 				{/* TOP */}
@@ -249,8 +249,8 @@ const Main = ({ data, subpage }) => {
 				{/* LINES */}
 				<span className="lines horizontal-line border-b top-0 left-0 !h-[56.5px]"></span>
 				<span className="lines horizontal-line border-t bottom-0 left-0 !h-[56.5px] "></span>
-				<span className="lines vertical-line border-r top-0 left-0 !h-screen md:w-[--sidebar-w-md]  lg:w-[--sidebar-w] !hidden md:!block"></span>
-				<span className="lines vertical-line border-l top-0 right-0 !h-screen md:w-[--sidebar-w-md]  lg:w-[--sidebar-w] !hidden md:!block"></span>
+				<span className="lines vertical-line border-r top-0 left-0 !h-full md:w-[--sidebar-w-md]  lg:w-[--sidebar-w] !hidden md:!block"></span>
+				<span className="lines vertical-line border-l top-0 right-0 !h-full md:w-[--sidebar-w-md]  lg:w-[--sidebar-w] !hidden md:!block"></span>
 			</div>
 			{showMenu && (
 				<MenuPopup
