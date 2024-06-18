@@ -57,7 +57,7 @@ const SubpageSlide = ({ data, id }) => {
 						title={data.content[0].title}
 						text={data.content[0].text[0]}
 						btnText={data.buttonText}
-						href={data.link}
+						href={'../contact'}
 						short
 
 						// short={data.short}
