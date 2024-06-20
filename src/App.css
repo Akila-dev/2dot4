@@ -19,13 +19,6 @@ body::-webkit-scrollbar {
 	display: none;
 }
 
-/* .scroll-container {
-	scroll-snap-type: y mandatory;
-	transition: transform 3s linear !important;
-}
-.scroll-content {
-	scroll-snap-align: center;
-} */
 .mySwiper {
 	scroll-behavior: smooth;
 }
@@ -47,22 +40,6 @@ body::-webkit-scrollbar {
 	scroll-snap-stop: always;
 }
 
-.scroll-container {
-	height: 100vh;
-	overflow-y: scroll;
-	scroll-snap-type: mandatory;
-	scroll-snap-type: y mandatory;
-	scroll-snap-points-y: repeat(100vh);
-	scroll-behavior: smooth;
+.scroll-item:first-child {
+	height: 100%;
 }
-
-.scroll-item {
-	height: 100vh;
-	scroll-snap-align: start;
-	scroll-snap-stop: always;
-	position: relative;
-}
-
-/* .clip-bg {
-	clip-path: circle(50% at 50% 100%);
-} */

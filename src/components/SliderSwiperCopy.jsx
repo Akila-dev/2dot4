@@ -13,7 +13,7 @@ import { Mousewheel, EffectCreative } from 'swiper/modules';
 
 const Slide = ({ data }) => (
 	<div className="w-full h-full object-cover overflow-hidden relative">
-		<div className="absolute top-0 left-0 w-full h-full object-cover ">
+		<div className="absolute top-0 left-0 w-full h-full object-cover">
 			<ImgWithFallback src={data.imgWebp} fallback={data.img} alt={data.link} />
 			<div className="bg-overlay absolute top-0 left-0"></div>
 		</div>

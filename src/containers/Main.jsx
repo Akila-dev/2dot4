@@ -117,7 +117,7 @@ const MenuPopup = ({ close, data, container }) => {
 	);
 };
 
-const Main = ({ data, subpage }) => {
+const Main = ({ data, page, subpage }) => {
 	const container = useRef();
 	const menuContainer = useRef();
 	const [showMenu, setShowMenu] = useState(false);
@@ -143,15 +143,20 @@ const Main = ({ data, subpage }) => {
 	// LINES ANIMATION
 	useGSAP(
 		() => {
+			gsap.fromTo(
+				'.gsap-fade-in',
+				{ opacity: 0, duration: 4, ease: 'power1.out' },
+				{ opacity: 1, duration: 4, ease: 'power1.out' }
+			);
 			gsap.from('.horizontal-line', {
 				xPercent: -100,
-				delay: 0.1,
+				delay: 0.5,
 				duration: 1,
 				ease: 'sine.out',
 			});
 			gsap.from('.vertical-line', {
 				yPercent: -100,
-				delay: 0.8,
+				delay: 1.1,
 				duration: 1.5,
 				ease: 'sine.out',
 			});
@@ -173,7 +178,7 @@ const Main = ({ data, subpage }) => {
 		<div ref={container} className="fixed top-0 left-0 w-full h-full">
 			<div className="flex flex-col justify-between h-full w-full items-center relative overflow-hidden scroll-snap">
 				{/* CONTENT */}
-				<Slider data={data} subpage={subpage} />
+				<Slider data={data} page={page} subpage={subpage} />
 				{/* TOP */}
 				{/* TOP */}
 				<div className="h-[56.5px] flex items-center justify-center relative w-full z-10 pointer-events-none">
@@ -203,7 +208,7 @@ const Main = ({ data, subpage }) => {
 				{/* MIDDLE */}
 				<div className="relative w-full flex-1 flex justify-between items-center z-10 pointer-events-none">
 					<div className="!hidden md:!flex layout-sidebars !p-0 md:!px-8 lg:!px-10">
-						<div className="md:space-y-3">
+						{/* <div className="md:space-y-3">
 							{data.map((item, id) => (
 								<SideNavLink
 									data={item}
@@ -213,7 +218,7 @@ const Main = ({ data, subpage }) => {
 									// onClick={() => scrollToSection(id)}
 								/>
 							))}
-						</div>
+						</div> */}
 					</div>
 					<div className="w-full flex items-center justify-center flex-1">
 						{/* CSPACE FOR THE ACTUAL CONTENTS */}

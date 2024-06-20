@@ -7,4 +7,3 @@ export { default as ContactForm } from './ContactForm';
 
 export { default as SideNavLink } from './SideNavLink';
 export { default as Slider } from './Slider';
-export { default as SliderSubPage } from './SliderSubPage';

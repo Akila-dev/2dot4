@@ -7,7 +7,7 @@ import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(useGSAP);
 
-const Cta = ({ title, text, btnText, href, onClick, short }) => {
+const Cta = ({ title, text, btnText, href, onClick, short, makeTiny, id }) => {
 	const container = useRef();
 	const { contextSafe } = useGSAP({ scope: container });
 
@@ -56,13 +56,22 @@ const Cta = ({ title, text, btnText, href, onClick, short }) => {
 	});
 
 	return (
-		<div ref={container} className="container">
+		<div id={id} ref={container} className="container !px-3">
 			<div
 				className={`${
 					short ? 'max-w-[500px]' : 'max-w-[900px]'
-				} flex flex-col items-center justify-center gap-5 px-[2.5%] text-center`}
+				} flex flex-col items-center justify-center gap-5 ${
+					makeTiny ? 'px-0  ' : 'px-[2.5%] '
+				} text-center`}
 			>
-				<h1 className="gsap-show">{title}</h1>
+				<h1
+					className={`gsap-show ${
+						makeTiny &&
+						'text-[7vw] md:text-[3.5vw] lg:text-[2rem] leading-[130%]'
+					}`}
+				>
+					{title}
+				</h1>
 				<p className="gsap-show">{text}</p>
 				{btnText && (
 					<div className="pt-2 w-full gsap-show">

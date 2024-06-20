@@ -38,7 +38,7 @@ body {
 }
 
 h1 {
-	@apply font-semibold text-[9vw] sm:text-[25px] md:text-[2rem] leading-[130%] uppercase text-[--white];
+	@apply font-semibold text-2xl sm:text-[25px] md:text-[2rem] leading-[130%] uppercase text-[--white];
 }
 
 h3 {
@@ -46,7 +46,7 @@ h3 {
 }
 
 p {
-	@apply text-[--grey] text-[4.2vw] sm:text-xs md:text-sm !leading-[170%] font-medium;
+	@apply text-[--grey] text-xs md:text-sm !leading-[170%] font-medium;
 }
 
 h1,
@@ -103,3 +103,10 @@ button {
 .text-input {
 	@apply block w-full py-2 bg-transparent border-b border-[--border] outline-none focus:outline-none text-[--grey] text-sm placeholder:text-[--grey] placeholder:font-light;
 }
+/* 
+.gsap-show {
+	@apply opacity-0;
+}
+.gsap-show::first-child {
+	@apply opacity-100;
+} */
