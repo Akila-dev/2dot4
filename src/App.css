@@ -40,6 +40,11 @@ body::-webkit-scrollbar {
 	scroll-snap-stop: always;
 }
 
+.scroll-item {
+	position: fixed;
+	width: 100%;
+	top: 0;
+}
 .scroll-item:first-child {
 	height: 100%;
 }
