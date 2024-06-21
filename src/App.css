@@ -40,10 +40,16 @@ body::-webkit-scrollbar {
 	scroll-snap-stop: always;
 }
 
-.scroll-item {
+/* .scroll-item {
 	position: fixed;
 	width: 100%;
-	top: 0;
+	bottom: 0;
+	overflow-y: hidden;
+} */
+
+.scroll-item {
+	object-position: bottom;
+	transform-origin: bottom;
 }
 .scroll-item:first-child {
 	height: 100%;

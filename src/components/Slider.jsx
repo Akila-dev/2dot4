@@ -28,7 +28,7 @@ const Slide = ({ data, id, page }) => {
 			id={page + id}
 			className={`slide w-full h-full object-cover overflow-hidden relative scroll-content transition`}
 		>
-			<div className="absolute bottom-0 left-0 w-full h-full object-cover ">
+			<div className="absolute !bottom-0 left-0 w-full h-screen overflow-hidden ">
 				<ImgWithFallback
 					src={data.imgWebp}
 					fallback={data.img}
@@ -120,35 +120,41 @@ const Slider = ({ data, subpage, page }) => {
 			// if(scrolling){
 			if (from !== to) {
 				if (from < to) {
-					gsap.fromTo(
+					gsap.timeline().fromTo(
 						'#slide' + to,
 						{
-							y: screenSize.height,
+							height: 0,
+							y: (screenSize.height * 40) / 100,
 						},
 						{
+							height: screenSize.height,
 							y: 0,
-							duration: 1,
+							duration: 1.5,
 							ease: 'power1.out',
 							delay: 0.5,
 						}
 					);
 					gsap
 						.timeline()
-						.set('#slide' + to, {
-							height: screenSize.height,
-							y: screenSize.height,
-							delay: 0.5,
-						})
-						.to('#slide' + from, {
-							y: -screenSize.height,
-							duration: 1,
-							ease: 'power1.out',
-						})
-
+						.fromTo(
+							'#slide' + from,
+							{
+								height: screenSize.height,
+							},
+							{
+								y: -(screenSize.height * 40) / 100,
+								duration: 1.5,
+								ease: 'power1.out',
+								delay: 0.5,
+							}
+						)
 						.set('#slide' + from, {
 							height: 0,
 							y: 0,
 						});
+					// !TEXT
+					//! TEXT
+					//! TEXT
 					gsap
 						.timeline()
 						.fromTo(
@@ -178,39 +184,57 @@ const Slider = ({ data, subpage, page }) => {
 								duration: 0.75,
 								stagger: 0.125,
 								ease: 'power1.out',
-								delay: 0.5,
+								delay: 1.1,
 							}
 						);
 				} else {
-					gsap.fromTo(
-						'#slide' + to,
-						{
-							y: -screenSize.height,
-						},
-						{
+					gsap
+						.timeline()
+						.set('#slide' + from, {
+							height: screenSize.height,
 							y: 0,
-							duration: 1,
-							ease: 'power1.out',
-							delay: 0.5,
-						}
-					);
+						})
+						.fromTo(
+							'#slide' + from,
+							{
+								height: screenSize.height,
+								y: 0,
+							},
+							{
+								height: 0,
+								y: (screenSize.height * 40) / 100,
+								duration: 1.5,
+								ease: 'power1.out',
+								delay: 0.5,
+							}
+						);
 					gsap
 						.timeline()
 						.set('#slide' + to, {
+							y: -(screenSize.height * 40) / 100,
 							height: screenSize.height,
-							y: -screenSize.height,
-							delay: 0.5,
 						})
-						.to('#slide' + from, {
-							y: screenSize.height,
-							duration: 1,
-							ease: 'power1.out',
-						})
-
+						.fromTo(
+							'#slide' + to,
+							{
+								y: -(screenSize.height * 40) / 100,
+								height: screenSize.height,
+							},
+							{
+								y: 0,
+								height: screenSize.height,
+								duration: 1.5,
+								ease: 'power1.out',
+								delay: 0.5,
+							}
+						)
 						.set('#slide' + from, {
 							height: 0,
 							y: 0,
 						});
+					//! TEXT
+					//! TEXT
+					//! TEXT
 					gsap
 						.timeline()
 						.fromTo(
@@ -241,7 +265,7 @@ const Slider = ({ data, subpage, page }) => {
 								duration: 0.75,
 								stagger: 0.125,
 								ease: 'power1.out',
-								delay: 0.5,
+								delay: 1.1,
 							}
 						);
 				}
@@ -294,7 +318,11 @@ const Slider = ({ data, subpage, page }) => {
 		>
 			<div className="scroll-container h-full gsap-fade-in">
 				{data.map((item, index) => (
-					<div id={'slide' + index} className={`scroll-item h-0`} key={index}>
+					<div
+						id={'slide' + index}
+						className={`scroll-item fixed bottom-0 overflow-hidden w-full h-0`}
+						key={index}
+					>
 						<div className="h-full">
 							{subpage ? (
 								<SubpageSlide data={item} id={index} page={page} />

@@ -15,16 +15,16 @@ const ImgWithFallback = ({
 	...delegated
 }) => {
 	return (
-		<picture className="w-full h-full img-pos !object-cover overflow-hidden">
+		<picture className="w-full h-screen !object-bottom !object-cover overflow-hidden">
 			<source
 				srcSet={src}
 				type={type}
-				className="w-full h-full img-pos !object-cover overflow-hidden"
+				className="w-full h-screen !object-bottom !object-cover overflow-hidden"
 			/>
 			<img
 				src={fallback}
 				{...delegated}
-				className="w-full h-full img-pos !object-cover overflow-hidden"
+				className="w-full h-screen !object-bottom !object-cover overflow-hidden"
 			/>
 		</picture>
 	);
