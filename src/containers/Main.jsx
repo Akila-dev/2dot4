@@ -208,17 +208,7 @@ const Main = ({ data, page, subpage }) => {
 				{/* MIDDLE */}
 				<div className="relative w-full flex-1 flex justify-between items-center z-10 pointer-events-none">
 					<div className="!hidden md:!flex layout-sidebars !p-0 md:!px-8 lg:!px-10">
-						{/* <div className="md:space-y-3">
-							{data.map((item, id) => (
-								<SideNavLink
-									data={item}
-									id={id}
-									key={id}
-									// active={dataIndex}
-									// onClick={() => scrollToSection(id)}
-								/>
-							))}
-						</div> */}
+						{/* Side Nav space */}
 					</div>
 					<div className="w-full flex items-center justify-center flex-1">
 						{/* CSPACE FOR THE ACTUAL CONTENTS */}
@@ -234,7 +224,9 @@ const Main = ({ data, page, subpage }) => {
 							<span className="hidden md:inline">Discover</span>
 						</div>
 						<div className="w-full border-x border-[--lines] md:border-none flex items-center justify-center h-full">
-							<ArrowDown onClick={() => scrollDown()} />
+							<div className="hidden md:block">
+								<ArrowDown onClick={() => scrollDown()} />
+							</div>
 						</div>
 						<div>
 							<div className="!hidden md:!flex layout-sidebars layout-sidebar-r">

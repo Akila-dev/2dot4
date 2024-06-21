@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect, useRef } from 'react';
-import { ImgWithFallback, CTA, SideNavLink } from '../components';
-import useDetectScroll from '@smakss/react-scroll-direction';
+import { SideNavLink, Slide, SubpageSlider } from '../components';
 import WheelReact from 'wheel-react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -16,78 +15,6 @@ const getWindowsDimension = () => {
 	};
 };
 
-const Slide = ({ data, id, page }) => {
-	// scrollTrigger: {
-	// 	trigger: element.querySelector(".first"),
-	// 	start: "top top",
-	// 	end: "bottom center",
-	// 	scrub: true
-	//   }
-	return (
-		<div
-			id={page + id}
-			className={`slide w-full h-full object-cover overflow-hidden relative scroll-content transition`}
-		>
-			<div className="absolute !bottom-0 left-0 w-full h-screen overflow-hidden ">
-				<ImgWithFallback
-					src={data.imgWebp}
-					fallback={data.img}
-					alt={data.link}
-				/>
-				<div className="bg-overlay absolute top-0 left-0"></div>
-			</div>
-			{/* Content */}
-			<div className="py-[60px] px-5 md:px-[--sidebar-w] w-full h-full">
-				<div className="w-full h-full flex items-center justify-center flex-1">
-					<CTA
-						title={data.title}
-						text={data.text}
-						btnText={data.buttonText}
-						href={data.link}
-						short
-						id={page + id}
-						// short={data.short}
-					/>
-				</div>
-			</div>
-		</div>
-	);
-};
-
-const SubpageSlide = ({ data, page, id }) => {
-	return (
-		<div
-			id={page + id}
-			className={`slide w-full h-full object-cover overflow-hidden relative scroll-content transition`}
-		>
-			<div className="absolute bottom-0 left-0 w-full h-full object-cover ">
-				<ImgWithFallback
-					src={data.imgWebp}
-					fallback={data.img}
-					alt={data.link}
-				/>
-				<div className="bg-overlay absolute top-0 left-0"></div>
-			</div>
-
-			{/* Content */}
-			<div className="py-[60px] px-5 md:px-[--sidebar-w] w-full h-full">
-				<div className="w-full h-full flex items-center justify-center flex-1">
-					<CTA
-						title={data.content[0].title}
-						text={data.content[0].text[0]}
-						btnText={data.buttonText}
-						href={'../contact'}
-						short
-						makeTiny
-						id={page + id}
-						// short={data.short}
-					/>
-				</div>
-			</div>
-		</div>
-	);
-};
-
 const Slider = ({ data, subpage, page }) => {
 	// *UPDATE SCREEN SIZE WHEN SCREEN/VIEW PORT RESIZES
 	const [screenSize, setScreenSize] = useState(getWindowsDimension());
@@ -95,9 +22,6 @@ const Slider = ({ data, subpage, page }) => {
 	const [activeId, setActiveId] = useState(0);
 	const { contextSafe } = useGSAP({ scope: container });
 	const [isScrolling, setIsScrolling] = useState(false);
-
-	// GET SCROLL DIRECTION
-	const { scrollDir } = useDetectScroll();
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -280,12 +204,26 @@ const Slider = ({ data, subpage, page }) => {
 	useEffect(() => {
 		WheelReact.config({
 			left: () => {
-				// WheelReact.clearTimeout();
-				console.log('wheel left detected.');
+				if (page === 'home') {
+					if (!isScrolling) {
+						if (activeId < data.length - 1) {
+							console.log('wheel left detected.');
+							setIsScrolling(true);
+							scrollTo(activeId, activeId + 1);
+						}
+					}
+				}
 			},
 			right: () => {
-				// WheelReact.clearTimeout();
-				console.log('wheel right detected.');
+				if (page === 'home') {
+					if (!isScrolling) {
+						if (activeId > 0) {
+							console.log('wheel right detected.');
+							setIsScrolling(true);
+							scrollTo(activeId, activeId - 1);
+						}
+					}
+				}
 			},
 			up: () => {
 				// WheelReact.clearTimeout();
@@ -308,7 +246,7 @@ const Slider = ({ data, subpage, page }) => {
 				}
 			},
 		});
-	}, [activeId, data.length, scrollTo, isScrolling]);
+	}, [activeId, data.length, scrollTo, isScrolling, page]);
 
 	return (
 		<div
@@ -325,7 +263,7 @@ const Slider = ({ data, subpage, page }) => {
 					>
 						<div className="h-full">
 							{subpage ? (
-								<SubpageSlide data={item} id={index} page={page} />
+								<SubpageSlider data={item} id={index} page={page} />
 							) : (
 								<Slide data={item} id={index} page={page} />
 							)}
