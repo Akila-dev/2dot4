@@ -110,118 +110,124 @@ const Slider = ({ data, subpage, page }) => {
 	}, []);
 
 	const scrollTo = contextSafe((from, to) => {
-		setIsScrolling(true);
-		// if(scrolling){
-		if (from !== to) {
-			if (from < to) {
-				gsap
-					.timeline()
-					.to(
-						'#slide' + to,
-						{
-							height: screenSize.height,
-							duration: 1,
-							ease: 'power1.out',
-						}
-						// 0.55
-					)
-					.to('#slide' + from, {
-						height: 0,
-						duration: 1,
-						ease: 'power1.out',
-					});
-				gsap
-					.timeline()
-					.fromTo(
-						'#slide' + from + ' ' + '.gsap-show',
-						{
-							opacity: 1,
-							y: 0,
-						},
-						{
-							opacity: 0,
-							y: 15,
-							duration: 0.65,
-							stagger: 0.05,
-							ease: 'power1.out',
-						}
-					)
-
-					.fromTo(
-						'#slide' + to + ' ' + '.gsap-show',
-						{
-							opacity: 0,
-							y: 15,
-						},
-						{
-							opacity: 1,
-							y: 0,
-							duration: 0.75,
-							stagger: 0.125,
-							ease: 'power1.out',
-							delay: 0.5,
-						}
-					);
-			} else {
-				gsap
-					.timeline()
-					.to('#slide' + to, {
-						height: screenSize.height,
-						duration: 1,
-						delay: 0.5,
-						ease: 'power1.out',
-					})
-					.to(
-						'#slide' + from,
-						{
+		if (
+			from >= 0 &&
+			from <= data.length - 1 &&
+			to >= 0 &&
+			to <= data.length - 1
+		) {
+			setIsScrolling(true);
+			// if(scrolling){
+			if (from !== to) {
+				if (from < to) {
+					gsap
+						.timeline()
+						.to(
+							'#slide' + to,
+							{
+								height: screenSize.height,
+								duration: 1,
+								ease: 'power1.out',
+							}
+							// 0.55
+						)
+						.to('#slide' + from, {
 							height: 0,
 							duration: 1,
 							ease: 'power1.out',
-						}
-						// 1
-						// 1
-						// 1
-					);
-				gsap
-					.timeline()
-					.fromTo(
-						'#slide' + from + ' ' + '.gsap-show',
-						{
-							opacity: 1,
-							y: 0,
-						},
-						{
-							opacity: 0,
-							y: 15,
-							duration: 0.65,
-							stagger: 0.05,
-							ease: 'power1.out',
-						}
-					)
+						});
+					gsap
+						.timeline()
+						.fromTo(
+							'#slide' + from + ' ' + '.gsap-show',
+							{
+								opacity: 1,
+								y: 0,
+							},
+							{
+								opacity: 0,
+								y: 15,
+								duration: 0.65,
+								stagger: 0.05,
+								ease: 'power1.out',
+							}
+						)
 
-					.fromTo(
-						'#slide' + to + ' ' + '.gsap-show',
-						{
-							opacity: 0,
-							y: 15,
-						},
-						{
-							opacity: 1,
-							y: 0,
-							// delay: 1,
-							duration: 0.75,
-							stagger: 0.125,
-							ease: 'power1.out',
+						.fromTo(
+							'#slide' + to + ' ' + '.gsap-show',
+							{
+								opacity: 0,
+								y: 15,
+							},
+							{
+								opacity: 1,
+								y: 0,
+								duration: 0.75,
+								stagger: 0.125,
+								ease: 'power1.out',
+								delay: 0.5,
+							}
+						);
+				} else {
+					gsap
+						.timeline()
+						.to('#slide' + to, {
+							height: screenSize.height,
+							duration: 1,
 							delay: 0.5,
-						}
-					);
+							ease: 'power1.out',
+						})
+						.to(
+							'#slide' + from,
+							{
+								height: 0,
+								duration: 1,
+								ease: 'power1.out',
+							}
+							// 1
+							// 1
+							// 1
+						);
+					gsap
+						.timeline()
+						.fromTo(
+							'#slide' + from + ' ' + '.gsap-show',
+							{
+								opacity: 1,
+								y: 0,
+							},
+							{
+								opacity: 0,
+								y: 15,
+								duration: 0.65,
+								stagger: 0.05,
+								ease: 'power1.out',
+							}
+						)
+
+						.fromTo(
+							'#slide' + to + ' ' + '.gsap-show',
+							{
+								opacity: 0,
+								y: 15,
+							},
+							{
+								opacity: 1,
+								y: 0,
+								// delay: 1,
+								duration: 0.75,
+								stagger: 0.125,
+								ease: 'power1.out',
+								delay: 0.5,
+							}
+						);
+				}
+				setActiveId(to);
+				setTimeout(() => {
+					setIsScrolling(false);
+				}, 3000);
 			}
-			setActiveId(to);
 		}
-		setTimeout(() => {
-			setIsScrolling(false);
-		}, 2000);
-		// }
 	});
 
 	useEffect(() => {
@@ -235,21 +241,21 @@ const Slider = ({ data, subpage, page }) => {
 				console.log('wheel right detected.');
 			},
 			up: () => {
-				console.log('wheel up detected.');
 				// WheelReact.clearTimeout();
 				if (!isScrolling) {
-					setIsScrolling(true);
-					if (activeId >= 0 && activeId < data.length - 1) {
+					if (activeId < data.length - 1) {
+						console.log('wheel up detected.');
+						setIsScrolling(true);
 						scrollTo(activeId, activeId + 1);
 					}
 				}
 			},
 			down: () => {
-				console.log('wheel down detected.');
 				// WheelReact.clearTimeout();
 				if (!isScrolling) {
-					setIsScrolling(true);
-					if (activeId > 0 && activeId <= data.length - 1) {
+					if (activeId > 0) {
+						console.log('wheel down detected.');
+						setIsScrolling(true);
 						scrollTo(activeId, activeId - 1);
 					}
 				}
@@ -291,7 +297,7 @@ const Slider = ({ data, subpage, page }) => {
 				</div>
 			</div>
 			{/* TOP NAV FOR MOBILE */}
-			<div className=" md:hidden gsap-fade-in w-full h-[46.5px] border-b border-[--border] fixed top-[56.5px]">
+			<div className=" md:hidden gsap-fade-in w-full h-[46.5px] border-b-0 border-[--border] fixed top-[56.5px] t">
 				<div className="flex gap-5 items-center h-full w-full overflow-x-scroll no-scrollbar px-[25%]">
 					{data.map((item, id) => (
 						<div key={id} className="block text-center">
@@ -305,6 +311,7 @@ const Slider = ({ data, subpage, page }) => {
 						</div>
 					))}
 				</div>
+				<span className="horizontal-line absolute top-0 left-0 w-full h-[46.5px] border-b border-[--border] z-[-1]"></span>
 			</div>
 		</div>
 	);
