@@ -7,13 +7,22 @@ import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(useGSAP);
 
-const Cta = ({ title, text, btnText, href, onClick, short, makeTiny, id }) => {
+const CTASubSlider = ({
+	title,
+	text,
+	btnText,
+	href,
+	onClick,
+	short,
+	makeTiny,
+	id,
+}) => {
 	const container = useRef();
 	const { contextSafe } = useGSAP({ scope: container });
 
 	useGSAP(
 		() => {
-			gsap.from('.gsap-show', {
+			gsap.from('.gsap -show', {
 				opacity: 0,
 				y: 15,
 				duration: 0.75,
@@ -56,7 +65,7 @@ const Cta = ({ title, text, btnText, href, onClick, short, makeTiny, id }) => {
 	});
 
 	return (
-		<div id={id} ref={container} className="container !px-3 ">
+		<div id={id} ref={container} className="container !px-3 fixed">
 			<div
 				className={`${
 					short ? 'max-w-[500px]' : 'max-w-[900px]'
@@ -65,16 +74,16 @@ const Cta = ({ title, text, btnText, href, onClick, short, makeTiny, id }) => {
 				} text-center`}
 			>
 				<h1
-					className={`gsap-show ${
+					className={`gsap-subslide-show gsap-show ${
 						makeTiny &&
 						'text-[7vw] md:text-[3.5vw] lg:text-[2rem] leading-[130%]'
 					}`}
 				>
 					{title}
 				</h1>
-				<p className="gsap-show">{text}</p>
+				<p className="gsap-subslide-show gsap-show">{text}</p>
 				{btnText && (
-					<div className="pt-2 w-full gsap-show">
+					<div className="pt-2 w-full gsap-subslide-show gsap-show">
 						{href ? (
 							<Link
 								onMouseEnter={() => hovering()}
@@ -107,4 +116,4 @@ const Cta = ({ title, text, btnText, href, onClick, short, makeTiny, id }) => {
 	);
 };
 
-export default Cta;
+export default CTASubSlider;

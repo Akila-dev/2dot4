@@ -150,14 +150,14 @@ const Main = ({ data, page, subpage }) => {
 			);
 			gsap.from('.horizontal-line', {
 				xPercent: -100,
-				delay: 0.5,
-				duration: 1,
+				delay: 0.25,
+				duration: 1.25,
 				ease: 'sine.out',
 			});
 			gsap.from('.vertical-line', {
 				yPercent: -100,
-				delay: 1.1,
-				duration: 1.5,
+				delay: 1.25,
+				duration: 1.25,
 				ease: 'sine.out',
 			});
 		},

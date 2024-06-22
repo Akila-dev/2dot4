@@ -53,7 +53,7 @@ const Slider = ({ data, subpage, page }) => {
 						{
 							height: screenSize.height,
 							y: 0,
-							duration: 1.5,
+							duration: 1,
 							ease: 'power1.out',
 							delay: 0.5,
 						}
@@ -67,7 +67,7 @@ const Slider = ({ data, subpage, page }) => {
 							},
 							{
 								y: -(screenSize.height * 40) / 100,
-								duration: 1.5,
+								duration: 1,
 								ease: 'power1.out',
 								delay: 0.5,
 							}
@@ -75,6 +75,7 @@ const Slider = ({ data, subpage, page }) => {
 						.set('#slide' + from, {
 							height: 0,
 							y: 0,
+							delay: 0.5,
 						});
 					// !TEXT
 					//! TEXT
@@ -90,8 +91,8 @@ const Slider = ({ data, subpage, page }) => {
 							{
 								opacity: 0,
 								y: 15,
-								duration: 0.65,
-								stagger: 0.05,
+								duration: 0.35,
+								stagger: 0.1,
 								ease: 'power1.out',
 							}
 						)
@@ -105,10 +106,10 @@ const Slider = ({ data, subpage, page }) => {
 							{
 								opacity: 1,
 								y: 0,
-								duration: 0.75,
-								stagger: 0.125,
+								duration: 0.35,
+								stagger: 0.1,
 								ease: 'power1.out',
-								delay: 1.1,
+								delay: 0.65,
 							}
 						);
 				} else {
@@ -127,7 +128,7 @@ const Slider = ({ data, subpage, page }) => {
 							{
 								height: 0,
 								y: (screenSize.height * 40) / 100,
-								duration: 1.5,
+								duration: 1,
 								ease: 'power1.out',
 								delay: 0.5,
 							}
@@ -147,14 +148,15 @@ const Slider = ({ data, subpage, page }) => {
 							{
 								y: 0,
 								height: screenSize.height,
-								duration: 1.5,
+								duration: 1,
 								ease: 'power1.out',
-								delay: 0.5,
+								delay: 0.25,
 							}
 						)
 						.set('#slide' + from, {
 							height: 0,
 							y: 0,
+							delay: 0.5,
 						});
 					//! TEXT
 					//! TEXT
@@ -170,8 +172,8 @@ const Slider = ({ data, subpage, page }) => {
 							{
 								opacity: 0,
 								y: 15,
-								duration: 0.65,
-								stagger: 0.05,
+								duration: 0.35,
+								stagger: 0.1,
 								ease: 'power1.out',
 							}
 						)
@@ -186,10 +188,10 @@ const Slider = ({ data, subpage, page }) => {
 								opacity: 1,
 								y: 0,
 								// delay: 1,
-								duration: 0.75,
-								stagger: 0.125,
+								duration: 0.35,
+								stagger: 0.1,
 								ease: 'power1.out',
-								delay: 1.1,
+								delay: 0.45,
 							}
 						);
 				}
@@ -204,24 +206,20 @@ const Slider = ({ data, subpage, page }) => {
 	useEffect(() => {
 		WheelReact.config({
 			left: () => {
-				if (page === 'home') {
-					if (!isScrolling) {
-						if (activeId < data.length - 1) {
-							console.log('wheel left detected.');
-							setIsScrolling(true);
-							scrollTo(activeId, activeId + 1);
-						}
+				if (!isScrolling) {
+					if (activeId < data.length - 1) {
+						console.log('wheel left detected.');
+						setIsScrolling(true);
+						scrollTo(activeId, activeId + 1);
 					}
 				}
 			},
 			right: () => {
-				if (page === 'home') {
-					if (!isScrolling) {
-						if (activeId > 0) {
-							console.log('wheel right detected.');
-							setIsScrolling(true);
-							scrollTo(activeId, activeId - 1);
-						}
+				if (!isScrolling) {
+					if (activeId > 0) {
+						console.log('wheel right detected.');
+						setIsScrolling(true);
+						scrollTo(activeId, activeId - 1);
 					}
 				}
 			},

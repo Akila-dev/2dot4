@@ -4,7 +4,7 @@ import { ImgWithFallback, CTA } from '../components';
 const Slide = ({ data, id, page }) => {
 	return (
 		<div
-			id={page + id}
+			// id={page + id}
 			className={`slide w-full h-full object-cover overflow-hidden relative scroll-content transition`}
 		>
 			<div className="absolute !bottom-0 left-0 w-full h-screen overflow-hidden ">
