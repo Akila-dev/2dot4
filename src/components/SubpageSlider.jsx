@@ -35,7 +35,7 @@ const Slide = ({ data, text, id, page, sectionId }) => {
 						<div className="bg-overlay absolute top-0 left-0"></div>
 					</div>
 					{/* Content */}
-					<div className="fixed  md:py-[60px] px-5 md:px-[305px] w-screen h-full flex items-center justify-between ">
+					<div className="fixed  md:py-[60px] px-5 md:px-[305px] w-screen h-full flex items-center justify-between">
 						<div className="w-full h-full flex items-center justify-center flex-1">
 							<CTASubSlider
 								title={data.content[0].title}
@@ -46,12 +46,6 @@ const Slide = ({ data, text, id, page, sectionId }) => {
 								id={page + id}
 								// short={data.short}
 							/>
-							{data.content[0].text.length > 1 && (
-								<div className="hidden lg:flex items-center justify-center !fixed w-full bottom-[57.5px] h-[50px] text-xs tracking-wider font-medium">
-									0{id + 1}
-									<span className="px-1">/</span>0{data.content[0].text.length}
-								</div>
-							)}
 						</div>
 					</div>
 				</div>
@@ -76,6 +70,27 @@ const SubpageSlider = ({ data, id, page }) => {
 
 		return () => window.removeEventListener('resize', handleResize);
 	}, []);
+
+	useGSAP(
+		() => {
+			gsap.fromTo(
+				'.gsap-nav-controller',
+				{
+					opacity: 0,
+					y: 15,
+				},
+				{
+					opacity: 1,
+					y: 0,
+					duration: 0.75,
+					stagger: 0.175,
+					ease: 'power2.out',
+					delay: 0.5,
+				}
+			);
+		},
+		{ scope: container }
+	);
 
 	const scrollTo = contextSafe((from, to) => {
 		if (
@@ -146,7 +161,6 @@ const SubpageSlider = ({ data, id, page }) => {
 								ease: 'power1.out',
 							}
 						)
-
 						.fromTo(
 							targetTo + ' ' + '.gsap-show',
 							{
@@ -158,6 +172,41 @@ const SubpageSlider = ({ data, id, page }) => {
 								y: 0,
 								duration: 0.35,
 								stagger: 0.1,
+								ease: 'power1.out',
+								delay: 1,
+							}
+						);
+					// !CONTROLLER
+					// !CONTROLLER
+					// !CONTROLLER
+					gsap
+						.timeline()
+						.fromTo(
+							targetFrom + ' ' + '.gsap-nav-controller',
+							{
+								opacity: 1,
+								y: 0,
+							},
+							{
+								opacity: 0,
+								y: 15,
+								duration: 0.35,
+								// stagger: 0.1,
+								ease: 'power1.out',
+							}
+						)
+
+						.fromTo(
+							targetTo + ' ' + '.gsap-nav-controller',
+							{
+								opacity: 0,
+								y: 15,
+							},
+							{
+								opacity: 1,
+								y: 0,
+								duration: 0.35,
+								// stagger: 0.1,
 								ease: 'power1.out',
 								delay: 1,
 							}
@@ -244,6 +293,41 @@ const SubpageSlider = ({ data, id, page }) => {
 								delay: 0.85,
 							}
 						);
+					// !CONTROLLER
+					// !CONTROLLER
+					// !CONTROLLER
+					gsap
+						.timeline()
+						.fromTo(
+							targetFrom + ' ' + '.gsap-nav-controller',
+							{
+								opacity: 1,
+								y: 0,
+							},
+							{
+								opacity: 0,
+								y: 15,
+								duration: 0.35,
+								// stagger: 0.1,
+								ease: 'power1.out',
+							}
+						)
+
+						.fromTo(
+							targetTo + ' ' + '.gsap-nav-controller',
+							{
+								opacity: 0,
+								y: 15,
+							},
+							{
+								opacity: 1,
+								y: 0,
+								duration: 0.35,
+								// stagger: 0.1,
+								ease: 'power1.out',
+								delay: 1,
+							}
+						);
 				}
 				setTimeout(() => {
 					setActiveId(to);
@@ -283,20 +367,55 @@ const SubpageSlider = ({ data, id, page }) => {
 					// prev={() => prev()}
 				/>
 			))}
-			<div className="hidden lg:flex w-[80px] xl:w-[100px] h-full justify-center items-center fixed lg:left-[--sidebar-w]">
+			<div className="gsap-nav-controller hidden lg:flex w-[80px] xl:w-[100px] h-full justify-center items-center fixed lg:left-[--sidebar-w]">
 				{data.content[0].text.length > 1 && activeId !== 0 && (
 					<button className="hover:opacity-70" onClick={() => prev()}>
 						<PiCaretLeftThin className="text-4xl font-light" />
 					</button>
 				)}
 			</div>
-			<div className="hidden lg:flex w-[80px] xl:w-[100px] h-full justify-center items-center fixed lg:right-[--sidebar-w]">
+			<div className="gsap-nav-controller hidden lg:flex w-[80px] xl:w-[100px] h-full justify-center items-center fixed lg:right-[--sidebar-w]">
 				{data.content[0].text.length > 1 &&
 					activeId !== data.content[0].text.length - 1 && (
 						<button className="hover:opacity-70" onClick={() => next()}>
 							<PiCaretRightThin className="text-4xl font-light" />
 						</button>
 					)}
+			</div>
+			{data.content[0].text.length > 1 && (
+				<div className="gsap-nav-controller hidden lg:flex items-center justify-center !absolute w-full bottom-[57.5px] left-0 h-[50px] text-xs tracking-wider font-medium">
+					0{activeId + 1}
+					<span className="px-1">/</span>0{data.content[0].text.length}
+				</div>
+			)}
+
+			{/* MOBILE */}
+			<div className="gsap-nav-controller lg:hidden items-center justify-center !absolute w-full bottom-0 left-0 h-[57.5px] text-xs tracking-wider font-medium px-[--sidebar-w-sm] md:px-[--sidebar-w-md] ">
+				<div className=" h-full w-full flex items-center justify-center gap-5 ">
+					<div className="gsap-nav-controller lg:hidden w-[35px]  h-full flex items-center justify-start">
+						{data.content[0].text.length > 1 && activeId !== 0 && (
+							<button className="hover:opacity-70" onClick={() => prev()}>
+								<PiCaretLeftThin className="text-lg font-light" />
+							</button>
+						)}
+					</div>
+					<div className="gsap-nav-controller lg:hidden bg-green-800 h-full">
+						{data.content[0].text.length > 1 && (
+							<div className="gsap-nav-controller flex items-center justify-center !absolute w-full h-full text-xs tracking-wider font-medium">
+								0{activeId + 1}
+								<span className="px-1">/</span>0{data.content[0].text.length}
+							</div>
+						)}
+					</div>
+					<div className="gsap-nav-controller lg:hidden w-[35px]  h-full flex items-center justify-end">
+						{data.content[0].text.length > 1 &&
+							activeId !== data.content[0].text.length - 1 && (
+								<button className="hover:opacity-70" onClick={() => next()}>
+									<PiCaretRightThin className="text-lg font-light" />
+								</button>
+							)}
+					</div>
+				</div>
 			</div>
 		</div>
 	);

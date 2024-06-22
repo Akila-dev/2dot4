@@ -20,19 +20,19 @@ const CTASubSlider = ({
 	const container = useRef();
 	const { contextSafe } = useGSAP({ scope: container });
 
-	useGSAP(
-		() => {
-			gsap.from('.gsap -show', {
-				opacity: 0,
-				y: 15,
-				duration: 0.75,
-				stagger: 0.175,
-				ease: 'power2.out',
-				delay: 0.5,
-			});
-		},
-		{ scope: container }
-	);
+	// useGSAP(
+	// 	() => {
+	// 		gsap.from('.gsap -show', {
+	// 			opacity: 0,
+	// 			y: 15,
+	// 			duration: 0.75,
+	// 			stagger: 0.175,
+	// 			ease: 'power2.out',
+	// 			delay: 0.5,
+	// 		});
+	// 	},
+	// 	{ scope: container }
+	// );
 
 	const hovering = contextSafe(() => {
 		gsap
@@ -70,7 +70,7 @@ const CTASubSlider = ({
 				className={`${
 					short ? 'max-w-[500px]' : 'max-w-[900px]'
 				} flex flex-col items-center justify-center gap-5 ${
-					makeTiny ? 'px-0  ' : 'px-[2.5%] '
+					makeTiny ? 'px-0  ' : 'px-[2.5%] md:px-[100px] lg:px-[50px]'
 				} text-center`}
 			>
 				<h1

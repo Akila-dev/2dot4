@@ -64,3 +64,10 @@ body::-webkit-scrollbar {
 	height: 100%;
 	width: 100%;
 }
+
+.gsap-nav-controller {
+	opacity: 0;
+}
+.gsap-nav-controller::first-child {
+	opacity: 1;
+}

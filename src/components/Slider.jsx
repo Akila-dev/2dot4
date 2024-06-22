@@ -112,6 +112,41 @@ const Slider = ({ data, subpage, page }) => {
 								delay: 0.65,
 							}
 						);
+					// !CONTROLS
+					//! CONTROLS
+					//! CONTROLS
+					gsap
+						.timeline()
+						.fromTo(
+							'#slide' + from + ' ' + '.gsap-nav-controller',
+							{
+								opacity: 1,
+								y: 0,
+							},
+							{
+								opacity: 0,
+								y: 15,
+								duration: 0.35,
+								// stagger: 0.1,
+								ease: 'power1.out',
+							}
+						)
+
+						.fromTo(
+							'#slide' + to + ' ' + '.gsap-nav-controller',
+							{
+								opacity: 0,
+								y: 15,
+							},
+							{
+								opacity: 1,
+								y: 0,
+								duration: 0.35,
+								// stagger: 0.1,
+								ease: 'power1.out',
+								delay: 1,
+							}
+						);
 				} else {
 					gsap
 						.timeline()
@@ -192,6 +227,42 @@ const Slider = ({ data, subpage, page }) => {
 								stagger: 0.1,
 								ease: 'power1.out',
 								delay: 0.45,
+							}
+						);
+					// !CONTROLLER
+					// !CONTROLLER
+					// !CONTROLLER
+					gsap
+						.timeline()
+						.fromTo(
+							'#slide' + from + ' ' + '.gsap-nav-controller',
+							{
+								opacity: 1,
+								y: 0,
+							},
+							{
+								opacity: 0,
+								y: 15,
+								duration: 0.35,
+								// stagger: 0.1,
+								ease: 'power1.out',
+							}
+						)
+
+						.fromTo(
+							'#slide' + to + ' ' + '.gsap-nav-controller',
+							{
+								opacity: 0,
+								y: 15,
+							},
+							{
+								opacity: 1,
+								y: 0,
+								// delay: 1,
+								duration: 0.35,
+								// stagger: 0.1,
+								ease: 'power1.out',
+								delay: 1,
 							}
 						);
 				}
