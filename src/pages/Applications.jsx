@@ -1,12 +1,12 @@
 import { Main } from '../containers';
 import { DATA } from '../utils/data';
 
-const Diamond = () => {
+const Applications = () => {
 	return (
 		<div className="!h-full">
-			<Main data={DATA[2].subContent} page="diamond" subpage />
+			<Main data={DATA[3].subContent} page="application" subpage />
 		</div>
 	);
 };
 
-export default Diamond;
+export default Applications;

@@ -120,8 +120,10 @@ export const DATA = [
 				link: 'Education',
 				content: [
 					{
-						title: ["Let's embark on this exciting adventure together!"],
-						text: [''],
+						title: ['Education'],
+						text: [
+							'At 2DOT4 we are dedicated to providing transparent, high-standard education on lab-grown diamonds to empower individuals and businesses alike. Our strategy revolves around promoting top quality, exploring the diverse possibilities of diamond material, and fostering a deep understanding of its applications. ',
+						],
 					},
 				],
 				buttonText: 'Contact Us',
@@ -197,9 +199,9 @@ export const DATA = [
 		],
 	},
 	{
-		link: 'diamond',
+		link: 'diamonds',
 		title: 'FROM SEED TO POLISHED STONE',
-		text: 'Our Lab-grown Diamonds',
+		text: 'Diamonds, process seeds, rough and polished',
 		buttonText: 'Explore Now',
 		img: diamondHero,
 		imgWebp: diamondHeroWebp,
@@ -252,7 +254,7 @@ export const DATA = [
 					{
 						title: ['Our Standard'],
 						text: [
-							'At 2dot4, we redefine excellence by marrying the intrinsic properties of diamonds with the precision of a perfect cut. Our unwavering commitment is to deliver unparalleled light performance through a harmonious fusion of color, clarity, and cut—the cornerstone of our revolutionary 2dot4 standard.',
+							'At 2DOT4, we redefine excellence by marrying the intrinsic properties of diamonds with the precision of a perfect cut. Our unwavering commitment is to deliver unparalleled light performance through a harmonious fusion of color, clarity, and cut—the cornerstone of our revolutionary 2dot4 standard.',
 							'Expect nothing short of brilliance as we consistently offer diamonds within the esteemed D to F color range and VS1 to VVS clarity grades, paired exclusively with ideal or excellent cuts. This meticulous calibration ensures optimal light performance, setting a new benchmark in the industry.',
 							'We pride ourselves on cultivating stones free from any milk or black inclusions, guaranteeing your diamond radiates the utmost brilliance and fire—the epitome of sought-after beauty in the diamond realm.',
 							'Join us as we boldly reshape the landscape of the diamond industry, setting a new standard of excellence with every facet, every sparkle, and every shimmering moment.',
@@ -268,8 +270,8 @@ export const DATA = [
 		],
 	},
 	{
-		link: 'application',
-		title: 'Application',
+		link: 'applications',
+		title: 'Applicationss',
 		text: 'The Applications',
 		buttonText: 'Explore Now',
 		img: applicationHero,
@@ -344,40 +346,86 @@ export const DATA = [
 				short: false,
 				// video: '',
 			},
+			{
+				link: 'Summary',
+				content: [
+					{
+						title: ['Semiconductor Diamonds'],
+						text: [
+							'At 2DOT4 Diamonds LLC, our pursuit of excellence in the field of lab-grown diamonds extends beyond gemstone production into the realms of technical and industrial applications. Our comprehensive research and development efforts demonstrate our commitment to innovation, quality, and the future of technology.',
+							'By pushing the boundaries of what is possible with lab-grown diamonds, we are not just crafting the future of our company but also contributing to the broader future of industry and science.',
+						],
+					},
+				],
+				buttonText: 'Contact Us',
+				img: [application4, application42],
+				imgWebp: [application4Webp, application42Webp],
+				short: false,
+				// video: '',
+			},
 		],
 	},
 ];
 
 export const ATELIER = {
 	img: dummy,
-	content: [
+	subContent: [
 		{
-			img: dummy,
-			title: 'What is Atelier Program',
-			text: "Step into our exclusive atelier program, where dreams become dazzling reality. Here, we craft bespoke masterpieces tailored to your every desire. From the smallest detail to the grandest vision, we bring your imagination to life, transforming your dreams into exquisite works of art. With limitless possibilities, let us guide you on a journey to create a one-of-a-kind treasure that captures the essence of your unique story. Your dream awaits – let's make it shine together.",
-		},
-		{
-			img: dummy,
-			title: 'How does the program work?',
-			text: 'Embark on an enchanting journey with us, where every step is a magical moment toward your ultimate masterpiece. Our meticulous process begins with selecting the perfect model, laying the foundation for your vision. From there, we dive deep into a realm of endless creativity, refining and shaping with each iteration until your dream takes its breathtaking form. Let us guide you through this enchanting voyage, where every detail leads to the creation of a timeless treasure crafted just for you. Your journey to perfection starts here.',
-		},
-		{
-			img: dummy,
-			title: 'How long does the Atelier program takes?',
-			text: 'The timeline for completing a project can vary significantly based on its complexity, making it challenging to offer a precise estimate. Generally, projects utilizing our pre-selected options are completed more quickly than custom development projects, such as creating a completely new diamond cut, which may require several months for cutting and polishing. Rest assured, we are committed to providing accurate timelines and ensuring each project is completed to the highest standards of quality and craftsmanship.',
-		},
-		{
-			img: dummy,
-			title: 'What are the capacities of the Atelier Program?',
-			text: "Our Atelier program is all about crafting unique and special pieces that reflect your individual style. Because we want to give each project the attention it deserves, we have a limited number of spots available each year. If we receive more requests than we can handle right away, don't worry! We'll add you to our waiting list and keep you updated on when we can start working together. Your dream piece is worth the wait, and we're here to make it happen.",
-		},
-		{
-			img: dummy,
-			title: 'What are the prices for the items of the ATELIER program?',
-			text: 'The price will be determined based on factors such as quality, materials and complexity, and would be mutually agreed upon between 2DOT4 and the client for each individual case',
+			link: 'Atelier Program',
+			content: [
+				{
+					title: [
+						'What is Atelier Program',
+						'How does the program work?',
+						'How long does the Atelier program takes?',
+						'What are the capacities of the Atelier Program?',
+						'What are the prices for the items of the ATELIER program?',
+					],
+					text: [
+						"Step into our exclusive atelier program, where dreams become dazzling reality. Here, we craft bespoke masterpieces tailored to your every desire. From the smallest detail to the grandest vision, we bring your imagination to life, transforming your dreams into exquisite works of art. With limitless possibilities, let us guide you on a journey to create a one-of-a-kind treasure that captures the essence of your unique story. Your dream awaits – let's make it shine together.",
+						'Embark on an enchanting journey with us, where every step is a magical moment toward your ultimate masterpiece. Our meticulous process begins with selecting the perfect model, laying the foundation for your vision. From there, we dive deep into a realm of endless creativity, refining and shaping with each iteration until your dream takes its breathtaking form. Let us guide you through this enchanting voyage, where every detail leads to the creation of a timeless treasure crafted just for you. Your journey to perfection starts here.',
+						'The timeline for completing a project can vary significantly based on its complexity, making it challenging to offer a precise estimate. Generally, projects utilizing our pre-selected options are completed more quickly than custom development projects, such as creating a completely new diamond cut, which may require several months for cutting and polishing. Rest assured, we are committed to providing accurate timelines and ensuring each project is completed to the highest standards of quality and craftsmanship.',
+						"Our Atelier program is all about crafting unique and special pieces that reflect your individual style. Because we want to give each project the attention it deserves, we have a limited number of spots available each year. If we receive more requests than we can handle right away, don't worry! We'll add you to our waiting list and keep you updated on when we can start working together. Your dream piece is worth the wait, and we're here to make it happen.",
+						'The price will be determined based on factors such as quality, materials and complexity, and would be mutually agreed upon between 2DOT4 and the client for each individual case',
+					],
+				},
+			],
+			buttonText: '',
+			img: [
+				application1,
+				application12,
+				application1,
+				application12,
+				application1,
+				application12,
+			],
+			imgWebp: [
+				application1Webp,
+				application12Webp,
+				application1Webp,
+				application12Webp,
+				application1Webp,
+				application12Webp,
+			],
+			short: false,
+			// video: '',
 		},
 	],
 };
+
+export const discover = [
+	{
+		img: dummy,
+		content: [
+			{
+				img: [application4],
+				imgWebp: [application4Webp],
+				title: 'Discover',
+				text: "Discover the secret to extraordinary sparkle with 2DOT4—the ultimate destination for diamond perfection. At the heart of our name lies the magic of the diamond's refractive index, a dazzling 2.42—a testament to its unmatched brilliance. Picture every moment shimmering with the radiance of a thousand stars. That's the power of the Diamond Refraction Index. Elevate your memories to new heights of luxury and sophistication. Because when it comes to celebrating life's precious moments, nothing less than perfection will suffice. Experience the brilliance of 2DOT4 and let your diamonds shine like never before.",
+			},
+		],
+	},
+];
 
 export const CONTACT = {
 	brandName: '2dot4',

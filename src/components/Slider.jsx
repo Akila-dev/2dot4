@@ -341,7 +341,13 @@ const Slider = ({ data, subpage, page }) => {
 				))}
 			</div>
 			{/* Sidebar */}
-			<div className="!hidden md:!flex layout-sidebars !p-0 md:!px-8 lg:!px-10 fixed top-0 left-0 h-full gsap-fade-in">
+			<div
+				className={
+					page === 'discover'
+						? 'hidden'
+						: '!hidden md:!flex layout-sidebars !p-0 md:!px-8 lg:!px-10 fixed top-0 left-0 h-full gsap-fade-in'
+				}
+			>
 				<div className="md:space-y-3">
 					{data.map((item, id) => (
 						<SideNavLink
@@ -355,7 +361,13 @@ const Slider = ({ data, subpage, page }) => {
 				</div>
 			</div>
 			{/* TOP NAV FOR MOBILE */}
-			<div className=" md:hidden gsap-fade-in w-full h-[40px] border-b-0 border-[--border] fixed top-[45px] md:top-[56.5px]">
+			<div
+				className={
+					page === 'discover'
+						? 'hidden'
+						: 'md:hidden gsap-fade-in w-full h-[40px] border-b-0 border-[--border] fixed top-[45px] md:top-[56.5px]'
+				}
+			>
 				<div className="flex gap-5 items-center h-full w-full overflow-x-scroll no-scrollbar px-[25%]">
 					{data.map((item, id) => (
 						<div key={id} className="block text-center">

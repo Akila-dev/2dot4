@@ -22,7 +22,7 @@ import {
 } from 'react-icons/bi';
 import { PiInstagramLogoFill, PiDotsThreeOutlineFill } from 'react-icons/pi';
 
-const Main = ({ data, page, subpage }) => {
+const DiscoverContainer = ({ data, page, subpage }) => {
 	const container = useRef();
 	const menuContainer = useRef();
 	const [showMenu, setShowMenu] = useState(false);
@@ -177,4 +177,4 @@ const Main = ({ data, page, subpage }) => {
 	);
 };
 
-export default Main;
+export default DiscoverContainer;

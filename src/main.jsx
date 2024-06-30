@@ -8,9 +8,11 @@ import {
 	Home,
 	About,
 	Technology,
-	Diamond,
-	Application,
+	Diamonds,
+	Applications,
 	Contact,
+	Discover,
+	Atelier,
 	ErrorPage,
 } from './pages';
 
@@ -31,8 +33,8 @@ const router = createBrowserRouter([
 		errorElement: <ErrorPage />,
 	},
 	{
-		path: '/diamond',
-		element: <Diamond />,
+		path: '/diamonds',
+		element: <Diamonds />,
 		errorElement: <ErrorPage />,
 	},
 	{
@@ -41,8 +43,18 @@ const router = createBrowserRouter([
 		errorElement: <ErrorPage />,
 	},
 	{
-		path: '/application',
-		element: <Application />,
+		path: '/applications',
+		element: <Applications />,
+		errorElement: <ErrorPage />,
+	},
+	{
+		path: '/discover',
+		element: <Discover />,
+		errorElement: <ErrorPage />,
+	},
+	{
+		path: '/atelier',
+		element: <Atelier />,
 		errorElement: <ErrorPage />,
 	},
 ]);
