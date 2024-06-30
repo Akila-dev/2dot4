@@ -28,9 +28,9 @@ const Slide = ({ data, text, id, page, sectionId }) => {
 				>
 					<div className="absolute !bottom-0 !right-0 w-screen h-screen overflow-hidden ">
 						<ImgWithFallback
-							src={data.imgWebp}
-							fallback={data.img}
-							alt={data.link}
+							src={data.imgWebp[id]}
+							fallback={data.img[id]}
+							alt={data.link + id}
 						/>
 						<div className="bg-overlay absolute top-0 left-0"></div>
 					</div>
@@ -38,7 +38,11 @@ const Slide = ({ data, text, id, page, sectionId }) => {
 					<div className="fixed  md:py-[60px] px-5 md:px-[305px] w-screen h-full flex items-center justify-between">
 						<div className="w-full h-full flex items-center justify-center flex-1">
 							<CTASubSlider
-								title={data.content[0].title}
+								title={
+									data.content[0].title.length > 1
+										? data.content[0].title[id]
+										: data.content[0].title
+								}
 								text={text}
 								btnText={data.buttonText}
 								href={data.link}

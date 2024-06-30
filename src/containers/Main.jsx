@@ -18,6 +18,8 @@ import {
 	// ImgWithFallback,
 } from '../components';
 
+import logo_icon from '../assets/imgs/2dot4-icon.svg';
+
 gsap.registerPlugin(useGSAP);
 
 // Assets
@@ -31,29 +33,46 @@ import { PiInstagramLogoFill, PiDotsThreeOutlineFill } from 'react-icons/pi';
 import { RiCloseLargeLine } from 'react-icons/ri';
 
 const MenuPopup = ({ close, data, container }) => {
-	const { contextSafe } = useGSAP({ scope: container });
+	const menu = [
+		{
+			link: 'about',
+		},
+		{
+			link: 'technology',
+		},
+		{
+			link: 'diamond',
+		},
+		{
+			link: 'application',
+		},
+		{
+			link: 'news',
+		},
+	];
+	// const { contextSafe } = useGSAP({ scope: container });
 
-	const spinIn = contextSafe(() => {
-		gsap.timeline().to('.menu-icon', {
-			rotation: 360,
-			opacity: 0.5,
-			duration: 1,
-			stagger: 0.175,
-			ease: 'power2.out',
-			// clearProps: 'width',
-		});
-	});
+	// const spinIn = contextSafe(() => {
+	// 	gsap.timeline().to('.menu-icon', {
+	// 		rotation: 360,
+	// 		opacity: 0.5,
+	// 		duration: 1,
+	// 		stagger: 0.175,
+	// 		ease: 'power2.out',
+	// 		// clearProps: 'width',
+	// 	});
+	// });
 
-	const spinOut = contextSafe(() => {
-		gsap.timeline().to('.menu-icon', {
-			rotation: 0,
-			opacity: 1,
-			duration: 1,
-			stagger: 0.175,
-			ease: 'power2.out',
-			// clearProps: 'width',
-		});
-	});
+	// const spinOut = contextSafe(() => {
+	// 	gsap.timeline().to('.menu-icon', {
+	// 		rotation: 0,
+	// 		opacity: 1,
+	// 		duration: 1,
+	// 		stagger: 0.175,
+	// 		ease: 'power2.out',
+	// 		// clearProps: 'width',
+	// 	});
+	// });
 
 	useGSAP(
 		() => {
@@ -77,7 +96,7 @@ const MenuPopup = ({ close, data, container }) => {
 
 				<div>
 					<div className="space-y-4">
-						{data.map((item, id) => (
+						{menu.map((item, id) => (
 							<Link
 								key={id}
 								to={item.link}
@@ -181,7 +200,7 @@ const Main = ({ data, page, subpage }) => {
 				<Slider data={data} page={page} subpage={subpage} />
 				{/* TOP */}
 				{/* TOP */}
-				<div className="h-[56.5px] flex items-center justify-center relative w-full z-10 pointer-events-none">
+				<div className="h-[45px] md:h-[56.5px] flex items-center justify-center relative w-full z-10 pointer-events-none">
 					<div className="flex justify-between items-center w-full layout-text h-full">
 						<div className="layout-sidebars layout-sidebar-l">
 							<MenuButton onClick={() => setShowMenu(true)} />
@@ -217,11 +236,18 @@ const Main = ({ data, page, subpage }) => {
 				</div>
 				{/* BOTTOM */}
 				{/* BOTTOM */}
-				<div className="h-[56.5px] flex items-center justify-center w-full z-10 pointer-events-none ">
+				<div className="h-[45px] md:h-[56.5px] flex items-center justify-center w-full z-10 pointer-events-none ">
 					<div className="flex justify-between items-center w-full layout-text h-full">
 						<div className="layout-sidebars layout-sidebar-l pointer-events-auto">
-							<BiSolidPaperPlane className="text-xl" />
-							<span className="hidden md:inline">Discover</span>
+							{/* <BiSolidPaperPlane className="text-xl" /> */}
+							<a href="discover" className="flex items-end gap-[10px]">
+								<img
+									src={logo_icon}
+									alt="logo"
+									className="h-[30px] md:h-[40px] w-auto object-cover"
+								/>
+								<span className="hidden md:inline pb-1">Discover</span>
+							</a>
 						</div>
 						<div className="w-full border-x border-[--lines] md:border-none flex items-center justify-center h-full">
 							<div className="hidden lg:block">
@@ -244,8 +270,8 @@ const Main = ({ data, page, subpage }) => {
 				</div>
 				{/* LINES */}
 				{/* LINES */}
-				<span className="lines horizontal-line border-b top-0 left-0 !h-[56.5px]"></span>
-				<span className="lines horizontal-line border-t bottom-0 left-0 !h-[56.5px] "></span>
+				<span className="lines horizontal-line border-b top-0 left-0 !h-[45px] md:!h-[56.5px]"></span>
+				<span className="lines horizontal-line border-t bottom-0 left-0 !h-[45px] md:!h-[56.5px] "></span>
 				<span className="lines vertical-line border-r top-0 left-0 !h-full md:w-[--sidebar-w-md]  lg:w-[--sidebar-w] !hidden md:!block"></span>
 				<span className="lines vertical-line border-l top-0 right-0 !h-full md:w-[--sidebar-w-md]  lg:w-[--sidebar-w] !hidden md:!block"></span>
 			</div>

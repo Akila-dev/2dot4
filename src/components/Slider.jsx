@@ -355,7 +355,7 @@ const Slider = ({ data, subpage, page }) => {
 				</div>
 			</div>
 			{/* TOP NAV FOR MOBILE */}
-			<div className=" md:hidden gsap-fade-in w-full h-[46.5px] border-b-0 border-[--border] fixed top-[56.5px] t">
+			<div className=" md:hidden gsap-fade-in w-full h-[40px] border-b-0 border-[--border] fixed top-[45px] md:top-[56.5px]">
 				<div className="flex gap-5 items-center h-full w-full overflow-x-scroll no-scrollbar px-[25%]">
 					{data.map((item, id) => (
 						<div key={id} className="block text-center">
@@ -369,7 +369,7 @@ const Slider = ({ data, subpage, page }) => {
 						</div>
 					))}
 				</div>
-				<span className="horizontal-line absolute top-0 left-0 w-full h-[46.5px] border-b border-[--border] z-[-1]"></span>
+				<span className="horizontal-line absolute top-0 left-0 w-full h-[40px] border-b border-[--border] z-[-1]"></span>
 			</div>
 		</div>
 	);
