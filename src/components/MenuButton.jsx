@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
@@ -9,13 +9,24 @@ const MenuButton = ({ onClick }) => {
 	const container = useRef();
 	const { contextSafe } = useGSAP({ scope: container });
 	const animateIcon = contextSafe(() => {
-		gsap.from('.menu-lines', {
-			width: 0,
-			duration: 1,
-			stagger: 0.175,
-			ease: 'power2.out',
-			// clearProps: 'width',
-		});
+		gsap
+			// .timeline()
+			// .set('.menu-lines', {
+			// 	width: 0,
+			// })
+			.fromTo(
+				'.menu-lines',
+				{
+					width: 0,
+				},
+				{
+					width: 20,
+					duration: 1,
+					stagger: 0.175,
+					ease: 'power2.out',
+					// clearProps: 'width',
+				}
+			);
 	});
 	return (
 		<button

@@ -3,6 +3,7 @@ import { ImgWithFallback, CTASubSlider } from '../components';
 import { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+// import WheelReact from 'wheel-react';
 
 import { PiCaretLeftThin, PiCaretRightThin } from 'react-icons/pi';
 
@@ -64,6 +65,7 @@ const SubpageSlider = ({ data, id, page }) => {
 	const container = useRef(null);
 	const [activeId, setActiveId] = useState(0);
 	const { contextSafe } = useGSAP({ scope: container });
+	// const [isSideScrolling, setIsSideScrolling] = useState(false);
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -105,6 +107,7 @@ const SubpageSlider = ({ data, id, page }) => {
 		) {
 			var targetTo = '#' + String(page + id + to);
 			var targetFrom = '#' + String(page + id + from);
+			// setIsSideScrolling(true);
 			if (from !== to) {
 				if (from < to) {
 					gsap
@@ -336,6 +339,9 @@ const SubpageSlider = ({ data, id, page }) => {
 				setTimeout(() => {
 					setActiveId(to);
 				}, 500);
+				// setTimeout(() => {
+				// 	setIsSideScrolling(false);
+				// }, 3000);
 			}
 		}
 	});
@@ -344,6 +350,7 @@ const SubpageSlider = ({ data, id, page }) => {
 		if (activeId < data.content[0].text.length - 1) {
 			console.log('test next');
 			scrollTo(activeId, activeId + 1);
+			// setIsSideScrolling(true);
 		}
 	});
 
@@ -351,13 +358,32 @@ const SubpageSlider = ({ data, id, page }) => {
 		if (activeId > 0) {
 			console.log('test prev');
 			scrollTo(activeId, activeId - 1);
+			// setIsSideScrolling(true);
 		}
 	});
+
+	// useEffect(() => {
+	// 	WheelReact.config({
+	// 		left: () => {
+	// 			if (!isSideScrolling) {
+	// 				setIsSideScrolling(true);
+	// 				next();
+	// 			}
+	// 		},
+	// 		right: () => {
+	// 			if (!isSideScrolling) {
+	// 				setIsSideScrolling(true);
+	// 				prev();
+	// 			}
+	// 		},
+	// 	});
+	// }, [isSideScrolling, next, prev]);
 
 	return (
 		<div
 			ref={container}
 			className="w-full h-full overflow-hidden relative right-0"
+			// {...WheelReact.events}
 		>
 			{data.content[0].text.map((text, index) => (
 				<Slide
@@ -394,7 +420,7 @@ const SubpageSlider = ({ data, id, page }) => {
 			)}
 
 			{/* MOBILE */}
-			<div className="gsap-nav-controller lg:hidden items-center justify-center !absolute w-full bottom-0 left-0 h-[57.5px] text-xs tracking-wider font-medium px-[--sidebar-w-sm] md:px-[--sidebar-w-md] ">
+			<div className="gsap-nav-controller lg:hidden items-center justify-center !absolute w-full bottom-0 left-0 h-[45px] md:h-[57.5px] text-xs tracking-wider font-medium px-[--sidebar-w-sm] md:px-[--sidebar-w-md] ">
 				<div className=" h-full w-full flex items-center justify-center gap-5 ">
 					<div className="gsap-nav-controller lg:hidden w-[35px]  h-full flex items-center justify-start">
 						{data.content[0].text.length > 1 && activeId !== 0 && (

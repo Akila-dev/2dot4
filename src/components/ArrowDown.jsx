@@ -43,7 +43,7 @@ const ArrowDown = ({ onClick }) => {
 				onClick={onClick}
 				onMouseEnter={() => toggleTimeline()}
 				onMouseLeave={() => toggleTimeline()}
-				className={`h-[40px] w-[40px] rounded-full border border-[--border] border-dashed dotted-circle`}
+				className={`h-[35px] md:h-[40px] w-[35px] md:w-[40px] rounded-full border border-[--border] border-dashed dotted-circle`}
 			>
 				{/* <span
 					onClick={onClick}
@@ -62,8 +62,8 @@ const ArrowDown = ({ onClick }) => {
 				)} */}
 			</button>
 			<div className="absolute top-0 h-full flex justify-center items-center pointer-events-none">
-				<span className="w-[40px] h-[40px] flex items-center justify-center">
-					<GoArrowDown className="text-lg text-[--grey]" />
+				<span className="`h-[35px] md:h-[40px] w-[35px] md:w-[40px]  flex items-center justify-center pl-[1px]">
+					<GoArrowDown className="te text-base md:text-lg text-[--grey]" />
 				</span>
 			</div>
 		</div>

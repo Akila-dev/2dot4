@@ -277,20 +277,24 @@ const Slider = ({ data, subpage, page }) => {
 	useEffect(() => {
 		WheelReact.config({
 			left: () => {
-				if (!isScrolling) {
-					if (activeId < data.length - 1) {
-						console.log('wheel left detected.');
-						setIsScrolling(true);
-						scrollTo(activeId, activeId + 1);
+				if (page === 'home') {
+					if (!isScrolling) {
+						if (activeId < data.length - 1) {
+							console.log('wheel left detected.');
+							setIsScrolling(true);
+							scrollTo(activeId, activeId + 1);
+						}
 					}
 				}
 			},
 			right: () => {
-				if (!isScrolling) {
-					if (activeId > 0) {
-						console.log('wheel right detected.');
-						setIsScrolling(true);
-						scrollTo(activeId, activeId - 1);
+				if (page === 'home') {
+					if (!isScrolling) {
+						if (activeId > 0) {
+							console.log('wheel right detected.');
+							setIsScrolling(true);
+							scrollTo(activeId, activeId - 1);
+						}
 					}
 				}
 			},

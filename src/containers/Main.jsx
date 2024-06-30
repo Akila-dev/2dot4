@@ -98,7 +98,7 @@ const Main = ({ data, page, subpage }) => {
 									<img
 										src={logo_white}
 										alt="logo"
-										className="h-[30px] md:h-[40px] w-auto object-cover mb-1"
+										className="h-[30px] md:h-[40px] w-auto object-cover mb-1 hover:scale-110 transition duration-500"
 									/>
 								</h3>
 							</Link>
