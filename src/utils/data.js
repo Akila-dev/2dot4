@@ -106,11 +106,11 @@ export const DATA = [
 					{
 						title: ['Center of Excellence'],
 						text: [
-							"At 2DOT4, we go beyond mere certification; we cultivate a fusion of culture, emotion, and innovation. As a center of excellence, we intertwine technology with artistry and talent, fuelled by an unwavering commitment to excellence. Recently, in Dubai, the epitome of innovation in the Middle East, we proudly inaugurated the GCC's premier Lab-Grown Diamond plantation—a monumental stride in our quest to revolutionize the diamond industry.",
+							"At 2DOT4, we go beyond mere certification; we cultivate a fusion of culture, emotion, and innovation. As a center of excellence, we intertwine technology with artistry and talent, fuelled by an unwavering commitment to excellence. Recently, in Dubai, the epitome of innovation in the Middle East, we proudly inaugurated the GCC's premier Lab-Grown Diamond laboratory—a monumental stride in our quest to revolutionize the diamond industry.",
 						],
 					},
 				],
-				buttonText: '',
+				buttonText: 'Visit Us',
 				img: [about2],
 				imgWebp: [about2Webp],
 				short: false,
@@ -120,7 +120,7 @@ export const DATA = [
 				link: 'Education',
 				content: [
 					{
-						title: ['Education'],
+						title: ["Let's Embark on this exciting adventure together"],
 						text: [
 							'At 2DOT4 we are dedicated to providing transparent, high-standard education on lab-grown diamonds to empower individuals and businesses alike. Our strategy revolves around promoting top quality, exploring the diverse possibilities of diamond material, and fostering a deep understanding of its applications. ',
 						],
@@ -164,7 +164,7 @@ export const DATA = [
 				link: 'State of the Art Reactors',
 				content: [
 					{
-						title: ['State-of-the-Art Reactors'],
+						title: ['State-of-the-Art Reactors', '', ''],
 						text: [
 							'In the realm of cutting-edge diamond manufacturing, the cornerstone of innovation lies in the state-of-the-art CVD reactors employed by us at 2DOT4 Diamond LLC. These marvels of modern science represent the pinnacle of technological advancement, seamlessly blending precision engineering with scientific ingenuity. Behind the sleek façade lies a world of intricate processes, meticulously orchestrated to yield diamonds of unparalleled quality and brilliance.',
 							"What sets our CVD reactors apart, however, goes beyond mere surface aesthetics. It's in the subtle nuances of design refinement, the meticulous attention to detail, and the relentless pursuit of perfection that truly distinguish our reactors from the competition. With a focus on efficiency, reliability, and sustainability, our reactors effortlessly transcend the boundaries of conventional diamond production, setting new standards of excellence in the industry.",
@@ -182,7 +182,7 @@ export const DATA = [
 				link: 'CVD Technology',
 				content: [
 					{
-						title: ['CVD Diamond Growth Technology'],
+						title: ['CVD Diamond Growth Technology', '', ''],
 						text: [
 							'At 2DOT4, we produce diamonds through Chemical Vapor Deposition (CVD), a sophisticated technique that uses our state-of-the-art reactors.',
 							'We start with a diamond seed, placed in a reactor where we introduce gases like methane and hydrogen. These gases are ionised into plasma with microwave radiation, allowing carbon atoms from the methane to bond with the seed, building the diamond layer by layer.',
@@ -254,7 +254,7 @@ export const DATA = [
 					{
 						title: ['Our Standard'],
 						text: [
-							'At 2DOT4, we redefine excellence by marrying the intrinsic properties of diamonds with the precision of a perfect cut. Our unwavering commitment is to deliver unparalleled light performance through a harmonious fusion of color, clarity, and cut—the cornerstone of our revolutionary 2dot4 standard.',
+							'At 2DOT4, we redefine excellence by marrying the intrinsic properties of diamonds with the precision of a perfect cut. Our unwavering commitment is to deliver unparalleled light performance through a harmonious fusion of color, clarity, and cut—the cornerstone of our revolutionary 2DOT4 standard.',
 							'Expect nothing short of brilliance as we consistently offer diamonds within the esteemed D to F color range and VS1 to VVS clarity grades, paired exclusively with ideal or excellent cuts. This meticulous calibration ensures optimal light performance, setting a new benchmark in the industry.',
 							'We pride ourselves on cultivating stones free from any milk or black inclusions, guaranteeing your diamond radiates the utmost brilliance and fire—the epitome of sought-after beauty in the diamond realm.',
 							'Join us as we boldly reshape the landscape of the diamond industry, setting a new standard of excellence with every facet, every sparkle, and every shimmering moment.',
@@ -271,8 +271,8 @@ export const DATA = [
 	},
 	{
 		link: 'applications',
-		title: 'Applicationss',
-		text: 'The Applications',
+		title: 'Applications',
+		text: 'Our cutting-edge R&D team is revolutionizing the diamond industry. We create stunning gem diamonds and pioneer innovative industrial applications for lab-grown diamonds. Leveraging advanced technology and rigorous research, we set new standards and lead the market. Discover the future of diamonds with us.',
 		buttonText: 'Explore Now',
 		img: applicationHero,
 		imgWebp: applicationHeroWebp,
@@ -428,7 +428,7 @@ export const discover = [
 ];
 
 export const CONTACT = {
-	brandName: '2dot4',
+	brandName: '2DOT4',
 	socials: [
 		'https://instagram.com',
 		'https://linkedin.com',

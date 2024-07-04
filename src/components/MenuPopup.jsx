@@ -17,14 +17,14 @@ const MenuPopup = ({ close, container }) => {
 			link: 'technology',
 		},
 		{
-			link: 'diamond',
+			link: 'diamonds',
 		},
 		{
-			link: 'application',
+			link: 'applications',
 		},
-		{
-			link: 'news',
-		},
+		// {
+		// 	link: 'news',
+		// },
 	];
 
 	useGSAP(

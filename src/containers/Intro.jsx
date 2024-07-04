@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
-// import { CONTACT } from '../utils/data';
+import { CONTACT } from '../utils/data';
 // import { useEffect, useRef, useState } from 'react';
 import { useRef } from 'react';
 import WheelReact from 'wheel-react';
 
 import { CTA, ArrowDown } from '../components';
-import logo_white from '../assets/imgs/logo-white.svg';
+// import logo_white from '../assets/imgs/logo-white.svg';
 
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -14,7 +14,7 @@ gsap.registerPlugin(useGSAP);
 
 const Intro = ({ closeIntro }) => {
 	// const [scrolling, setScrolling] = useState(false);
-	// const contact = { ...CONTACT };
+	const contact = { ...CONTACT };
 	const container = useRef();
 	const { contextSafe } = useGSAP({ scope: container });
 
@@ -26,7 +26,7 @@ const Intro = ({ closeIntro }) => {
 			opacity: 0,
 			delay: 0.5,
 			duration: 0.75,
-			stagger: 0.275,
+			stagger: 0.175,
 			ease: 'power2.out',
 			onComplete: () => closeIntro(),
 		});
@@ -64,12 +64,12 @@ const Intro = ({ closeIntro }) => {
 				<div className="bg-overlay absolute top-0 left-0 z-[-1]"></div>
 
 				<div className="h-[45px] md:h-[56.5px] flex items-center justify-center border-b border-[--border] w-full intro-content">
-					{/* <h3 className="uppercase">{contact.brandName}</h3> */}
-					<img
+					<h3 className="uppercase">{contact.brandName}</h3>
+					{/* <img
 						src={logo_white}
 						alt="logo"
 						className="h-[30px] md:h-[40px] w-auto object-cover mb-1  transition duration-500"
-					/>
+					/> */}
 				</div>
 				<div className="intro-content">
 					<CTA
