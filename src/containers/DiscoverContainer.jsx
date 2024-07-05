@@ -10,7 +10,7 @@ import { CONTACT } from '../utils/data';
 import { ArrowDown, MenuButton, Slider, MenuPopup } from '../components';
 
 import logo_icon from '../assets/imgs/2dot4-icon.svg';
-import logo_white from '../assets/imgs/logo-white.svg';
+// import logo_white from '../assets/imgs/logo-white.svg';
 
 gsap.registerPlugin(useGSAP);
 
@@ -94,12 +94,12 @@ const DiscoverContainer = ({ data, page, subpage }) => {
 						<div className="w-full h-full">
 							<Link to="/">
 								<h3 className="uppercase w-full border-x border-[--lines] md:border-none flex items-center justify-center h-full pointer-events-auto">
-									{/* {contact.brandName} */}
-									<img
+									{contact.brandName}
+									{/* <img
 										src={logo_white}
 										alt="logo"
 										className="h-[30px] md:h-[40px] w-auto object-cover mb-1"
-									/>
+									/> */}
 								</h3>
 							</Link>
 						</div>
@@ -131,13 +131,16 @@ const DiscoverContainer = ({ data, page, subpage }) => {
 					<div className="flex justify-between items-center w-full layout-text h-full">
 						<div className="layout-sidebars layout-sidebar-l pointer-events-auto">
 							{/* <BiSolidPaperPlane className="text-xl" /> */}
-							<a href="discover" className="flex items-end gap-[10px]">
+							<a
+								href="discover"
+								className="flex items-end w-full justify-center gap-[10px]"
+							>
 								<img
 									src={logo_icon}
 									alt="logo"
 									className="h-[30px] md:h-[40px] w-auto object-cover"
 								/>
-								<span className="hidden md:inline pb-1">Discover</span>
+								{/* <span className="hidden md:inline pb-1">Discover</span> */}
 							</a>
 						</div>
 						<div className="w-full border-x border-[--lines] md:border-none flex items-center justify-center h-full">

@@ -131,7 +131,10 @@ const Main = ({ data, page, subpage }) => {
 					<div className="flex justify-between items-center w-full layout-text h-full">
 						<div className="layout-sidebars layout-sidebar-l pointer-events-auto">
 							{/* <BiSolidPaperPlane className="text-xl" /> */}
-							<a href="discover" className="flex items-end gap-[10px]">
+							<a
+								href="discover"
+								className="flex items-end w-full justify-center gap-[10px]"
+							>
 								<img
 									src={logo_icon}
 									alt="logo"

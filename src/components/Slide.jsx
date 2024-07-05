@@ -22,7 +22,7 @@ const Slide = ({ data, id, page }) => {
 						title={data.title}
 						text={data.text}
 						btnText={data.buttonText}
-						href={data.link}
+						href={'/' + data.link}
 						short
 						id={page + id}
 						// short={data.short}
