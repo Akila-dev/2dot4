@@ -22,10 +22,22 @@ import technology2Webp from '../assets/sectionImgs/2/2.webp';
 
 //* SECTION 3: DIAMOND SECTION
 import diamondHero from '../assets/sectionImgs/3/hero.jpg';
-import diamond1 from '../assets/sectionImgs/3/1.jpg';
+import diamond11 from '../assets/sectionImgs/3/11.jpg';
+import diamond12 from '../assets/sectionImgs/3/12.jpg';
+import diamond13 from '../assets/sectionImgs/3/13.jpg';
+import diamond14 from '../assets/sectionImgs/3/14.jpg';
+import diamond15 from '../assets/sectionImgs/3/15.jpg';
+import diamond16 from '../assets/sectionImgs/3/16.jpg';
+import diamond17 from '../assets/sectionImgs/3/17.jpg';
 import diamond2 from '../assets/sectionImgs/3/2.jpg';
 import diamondHeroWebp from '../assets/sectionImgs/3/hero.webp';
-import diamond1Webp from '../assets/sectionImgs/3/1.webp';
+import diamond11Webp from '../assets/sectionImgs/3/11.webp';
+import diamond12Webp from '../assets/sectionImgs/3/12.webp';
+import diamond13Webp from '../assets/sectionImgs/3/13.webp';
+import diamond14Webp from '../assets/sectionImgs/3/14.webp';
+import diamond15Webp from '../assets/sectionImgs/3/15.webp';
+import diamond16Webp from '../assets/sectionImgs/3/16.webp';
+import diamond17Webp from '../assets/sectionImgs/3/17.webp';
 import diamond2Webp from '../assets/sectionImgs/3/2.webp';
 
 //* SECTION 4: APPLICATION SECTION
@@ -236,14 +248,23 @@ export const DATA = [
 					},
 				],
 				buttonText: 'Contact Us',
-				img: [diamond1, diamond1, diamond1, diamond1, diamond1, diamond1],
+				img: [
+					diamond11,
+					diamond12,
+					diamond13,
+					diamond14,
+					diamond15,
+					diamond16,
+					diamond17,
+				],
 				imgWebp: [
-					diamond1Webp,
-					diamond1Webp,
-					diamond1Webp,
-					diamond1Webp,
-					diamond1Webp,
-					diamond1Webp,
+					diamond11Webp,
+					diamond12Webp,
+					diamond13Webp,
+					diamond14Webp,
+					diamond15Webp,
+					diamond16Webp,
+					diamond17Webp,
 				],
 				short: false,
 				// video: '',

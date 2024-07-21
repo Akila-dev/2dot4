@@ -42,7 +42,9 @@ const Slide = ({ data, text, id, page, sectionId }) => {
 								title={
 									data.content[0].title.length > 1
 										? data.content[0].title[id]
-										: data.content[0].title
+										: id === 0
+										? data.content[0].title
+										: ''
 								}
 								text={text}
 								btnText={
