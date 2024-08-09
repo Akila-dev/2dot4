@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 
 {
@@ -16,11 +17,11 @@ const ImgWithFallback = ({
 }) => {
 	return (
 		<picture className="w-screen h-screen !object-center !object-cover overflow-hidden">
-			<source
+			{/* <source
 				srcSet={src}
 				type={type}
 				className="w-screen h-screen !object-center !object-cover overflow-hidden"
-			/>
+			/> */}
 			<img
 				src={fallback}
 				{...delegated}
