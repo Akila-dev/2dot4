@@ -24,6 +24,10 @@ const Slider = ({ data, subpage, page }) => {
 		new Array(data.length).fill(0)
 	); // Active Id for the subpage sliders (i.e ltr and rtl slides)
 	// const [callNext, setCallNext] = useState(second)
+	const [touchStart, setTouchStart] = useState({
+		x: 0,
+		y: 0,
+	});
 	const { contextSafe } = useGSAP({ scope: container });
 	const [isScrolling, setIsScrolling] = useState(false);
 
@@ -570,103 +574,68 @@ const Slider = ({ data, subpage, page }) => {
 		prevSubSlide,
 	]);
 
-	// ! MOBILE CONTROLS WITH TOUCH CONTROLS
-	useEffect(() => {
-		const getTouches = (evt) => {
-			return evt.touches;
-		};
-		var xDown = null;
-		var yDown = null;
+	// ! MOBILE SWIPE CONTROL USING TOUCHES
+	const touchControl = (e) => {
+		let touchendX = e.changedTouches[0].clientX;
+		let touchendY = e.changedTouches[0].clientY;
 
-		function handleTouchStart(evt) {
-			const firstTouch = getTouches(evt)[0];
-			xDown = firstTouch.clientX;
-			yDown = firstTouch.clientY;
-		}
-
-		function handleTouchMove(evt) {
-			if (!xDown || !yDown) {
-				return;
-			}
-
-			var xUp = evt.touches[0].clientX;
-			var yUp = evt.touches[0].clientY;
-
-			var xDiff = xDown - xUp;
-			var yDiff = yDown - yUp;
-
-			if (Math.abs(xDiff) > Math.abs(yDiff)) {
-				if (xDiff > 0) {
-					/* right swipe */
-					if (page === 'home') {
-						if (!isScrolling) {
-							if (activeId < data.length - 1) {
-								console.log('wheel left detected.');
-								setIsScrolling(true);
-								scrollTo(activeId, activeId + 1);
-							}
-						}
-					} else {
-						if (!isScrolling) {
-							nextSubSlide();
-						}
+		if (
+			Math.abs(touchendX - touchStart.x) > Math.abs(touchendY - touchStart.y)
+		) {
+			if (touchendX < touchStart.x) {
+				if (page === 'home') {
+					if (activeId < data.length - 1) {
+						console.log('touch left detected.');
+						scrollTo(activeId, activeId + 1);
+						console.log(activeId);
 					}
 				} else {
-					/* left swipe */
-					if (page === 'home') {
-						if (!isScrolling) {
-							if (activeId < data.length - 1) {
-								console.log('wheel left detected.');
-								setIsScrolling(true);
-								scrollTo(activeId, activeId + 1);
-							}
-						}
-					} else {
-						if (!isScrolling) {
-							nextSubSlide();
-						}
-					}
-				}
-			} else {
-				if (yDiff > 0) {
-					/* down swipe */
-					if (!isScrolling) {
-						if (activeId > 0) {
-							console.log('wheel down detected.');
-							setIsScrolling(true);
-							scrollTo(activeId, activeId - 1);
-						}
-					}
-				} else {
-					/* up swipe */
-					if (!isScrolling) {
-						if (activeId < data.length - 1) {
-							console.log('wheel up detected.');
-							setIsScrolling(true);
-							scrollTo(activeId, activeId + 1);
-						}
-					}
+					nextSubSlide();
+					console.log(activeId);
 				}
 			}
-			/* reset values */
-			xDown = null;
-			yDown = null;
+			if (touchendX > touchStart.x) {
+				if (page === 'home') {
+					if (activeId > 0) {
+						console.log('touch right detected.');
+						scrollTo(activeId, activeId - 1);
+						console.log(activeId);
+					}
+				} else {
+					prevSubSlide();
+					console.log(activeId);
+				}
+			}
+		} else {
+			if (touchendY < touchStart.y) {
+				if (activeId < data.length - 1) {
+					console.log('wheel up detected.');
+					setIsScrolling(true);
+					scrollTo(activeId, activeId + 1);
+				}
+			}
+			if (touchendY > touchStart.y) {
+				if (activeId > 0) {
+					console.log('touch down detected.');
+					scrollTo(activeId, activeId - 1);
+				}
+			}
 		}
-
-		window.addEventListener('touchstart', handleTouchStart, false);
-		window.addEventListener('touchmove', handleTouchMove, false);
-
-		return () => {
-			window.addEventListener('touchstart', handleTouchStart, false);
-			window.addEventListener('touchmove', handleTouchMove, false);
-		};
-	}, [activeId, data.length, isScrolling, nextSubSlide, page, scrollTo]);
+	};
 
 	return (
 		<div
 			ref={container}
 			{...WheelReact.events}
 			className="absolute bottom-0 left-0 w-full h-full object-cover overflow-hidden"
+			onTouchStart={(e) =>
+				setTouchStart({
+					...touchStart,
+					['x']: e.touches[0].clientX,
+					['y']: e.touches[0].clientY,
+				})
+			}
+			onTouchEnd={(e) => touchControl(e)}
 		>
 			<div className="scroll-container h-full gsap-fade-in">
 				{data.map((item, index) => (
