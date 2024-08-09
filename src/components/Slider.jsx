@@ -184,7 +184,7 @@ const Slider = ({ data, subpage, page }) => {
 							{
 								height: 0,
 								y: (screenSize.height * 40) / 100,
-								duration: 1,
+								duration: 1.5,
 								ease: 'power1.out',
 							}
 						)
@@ -197,10 +197,10 @@ const Slider = ({ data, subpage, page }) => {
 							{
 								y: 0,
 								height: screenSize.height,
-								duration: 1,
+								duration: 1.5,
 								ease: 'power1.out',
 							},
-							'<-0.4'
+							'<-0.6'
 						)
 						.set('#slide' + from, {
 							height: 0,
@@ -218,7 +218,8 @@ const Slider = ({ data, subpage, page }) => {
 								duration: 0.35,
 								stagger: 0.1,
 								ease: 'power1.out',
-							}
+							},
+							'<-0.4'
 						)
 						.fromTo(
 							'#slide' + to + ' ' + '.gsap-nav-controller',
