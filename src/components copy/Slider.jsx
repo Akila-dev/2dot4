@@ -20,10 +20,7 @@ const Slider = ({ data, subpage, page }) => {
 	const [screenSize, setScreenSize] = useState(getWindowsDimension());
 	const container = useRef(null);
 	const [activeId, setActiveId] = useState(0);
-	const [subActiveId, setsubActiveId] = useState(
-		new Array(data.length).fill(0)
-	); // Active Id for the subpage sliders (i.e ltr and rtl slides)
-	// const [callNext, setCallNext] = useState(second)
+	const [subActiveId, setsubActiveId] = useState(0);
 	const { contextSafe } = useGSAP({ scope: container });
 	const [isScrolling, setIsScrolling] = useState(false);
 
@@ -48,6 +45,42 @@ const Slider = ({ data, subpage, page }) => {
 			// if(scrolling){
 			if (from !== to) {
 				if (from < to) {
+					gsap.timeline().fromTo(
+						'#slide' + to,
+						{
+							height: 0,
+							y: (screenSize.height * 40) / 100,
+						},
+						{
+							height: screenSize.height,
+							y: 0,
+							duration: 1,
+							ease: 'power1.out',
+							delay: 0.5,
+						}
+					);
+					gsap
+						.timeline()
+						.fromTo(
+							'#slide' + from,
+							{
+								height: screenSize.height,
+							},
+							{
+								y: -(screenSize.height * 40) / 100,
+								duration: 1,
+								ease: 'power1.out',
+								delay: 0.5,
+							}
+						)
+						.set('#slide' + from, {
+							height: 0,
+							y: 0,
+							delay: 0.5,
+						});
+					// !TEXT
+					//! TEXT
+					//! TEXT
 					gsap
 						.timeline()
 						.fromTo(
@@ -64,49 +97,7 @@ const Slider = ({ data, subpage, page }) => {
 								ease: 'power1.out',
 							}
 						)
-						.fromTo(
-							'#slide' + from + ' ' + '.gsap-nav-controller',
-							{
-								opacity: 1,
-								y: 0,
-							},
-							{
-								opacity: 0,
-								y: 15,
-								duration: 0.35,
-								ease: 'power1.out',
-							},
-							'<'
-						)
-						.fromTo(
-							'#slide' + to,
-							{
-								height: 0,
-								y: (screenSize.height * 40) / 100,
-							},
-							{
-								height: screenSize.height,
-								y: 0,
-								duration: 1,
-								ease: 'power1.out',
-							}
-						)
-						.fromTo(
-							'#slide' + from,
-							{
-								height: screenSize.height,
-							},
-							{
-								y: -(screenSize.height * 30) / 100,
-								duration: 1,
-								ease: 'power1.out',
-							},
-							'<0.2'
-						)
-						.set('#slide' + from, {
-							height: 0,
-							y: 0,
-						})
+
 						.fromTo(
 							'#slide' + to + ' ' + '.gsap-show',
 							{
@@ -119,8 +110,29 @@ const Slider = ({ data, subpage, page }) => {
 								duration: 0.35,
 								stagger: 0.1,
 								ease: 'power1.out',
+								delay: 0.65,
+							}
+						);
+					// !CONTROLS
+					//! CONTROLS
+					//! CONTROLS
+					gsap
+						.timeline()
+						.fromTo(
+							'#slide' + from + ' ' + '.gsap-nav-controller',
+							{
+								opacity: 1,
+								y: 0,
+							},
+							{
+								opacity: 0,
+								y: 15,
+								duration: 0.35,
+								// stagger: 0.1,
+								ease: 'power1.out',
 							}
 						)
+
 						.fromTo(
 							'#slide' + to + ' ' + '.gsap-nav-controller',
 							{
@@ -133,10 +145,58 @@ const Slider = ({ data, subpage, page }) => {
 								duration: 0.35,
 								// stagger: 0.1,
 								ease: 'power1.out',
-							},
-							'<'
+								delay: 1,
+							}
 						);
 				} else {
+					gsap
+						.timeline()
+						.set('#slide' + from, {
+							height: screenSize.height,
+							y: 0,
+						})
+						.fromTo(
+							'#slide' + from,
+							{
+								height: screenSize.height,
+								y: 0,
+							},
+							{
+								height: 0,
+								y: (screenSize.height * 40) / 100,
+								duration: 1,
+								ease: 'power1.out',
+								delay: 0.5,
+							}
+						);
+					gsap
+						.timeline()
+						.set('#slide' + to, {
+							y: -(screenSize.height * 40) / 100,
+							height: screenSize.height,
+						})
+						.fromTo(
+							'#slide' + to,
+							{
+								y: -(screenSize.height * 40) / 100,
+								height: screenSize.height,
+							},
+							{
+								y: 0,
+								height: screenSize.height,
+								duration: 1,
+								ease: 'power1.out',
+								delay: 0.25,
+							}
+						)
+						.set('#slide' + from, {
+							height: 0,
+							y: 0,
+							delay: 0.5,
+						});
+					//! TEXT
+					//! TEXT
+					//! TEXT
 					gsap
 						.timeline()
 						.fromTo(
@@ -153,6 +213,28 @@ const Slider = ({ data, subpage, page }) => {
 								ease: 'power1.out',
 							}
 						)
+
+						.fromTo(
+							'#slide' + to + ' ' + '.gsap-show',
+							{
+								opacity: 0,
+								y: 15,
+							},
+							{
+								opacity: 1,
+								y: 0,
+								// delay: 1,
+								duration: 0.35,
+								stagger: 0.1,
+								ease: 'power1.out',
+								delay: 0.45,
+							}
+						);
+					// !CONTROLLER
+					// !CONTROLLER
+					// !CONTROLLER
+					gsap
+						.timeline()
 						.fromTo(
 							'#slide' + from + ' ' + '.gsap-nav-controller',
 							{
@@ -163,59 +245,11 @@ const Slider = ({ data, subpage, page }) => {
 								opacity: 0,
 								y: 15,
 								duration: 0.35,
-								ease: 'power1.out',
-							},
-							'<'
-						)
-						.set('#slide' + to, {
-							y: -(screenSize.height * 40) / 100,
-							height: screenSize.height,
-						})
-						.fromTo(
-							'#slide' + from,
-							{
-								height: screenSize.height,
-								y: 0,
-							},
-							{
-								height: 0,
-								y: (screenSize.height * 40) / 100,
-								duration: 1,
+								// stagger: 0.1,
 								ease: 'power1.out',
 							}
 						)
-						.fromTo(
-							'#slide' + to,
-							{
-								y: -(screenSize.height * 40) / 100,
-								height: screenSize.height,
-							},
-							{
-								y: 0,
-								height: screenSize.height,
-								duration: 1,
-								ease: 'power1.out',
-							},
-							'<-0.4'
-						)
-						.set('#slide' + from, {
-							height: 0,
-							y: 0,
-						})
-						.fromTo(
-							'#slide' + to + ' ' + '.gsap-show',
-							{
-								opacity: 0,
-								y: 15,
-							},
-							{
-								opacity: 1,
-								y: 0,
-								duration: 0.35,
-								stagger: 0.1,
-								ease: 'power1.out',
-							}
-						)
+
 						.fromTo(
 							'#slide' + to + ' ' + '.gsap-nav-controller',
 							{
@@ -225,10 +259,12 @@ const Slider = ({ data, subpage, page }) => {
 							{
 								opacity: 1,
 								y: 0,
+								// delay: 1,
 								duration: 0.35,
+								// stagger: 0.1,
 								ease: 'power1.out',
-							},
-							'<'
+								delay: 1,
+							}
 						);
 				}
 				setActiveId(to);
@@ -246,8 +282,6 @@ const Slider = ({ data, subpage, page }) => {
 			to >= 0 &&
 			to <= data[id].content[0].text.length - 1
 		) {
-			setIsScrolling(true);
-
 			var targetTo = '#' + String(page + id + to);
 			var targetFrom = '#' + String(page + id + from);
 			// setIsSideScrolling(true);
@@ -479,32 +513,31 @@ const Slider = ({ data, subpage, page }) => {
 							}
 						);
 				}
-
-				setsubActiveId((prev) => [...prev, (prev[id] = to)]);
 				setTimeout(() => {
-					setIsScrolling(false);
-				}, 3000);
+					setsubActiveId(to);
+				}, 500);
+				// setTimeout(() => {
+				// 	setIsSideScrolling(false);
+				// }, 3000);
 			}
 		}
 	});
 
-	const nextSubSlide = contextSafe(() => {
-		if (subActiveId[activeId] < data[activeId].content[0].text.length - 1) {
-			console.log('test next');
-			setIsScrolling(true);
-			subScrollTo(subActiveId[activeId], subActiveId[activeId] + 1, activeId);
-			// setIsSideScrolling(true);
-		}
-	});
+	// const next = contextSafe(() => {
+	// 	if (activeId < data.content[0].text.length - 1) {
+	// 		console.log('test next');
+	// 		scrollTo(activeId, activeId + 1, id);
+	// 		// setIsSideScrolling(true);
+	// 	}
+	// });
 
-	const prevSubSlide = contextSafe(() => {
-		if (subActiveId[activeId] > 0) {
-			console.log('test prev');
-			setIsScrolling(true);
-			subScrollTo(subActiveId[activeId], subActiveId[activeId] - 1, activeId);
-			// setIsSideScrolling(true);
-		}
-	});
+	// const prev = contextSafe(() => {
+	// 	if (activeId > 0) {
+	// 		console.log('test prev');
+	// 		scrollTo(activeId, activeId - 1, id);
+	// 		// setIsSideScrolling(true);
+	// 	}
+	// });
 
 	useEffect(() => {
 		WheelReact.config({
@@ -517,10 +550,6 @@ const Slider = ({ data, subpage, page }) => {
 							scrollTo(activeId, activeId + 1);
 						}
 					}
-				} else {
-					if (!isScrolling) {
-						nextSubSlide();
-					}
 				}
 			},
 			right: () => {
@@ -531,10 +560,6 @@ const Slider = ({ data, subpage, page }) => {
 							setIsScrolling(true);
 							scrollTo(activeId, activeId - 1);
 						}
-					}
-				} else {
-					if (!isScrolling) {
-						prevSubSlide();
 					}
 				}
 			},
@@ -559,15 +584,7 @@ const Slider = ({ data, subpage, page }) => {
 				}
 			},
 		});
-	}, [
-		activeId,
-		data.length,
-		scrollTo,
-		isScrolling,
-		page,
-		nextSubSlide,
-		prevSubSlide,
-	]);
+	}, [activeId, data.length, scrollTo, isScrolling, page]);
 
 	return (
 		<div
@@ -588,11 +605,9 @@ const Slider = ({ data, subpage, page }) => {
 									data={item}
 									id={index}
 									page={page}
-									// scrollTo={subScrollTo}
-									activeId={subActiveId[index]}
-									// setActiveId={setsubActiveId}
-									next={() => nextSubSlide()}
-									prev={() => prevSubSlide()}
+									scrollTo={subScrollTo}
+									activeId={subActiveId}
+									setActiveId={setsubActiveId}
 								/>
 							) : (
 								<Slide data={item} id={index} page={page} />

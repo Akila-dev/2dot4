@@ -20,10 +20,6 @@ const Slider = ({ data, subpage, page }) => {
 	const [screenSize, setScreenSize] = useState(getWindowsDimension());
 	const container = useRef(null);
 	const [activeId, setActiveId] = useState(0);
-	const [subActiveId, setsubActiveId] = useState(
-		new Array(data.length).fill(0)
-	); // Active Id for the subpage sliders (i.e ltr and rtl slides)
-	// const [callNext, setCallNext] = useState(second)
 	const { contextSafe } = useGSAP({ scope: container });
 	const [isScrolling, setIsScrolling] = useState(false);
 
@@ -48,6 +44,42 @@ const Slider = ({ data, subpage, page }) => {
 			// if(scrolling){
 			if (from !== to) {
 				if (from < to) {
+					gsap.timeline().fromTo(
+						'#slide' + to,
+						{
+							height: 0,
+							y: (screenSize.height * 40) / 100,
+						},
+						{
+							height: screenSize.height,
+							y: 0,
+							duration: 1,
+							ease: 'power1.out',
+							delay: 0.5,
+						}
+					);
+					gsap
+						.timeline()
+						.fromTo(
+							'#slide' + from,
+							{
+								height: screenSize.height,
+							},
+							{
+								y: -(screenSize.height * 40) / 100,
+								duration: 1,
+								ease: 'power1.out',
+								delay: 0.5,
+							}
+						)
+						.set('#slide' + from, {
+							height: 0,
+							y: 0,
+							delay: 0.5,
+						});
+					// !TEXT
+					//! TEXT
+					//! TEXT
 					gsap
 						.timeline()
 						.fromTo(
@@ -64,49 +96,7 @@ const Slider = ({ data, subpage, page }) => {
 								ease: 'power1.out',
 							}
 						)
-						.fromTo(
-							'#slide' + from + ' ' + '.gsap-nav-controller',
-							{
-								opacity: 1,
-								y: 0,
-							},
-							{
-								opacity: 0,
-								y: 15,
-								duration: 0.35,
-								ease: 'power1.out',
-							},
-							'<'
-						)
-						.fromTo(
-							'#slide' + to,
-							{
-								height: 0,
-								y: (screenSize.height * 40) / 100,
-							},
-							{
-								height: screenSize.height,
-								y: 0,
-								duration: 1,
-								ease: 'power1.out',
-							}
-						)
-						.fromTo(
-							'#slide' + from,
-							{
-								height: screenSize.height,
-							},
-							{
-								y: -(screenSize.height * 30) / 100,
-								duration: 1,
-								ease: 'power1.out',
-							},
-							'<0.2'
-						)
-						.set('#slide' + from, {
-							height: 0,
-							y: 0,
-						})
+
 						.fromTo(
 							'#slide' + to + ' ' + '.gsap-show',
 							{
@@ -119,8 +109,29 @@ const Slider = ({ data, subpage, page }) => {
 								duration: 0.35,
 								stagger: 0.1,
 								ease: 'power1.out',
+								delay: 0.65,
+							}
+						);
+					// !CONTROLS
+					//! CONTROLS
+					//! CONTROLS
+					gsap
+						.timeline()
+						.fromTo(
+							'#slide' + from + ' ' + '.gsap-nav-controller',
+							{
+								opacity: 1,
+								y: 0,
+							},
+							{
+								opacity: 0,
+								y: 15,
+								duration: 0.35,
+								// stagger: 0.1,
+								ease: 'power1.out',
 							}
 						)
+
 						.fromTo(
 							'#slide' + to + ' ' + '.gsap-nav-controller',
 							{
@@ -133,43 +144,15 @@ const Slider = ({ data, subpage, page }) => {
 								duration: 0.35,
 								// stagger: 0.1,
 								ease: 'power1.out',
-							},
-							'<'
+								delay: 1,
+							}
 						);
 				} else {
 					gsap
 						.timeline()
-						.fromTo(
-							'#slide' + from + ' ' + '.gsap-show',
-							{
-								opacity: 1,
-								y: 0,
-							},
-							{
-								opacity: 0,
-								y: 15,
-								duration: 0.35,
-								stagger: 0.1,
-								ease: 'power1.out',
-							}
-						)
-						.fromTo(
-							'#slide' + from + ' ' + '.gsap-nav-controller',
-							{
-								opacity: 1,
-								y: 0,
-							},
-							{
-								opacity: 0,
-								y: 15,
-								duration: 0.35,
-								ease: 'power1.out',
-							},
-							'<'
-						)
-						.set('#slide' + to, {
-							y: -(screenSize.height * 40) / 100,
+						.set('#slide' + from, {
 							height: screenSize.height,
+							y: 0,
 						})
 						.fromTo(
 							'#slide' + from,
@@ -182,8 +165,15 @@ const Slider = ({ data, subpage, page }) => {
 								y: (screenSize.height * 40) / 100,
 								duration: 1,
 								ease: 'power1.out',
+								delay: 0.5,
 							}
-						)
+						);
+					gsap
+						.timeline()
+						.set('#slide' + to, {
+							y: -(screenSize.height * 40) / 100,
+							height: screenSize.height,
+						})
 						.fromTo(
 							'#slide' + to,
 							{
@@ -195,240 +185,36 @@ const Slider = ({ data, subpage, page }) => {
 								height: screenSize.height,
 								duration: 1,
 								ease: 'power1.out',
-							},
-							'<-0.4'
+								delay: 0.25,
+							}
 						)
 						.set('#slide' + from, {
 							height: 0,
 							y: 0,
-						})
+							delay: 0.5,
+						});
+					//! TEXT
+					//! TEXT
+					//! TEXT
+					gsap
+						.timeline()
+						.fromTo(
+							'#slide' + from + ' ' + '.gsap-show',
+							{
+								opacity: 1,
+								y: 0,
+							},
+							{
+								opacity: 0,
+								y: 15,
+								duration: 0.35,
+								stagger: 0.1,
+								ease: 'power1.out',
+							}
+						)
+
 						.fromTo(
 							'#slide' + to + ' ' + '.gsap-show',
-							{
-								opacity: 0,
-								y: 15,
-							},
-							{
-								opacity: 1,
-								y: 0,
-								duration: 0.35,
-								stagger: 0.1,
-								ease: 'power1.out',
-							}
-						)
-						.fromTo(
-							'#slide' + to + ' ' + '.gsap-nav-controller',
-							{
-								opacity: 0,
-								y: 15,
-							},
-							{
-								opacity: 1,
-								y: 0,
-								duration: 0.35,
-								ease: 'power1.out',
-							},
-							'<'
-						);
-				}
-				setActiveId(to);
-				setTimeout(() => {
-					setIsScrolling(false);
-				}, 3000);
-			}
-		}
-	});
-
-	const subScrollTo = contextSafe((from, to, id) => {
-		if (
-			from >= 0 &&
-			from <= data[id].content[0].text.length - 1 &&
-			to >= 0 &&
-			to <= data[id].content[0].text.length - 1
-		) {
-			setIsScrolling(true);
-
-			var targetTo = '#' + String(page + id + to);
-			var targetFrom = '#' + String(page + id + from);
-			// setIsSideScrolling(true);
-			if (from !== to) {
-				if (from < to) {
-					gsap
-						.timeline()
-						.set(targetTo, {
-							width: 0,
-							x: (screenSize.width * 20) / 100,
-						})
-						.fromTo(
-							targetTo,
-							{
-								width: 0,
-								x: (screenSize.width * 20) / 100,
-							},
-							{
-								width: screenSize.width,
-								x: 0,
-								duration: 1,
-								ease: 'power1.out',
-								delay: 0.5,
-							}
-						);
-					gsap
-						.timeline()
-						.fromTo(
-							targetFrom,
-							{
-								width: screenSize.width,
-							},
-							{
-								x: -(screenSize.width * 20) / 100,
-								duration: 1,
-								ease: 'power1.out',
-								delay: 0.5,
-							}
-						)
-						.set(targetFrom, {
-							width: 0,
-							x: 0,
-							delay: 0.5,
-						});
-					// !TEXT
-					//! TEXT
-					//! TEXT
-					gsap
-						.timeline()
-						.fromTo(
-							targetFrom + ' ' + '.gsap-show',
-							{
-								opacity: 1,
-								y: 0,
-							},
-							{
-								opacity: 0,
-								y: 15,
-								duration: 0.35,
-								stagger: 0.1,
-								ease: 'power1.out',
-							}
-						)
-						.fromTo(
-							targetTo + ' ' + '.gsap-show',
-							{
-								opacity: 0,
-								y: 15,
-							},
-							{
-								opacity: 1,
-								y: 0,
-								duration: 0.35,
-								stagger: 0.1,
-								ease: 'power1.out',
-								delay: 1,
-							}
-						);
-					// !CONTROLLER
-					// !CONTROLLER
-					// !CONTROLLER
-					gsap
-						.timeline()
-						.fromTo(
-							targetFrom + ' ' + '.gsap-nav-controller',
-							{
-								opacity: 1,
-								y: 0,
-							},
-							{
-								opacity: 0,
-								y: 15,
-								duration: 0.35,
-								// stagger: 0.1,
-								ease: 'power1.out',
-							}
-						)
-
-						.fromTo(
-							targetTo + ' ' + '.gsap-nav-controller',
-							{
-								opacity: 0,
-								y: 15,
-							},
-							{
-								opacity: 1,
-								y: 0,
-								duration: 0.35,
-								// stagger: 0.1,
-								ease: 'power1.out',
-								delay: 1,
-							}
-						);
-				} else {
-					gsap
-						.timeline()
-						.set(targetFrom, {
-							width: screenSize.width,
-							x: 0,
-						})
-						.fromTo(
-							targetFrom,
-							{
-								width: screenSize.width,
-								x: 0,
-							},
-							{
-								width: 0,
-								x: (screenSize.width * 20) / 100,
-								duration: 1,
-								ease: 'power1.out',
-								delay: 0.5,
-							}
-						);
-					gsap
-						.timeline()
-						.set(targetTo, {
-							x: -(screenSize.width * 20) / 100,
-							width: screenSize.width,
-						})
-						.fromTo(
-							targetTo,
-							{
-								x: -(screenSize.width * 20) / 100,
-								width: screenSize.width,
-							},
-							{
-								x: 0,
-								width: screenSize.width,
-								duration: 1,
-								ease: 'power1.out',
-								delay: 0.25,
-							}
-						)
-						.set(targetFrom, {
-							width: 0,
-							x: 0,
-							delay: 0.5,
-						});
-					//! TEXT
-					//! TEXT
-					//! TEXT
-					gsap
-						.timeline()
-						.fromTo(
-							targetFrom + ' ' + '.gsap-show',
-							{
-								opacity: 1,
-								y: 0,
-							},
-							{
-								opacity: 0,
-								y: 15,
-								duration: 0.35,
-								stagger: 0.1,
-								ease: 'power1.out',
-							}
-						)
-
-						.fromTo(
-							targetTo + ' ' + '.gsap-show',
 							{
 								opacity: 0,
 								y: 15,
@@ -440,7 +226,7 @@ const Slider = ({ data, subpage, page }) => {
 								duration: 0.35,
 								stagger: 0.1,
 								ease: 'power1.out',
-								delay: 0.85,
+								delay: 0.45,
 							}
 						);
 					// !CONTROLLER
@@ -449,7 +235,7 @@ const Slider = ({ data, subpage, page }) => {
 					gsap
 						.timeline()
 						.fromTo(
-							targetFrom + ' ' + '.gsap-nav-controller',
+							'#slide' + from + ' ' + '.gsap-nav-controller',
 							{
 								opacity: 1,
 								y: 0,
@@ -464,7 +250,7 @@ const Slider = ({ data, subpage, page }) => {
 						)
 
 						.fromTo(
-							targetTo + ' ' + '.gsap-nav-controller',
+							'#slide' + to + ' ' + '.gsap-nav-controller',
 							{
 								opacity: 0,
 								y: 15,
@@ -472,6 +258,7 @@ const Slider = ({ data, subpage, page }) => {
 							{
 								opacity: 1,
 								y: 0,
+								// delay: 1,
 								duration: 0.35,
 								// stagger: 0.1,
 								ease: 'power1.out',
@@ -479,30 +266,11 @@ const Slider = ({ data, subpage, page }) => {
 							}
 						);
 				}
-
-				setsubActiveId((prev) => [...prev, (prev[id] = to)]);
+				setActiveId(to);
 				setTimeout(() => {
 					setIsScrolling(false);
 				}, 3000);
 			}
-		}
-	});
-
-	const nextSubSlide = contextSafe(() => {
-		if (subActiveId[activeId] < data[activeId].content[0].text.length - 1) {
-			console.log('test next');
-			setIsScrolling(true);
-			subScrollTo(subActiveId[activeId], subActiveId[activeId] + 1, activeId);
-			// setIsSideScrolling(true);
-		}
-	});
-
-	const prevSubSlide = contextSafe(() => {
-		if (subActiveId[activeId] > 0) {
-			console.log('test prev');
-			setIsScrolling(true);
-			subScrollTo(subActiveId[activeId], subActiveId[activeId] - 1, activeId);
-			// setIsSideScrolling(true);
 		}
 	});
 
@@ -517,10 +285,6 @@ const Slider = ({ data, subpage, page }) => {
 							scrollTo(activeId, activeId + 1);
 						}
 					}
-				} else {
-					if (!isScrolling) {
-						nextSubSlide();
-					}
 				}
 			},
 			right: () => {
@@ -531,10 +295,6 @@ const Slider = ({ data, subpage, page }) => {
 							setIsScrolling(true);
 							scrollTo(activeId, activeId - 1);
 						}
-					}
-				} else {
-					if (!isScrolling) {
-						prevSubSlide();
 					}
 				}
 			},
@@ -559,15 +319,7 @@ const Slider = ({ data, subpage, page }) => {
 				}
 			},
 		});
-	}, [
-		activeId,
-		data.length,
-		scrollTo,
-		isScrolling,
-		page,
-		nextSubSlide,
-		prevSubSlide,
-	]);
+	}, [activeId, data.length, scrollTo, isScrolling, page]);
 
 	return (
 		<div
@@ -584,16 +336,7 @@ const Slider = ({ data, subpage, page }) => {
 					>
 						<div className="h-full">
 							{subpage ? (
-								<SubpageSlider
-									data={item}
-									id={index}
-									page={page}
-									// scrollTo={subScrollTo}
-									activeId={subActiveId[index]}
-									// setActiveId={setsubActiveId}
-									next={() => nextSubSlide()}
-									prev={() => prevSubSlide()}
-								/>
+								<SubpageSlider data={item} id={index} page={page} />
 							) : (
 								<Slide data={item} id={index} page={page} />
 							)}
