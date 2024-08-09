@@ -506,6 +506,7 @@ const Slider = ({ data, subpage, page }) => {
 		}
 	});
 
+	// ! DESKTOP CONTROLS WITH MOUSEWHEEL
 	useEffect(() => {
 		WheelReact.config({
 			left: () => {
@@ -568,6 +569,98 @@ const Slider = ({ data, subpage, page }) => {
 		nextSubSlide,
 		prevSubSlide,
 	]);
+
+	// ! MOBILE CONTROLS WITH TOUCH CONTROLS
+	useEffect(() => {
+		const getTouches = (evt) => {
+			return evt.touches;
+		};
+		var xDown = null;
+		var yDown = null;
+
+		function handleTouchStart(evt) {
+			const firstTouch = getTouches(evt)[0];
+			xDown = firstTouch.clientX;
+			yDown = firstTouch.clientY;
+		}
+
+		function handleTouchMove(evt) {
+			if (!xDown || !yDown) {
+				return;
+			}
+
+			var xUp = evt.touches[0].clientX;
+			var yUp = evt.touches[0].clientY;
+
+			var xDiff = xDown - xUp;
+			var yDiff = yDown - yUp;
+
+			if (Math.abs(xDiff) > Math.abs(yDiff)) {
+				if (xDiff > 0) {
+					/* right swipe */
+					if (page === 'home') {
+						if (!isScrolling) {
+							if (activeId < data.length - 1) {
+								console.log('wheel left detected.');
+								setIsScrolling(true);
+								scrollTo(activeId, activeId + 1);
+							}
+						}
+					} else {
+						if (!isScrolling) {
+							nextSubSlide();
+						}
+					}
+				} else {
+					/* left swipe */
+					if (page === 'home') {
+						if (!isScrolling) {
+							if (activeId < data.length - 1) {
+								console.log('wheel left detected.');
+								setIsScrolling(true);
+								scrollTo(activeId, activeId + 1);
+							}
+						}
+					} else {
+						if (!isScrolling) {
+							nextSubSlide();
+						}
+					}
+				}
+			} else {
+				if (yDiff > 0) {
+					/* down swipe */
+					if (!isScrolling) {
+						if (activeId > 0) {
+							console.log('wheel down detected.');
+							setIsScrolling(true);
+							scrollTo(activeId, activeId - 1);
+						}
+					}
+				} else {
+					/* up swipe */
+					if (!isScrolling) {
+						if (activeId < data.length - 1) {
+							console.log('wheel up detected.');
+							setIsScrolling(true);
+							scrollTo(activeId, activeId + 1);
+						}
+					}
+				}
+			}
+			/* reset values */
+			xDown = null;
+			yDown = null;
+		}
+
+		window.addEventListener('touchstart', handleTouchStart, false);
+		window.addEventListener('touchmove', handleTouchMove, false);
+
+		return () => {
+			window.addEventListener('touchstart', handleTouchStart, false);
+			window.addEventListener('touchmove', handleTouchMove, false);
+		};
+	}, [activeId, data.length, isScrolling, nextSubSlide, page, scrollTo]);
 
 	return (
 		<div
