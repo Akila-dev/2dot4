@@ -638,6 +638,7 @@ const Slider = ({ data, subpage, page, allowSlide }) => {
 									// setActiveId={setsubActiveId}
 									next={() => nextSubSlide()}
 									prev={() => prevSubSlide()}
+									container={container}
 								/>
 							) : (
 								<Slide data={item} id={index} page={page} />

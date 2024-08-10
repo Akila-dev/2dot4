@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { ImgWithFallback, CTASubSlider } from '../components';
-import { useRef } from 'react';
+// import { useRef } from 'react';
 // import WheelReact from 'wheel-react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -66,8 +66,9 @@ const SubpageSlider = ({
 	// setActiveId,
 	next,
 	prev,
+	container,
 }) => {
-	const container = useRef(null);
+	// const container = useRef(null);
 	// const { contextSafe } = useGSAP({ scope: container });
 	// const [isSideScrolling, setIsSideScrolling] = useState(false);
 
