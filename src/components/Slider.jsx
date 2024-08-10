@@ -580,11 +580,11 @@ const Slider = ({ data, subpage, page, allowSlide }) => {
 	}, [
 		activeId,
 		data.length,
-		scrollTo,
 		isScrolling,
-		page,
 		nextSubSlide,
+		page,
 		prevSubSlide,
+		scrollTo,
 	]);
 
 	// ! MOBILE SWIPE CONTROL USING TOUCHES
