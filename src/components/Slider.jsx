@@ -457,8 +457,10 @@ const Slider = ({ data, subpage, page, allowSlide }) => {
 								'<'
 							);
 					}
+					setTimeout(() => {
+						setsubActiveId((prev) => [...prev, (prev[id] = to)]);
+					}, 500);
 
-					setsubActiveId((prev) => [...prev, (prev[id] = to)]);
 					setTimeout(() => {
 						setIsScrolling(false);
 					}, 3000);
