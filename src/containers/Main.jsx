@@ -26,7 +26,7 @@ const Main = ({ data, page, subpage }) => {
 	const container = useRef();
 	const menuContainer = useRef();
 	const [showMenu, setShowMenu] = useState(false);
-	const [allowSlide, setAllowSlide] = useState(true);
+	const [allowSlide, setAllowSlide] = useState(false);
 
 	const { contextSafe } = useGSAP({ scope: menuContainer });
 
