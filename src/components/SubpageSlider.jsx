@@ -110,7 +110,7 @@ const SubpageSlider = ({
 			))}
 			<div className="gsap-nav-controller hidden lg:flex w-[80px] xl:w-[100px] h-full justify-center items-center fixed lg:left-[--sidebar-w]">
 				{data.content[0].text.length > 1 && activeId !== 0 && (
-					<button className="hover:opacity-70" onClick={prev}>
+					<button className="hover:opacity-70" onClick={() => prev()}>
 						<PiCaretLeftThin className="text-4xl font-light" />
 					</button>
 				)}
@@ -118,7 +118,7 @@ const SubpageSlider = ({
 			<div className="gsap-nav-controller hidden lg:flex w-[80px] xl:w-[100px] h-full justify-center items-center fixed lg:right-[--sidebar-w]">
 				{data.content[0].text.length > 1 &&
 					activeId !== data.content[0].text.length - 1 && (
-						<button className="hover:opacity-70" onClick={next}>
+						<button className="hover:opacity-70" onClick={() => next()}>
 							<PiCaretRightThin className="text-4xl font-light" />
 						</button>
 					)}
@@ -135,7 +135,7 @@ const SubpageSlider = ({
 				<div className=" h-full w-full flex items-center justify-center gap-5 ">
 					<div className="gsap-nav-controller lg:hidden w-[35px]  h-full flex items-center justify-start">
 						{data.content[0].text.length > 1 && activeId !== 0 && (
-							<button className="hover:opacity-70" onClick={prev}>
+							<button className="hover:opacity-70" onClick={() => prev()}>
 								<PiCaretLeftThin className="text-lg font-light" />
 							</button>
 						)}
@@ -151,7 +151,7 @@ const SubpageSlider = ({
 					<div className="gsap-nav-controller lg:hidden w-[35px]  h-full flex items-center justify-end">
 						{data.content[0].text.length > 1 &&
 							activeId !== data.content[0].text.length - 1 && (
-								<button className="hover:opacity-70" onClick={next}>
+								<button className="hover:opacity-70" onClick={() => next()}>
 									<PiCaretRightThin className="text-lg font-light" />
 								</button>
 							)}
