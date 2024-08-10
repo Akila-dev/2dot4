@@ -24,10 +24,10 @@ const Slider = ({ data, subpage, page, allowSlide }) => {
 		new Array(data.length).fill(0)
 	); // Active Id for the subpage sliders (i.e ltr and rtl slides)
 	// const [callNext, setCallNext] = useState(second)
-	const [touchStart, setTouchStart] = useState({
-		x: 0,
-		y: 0,
-	});
+	// const [touchStart, setTouchStart] = useState({
+	// 	x: 0,
+	// 	y: 0,
+	// });
 	const { contextSafe } = useGSAP({ scope: container });
 	const [isScrolling, setIsScrolling] = useState(false);
 
@@ -555,68 +555,68 @@ const Slider = ({ data, subpage, page, allowSlide }) => {
 		scrollTo,
 	]);
 
-	// ! MOBILE SWIPE CONTROL USING TOUCHES
-	const touchControl = (e) => {
-		let touchendX = e.changedTouches[0].clientX;
-		let touchendY = e.changedTouches[0].clientY;
+	// // ! MOBILE SWIPE CONTROL USING TOUCHES
+	// const touchControl = (e) => {
+	// 	let touchendX = e.changedTouches[0].clientX;
+	// 	let touchendY = e.changedTouches[0].clientY;
 
-		if (
-			Math.abs(touchendX - touchStart.x) > Math.abs(touchendY - touchStart.y)
-		) {
-			if (touchendX < touchStart.x) {
-				if (page === 'home') {
-					if (activeId < data.length - 1) {
-						console.log('touch left detected.');
-						scrollTo(activeId, activeId + 1);
-						console.log(activeId);
-					}
-				} else {
-					nextSubSlide();
-					console.log(activeId);
-				}
-			}
-			if (touchendX > touchStart.x) {
-				if (page === 'home') {
-					if (activeId > 0) {
-						console.log('touch right detected.');
-						scrollTo(activeId, activeId - 1);
-						console.log(activeId);
-					}
-				} else {
-					prevSubSlide();
-					console.log(activeId);
-				}
-			}
-		} else {
-			if (touchendY < touchStart.y) {
-				if (activeId < data.length - 1) {
-					console.log('wheel up detected.');
-					setIsScrolling(true);
-					scrollTo(activeId, activeId + 1);
-				}
-			}
-			if (touchendY > touchStart.y) {
-				if (activeId > 0) {
-					console.log('touch down detected.');
-					scrollTo(activeId, activeId - 1);
-				}
-			}
-		}
-	};
+	// 	if (
+	// 		Math.abs(touchendX - touchStart.x) > Math.abs(touchendY - touchStart.y)
+	// 	) {
+	// 		if (touchendX < touchStart.x) {
+	// 			if (page === 'home') {
+	// 				if (activeId < data.length - 1) {
+	// 					console.log('touch left detected.');
+	// 					scrollTo(activeId, activeId + 1);
+	// 					console.log(activeId);
+	// 				}
+	// 			} else {
+	// 				nextSubSlide();
+	// 				console.log(activeId);
+	// 			}
+	// 		}
+	// 		if (touchendX > touchStart.x) {
+	// 			if (page === 'home') {
+	// 				if (activeId > 0) {
+	// 					console.log('touch right detected.');
+	// 					scrollTo(activeId, activeId - 1);
+	// 					console.log(activeId);
+	// 				}
+	// 			} else {
+	// 				prevSubSlide();
+	// 				console.log(activeId);
+	// 			}
+	// 		}
+	// 	} else {
+	// 		if (touchendY < touchStart.y) {
+	// 			if (activeId < data.length - 1) {
+	// 				console.log('wheel up detected.');
+	// 				setIsScrolling(true);
+	// 				scrollTo(activeId, activeId + 1);
+	// 			}
+	// 		}
+	// 		if (touchendY > touchStart.y) {
+	// 			if (activeId > 0) {
+	// 				console.log('touch down detected.');
+	// 				scrollTo(activeId, activeId - 1);
+	// 			}
+	// 		}
+	// 	}
+	// };
 
 	return (
 		<div
 			ref={container}
 			{...WheelReact.events}
 			className="absolute bottom-0 left-0 w-full h-full object-cover overflow-hidden"
-			onTouchStart={(e) =>
-				setTouchStart({
-					...touchStart,
-					['x']: e.touches[0].clientX,
-					['y']: e.touches[0].clientY,
-				})
-			}
-			onTouchEnd={(e) => touchControl(e)}
+			// onTouchStart={(e) =>
+			// 	setTouchStart({
+			// 		...touchStart,
+			// 		['x']: e.touches[0].clientX,
+			// 		['y']: e.touches[0].clientY,
+			// 	})
+			// }
+			// onTouchEnd={(e) => touchControl(e)}
 		>
 			<div className="scroll-container h-full gsap-fade-in">
 				{data.map((item, index) => (
