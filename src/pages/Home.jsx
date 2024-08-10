@@ -64,7 +64,12 @@ const Home = () => {
 	}, []);
 
 	return (
-		<div className="!h-full">
+		<div
+			onWheel={() => {
+				if (showIntro) stopintro();
+			}}
+			className="!h-full"
+		>
 			{showIntro ? (
 				<Intro closeIntro={stopintro} />
 			) : (

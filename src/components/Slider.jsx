@@ -15,7 +15,7 @@ const getWindowsDimension = () => {
 	};
 };
 
-const Slider = ({ data, subpage, page }) => {
+const Slider = ({ data, subpage, page, allowSlide }) => {
 	// *UPDATE SCREEN SIZE WHEN SCREEN/VIEW PORT RESIZES
 	const [screenSize, setScreenSize] = useState(getWindowsDimension());
 	const container = useRef(null);
@@ -42,454 +42,462 @@ const Slider = ({ data, subpage, page }) => {
 	}, []);
 
 	const scrollTo = contextSafe((from, to) => {
-		if (
-			from >= 0 &&
-			from <= data.length - 1 &&
-			to >= 0 &&
-			to <= data.length - 1
-		) {
-			setIsScrolling(true);
-			// if(scrolling){
-			if (from !== to) {
-				if (from < to) {
-					gsap
-						.timeline()
-						.fromTo(
-							'#slide' + from + ' ' + '.gsap-show',
-							{
-								opacity: 1,
-								y: 0,
-							},
-							{
-								opacity: 0,
-								y: 15,
-								duration: 0.35,
-								stagger: 0.1,
-								ease: 'power1.out',
-							}
-						)
-						.fromTo(
-							'#slide' + from + ' ' + '.gsap-nav-controller',
-							{
-								opacity: 1,
-								y: 0,
-							},
-							{
-								opacity: 0,
-								y: 15,
-								duration: 0.35,
-								ease: 'power1.out',
-							},
-							'<'
-						)
-						.fromTo(
-							'#slide' + to,
-							{
+		if (allowSlide) {
+			if (
+				from >= 0 &&
+				from <= data.length - 1 &&
+				to >= 0 &&
+				to <= data.length - 1
+			) {
+				setIsScrolling(true);
+				// if(scrolling){
+				if (from !== to) {
+					if (from < to) {
+						gsap
+							.timeline()
+							.fromTo(
+								'#slide' + from + ' ' + '.gsap-show',
+								{
+									opacity: 1,
+									y: 0,
+								},
+								{
+									opacity: 0,
+									y: 15,
+									duration: 0.35,
+									stagger: 0.1,
+									ease: 'power1.out',
+								}
+							)
+							.fromTo(
+								'#slide' + from + ' ' + '.gsap-nav-controller',
+								{
+									opacity: 1,
+									y: 0,
+								},
+								{
+									opacity: 0,
+									y: 15,
+									duration: 0.35,
+									ease: 'power1.out',
+								},
+								'<'
+							)
+							.fromTo(
+								'#slide' + to,
+								{
+									height: 0,
+									y: (screenSize.height * 40) / 100,
+								},
+								{
+									height: screenSize.height,
+									y: 0,
+									duration: 1,
+									ease: 'power1.out',
+								}
+							)
+							.fromTo(
+								'#slide' + from,
+								{
+									height: screenSize.height,
+								},
+								{
+									y: -(screenSize.height * 30) / 100,
+									duration: 1,
+									ease: 'power1.out',
+								},
+								'<0.2'
+							)
+							.set('#slide' + from, {
 								height: 0,
-								y: (screenSize.height * 40) / 100,
-							},
-							{
-								height: screenSize.height,
 								y: 0,
-								duration: 1,
-								ease: 'power1.out',
-							}
-						)
-						.fromTo(
-							'#slide' + from,
-							{
-								height: screenSize.height,
-							},
-							{
-								y: -(screenSize.height * 30) / 100,
-								duration: 1,
-								ease: 'power1.out',
-							},
-							'<0.2'
-						)
-						.set('#slide' + from, {
-							height: 0,
-							y: 0,
-						})
-						.fromTo(
-							'#slide' + to + ' ' + '.gsap-show',
-							{
-								opacity: 0,
-								y: 15,
-							},
-							{
-								opacity: 1,
-								y: 0,
-								duration: 0.35,
-								stagger: 0.1,
-								ease: 'power1.out',
-							}
-						)
-						.fromTo(
-							'#slide' + to + ' ' + '.gsap-nav-controller',
-							{
-								opacity: 0,
-								y: 15,
-							},
-							{
-								opacity: 1,
-								y: 0,
-								duration: 0.35,
-								// stagger: 0.1,
-								ease: 'power1.out',
-							},
-							'<'
-						);
-				} else {
-					gsap
-						.timeline()
-						.fromTo(
-							'#slide' + from + ' ' + '.gsap-show',
-							{
-								opacity: 1,
-								y: 0,
-							},
-							{
-								opacity: 0,
-								y: 15,
-								duration: 0.35,
-								stagger: 0.1,
-								ease: 'power1.out',
-							}
-						)
-						.fromTo(
-							'#slide' + from + ' ' + '.gsap-nav-controller',
-							{
-								opacity: 1,
-								y: 0,
-							},
-							{
-								opacity: 0,
-								y: 15,
-								duration: 0.35,
-								ease: 'power1.out',
-							},
-							'<'
-						)
-						.set('#slide' + to, {
-							y: -(screenSize.height * 40) / 100,
-							height: screenSize.height,
-						})
-						.fromTo(
-							'#slide' + from,
-							{
-								height: screenSize.height,
-								y: 0,
-							},
-							{
-								height: 0,
-								y: (screenSize.height * 40) / 100,
-								duration: 1.5,
-								ease: 'power1.out',
-							}
-						)
-						.fromTo(
-							'#slide' + to,
-							{
+							})
+							.fromTo(
+								'#slide' + to + ' ' + '.gsap-show',
+								{
+									opacity: 0,
+									y: 15,
+								},
+								{
+									opacity: 1,
+									y: 0,
+									duration: 0.35,
+									stagger: 0.1,
+									ease: 'power1.out',
+								}
+							)
+							.fromTo(
+								'#slide' + to + ' ' + '.gsap-nav-controller',
+								{
+									opacity: 0,
+									y: 15,
+								},
+								{
+									opacity: 1,
+									y: 0,
+									duration: 0.35,
+									// stagger: 0.1,
+									ease: 'power1.out',
+								},
+								'<'
+							);
+					} else {
+						gsap
+							.timeline()
+							.fromTo(
+								'#slide' + from + ' ' + '.gsap-show',
+								{
+									opacity: 1,
+									y: 0,
+								},
+								{
+									opacity: 0,
+									y: 15,
+									duration: 0.35,
+									stagger: 0.1,
+									ease: 'power1.out',
+								}
+							)
+							.fromTo(
+								'#slide' + from + ' ' + '.gsap-nav-controller',
+								{
+									opacity: 1,
+									y: 0,
+								},
+								{
+									opacity: 0,
+									y: 15,
+									duration: 0.35,
+									ease: 'power1.out',
+								},
+								'<'
+							)
+							.set('#slide' + to, {
 								y: -(screenSize.height * 40) / 100,
 								height: screenSize.height,
-							},
-							{
+							})
+							.fromTo(
+								'#slide' + from,
+								{
+									height: screenSize.height,
+									y: 0,
+								},
+								{
+									height: 0,
+									y: (screenSize.height * 40) / 100,
+									duration: 1.5,
+									ease: 'power1.out',
+								}
+							)
+							.fromTo(
+								'#slide' + to,
+								{
+									y: -(screenSize.height * 40) / 100,
+									height: screenSize.height,
+								},
+								{
+									y: 0,
+									height: screenSize.height,
+									duration: 1.5,
+									ease: 'power1.out',
+								},
+								'<-0.6'
+							)
+							.set('#slide' + from, {
+								height: 0,
 								y: 0,
-								height: screenSize.height,
-								duration: 1.5,
-								ease: 'power1.out',
-							},
-							'<-0.6'
-						)
-						.set('#slide' + from, {
-							height: 0,
-							y: 0,
-						})
-						.fromTo(
-							'#slide' + to + ' ' + '.gsap-show',
-							{
-								opacity: 0,
-								y: 15,
-							},
-							{
-								opacity: 1,
-								y: 0,
-								duration: 0.35,
-								stagger: 0.1,
-								ease: 'power1.out',
-							},
-							'<-0.4'
-						)
-						.fromTo(
-							'#slide' + to + ' ' + '.gsap-nav-controller',
-							{
-								opacity: 0,
-								y: 15,
-							},
-							{
-								opacity: 1,
-								y: 0,
-								duration: 0.35,
-								ease: 'power1.out',
-							},
-							'<'
-						);
+							})
+							.fromTo(
+								'#slide' + to + ' ' + '.gsap-show',
+								{
+									opacity: 0,
+									y: 15,
+								},
+								{
+									opacity: 1,
+									y: 0,
+									duration: 0.35,
+									stagger: 0.1,
+									ease: 'power1.out',
+								},
+								'<-0.4'
+							)
+							.fromTo(
+								'#slide' + to + ' ' + '.gsap-nav-controller',
+								{
+									opacity: 0,
+									y: 15,
+								},
+								{
+									opacity: 1,
+									y: 0,
+									duration: 0.35,
+									ease: 'power1.out',
+								},
+								'<'
+							);
+					}
+					setActiveId(to);
+					setTimeout(() => {
+						setIsScrolling(false);
+					}, 3000);
 				}
-				setActiveId(to);
-				setTimeout(() => {
-					setIsScrolling(false);
-				}, 3000);
 			}
+		} else {
+			setIsScrolling(false);
 		}
 	});
 
 	const subScrollTo = contextSafe((from, to, id) => {
-		if (
-			from >= 0 &&
-			from <= data[id].content[0].text.length - 1 &&
-			to >= 0 &&
-			to <= data[id].content[0].text.length - 1
-		) {
-			setIsScrolling(true);
+		if (allowSlide) {
+			if (
+				from >= 0 &&
+				from <= data[id].content[0].text.length - 1 &&
+				to >= 0 &&
+				to <= data[id].content[0].text.length - 1
+			) {
+				setIsScrolling(true);
 
-			var targetTo = '#' + String(page + id + to);
-			var targetFrom = '#' + String(page + id + from);
-			// setIsSideScrolling(true);
-			if (from !== to) {
-				if (from < to) {
-					gsap
-						.timeline()
-						.set(targetTo, {
-							width: 0,
-							x: (screenSize.width * 20) / 100,
-						})
-						.fromTo(
-							targetTo,
-							{
+				var targetTo = '#' + String(page + id + to);
+				var targetFrom = '#' + String(page + id + from);
+				// setIsSideScrolling(true);
+				if (from !== to) {
+					if (from < to) {
+						gsap
+							.timeline()
+							.set(targetTo, {
 								width: 0,
 								x: (screenSize.width * 20) / 100,
-							},
-							{
-								width: screenSize.width,
-								x: 0,
-								duration: 1,
-								ease: 'power1.out',
-								delay: 0.5,
-							}
-						);
-					gsap
-						.timeline()
-						.fromTo(
-							targetFrom,
-							{
-								width: screenSize.width,
-							},
-							{
-								x: -(screenSize.width * 20) / 100,
-								duration: 1,
-								ease: 'power1.out',
-								delay: 0.5,
-							}
-						)
-						.set(targetFrom, {
-							width: 0,
-							x: 0,
-							delay: 0.5,
-						});
-					// !TEXT
-					//! TEXT
-					//! TEXT
-					gsap
-						.timeline()
-						.fromTo(
-							targetFrom + ' ' + '.gsap-show',
-							{
-								opacity: 1,
-								y: 0,
-							},
-							{
-								opacity: 0,
-								y: 15,
-								duration: 0.35,
-								stagger: 0.1,
-								ease: 'power1.out',
-							}
-						)
-						.fromTo(
-							targetTo + ' ' + '.gsap-show',
-							{
-								opacity: 0,
-								y: 15,
-							},
-							{
-								opacity: 1,
-								y: 0,
-								duration: 0.35,
-								stagger: 0.1,
-								ease: 'power1.out',
-								delay: 1,
-							}
-						);
-					// !CONTROLLER
-					// !CONTROLLER
-					// !CONTROLLER
-					gsap
-						.timeline()
-						.fromTo(
-							targetFrom + ' ' + '.gsap-nav-controller',
-							{
-								opacity: 1,
-								y: 0,
-							},
-							{
-								opacity: 0,
-								y: 15,
-								duration: 0.35,
-								// stagger: 0.1,
-								ease: 'power1.out',
-							}
-						)
-
-						.fromTo(
-							targetTo + ' ' + '.gsap-nav-controller',
-							{
-								opacity: 0,
-								y: 15,
-							},
-							{
-								opacity: 1,
-								y: 0,
-								duration: 0.35,
-								// stagger: 0.1,
-								ease: 'power1.out',
-								delay: 1,
-							}
-						);
-				} else {
-					gsap
-						.timeline()
-						.set(targetFrom, {
-							width: screenSize.width,
-							x: 0,
-						})
-						.fromTo(
-							targetFrom,
-							{
-								width: screenSize.width,
-								x: 0,
-							},
-							{
+							})
+							.fromTo(
+								targetTo,
+								{
+									width: 0,
+									x: (screenSize.width * 20) / 100,
+								},
+								{
+									width: screenSize.width,
+									x: 0,
+									duration: 1,
+									ease: 'power1.out',
+									delay: 0.5,
+								}
+							);
+						gsap
+							.timeline()
+							.fromTo(
+								targetFrom,
+								{
+									width: screenSize.width,
+								},
+								{
+									x: -(screenSize.width * 20) / 100,
+									duration: 1,
+									ease: 'power1.out',
+									delay: 0.5,
+								}
+							)
+							.set(targetFrom, {
 								width: 0,
-								x: (screenSize.width * 20) / 100,
-								duration: 1,
-								ease: 'power1.out',
+								x: 0,
 								delay: 0.5,
-							}
-						);
-					gsap
-						.timeline()
-						.set(targetTo, {
-							x: -(screenSize.width * 20) / 100,
-							width: screenSize.width,
-						})
-						.fromTo(
-							targetTo,
-							{
+							});
+						// !TEXT
+						//! TEXT
+						//! TEXT
+						gsap
+							.timeline()
+							.fromTo(
+								targetFrom + ' ' + '.gsap-show',
+								{
+									opacity: 1,
+									y: 0,
+								},
+								{
+									opacity: 0,
+									y: 15,
+									duration: 0.35,
+									stagger: 0.1,
+									ease: 'power1.out',
+								}
+							)
+							.fromTo(
+								targetTo + ' ' + '.gsap-show',
+								{
+									opacity: 0,
+									y: 15,
+								},
+								{
+									opacity: 1,
+									y: 0,
+									duration: 0.35,
+									stagger: 0.1,
+									ease: 'power1.out',
+									delay: 1,
+								}
+							);
+						// !CONTROLLER
+						// !CONTROLLER
+						// !CONTROLLER
+						gsap
+							.timeline()
+							.fromTo(
+								targetFrom + ' ' + '.gsap-nav-controller',
+								{
+									opacity: 1,
+									y: 0,
+								},
+								{
+									opacity: 0,
+									y: 15,
+									duration: 0.35,
+									// stagger: 0.1,
+									ease: 'power1.out',
+								}
+							)
+
+							.fromTo(
+								targetTo + ' ' + '.gsap-nav-controller',
+								{
+									opacity: 0,
+									y: 15,
+								},
+								{
+									opacity: 1,
+									y: 0,
+									duration: 0.35,
+									// stagger: 0.1,
+									ease: 'power1.out',
+									delay: 1,
+								}
+							);
+					} else {
+						gsap
+							.timeline()
+							.set(targetFrom, {
+								width: screenSize.width,
+								x: 0,
+							})
+							.fromTo(
+								targetFrom,
+								{
+									width: screenSize.width,
+									x: 0,
+								},
+								{
+									width: 0,
+									x: (screenSize.width * 20) / 100,
+									duration: 1,
+									ease: 'power1.out',
+									delay: 0.5,
+								}
+							);
+						gsap
+							.timeline()
+							.set(targetTo, {
 								x: -(screenSize.width * 20) / 100,
 								width: screenSize.width,
-							},
-							{
+							})
+							.fromTo(
+								targetTo,
+								{
+									x: -(screenSize.width * 20) / 100,
+									width: screenSize.width,
+								},
+								{
+									x: 0,
+									width: screenSize.width,
+									duration: 1,
+									ease: 'power1.out',
+									delay: 0.25,
+								}
+							)
+							.set(targetFrom, {
+								width: 0,
 								x: 0,
-								width: screenSize.width,
-								duration: 1,
-								ease: 'power1.out',
-								delay: 0.25,
-							}
-						)
-						.set(targetFrom, {
-							width: 0,
-							x: 0,
-							delay: 0.5,
-						});
-					//! TEXT
-					//! TEXT
-					//! TEXT
-					gsap
-						.timeline()
-						.fromTo(
-							targetFrom + ' ' + '.gsap-show',
-							{
-								opacity: 1,
-								y: 0,
-							},
-							{
-								opacity: 0,
-								y: 15,
-								duration: 0.35,
-								stagger: 0.1,
-								ease: 'power1.out',
-							}
-						)
+								delay: 0.5,
+							});
+						//! TEXT
+						//! TEXT
+						//! TEXT
+						gsap
+							.timeline()
+							.fromTo(
+								targetFrom + ' ' + '.gsap-show',
+								{
+									opacity: 1,
+									y: 0,
+								},
+								{
+									opacity: 0,
+									y: 15,
+									duration: 0.35,
+									stagger: 0.1,
+									ease: 'power1.out',
+								}
+							)
 
-						.fromTo(
-							targetTo + ' ' + '.gsap-show',
-							{
-								opacity: 0,
-								y: 15,
-							},
-							{
-								opacity: 1,
-								y: 0,
-								// delay: 1,
-								duration: 0.35,
-								stagger: 0.1,
-								ease: 'power1.out',
-								delay: 0.85,
-							}
-						);
-					// !CONTROLLER
-					// !CONTROLLER
-					// !CONTROLLER
-					gsap
-						.timeline()
-						.fromTo(
-							targetFrom + ' ' + '.gsap-nav-controller',
-							{
-								opacity: 1,
-								y: 0,
-							},
-							{
-								opacity: 0,
-								y: 15,
-								duration: 0.35,
-								// stagger: 0.1,
-								ease: 'power1.out',
-							}
-						)
+							.fromTo(
+								targetTo + ' ' + '.gsap-show',
+								{
+									opacity: 0,
+									y: 15,
+								},
+								{
+									opacity: 1,
+									y: 0,
+									// delay: 1,
+									duration: 0.35,
+									stagger: 0.1,
+									ease: 'power1.out',
+									delay: 0.85,
+								}
+							);
+						// !CONTROLLER
+						// !CONTROLLER
+						// !CONTROLLER
+						gsap
+							.timeline()
+							.fromTo(
+								targetFrom + ' ' + '.gsap-nav-controller',
+								{
+									opacity: 1,
+									y: 0,
+								},
+								{
+									opacity: 0,
+									y: 15,
+									duration: 0.35,
+									// stagger: 0.1,
+									ease: 'power1.out',
+								}
+							)
 
-						.fromTo(
-							targetTo + ' ' + '.gsap-nav-controller',
-							{
-								opacity: 0,
-								y: 15,
-							},
-							{
-								opacity: 1,
-								y: 0,
-								duration: 0.35,
-								// stagger: 0.1,
-								ease: 'power1.out',
-								delay: 1,
-							}
-						);
+							.fromTo(
+								targetTo + ' ' + '.gsap-nav-controller',
+								{
+									opacity: 0,
+									y: 15,
+								},
+								{
+									opacity: 1,
+									y: 0,
+									duration: 0.35,
+									// stagger: 0.1,
+									ease: 'power1.out',
+									delay: 1,
+								}
+							);
+					}
+
+					setsubActiveId((prev) => [...prev, (prev[id] = to)]);
+					setTimeout(() => {
+						setIsScrolling(false);
+					}, 3000);
 				}
-
-				setsubActiveId((prev) => [...prev, (prev[id] = to)]);
-				setTimeout(() => {
-					setIsScrolling(false);
-				}, 3000);
 			}
+		} else {
+			setIsScrolling(false);
 		}
 	});
 
@@ -515,6 +523,7 @@ const Slider = ({ data, subpage, page }) => {
 	useEffect(() => {
 		WheelReact.config({
 			left: () => {
+				// WheelReact.clearTimeout();
 				if (page === 'home') {
 					if (!isScrolling) {
 						if (activeId < data.length - 1) {
@@ -530,6 +539,7 @@ const Slider = ({ data, subpage, page }) => {
 				}
 			},
 			right: () => {
+				// WheelReact.clearTimeout();
 				if (page === 'home') {
 					if (!isScrolling) {
 						if (activeId > 0) {
@@ -565,6 +575,8 @@ const Slider = ({ data, subpage, page }) => {
 				}
 			},
 		});
+
+		// return WheelReact.clearTimeout();
 	}, [
 		activeId,
 		data.length,
