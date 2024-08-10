@@ -71,6 +71,7 @@ const SubpageSlider = ({
 	// const container = useRef(null);
 	// const { contextSafe } = useGSAP({ scope: container });
 	// const [isSideScrolling, setIsSideScrolling] = useState(false);
+	console.log(id, activeId);
 
 	useGSAP(
 		() => {
