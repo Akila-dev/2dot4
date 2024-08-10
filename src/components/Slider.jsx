@@ -70,7 +70,7 @@ const Slider = ({ data, subpage, page, allowSlide }) => {
 								}
 							)
 							.fromTo(
-								'#slide' + from + ' ' + '.gsap-nav-controller',
+								'.gsap-nav-controller',
 								{
 									opacity: 1,
 									y: 0,
@@ -127,7 +127,7 @@ const Slider = ({ data, subpage, page, allowSlide }) => {
 								}
 							)
 							.fromTo(
-								'#slide' + to + ' ' + '.gsap-nav-controller',
+								'.gsap-nav-controller',
 								{
 									opacity: 0,
 									y: 15,
@@ -159,7 +159,7 @@ const Slider = ({ data, subpage, page, allowSlide }) => {
 								}
 							)
 							.fromTo(
-								'#slide' + from + ' ' + '.gsap-nav-controller',
+								'.gsap-nav-controller',
 								{
 									opacity: 1,
 									y: 0,
@@ -223,7 +223,7 @@ const Slider = ({ data, subpage, page, allowSlide }) => {
 								'<-0.4'
 							)
 							.fromTo(
-								'#slide' + to + ' ' + '.gsap-nav-controller',
+								'.gsap-nav-controller',
 								{
 									opacity: 0,
 									y: 15,
@@ -265,6 +265,34 @@ const Slider = ({ data, subpage, page, allowSlide }) => {
 					if (from < to) {
 						gsap
 							.timeline()
+							.fromTo(
+								'.gsap-nav-controller',
+								{
+									opacity: 1,
+									y: 0,
+								},
+								{
+									opacity: 0,
+									y: 15,
+									duration: 0.35,
+									ease: 'power1.out',
+								}
+							)
+							.fromTo(
+								targetFrom + ' ' + '.gsap-show',
+								{
+									opacity: 1,
+									y: 0,
+								},
+								{
+									opacity: 0,
+									y: 15,
+									duration: 0.35,
+									stagger: 0.1,
+									ease: 'power1.out',
+								},
+								'<'
+							)
 							.set(targetTo, {
 								width: 0,
 								x: (screenSize.width * 20) / 100,
@@ -280,11 +308,8 @@ const Slider = ({ data, subpage, page, allowSlide }) => {
 									x: 0,
 									duration: 1,
 									ease: 'power1.out',
-									delay: 0.5,
 								}
-							);
-						gsap
-							.timeline()
+							)
 							.fromTo(
 								targetFrom,
 								{
@@ -294,33 +319,13 @@ const Slider = ({ data, subpage, page, allowSlide }) => {
 									x: -(screenSize.width * 20) / 100,
 									duration: 1,
 									ease: 'power1.out',
-									delay: 0.5,
-								}
+								},
+								'<0.2'
 							)
 							.set(targetFrom, {
 								width: 0,
 								x: 0,
-								delay: 0.5,
-							});
-						// !TEXT
-						//! TEXT
-						//! TEXT
-						gsap
-							.timeline()
-							.fromTo(
-								targetFrom + ' ' + '.gsap-show',
-								{
-									opacity: 1,
-									y: 0,
-								},
-								{
-									opacity: 0,
-									y: 15,
-									duration: 0.35,
-									stagger: 0.1,
-									ease: 'power1.out',
-								}
-							)
+							})
 							.fromTo(
 								targetTo + ' ' + '.gsap-show',
 								{
@@ -333,31 +338,11 @@ const Slider = ({ data, subpage, page, allowSlide }) => {
 									duration: 0.35,
 									stagger: 0.1,
 									ease: 'power1.out',
-									delay: 1,
-								}
-							);
-						// !CONTROLLER
-						// !CONTROLLER
-						// !CONTROLLER
-						gsap
-							.timeline()
-							.fromTo(
-								targetFrom + ' ' + '.gsap-nav-controller',
-								{
-									opacity: 1,
-									y: 0,
 								},
-								{
-									opacity: 0,
-									y: 15,
-									duration: 0.35,
-									// stagger: 0.1,
-									ease: 'power1.out',
-								}
+								'<-0.2'
 							)
-
 							.fromTo(
-								targetTo + ' ' + '.gsap-nav-controller',
+								'.gsap-nav-controller',
 								{
 									opacity: 0,
 									y: 15,
@@ -366,34 +351,45 @@ const Slider = ({ data, subpage, page, allowSlide }) => {
 									opacity: 1,
 									y: 0,
 									duration: 0.35,
-									// stagger: 0.1,
 									ease: 'power1.out',
-									delay: 1,
-								}
+								},
+								'<'
 							);
 					} else {
 						gsap
 							.timeline()
-							.set(targetFrom, {
-								width: screenSize.width,
-								x: 0,
-							})
 							.fromTo(
-								targetFrom,
+								'.gsap-nav-controller',
 								{
-									width: screenSize.width,
-									x: 0,
+									opacity: 1,
+									y: 0,
 								},
 								{
-									width: 0,
-									x: (screenSize.width * 20) / 100,
-									duration: 1,
+									opacity: 0,
+									y: 15,
+									duration: 0.35,
 									ease: 'power1.out',
-									delay: 0.5,
 								}
-							);
-						gsap
-							.timeline()
+							)
+							.fromTo(
+								targetFrom + ' ' + '.gsap-show',
+								{
+									opacity: 1,
+									y: 0,
+								},
+								{
+									opacity: 0,
+									y: 15,
+									duration: 0.35,
+									stagger: 0.1,
+									ease: 'power1.out',
+								},
+								'<'
+							)
+							// .set(targetFrom, {
+							// 	width: screenSize.width,
+							// 	x: 0,
+							// })
 							.set(targetTo, {
 								x: -(screenSize.width * 20) / 100,
 								width: screenSize.width,
@@ -409,34 +405,27 @@ const Slider = ({ data, subpage, page, allowSlide }) => {
 									width: screenSize.width,
 									duration: 1,
 									ease: 'power1.out',
-									delay: 0.25,
 								}
 							)
+							.fromTo(
+								targetFrom,
+								{
+									width: screenSize.width,
+									x: 0,
+								},
+								{
+									width: 0,
+									x: (screenSize.width * 20) / 100,
+									duration: 1,
+									ease: 'power1.out',
+								},
+								'<0.2'
+							)
+
 							.set(targetFrom, {
 								width: 0,
 								x: 0,
-								delay: 0.5,
-							});
-						//! TEXT
-						//! TEXT
-						//! TEXT
-						gsap
-							.timeline()
-							.fromTo(
-								targetFrom + ' ' + '.gsap-show',
-								{
-									opacity: 1,
-									y: 0,
-								},
-								{
-									opacity: 0,
-									y: 15,
-									duration: 0.35,
-									stagger: 0.1,
-									ease: 'power1.out',
-								}
-							)
-
+							})
 							.fromTo(
 								targetTo + ' ' + '.gsap-show',
 								{
@@ -450,31 +439,10 @@ const Slider = ({ data, subpage, page, allowSlide }) => {
 									duration: 0.35,
 									stagger: 0.1,
 									ease: 'power1.out',
-									delay: 0.85,
-								}
-							);
-						// !CONTROLLER
-						// !CONTROLLER
-						// !CONTROLLER
-						gsap
-							.timeline()
-							.fromTo(
-								targetFrom + ' ' + '.gsap-nav-controller',
-								{
-									opacity: 1,
-									y: 0,
-								},
-								{
-									opacity: 0,
-									y: 15,
-									duration: 0.35,
-									// stagger: 0.1,
-									ease: 'power1.out',
 								}
 							)
-
 							.fromTo(
-								targetTo + ' ' + '.gsap-nav-controller',
+								'.gsap-nav-controller',
 								{
 									opacity: 0,
 									y: 15,
@@ -485,8 +453,8 @@ const Slider = ({ data, subpage, page, allowSlide }) => {
 									duration: 0.35,
 									// stagger: 0.1,
 									ease: 'power1.out',
-									delay: 1,
-								}
+								},
+								'<'
 							);
 					}
 
@@ -527,7 +495,7 @@ const Slider = ({ data, subpage, page, allowSlide }) => {
 				if (page === 'home') {
 					if (!isScrolling) {
 						if (activeId < data.length - 1) {
-							console.log('wheel left detected.');
+							// console.log('wheel left detected.');
 							setIsScrolling(true);
 							scrollTo(activeId, activeId + 1);
 						}
@@ -543,7 +511,7 @@ const Slider = ({ data, subpage, page, allowSlide }) => {
 				if (page === 'home') {
 					if (!isScrolling) {
 						if (activeId > 0) {
-							console.log('wheel right detected.');
+							// console.log('wheel right detected.');
 							setIsScrolling(true);
 							scrollTo(activeId, activeId - 1);
 						}
@@ -558,7 +526,7 @@ const Slider = ({ data, subpage, page, allowSlide }) => {
 				// WheelReact.clearTimeout();
 				if (!isScrolling) {
 					if (activeId < data.length - 1) {
-						console.log('wheel up detected.');
+						// console.log('wheel up detected.');
 						setIsScrolling(true);
 						scrollTo(activeId, activeId + 1);
 					}
@@ -568,7 +536,7 @@ const Slider = ({ data, subpage, page, allowSlide }) => {
 				// WheelReact.clearTimeout();
 				if (!isScrolling) {
 					if (activeId > 0) {
-						console.log('wheel down detected.');
+						// console.log('wheel down detected.');
 						setIsScrolling(true);
 						scrollTo(activeId, activeId - 1);
 					}
