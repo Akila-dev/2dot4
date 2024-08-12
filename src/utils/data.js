@@ -87,8 +87,8 @@ import application42Webp from '../assets/sectionImgs/4/42.webp';
 export const DATA = [
 	{
 		link: 'about',
-		title: 'IT STARTED WITH A DREAM!',
-		text: 'Fueled by the passion to grow and set a new standard in the diamond material without any compromise.',
+		title: 'A NEW STANDARD',
+		text: '2DOT4 leads a revolutionary shift in diamond industry. Setting elevated standards, fostering innovation through a robust ecosystem and diverse collaboration.',
 		buttonText: 'EXPLORE NOW',
 		img: aboutHero,
 		imgWebp: aboutHeroWebp,

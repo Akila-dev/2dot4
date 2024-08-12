@@ -83,7 +83,7 @@ const DiscoverContainer = ({ data, page, subpage }) => {
 		<div ref={container} className="fixed top-0 left-0 w-full h-full">
 			<div className="flex flex-col justify-between h-full w-full items-center relative overflow-hidden scroll-snap">
 				{/* CONTENT */}
-				<Slider data={data} page={page} subpage={subpage} />
+				<Slider data={data} page={page} subpage={subpage} allowSlide />
 				{/* TOP */}
 				{/* TOP */}
 				<div className="h-[45px] md:h-[56.5px] flex items-center justify-center relative w-full z-10 pointer-events-none">
