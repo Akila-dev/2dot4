@@ -3,6 +3,8 @@ import dummy from '../assets/dummy/1.jpg';
 //* SECTION 1: ABOUT SECTION
 import aboutHero from '../assets/sectionImgs/1/hero.jpg';
 import about1 from '../assets/sectionImgs/1/1.jpg';
+import about11 from '../assets/sectionImgs/1/11.png';
+import about13 from '../assets/sectionImgs/1/13.jpg';
 import about2 from '../assets/sectionImgs/1/2.jpg';
 import about3 from '../assets/sectionImgs/1/3.jpg';
 import about4 from '../assets/sectionImgs/1/4.jpg';
@@ -107,7 +109,7 @@ export const DATA = [
 					},
 				],
 				buttonText: '',
-				img: [about1, about1, about1],
+				img: [about11, about1, about13],
 				imgWebp: [about1Webp, about1Webp, about1Webp],
 				short: false,
 				// video: '',
