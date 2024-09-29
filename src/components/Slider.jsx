@@ -4,7 +4,7 @@ import { SideNavLink, Slide, SubpageSlider } from '../components';
 import WheelReact from 'wheel-react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { useSwiper } from 'swiper/react';
+// import { useSwiper } from 'swiper/react';
 
 gsap.registerPlugin(useGSAP);
 
@@ -17,8 +17,8 @@ const getWindowsDimension = () => {
 };
 
 const Slider = ({ data, subpage, page, allowSlide, scroll_to }) => {
-	const swiper = useSwiper();
-	console.log(swiper);
+	// const swiper = useSwiper();
+	// console.log(swiper);
 	// *UPDATE SCREEN SIZE WHEN SCREEN/VIEW PORT RESIZES
 	const [screenSize, setScreenSize] = useState(getWindowsDimension());
 	const container = useRef(null);
@@ -461,8 +461,8 @@ const Slider = ({ data, subpage, page, allowSlide, scroll_to }) => {
 							);
 					}
 
-					console.log([from, to]);
-					console.log(subActiveId);
+					// console.log([from, to]);
+					// console.log(subActiveId);
 					let newActiveId = subActiveId;
 					newActiveId[id] = to;
 					setsubActiveId(newActiveId);

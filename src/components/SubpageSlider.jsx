@@ -21,11 +21,28 @@ const Slide = ({ data, text, id, page, sectionId }) => {
 					className={`slide w-full h-full object-cover overflow-hidden relative scroll-content transition`}
 				>
 					<div className="absolute !bottom-0 !right-0 w-screen h-screen overflow-hidden ">
-						<ImgWithFallback
-							src={data.imgWebp[id]}
-							fallback={data.img[id]}
-							alt={data.link + id}
-						/>
+						{data.video ? (
+							<div className="w-full h-full object-cover">
+								<video
+									className="w-full h-full object-cover"
+									// style={{
+									// 	aspectRatio: 1,
+									// 	width: '100%',
+									// }}
+									autoPlay
+									muted
+									loop
+								>
+									<source src={data.video[id]} type="video/mp4" />
+								</video>
+							</div>
+						) : (
+							<ImgWithFallback
+								src={data.imgWebp[id]}
+								fallback={data.img[id]}
+								alt={data.link + id}
+							/>
+						)}
 						<div className="bg-overlay absolute top-0 left-0"></div>
 					</div>
 					{/* Content */}
