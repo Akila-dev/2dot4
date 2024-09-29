@@ -4,6 +4,7 @@ import { SideNavLink, Slide, SubpageSlider } from '../components';
 import WheelReact from 'wheel-react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { useSwiper } from 'swiper/react';
 
 gsap.registerPlugin(useGSAP);
 
@@ -15,7 +16,9 @@ const getWindowsDimension = () => {
 	};
 };
 
-const Slider = ({ data, subpage, page, allowSlide }) => {
+const Slider = ({ data, subpage, page, allowSlide, scroll_to }) => {
+	const swiper = useSwiper();
+	console.log(swiper);
 	// *UPDATE SCREEN SIZE WHEN SCREEN/VIEW PORT RESIZES
 	const [screenSize, setScreenSize] = useState(getWindowsDimension());
 	const container = useRef(null);
@@ -608,6 +611,14 @@ const Slider = ({ data, subpage, page, allowSlide }) => {
 			}
 		}
 	};
+
+	// !HANDLE NAV CLICK SCROLL
+	useEffect(() => {
+		if (scroll_to !== '') {
+			scrollTo(activeId, scroll_to);
+		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [scroll_to]);
 
 	return (
 		<div

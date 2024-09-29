@@ -44,7 +44,7 @@ const MenuPopup = ({ close, container }) => {
 			ref={container}
 			className="fixed top-0 left-0 w-full sm:max-w-[375px] !z-[100] h-full"
 		>
-			<div className="gsap-menu-container bg-[--white] text-[--bg] w-full h-full overflow-y-auto flex flex-col gap-10 justify-between px-5 md:px-[2rem] text-xs">
+			<div className="gsap-menu-container bg-[--bg] text-[--white] w-full h-full overflow-y-auto flex flex-col gap-10 justify-between px-5 md:px-[2rem] text-xs">
 				<CloseBtn onClick={() => close()} />
 
 				<div>
@@ -52,7 +52,9 @@ const MenuPopup = ({ close, container }) => {
 						{menu.map((item, id) => (
 							<Link
 								key={id}
-								to={'/' + item.link}
+								to={'/'}
+								// to={'/' + item.link}
+								state={{ index: id }}
 								className="block uppercase text-2xl text-medium link"
 							>
 								{item.link}

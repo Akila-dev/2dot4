@@ -98,7 +98,7 @@ button {
 }
 
 .link {
-	@apply hover:opacity-70 transition duration-500;
+	@apply hover:opacity-70 hover:scale-105 transition duration-500;
 }
 
 .text-input {

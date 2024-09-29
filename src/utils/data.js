@@ -7,9 +7,11 @@ import about11 from '../assets/sectionImgs/1/11.png';
 import about12 from '../assets/sectionImgs/1/12.jpg';
 import about13 from '../assets/sectionImgs/1/13.jpg';
 import about2 from '../assets/sectionImgs/1/2.jpg';
+import about21 from '../assets/sectionImgs/1/21.mov';
 // import about3 from '../assets/sectionImgs/1/3.jpg';
 import about31 from '../assets/sectionImgs/1/31.jpg';
 import about4 from '../assets/sectionImgs/1/4.jpg';
+import about41 from '../assets/sectionImgs/1/41.mov';
 import aboutHeroWebp from '../assets/sectionImgs/1/hero.webp';
 import about1Webp from '../assets/sectionImgs/1/1.webp';
 import about2Webp from '../assets/sectionImgs/1/2.webp';
@@ -139,7 +141,7 @@ export const DATA = [
 				img: [about2],
 				imgWebp: [about2Webp],
 				short: false,
-				// video: '',
+				video: [about21],
 			},
 			{
 				link: 'Education',
@@ -174,7 +176,7 @@ export const DATA = [
 				img: [about4, about4],
 				imgWebp: [about4Webp, about4Webp],
 				short: false,
-				// video: '',
+				video: [about41, about41],
 			},
 		],
 	},
@@ -235,19 +237,19 @@ export const DATA = [
 		imgWebp: diamondHeroWebp,
 		short: true,
 		subContent: [
-			{
-				link: 'FROM SEED TO POLISHED STONE',
-				content: [
-					{
-						title: '',
-						text: [''],
-					},
-				],
-				buttonText: '',
-				img: '',
-				imgWebp: '',
-				video: 'video',
-			},
+			// {
+			// 	link: 'FROM SEED TO POLISHED STONE',
+			// 	content: [
+			// 		{
+			// 			title: '',
+			// 			text: [''],
+			// 		},
+			// 	],
+			// 	buttonText: '',
+			// 	img: '',
+			// 	imgWebp: '',
+			// 	video: 'video',
+			// },
 			{
 				link: 'LAB GROWN DIAMONDS',
 				content: [

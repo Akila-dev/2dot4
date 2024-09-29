@@ -22,7 +22,7 @@ import {
 } from 'react-icons/bi';
 import { PiInstagramLogoFill, PiDotsThreeOutlineFill } from 'react-icons/pi';
 
-const Main = ({ data, page, subpage }) => {
+const Main = ({ data, page, subpage, scroll_to }) => {
 	const container = useRef();
 	const menuContainer = useRef();
 	const [showMenu, setShowMenu] = useState(false);
@@ -98,7 +98,13 @@ const Main = ({ data, page, subpage }) => {
 		<div ref={container} className="fixed top-0 left-0 w-full h-full">
 			<div className="flex flex-col justify-between h-full w-full items-center relative overflow-hidden scroll-snap">
 				{/* CONTENT */}
-				<Slider data={data} page={page} subpage={subpage} allowSlide={true} />
+				<Slider
+					data={data}
+					page={page}
+					subpage={subpage}
+					allowSlide={true}
+					scroll_to={scroll_to}
+				/>
 				{/* TOP */}
 				{/* TOP */}
 				<div className="h-[45px] md:h-[56.5px] flex items-center justify-center relative w-full z-10 pointer-events-none">
@@ -106,21 +112,22 @@ const Main = ({ data, page, subpage }) => {
 						<div className="layout-sidebars layout-sidebar-l">
 							<MenuButton onClick={() => setShowMenu(true)} />
 						</div>
-						<div className="w-full h-full flex items-center justify-center">
-							<Link
-								to="/"
-								onMouseEnter={() => scaleUp('logo')}
-								onMouseLeave={() => scaleBack('logo')}
-							>
-								<h3 className="logo uppercase w-full border-x border-[--lines] md:border-none flex items-center justify-center h-full pointer-events-auto">
+						<div className="!w-full h-full flex items-center justify-center">
+							<h3 className="logo uppercase w-full border-x border-[--lines] md:border-none flex items-center justify-center h-full pointer-events-auto">
+								<Link
+									to="/"
+									onMouseEnter={() => scaleUp('logo')}
+									onMouseLeave={() => scaleBack('logo')}
+									// className="w-full"
+								>
 									{contact.brandName}
 									{/* <img
 										src={logo_white}
 										alt="logo"
 										className="h-[30px] md:h-[40px] w-auto object-cover mb-1 hover:scale-110 transition duration-500"
 									/> */}
-								</h3>
-							</Link>
+								</Link>
+							</h3>
 						</div>
 						<div className="layout-sidebars layout-sidebar-r">
 							<Link
