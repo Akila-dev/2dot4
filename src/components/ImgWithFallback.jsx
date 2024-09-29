@@ -9,6 +9,8 @@
 /> */
 }
 
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 const ImgWithFallback = ({
 	src,
 	fallback,
@@ -22,11 +24,17 @@ const ImgWithFallback = ({
 				type={type}
 				className="w-screen h-screen !object-center !object-cover overflow-hidden"
 			/> */}
-			<img
+			<LazyLoadImage
+				height={'100%'}
+				src={fallback}
+				width={'100%'}
+				className="w-screen h-screen object-cover"
+			/>
+			{/* <img
 				src={fallback}
 				{...delegated}
 				className="w-screen h-screen !object-center !object-cover overflow-hidden"
-			/>
+			/> */}
 		</picture>
 	);
 };
