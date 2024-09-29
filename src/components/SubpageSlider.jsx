@@ -47,7 +47,13 @@ const Slide = ({ data, text, id, page, sectionId }) => {
 					</div>
 					{/* Content */}
 					<div className="fixed  md:py-[60px] px-5 md:px-[305px] w-screen h-full flex items-center justify-between">
-						<div className="w-full h-full flex items-center justify-center flex-1">
+						<div
+							className={`w-full h-full flex justify-center flex-1 ${
+								data.moveToBottom && data.moveToBottom[id]
+									? 'items-end pb-8'
+									: 'items-center'
+							}`}
+						>
 							<CTASubSlider
 								title={
 									data.content[0].title.length > 1

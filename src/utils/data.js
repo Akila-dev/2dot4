@@ -123,6 +123,7 @@ export const DATA = [
 				img: [about11, about12, about13],
 				imgWebp: [about1Webp, about1Webp, about1Webp],
 				short: false,
+				moveToBottom: [true, false, false],
 				// video: '',
 			},
 			{
