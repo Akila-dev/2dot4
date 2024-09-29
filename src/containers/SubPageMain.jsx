@@ -16,7 +16,7 @@ gsap.registerPlugin(useGSAP);
 
 // Assets
 import {
-	BiSolidMessageRoundedDetail,
+	// BiSolidMessageRoundedDetail,
 	BiLogoLinkedinSquare,
 	BiLogoFacebookCircle,
 } from 'react-icons/bi';
@@ -105,11 +105,11 @@ const SubPageMain = ({ data, page, subpage }) => {
 						</div>
 						<div className="layout-sidebars layout-sidebar-r">
 							<Link
-								to="/contact"
+								to="https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com"
 								className="flex gap-[6px] items-center pointer-events-auto"
 							>
 								<span className="hidden md:inline">Contact</span>{' '}
-								<BiSolidMessageRoundedDetail className="text-xl md:text-lg" />
+								{/* <BiSolidMessageRoundedDetail className="text-xl md:text-lg" /> */}
 							</Link>{' '}
 						</div>
 					</div>

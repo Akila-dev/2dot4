@@ -43,7 +43,7 @@ const Slide = ({ data, text, id, page, sectionId }) => {
 								btnText={
 									data.content[0].text.length === id + 1 ? data.buttonText : ''
 								}
-								href={'/contact'}
+								href={data.buttonLink}
 								short
 								id={page + id}
 								// short={data.short}

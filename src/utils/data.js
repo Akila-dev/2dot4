@@ -1,13 +1,14 @@
 import dummy from '../assets/dummy/1.jpg';
 
 //* SECTION 1: ABOUT SECTION
-import aboutHero from '../assets/sectionImgs/1/hero.jpg';
+import aboutHero from '../assets/sectionImgs/1/hero.png';
 // import about1 from '../assets/sectionImgs/1/1.jpg';
 import about11 from '../assets/sectionImgs/1/11.png';
 import about12 from '../assets/sectionImgs/1/12.jpg';
 import about13 from '../assets/sectionImgs/1/13.jpg';
 import about2 from '../assets/sectionImgs/1/2.jpg';
-import about3 from '../assets/sectionImgs/1/3.jpg';
+// import about3 from '../assets/sectionImgs/1/3.jpg';
+import about31 from '../assets/sectionImgs/1/31.jpg';
 import about4 from '../assets/sectionImgs/1/4.jpg';
 import aboutHeroWebp from '../assets/sectionImgs/1/hero.webp';
 import about1Webp from '../assets/sectionImgs/1/1.webp';
@@ -17,8 +18,10 @@ import about4Webp from '../assets/sectionImgs/1/4.webp';
 
 //* SECTION 2: TECHNOLOGY SECTION
 import technologyHero from '../assets/sectionImgs/2/hero.jpg';
-import technology1 from '../assets/sectionImgs/2/1.jpg';
-import technology2 from '../assets/sectionImgs/2/2.jpg';
+import technology11 from '../assets/sectionImgs/2/11.jpg';
+import technology21 from '../assets/sectionImgs/2/21.jpg';
+import technology22 from '../assets/sectionImgs/2/22.jpg';
+import technology23 from '../assets/sectionImgs/2/23.jpg';
 import technologyHeroWebp from '../assets/sectionImgs/2/hero.webp';
 import technology1Webp from '../assets/sectionImgs/2/1.webp';
 import technology2Webp from '../assets/sectionImgs/2/2.webp';
@@ -32,7 +35,10 @@ import diamond14 from '../assets/sectionImgs/3/14.jpg';
 import diamond15 from '../assets/sectionImgs/3/15.jpg';
 import diamond16 from '../assets/sectionImgs/3/16.jpg';
 import diamond17 from '../assets/sectionImgs/3/17.jpg';
-import diamond2 from '../assets/sectionImgs/3/2.jpg';
+import diamond31 from '../assets/sectionImgs/3/31.jpg';
+import diamond32 from '../assets/sectionImgs/3/32.jpg';
+import diamond33 from '../assets/sectionImgs/3/33.jpg';
+import diamond34 from '../assets/sectionImgs/3/34.jpg';
 import diamondHeroWebp from '../assets/sectionImgs/3/hero.webp';
 import diamond11Webp from '../assets/sectionImgs/3/11.webp';
 import diamond12Webp from '../assets/sectionImgs/3/12.webp';
@@ -52,7 +58,9 @@ import application4 from '../assets/sectionImgs/4/4.jpg';
 import application12 from '../assets/sectionImgs/4/12.png';
 import application22 from '../assets/sectionImgs/4/22.png';
 import application32 from '../assets/sectionImgs/4/32.png';
+import application41 from '../assets/sectionImgs/4/41.png';
 import application42 from '../assets/sectionImgs/4/42.png';
+import application51 from '../assets/sectionImgs/4/51.jpg';
 import applicationHeroWebp from '../assets/sectionImgs/4/hero.webp';
 import application1Webp from '../assets/sectionImgs/4/1.webp';
 import application2Webp from '../assets/sectionImgs/4/2.webp';
@@ -126,6 +134,8 @@ export const DATA = [
 					},
 				],
 				buttonText: 'Visit Us',
+				buttonLink:
+					'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
 				img: [about2],
 				imgWebp: [about2Webp],
 				short: false,
@@ -142,7 +152,9 @@ export const DATA = [
 					},
 				],
 				buttonText: 'Contact Us',
-				img: [about3],
+				buttonLink:
+					'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
+				img: [about31],
 				imgWebp: [about3Webp],
 				short: true,
 				// video: '',
@@ -188,7 +200,7 @@ export const DATA = [
 					},
 				],
 				buttonText: '',
-				img: [technology1, technology1, technology1],
+				img: [technology11, technology11, technology11],
 				imgWebp: [technology1Webp, technology1Webp, technology1Webp],
 				short: false,
 				// video: '',
@@ -206,7 +218,7 @@ export const DATA = [
 					},
 				],
 				buttonText: '',
-				img: [technology2, technology2, technology2],
+				img: [technology21, technology22, technology23],
 				imgWebp: [technology2Webp, technology2Webp, technology2Webp],
 				short: false,
 				// video: '',
@@ -216,7 +228,8 @@ export const DATA = [
 	{
 		link: 'diamonds',
 		title: 'FROM SEED TO POLISHED STONE',
-		text: 'Diamonds, process seeds, rough and polished',
+		text: "A lab-grown diamond is birthed in a crucible of human ingenuity, where the fierce embrace of highly developed growing recipe, pressure and heat or the delicate dance of carbon vapor crystallises a gem of exquisite brilliance, mirroring nature's ancient artistry.",
+		// text: 'Diamonds, process seeds, rough and polished',
 		buttonText: 'Explore Now',
 		img: diamondHero,
 		imgWebp: diamondHeroWebp,
@@ -236,10 +249,10 @@ export const DATA = [
 				video: 'video',
 			},
 			{
-				link: 'OUR LAB GROWN DIAMONDS',
+				link: 'LAB GROWN DIAMONDS',
 				content: [
 					{
-						title: ['Our Lab-Grown Diamonds'],
+						title: ['Lab-Grown Diamonds'],
 						text: [
 							'Growing diamonds in a lab allows remarkable flexibility as size, cut, and colour can all be predetermined. We can now design our pieces first and then grow the diamonds to exact specifications, making genuinely remarkable and original jewellery pieces.',
 							"A lab-grown diamond is a marvel of modern science and innovation. Unlike traditional diamonds formed deep within the Earth's crust over millions of years, lab-grown diamonds are meticulously created in controlled laboratory environments.",
@@ -251,6 +264,8 @@ export const DATA = [
 					},
 				],
 				buttonText: 'Contact Us',
+				buttonLink:
+					'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
 				img: [
 					diamond11,
 					diamond12,
@@ -286,7 +301,9 @@ export const DATA = [
 					},
 				],
 				buttonText: 'Contact Us',
-				img: [diamond2, diamond2, diamond2, diamond2],
+				buttonLink:
+					'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
+				img: [diamond31, diamond32, diamond33, diamond34],
 				imgWebp: [diamond2Webp, diamond2Webp, diamond2Webp, diamond2Webp],
 				short: false,
 				// video: '',
@@ -365,7 +382,7 @@ export const DATA = [
 					},
 				],
 				buttonText: '',
-				img: [application4, application42],
+				img: [application41, application42],
 				imgWebp: [application4Webp, application42Webp],
 				short: false,
 				// video: '',
@@ -374,16 +391,17 @@ export const DATA = [
 				link: 'Summary',
 				content: [
 					{
-						title: ['Semiconductor Diamonds'],
+						title: ['Summary'],
 						text: [
-							'At 2DOT4 Diamonds LLC, our pursuit of excellence in the field of lab-grown diamonds extends beyond gemstone production into the realms of technical and industrial applications. Our comprehensive research and development efforts demonstrate our commitment to innovation, quality, and the future of technology.',
-							'By pushing the boundaries of what is possible with lab-grown diamonds, we are not just crafting the future of our company but also contributing to the broader future of industry and science.',
+							'At 2DOT4 Diamonds LLC, our pursuit of excellence in the field of lab-grown diamonds extends beyond gemstone production into the realms of technical and industrial applications. Our comprehensive research and development efforts demonstrate our commitment to innovation, quality, and the future of technology. By pushing the boundaries of what is possible with lab-grown diamonds, we are not just crafting the future of our company but also contributing to the broader future of industry and science.',
 						],
 					},
 				],
 				buttonText: 'Contact Us',
-				img: [application4, application42],
-				imgWebp: [application4Webp, application42Webp],
+				buttonLink:
+					'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
+				img: [application51],
+				imgWebp: [application4Webp],
 				short: false,
 				// video: '',
 			},
@@ -456,7 +474,7 @@ export const CONTACT = {
 	socials: [
 		'https://instagram.com',
 		'https://linkedin.com',
-		'https://facebook.com',
+		// 'https://facebook.com',
 	],
 	phoneNo: ['08067586986'],
 	mail: ['rhemarx-dev@email.com'],
@@ -464,27 +482,27 @@ export const CONTACT = {
 
 export const FOOTERLINKLIST = [
 	{
-		link: 'career',
-		label: 'career',
+		link: '/discover',
+		label: 'discover',
 	},
 	{
-		link: 'contact',
+		link: 'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
 		label: 'contact',
 	},
 	{
-		link: 'faq',
+		link: '/faq',
 		label: 'FAQ',
 	},
 	{
-		link: 'privacy',
+		link: '/privacy',
 		label: 'Privacy Policy',
 	},
 	{
-		link: 'atelier',
+		link: '/atelier',
 		label: 'Atelier Program',
 	},
-	{
-		link: 'terms',
-		label: 'Terms & Conditions',
-	},
+	// {
+	// 	link: '/terms',
+	// 	label: 'Terms & Conditions',
+	// },
 ];
