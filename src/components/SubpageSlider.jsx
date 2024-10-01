@@ -69,6 +69,7 @@ const Slide = ({ data, text, id, page, sectionId }) => {
 								href={data.buttonLink}
 								short
 								id={page + id}
+								makeTiny={data.make_tiny}
 								// short={data.short}
 							/>
 						</div>

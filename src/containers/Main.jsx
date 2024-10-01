@@ -185,6 +185,7 @@ const Main = ({ data, page, subpage, scroll_to }) => {
 								{contact.socials.map((link, id) => (
 									<a
 										href={link}
+										target="_blank"
 										key={id}
 										className={`social-${id} pointer-events-auto`}
 										onMouseEnter={() => scaleUp('social-' + id)}

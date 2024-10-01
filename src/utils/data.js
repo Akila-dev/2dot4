@@ -73,6 +73,13 @@ import application22Webp from '../assets/sectionImgs/4/22.webp';
 import application32Webp from '../assets/sectionImgs/4/32.webp';
 import application42Webp from '../assets/sectionImgs/4/42.webp';
 
+// ATELIER
+import atelier1 from '../assets/sectionImgs/atelier/1.jpg';
+import atelier2 from '../assets/sectionImgs/atelier/2.jpg';
+import atelier3 from '../assets/sectionImgs/atelier/3.jpg';
+import atelier4 from '../assets/sectionImgs/atelier/4.jpg';
+import atelier5 from '../assets/sectionImgs/atelier/5.jpg';
+
 // export const DATA = [
 // {
 // 	link: '',
@@ -101,7 +108,7 @@ export const DATA = [
 	{
 		link: 'about',
 		title: 'A NEW STANDARD',
-		text: '2DOT4 leads a revolutionary shift in diamond industry. Setting elevated standards, fostering innovation through a robust ecosystem and diverse collaboration.',
+		text: '2DOT4 aims to lead a revolutionary shift in the diamond industry. Setting elevated standards, fostering innovation through a robust ecosystem and diverse industry collaboration.',
 		buttonText: 'EXPLORE NOW',
 		img: aboutHero,
 		imgWebp: aboutHeroWebp,
@@ -136,13 +143,14 @@ export const DATA = [
 						],
 					},
 				],
-				buttonText: 'Visit Us',
+				buttonText: 'CONTACT US',
 				buttonLink:
 					'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
 				img: [about2],
 				imgWebp: [about2Webp],
 				short: false,
 				video: [about21],
+				// make_tiny: true,
 			},
 			{
 				link: 'Education',
@@ -154,7 +162,7 @@ export const DATA = [
 						],
 					},
 				],
-				buttonText: 'Contact Us',
+				buttonText: 'CONTACT US',
 				buttonLink:
 					'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
 				img: [about31],
@@ -202,7 +210,9 @@ export const DATA = [
 						],
 					},
 				],
-				buttonText: '',
+				buttonText: 'CONTACT US',
+				buttonLink:
+					'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
 				img: [technology11, technology11, technology11],
 				imgWebp: [technology1Webp, technology1Webp, technology1Webp],
 				short: false,
@@ -220,7 +230,9 @@ export const DATA = [
 						],
 					},
 				],
-				buttonText: '',
+				buttonText: 'CONTACT US',
+				buttonLink:
+					'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
 				img: [technology21, technology22, technology23],
 				imgWebp: [technology2Webp, technology2Webp, technology2Webp],
 				short: false,
@@ -231,7 +243,7 @@ export const DATA = [
 	{
 		link: 'diamonds',
 		title: 'FROM SEED TO POLISHED STONE',
-		text: "A lab-grown diamond is birthed in a crucible of human ingenuity, where the fierce embrace of highly developed growing recipe, pressure and heat or the delicate dance of carbon vapor crystallises a gem of exquisite brilliance, mirroring nature's ancient artistry.",
+		text: 'A lab-grown diamond forms through human innovation, using a refined process of pressure, heat, or carbon vapor, creating a gem that mirrors nature’s brilliance.',
 		// text: 'Diamonds, process seeds, rough and polished',
 		buttonText: 'Explore Now',
 		img: diamondHero,
@@ -266,7 +278,7 @@ export const DATA = [
 						],
 					},
 				],
-				buttonText: 'Contact Us',
+				buttonText: 'CONTACT US',
 				buttonLink:
 					'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
 				img: [
@@ -297,13 +309,13 @@ export const DATA = [
 						title: ['Our Standard'],
 						text: [
 							'At 2DOT4, we redefine excellence by marrying the intrinsic properties of diamonds with the precision of a perfect cut. Our unwavering commitment is to deliver unparalleled light performance through a harmonious fusion of color, clarity, and cut—the cornerstone of our revolutionary 2DOT4 standard.',
-							'Expect nothing short of brilliance as we consistently offer diamonds within the esteemed D to F color range and VS1 to VVS clarity grades, paired exclusively with ideal or excellent cuts. This meticulous calibration ensures optimal light performance, setting a new benchmark in the industry.',
+							'Expect nothing short of brilliance as we consistently offer diamonds within the esteemed D to F color range, paired exclusively with ideal or excellent cuts. This meticulous calibration ensures optimal light performance, setting a new benchmark in the industry.',
 							'We pride ourselves on cultivating stones free from any milk or black inclusions, guaranteeing your diamond radiates the utmost brilliance and fire—the epitome of sought-after beauty in the diamond realm.',
 							'Join us as we boldly reshape the landscape of the diamond industry, setting a new standard of excellence with every facet, every sparkle, and every shimmering moment.',
 						],
 					},
 				],
-				buttonText: 'Contact Us',
+				buttonText: 'CONTACT US',
 				buttonLink:
 					'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
 				img: [diamond31, diamond32, diamond33, diamond34],
@@ -333,7 +345,9 @@ export const DATA = [
 						],
 					},
 				],
-				buttonText: '',
+				buttonText: 'CONTACT US',
+				buttonLink:
+					'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
 				img: [application1, application12],
 				imgWebp: [application1Webp, application12Webp],
 				short: false,
@@ -350,7 +364,9 @@ export const DATA = [
 						],
 					},
 				],
-				buttonText: '',
+				buttonText: 'CONTACT US',
+				buttonLink:
+					'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
 				img: [application2, application22],
 				imgWebp: [application2Webp, application22Webp],
 				short: false,
@@ -367,7 +383,9 @@ export const DATA = [
 						],
 					},
 				],
-				buttonText: '',
+				buttonText: 'CONTACT US',
+				buttonLink:
+					'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
 				img: [application3, application32],
 				imgWebp: [application3Webp, application32Webp],
 				short: false,
@@ -384,7 +402,9 @@ export const DATA = [
 						],
 					},
 				],
-				buttonText: '',
+				buttonText: 'CONTACT US',
+				buttonLink:
+					'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
 				img: [application41, application42],
 				imgWebp: [application4Webp, application42Webp],
 				short: false,
@@ -400,7 +420,7 @@ export const DATA = [
 						],
 					},
 				],
-				buttonText: 'Contact Us',
+				buttonText: 'CONTACT US',
 				buttonLink:
 					'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
 				img: [application51],
@@ -435,15 +455,10 @@ export const ATELIER = {
 					],
 				},
 			],
-			buttonText: '',
-			img: [
-				application1,
-				application12,
-				application1,
-				application12,
-				application1,
-				application12,
-			],
+			buttonText: 'CONTACT US',
+			buttonLink:
+				'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
+			img: [atelier1, atelier2, atelier3, atelier4, atelier5],
 			imgWebp: [
 				application1Webp,
 				application12Webp,
@@ -465,8 +480,8 @@ export const discover = [
 			{
 				img: [application4],
 				imgWebp: [application4Webp],
-				title: 'Discover',
-				text: "Discover the secret to extraordinary sparkle with 2DOT4—the ultimate destination for diamond perfection. At the heart of our name lies the magic of the diamond's refractive index, a dazzling 2.42—a testament to its unmatched brilliance. Picture every moment shimmering with the radiance of a thousand stars. That's the power of the Diamond Refraction Index. Elevate your memories to new heights of luxury and sophistication. Because when it comes to celebrating life's precious moments, nothing less than perfection will suffice. Experience the brilliance of 2DOT4 and let your diamonds shine like never before.",
+				title: 'A NAME THAT REFLECTS OUR MANIFESTO',
+				text: '2DOT4 is the universal figure referring to the diamond refractive index, synonym of perfection amongst transparent stones. 2DOT4 is our signature, we are creating a perfect and precise standard related to brilliant technology, human intelligence and sensibility.',
 			},
 		],
 	},
@@ -475,8 +490,8 @@ export const discover = [
 export const CONTACT = {
 	brandName: '2DOT4',
 	socials: [
-		'https://instagram.com',
-		'https://linkedin.com',
+		'https://www.instagram.com/2dot4_diamonds/',
+		'https://www.linkedin.com/company/2-dot-4-diamonds-llc/posts/?feedView=all',
 		// 'https://facebook.com',
 	],
 	phoneNo: ['08067586986'],
@@ -504,8 +519,8 @@ export const FOOTERLINKLIST = [
 		link: '/atelier',
 		label: 'Atelier Program',
 	},
-	// {
-	// 	link: '/terms',
-	// 	label: 'Terms & Conditions',
-	// },
+	{
+		link: 'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
+		label: 'Career',
+	},
 ];

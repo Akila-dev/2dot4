@@ -4,8 +4,9 @@ import { SideNavLink, Slide, SubpageSlider } from '../components';
 import WheelReact from 'wheel-react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-// import { useSwiper } from 'swiper/react';
-
+import { useSwiper } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 gsap.registerPlugin(useGSAP);
 
 const getWindowsDimension = () => {
@@ -17,7 +18,9 @@ const getWindowsDimension = () => {
 };
 
 const Slider = ({ data, subpage, page, allowSlide, scroll_to }) => {
-	// const swiper = useSwiper();
+	const swiper = useSwiper();
+	const prevRef = useRef();
+	const nextRef = useRef();
 	// console.log(swiper);
 	// *UPDATE SCREEN SIZE WHEN SCREEN/VIEW PORT RESIZES
 	const [screenSize, setScreenSize] = useState(getWindowsDimension());
@@ -483,6 +486,7 @@ const Slider = ({ data, subpage, page, allowSlide, scroll_to }) => {
 			setIsScrolling(true);
 			subScrollTo(subActiveId[activeId], subActiveId[activeId] + 1, activeId);
 			// setIsSideScrolling(true);
+			nextRef.current.click();
 		}
 	});
 
@@ -492,6 +496,7 @@ const Slider = ({ data, subpage, page, allowSlide, scroll_to }) => {
 			setIsScrolling(true);
 			subScrollTo(subActiveId[activeId], subActiveId[activeId] - 1, activeId);
 			// setIsSideScrolling(true);
+			prevRef.current.click();
 		}
 	});
 
@@ -682,7 +687,7 @@ const Slider = ({ data, subpage, page, allowSlide, scroll_to }) => {
 				</div>
 			</div>
 			{/* TOP NAV FOR MOBILE */}
-			<div
+			{/* <div
 				className={
 					page === 'discover'
 						? 'hidden'
@@ -702,6 +707,40 @@ const Slider = ({ data, subpage, page, allowSlide, scroll_to }) => {
 						</div>
 					))}
 				</div>
+				<span className="horizontal-line absolute top-0 left-0 w-full h-[40px] border-b border-[--border] z-[-1]"></span>
+			</div> */}
+			<div
+				className={
+					page === 'discover'
+						? 'hidden'
+						: 'md:hidden gsap-fade-in w-full h-[40px] border-b-0 border-[--border] fixed top-[45px] md:top-[56.5px]'
+				}
+			>
+				<Swiper
+					slidesPerView={3}
+					spaceBetween={screenSize.width / 3.5}
+					centeredSlides={true}
+					className="w-full h-full"
+				>
+					<div className="hidden">
+						<button onClick={() => swiper.slidePrev()}>prev</button>
+						<button onClick={() => swiper.slideNext()}>next</button>
+					</div>
+
+					{data.map((item, id) => (
+						<SwiperSlide key={id}>
+							<div key={id} className="block text-center h-full">
+								<SideNavLink
+									data={item}
+									// id={id}
+									key={id}
+									onClick={() => scrollTo(activeId, id)}
+									active={activeId}
+								/>
+							</div>
+						</SwiperSlide>
+					))}
+				</Swiper>
 				<span className="horizontal-line absolute top-0 left-0 w-full h-[40px] border-b border-[--border] z-[-1]"></span>
 			</div>
 		</div>

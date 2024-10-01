@@ -67,7 +67,7 @@ const MenuPopup = ({ close, container }) => {
 						{FOOTERLINKLIST.slice(0, 3).map((link, id) => (
 							<Link
 								key={id}
-								to={'/' + link.link}
+								to={link.link}
 								className="block capitalize text-base link"
 							>
 								{link.label}
@@ -78,7 +78,7 @@ const MenuPopup = ({ close, container }) => {
 						{FOOTERLINKLIST.slice(3, 6).map((link, id) => (
 							<Link
 								key={id}
-								to={'/' + link.link}
+								to={link.link}
 								className="block capitalize text-base link"
 							>
 								{link.label}

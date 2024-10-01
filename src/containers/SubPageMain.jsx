@@ -79,6 +79,21 @@ const SubPageMain = ({ data, page, subpage }) => {
 		});
 	});
 
+	const scaleUp = contextSafe((className) => {
+		gsap.to('.' + className, {
+			scale: 1.2,
+			duration: 0.75,
+			ease: 'power2.out',
+		});
+	});
+	const scaleBack = contextSafe((className) => {
+		gsap.to('.' + className, {
+			scale: 1,
+			duration: 0.75,
+			ease: 'power2.out',
+		});
+	});
+
 	return (
 		<div ref={container} className="fixed top-0 left-0 w-full h-full">
 			<div className="flex flex-col justify-between h-full w-full items-center relative overflow-hidden scroll-snap">
@@ -92,21 +107,28 @@ const SubPageMain = ({ data, page, subpage }) => {
 							<MenuButton onClick={() => setShowMenu(true)} />
 						</div>
 						<div className="w-full h-full">
-							<Link to="/">
-								<h3 className="uppercase w-full border-x border-[--lines] md:border-none flex items-center justify-center h-full pointer-events-auto">
+							<h3 className="logo uppercase w-full border-x border-[--lines] md:border-none flex items-center justify-center h-full pointer-events-auto">
+								<Link
+									to="/"
+									onMouseEnter={() => scaleUp('logo')}
+									onMouseLeave={() => scaleBack('logo')}
+									// className="w-full"
+								>
 									{contact.brandName}
 									{/* <img
 										src={logo_white}
 										alt="logo"
 										className="h-[30px] md:h-[40px] w-auto object-cover mb-1 hover:scale-110 transition duration-500"
 									/> */}
-								</h3>
-							</Link>
+								</Link>
+							</h3>
 						</div>
 						<div className="layout-sidebars layout-sidebar-r">
 							<Link
 								to="https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com"
-								className="flex gap-[6px] items-center pointer-events-auto"
+								onMouseEnter={() => scaleUp('contact-us')}
+								onMouseLeave={() => scaleBack('contact-us')}
+								className="contact-us flex gap-[6px] items-center pointer-events-auto"
 							>
 								<span className="hidden md:inline">Contact</span>{' '}
 								{/* <BiSolidMessageRoundedDetail className="text-xl md:text-lg" /> */}
