@@ -7,7 +7,7 @@ import about11 from '../assets/sectionImgs/1/11.png';
 import about12 from '../assets/sectionImgs/1/12.jpg';
 import about13 from '../assets/sectionImgs/1/13.jpg';
 import about2 from '../assets/sectionImgs/1/2.jpg';
-import about21 from '../assets/sectionImgs/1/21.mov';
+import about21 from '../assets/sectionImgs/1/21.mp4';
 import about31 from '../assets/sectionImgs/1/31.jpg';
 import about4 from '../assets/sectionImgs/1/4.jpg';
 import about41 from '../assets/sectionImgs/1/41.mov';
@@ -105,6 +105,11 @@ import atelier2Mobile from '../assets/mobileSectionImages/atelier/2.png';
 import atelier3Mobile from '../assets/mobileSectionImages/atelier/3.png';
 import atelier4Mobile from '../assets/mobileSectionImages/atelier/4.png';
 import atelier5Mobile from '../assets/mobileSectionImages/atelier/5.png';
+
+// ! ATELIERS
+import discoverImg from '../assets/sectionImgs/discover.jpg';
+// MOBILE
+import discoverMobile from '../assets/mobileSectionImages/discover.png';
 
 // export const DATA = [
 // {
@@ -526,7 +531,8 @@ export const discover = [
 		img: dummy,
 		content: [
 			{
-				img: [application4],
+				img: [discoverImg],
+				mobileImg: [discoverMobile],
 				imgWebp: [application4Webp],
 				title: 'A NAME THAT REFLECTS OUR MANIFESTO',
 				text: '2DOT4 is the universal figure referring to the diamond refractive index, synonym of perfection amongst transparent stones. 2DOT4 is our signature, we are creating a perfect and precise standard related to brilliant technology, human intelligence and sensibility.',
