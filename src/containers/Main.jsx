@@ -108,8 +108,8 @@ const Main = ({ data, page, subpage, scroll_to }) => {
 				{/* TOP */}
 				{/* TOP */}
 				<div className="h-[45px] md:h-[56.5px] flex items-center justify-center relative w-full z-10 pointer-events-none">
-					<div className="flex justify-between items-center w-full layout-text h-full">
-						<div className="layout-sidebars layout-sidebar-l">
+					<div className="flex justify-center items-center w-full layout-text h-full">
+						<div className="layout-sidebars layout-sidebar-l !justify-center">
 							<MenuButton onClick={() => setShowMenu(true)} />
 						</div>
 						<div className="!w-full h-full flex items-center justify-center">
@@ -130,15 +130,17 @@ const Main = ({ data, page, subpage, scroll_to }) => {
 							</h3>
 						</div>
 						<div className="layout-sidebars layout-sidebar-r">
-							<Link
-								to="https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com"
-								onMouseEnter={() => scaleUp('contact-us')}
-								onMouseLeave={() => scaleBack('contact-us')}
-								className="contact-us flex gap-[6px] items-center pointer-events-auto"
-							>
-								<span className="hidden md:inline">Contact</span>{' '}
-								<BiSolidMessageRoundedDetail className="text-xl md:text-lg md:hidden" />
-							</Link>{' '}
+							<div className="w-full flex justify-center">
+								<Link
+									to="https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com"
+									onMouseEnter={() => scaleUp('contact-us')}
+									onMouseLeave={() => scaleBack('contact-us')}
+									className="contact-us flex gap-[6px] items-center justify-center pointer-events-auto"
+								>
+									<span className="hidden md:inline">Contact</span>{' '}
+									<BiSolidMessageRoundedDetail className="text-xl md:text-lg md:hidden" />
+								</Link>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -181,7 +183,7 @@ const Main = ({ data, page, subpage, scroll_to }) => {
 							</div>
 						</div>
 						<div>
-							<div className="!hidden md:!flex layout-sidebars layout-sidebar-r">
+							<div className="!hidden md:!flex layout-sidebars layout-sidebar-r !justify-center">
 								{contact.socials.map((link, id) => (
 									<a
 										href={link}

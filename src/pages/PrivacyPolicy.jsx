@@ -2,6 +2,7 @@
 /* eslint-disable react/prop-types */
 import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -10,7 +11,7 @@ import { CONTACT, PRIVACY_POLICY } from '../utils/data';
 import { MenuButton, MenuPopup, ArrowDown } from '../components';
 
 import logo_icon from '../assets/imgs/2dot4-icon.svg';
-// import logo_white from '../assets/imgs/logo-white.svg';
+import privacy_bg from '../assets/imgs/sandy-bg.jpg';
 
 gsap.registerPlugin(useGSAP);
 
@@ -100,10 +101,18 @@ const PrivacyPolicy = () => {
 			<div className="flex flex-col justify-between h-full w-full items-center relative overflow-hidden scroll-snap">
 				{/* CONTENT */}
 				{/* TOP */}
+				<div className="absolute top-0 left-0 w-full h-full">
+					<LazyLoadImage
+						height={'100%'}
+						src={privacy_bg}
+						width={'100%'}
+						className="w-screen h-screen object-cover"
+					/>
+				</div>
 				{/* TOP */}
 				<div className="h-[45px] md:h-[56.5px] flex items-center justify-center relative w-full z-10 pointer-events-none">
 					<div className="flex justify-between items-center w-full layout-text h-full">
-						<div className="layout-sidebars layout-sidebar-l">
+						<div className="layout-sidebars layout-sidebar-l !justify-center">
 							<MenuButton onClick={() => setShowMenu(true)} />
 						</div>
 						<div className="!w-full h-full flex items-center justify-center">
@@ -128,7 +137,7 @@ const PrivacyPolicy = () => {
 								to="https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com"
 								onMouseEnter={() => scaleUp('contact-us')}
 								onMouseLeave={() => scaleBack('contact-us')}
-								className="contact-us flex gap-[6px] items-center pointer-events-auto"
+								className="contact-us flex w-full gap-[6px] items-center justify-center pointer-events-auto"
 							>
 								<span className="hidden md:inline">Contact</span>{' '}
 								<BiSolidMessageRoundedDetail className="text-xl md:text-lg md:hidden" />
@@ -188,7 +197,7 @@ const PrivacyPolicy = () => {
 													{email && (
 														<a
 															href={'mailto:' + { email }}
-															className="text-amber-600/50 hover:text-amber-600"
+															className="text-white underline underline-offset-4"
 														>
 															{email}
 														</a>
@@ -232,7 +241,7 @@ const PrivacyPolicy = () => {
 							</div>
 						</div>
 						<div>
-							<div className="!hidden md:!flex layout-sidebars layout-sidebar-r">
+							<div className="!hidden md:!flex layout-sidebars layout-sidebar-r !justify-center">
 								{contact.socials.map((link, id) => (
 									<a
 										href={link}
