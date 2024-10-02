@@ -143,7 +143,7 @@ const PrivacyPolicy = () => {
 						{/* Side Nav space */}
 						<div className="w-full h-full flex flex-col gap-3 ">
 							{PRIVACY_POLICY.map((item, i) => (
-								<div className=" relative w-full group">
+								<div key={i} className=" relative w-full group">
 									<a
 										href={'#' + item.title.replaceAll(' ', '')}
 										key={i}
