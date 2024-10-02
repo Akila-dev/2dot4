@@ -37,9 +37,14 @@ const Slide = ({ data, text, id, page, sectionId }) => {
 								</video>
 							</div>
 						) : (
+							// <ImgWithFallback
+							// 	src={data.imgWebp[id]}
+							// 	fallback={data.img[id]}
+							// 	alt={data.link + id}
+							// />
 							<ImgWithFallback
-								src={data.imgWebp[id]}
-								fallback={data.img[id]}
+								src={data.img[id]}
+								mobile={data.mobileImg[id] || data.img[id]}
 								alt={data.link + id}
 							/>
 						)}

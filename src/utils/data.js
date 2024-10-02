@@ -8,7 +8,6 @@ import about12 from '../assets/sectionImgs/1/12.jpg';
 import about13 from '../assets/sectionImgs/1/13.jpg';
 import about2 from '../assets/sectionImgs/1/2.jpg';
 import about21 from '../assets/sectionImgs/1/21.mov';
-// import about3 from '../assets/sectionImgs/1/3.jpg';
 import about31 from '../assets/sectionImgs/1/31.jpg';
 import about4 from '../assets/sectionImgs/1/4.jpg';
 import about41 from '../assets/sectionImgs/1/41.mov';
@@ -17,6 +16,12 @@ import about1Webp from '../assets/sectionImgs/1/1.webp';
 import about2Webp from '../assets/sectionImgs/1/2.webp';
 import about3Webp from '../assets/sectionImgs/1/3.webp';
 import about4Webp from '../assets/sectionImgs/1/4.webp';
+// MOBILE
+import aboutHeroMobile from '../assets/mobileSectionImages/1/hero.png';
+import about11Mobile from '../assets/mobileSectionImages/1/11.png';
+import about12Mobile from '../assets/mobileSectionImages/1/12.png';
+import about13Mobile from '../assets/mobileSectionImages/1/13.png';
+import about31Mobile from '../assets/mobileSectionImages/1/31.png';
 
 //* SECTION 2: TECHNOLOGY SECTION
 import technologyHero from '../assets/sectionImgs/2/hero.jpg';
@@ -27,6 +32,12 @@ import technology23 from '../assets/sectionImgs/2/23.jpg';
 import technologyHeroWebp from '../assets/sectionImgs/2/hero.webp';
 import technology1Webp from '../assets/sectionImgs/2/1.webp';
 import technology2Webp from '../assets/sectionImgs/2/2.webp';
+// MOBILE
+import technologyHeroMobile from '../assets/mobileSectionImages/2/hero.png';
+import technology11Mobile from '../assets/mobileSectionImages/2/11.png';
+import technology21Mobile from '../assets/mobileSectionImages/2/21.png';
+import technology22Mobile from '../assets/mobileSectionImages/2/22.png';
+import technology23Mobile from '../assets/mobileSectionImages/2/23.png';
 
 //* SECTION 3: DIAMOND SECTION
 import diamondHero from '../assets/sectionImgs/3/hero.jpg';
@@ -50,6 +61,11 @@ import diamond15Webp from '../assets/sectionImgs/3/15.webp';
 import diamond16Webp from '../assets/sectionImgs/3/16.webp';
 import diamond17Webp from '../assets/sectionImgs/3/17.webp';
 import diamond2Webp from '../assets/sectionImgs/3/2.webp';
+// MOBILE
+import diamond11Mobile from '../assets/mobileSectionImages/3/21.png';
+import diamond12Mobile from '../assets/mobileSectionImages/3/22.png';
+import diamond13Mobile from '../assets/mobileSectionImages/3/23.png';
+import diamond14Mobile from '../assets/mobileSectionImages/3/24.png';
 
 //* SECTION 4: APPLICATION SECTION
 import applicationHero from '../assets/sectionImgs/4/hero.jpg';
@@ -72,6 +88,10 @@ import application12Webp from '../assets/sectionImgs/4/12.webp';
 import application22Webp from '../assets/sectionImgs/4/22.webp';
 import application32Webp from '../assets/sectionImgs/4/32.webp';
 import application42Webp from '../assets/sectionImgs/4/42.webp';
+// MOBILE
+import applicationHeroMobile from '../assets/mobileSectionImages/4/hero.png';
+import application41Mobile from '../assets/mobileSectionImages/4/41.png';
+import application51Mobile from '../assets/mobileSectionImages/4/51.png';
 
 // ATELIER
 import atelier1 from '../assets/sectionImgs/atelier/1.jpg';
@@ -79,6 +99,12 @@ import atelier2 from '../assets/sectionImgs/atelier/2.jpg';
 import atelier3 from '../assets/sectionImgs/atelier/3.jpg';
 import atelier4 from '../assets/sectionImgs/atelier/4.jpg';
 import atelier5 from '../assets/sectionImgs/atelier/5.jpg';
+// MOBILE
+import atelier1Mobile from '../assets/mobileSectionImages/atelier/1.png';
+import atelier2Mobile from '../assets/mobileSectionImages/atelier/2.png';
+import atelier3Mobile from '../assets/mobileSectionImages/atelier/3.png';
+import atelier4Mobile from '../assets/mobileSectionImages/atelier/4.png';
+import atelier5Mobile from '../assets/mobileSectionImages/atelier/5.png';
 
 // export const DATA = [
 // {
@@ -111,6 +137,7 @@ export const DATA = [
 		text: '2DOT4 aims to lead a revolutionary shift in the diamond industry. Setting elevated standards, fostering innovation through a robust ecosystem and diverse industry collaboration.',
 		buttonText: 'EXPLORE NOW',
 		img: aboutHero,
+		mobileImg: aboutHeroMobile,
 		imgWebp: aboutHeroWebp,
 		short: true,
 		subContent: [
@@ -128,9 +155,10 @@ export const DATA = [
 				],
 				buttonText: '',
 				img: [about11, about12, about13],
+				mobileImg: [about11Mobile, about12Mobile, about13Mobile],
 				imgWebp: [about1Webp, about1Webp, about1Webp],
 				short: false,
-				moveToBottom: [true, false, false],
+				// moveToBottom: [true, false, false],
 				// video: '',
 			},
 			{
@@ -166,6 +194,7 @@ export const DATA = [
 				buttonLink:
 					'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
 				img: [about31],
+				mobileImg: [about31Mobile],
 				imgWebp: [about3Webp],
 				short: true,
 				// video: '',
@@ -195,6 +224,7 @@ export const DATA = [
 		text: 'Our multidisciplinary approach combines cutting-edge technology, rigorous research methodologies, and a deep understanding of diamond materials, positioning us at the forefront of the industry.',
 		buttonText: 'Explore Now',
 		img: technologyHero,
+		mobileImg: technologyHeroMobile,
 		imgWebp: technologyHeroWebp,
 		short: true,
 		subContent: [
@@ -214,6 +244,7 @@ export const DATA = [
 				buttonLink:
 					'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
 				img: [technology11, technology11, technology11],
+				mobileImg: [technology11Mobile, technology11Mobile, technology11Mobile],
 				imgWebp: [technology1Webp, technology1Webp, technology1Webp],
 				short: false,
 				// video: '',
@@ -234,6 +265,7 @@ export const DATA = [
 				buttonLink:
 					'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
 				img: [technology21, technology22, technology23],
+				mobileImg: [technology21Mobile, technology22Mobile, technology23Mobile],
 				imgWebp: [technology2Webp, technology2Webp, technology2Webp],
 				short: false,
 				// video: '',
@@ -290,6 +322,12 @@ export const DATA = [
 					diamond16,
 					diamond17,
 				],
+				mobileImg: [
+					diamond11Mobile,
+					diamond12Mobile,
+					diamond13Mobile,
+					diamond14Mobile,
+				],
 				imgWebp: [
 					diamond11Webp,
 					diamond12Webp,
@@ -331,6 +369,7 @@ export const DATA = [
 		text: 'Our cutting-edge R&D team is revolutionizing the diamond industry. We create stunning gem diamonds and pioneer innovative industrial applications for lab-grown diamonds. Leveraging advanced technology and rigorous research, we set new standards and lead the market. Discover the future of diamonds with us.',
 		buttonText: 'Explore Now',
 		img: applicationHero,
+		mobileImg: applicationHeroMobile,
 		imgWebp: applicationHeroWebp,
 		short: true,
 		subContent: [
@@ -406,6 +445,7 @@ export const DATA = [
 				buttonLink:
 					'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
 				img: [application41, application42],
+				mobileImg: [application41Mobile],
 				imgWebp: [application4Webp, application42Webp],
 				short: false,
 				// video: '',
@@ -424,6 +464,7 @@ export const DATA = [
 				buttonLink:
 					'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
 				img: [application51],
+				mobileImg: [application51Mobile],
 				imgWebp: [application4Webp],
 				short: false,
 				// video: '',
@@ -459,6 +500,13 @@ export const ATELIER = {
 			buttonLink:
 				'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
 			img: [atelier1, atelier2, atelier3, atelier4, atelier5],
+			mobileImg: [
+				atelier1Mobile,
+				atelier2Mobile,
+				atelier3Mobile,
+				atelier4Mobile,
+				atelier5Mobile,
+			],
 			imgWebp: [
 				application1Webp,
 				application12Webp,

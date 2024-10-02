@@ -9,8 +9,8 @@ const Slide = ({ data, id, page }) => {
 		>
 			<div className="absolute !bottom-0 left-0 w-full h-screen overflow-hidden ">
 				<ImgWithFallback
-					src={data.imgWebp}
-					fallback={data.img}
+					src={data.img}
+					mobile={data.mobileImg || data.img}
 					alt={data.link}
 				/>
 				<div className="bg-overlay absolute top-0 left-0"></div>
