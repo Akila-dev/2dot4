@@ -72,7 +72,7 @@ import applicationHero from '../assets/sectionImgs/4/hero.jpg';
 import application1 from '../assets/sectionImgs/4/1.jpg';
 import application2 from '../assets/sectionImgs/4/2.jpg';
 import application3 from '../assets/sectionImgs/4/3.jpg';
-import application4 from '../assets/sectionImgs/4/4.jpg';
+// import application4 from '../assets/sectionImgs/4/4.jpg';
 import application12 from '../assets/sectionImgs/4/12.png';
 import application22 from '../assets/sectionImgs/4/22.png';
 import application32 from '../assets/sectionImgs/4/32.png';
