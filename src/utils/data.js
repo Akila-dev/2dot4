@@ -107,7 +107,7 @@ import atelier4Mobile from '../assets/mobileSectionImages/atelier/4.png';
 import atelier5Mobile from '../assets/mobileSectionImages/atelier/5.png';
 
 // ! ATELIERS
-import discoverImg from '../assets/sectionImgs/discover.jpg';
+import discoverImg from '../assets/sectionImgs/discover.jpeg';
 // MOBILE
 import discoverMobile from '../assets/mobileSectionImages/discover.png';
 
@@ -562,8 +562,8 @@ export const FOOTERLINKLIST = [
 		label: 'contact',
 	},
 	{
-		link: '/faq',
-		label: 'FAQ',
+		link: 'https://vinwdzm1fbl.typeform.com/to/loWEY7U5',
+		label: 'Career',
 	},
 	{
 		link: '/privacy',
@@ -573,10 +573,10 @@ export const FOOTERLINKLIST = [
 		link: '/atelier',
 		label: 'Atelier Program',
 	},
-	{
-		link: 'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
-		label: 'Career',
-	},
+	// {
+	// 	link: 'https://vinwdzm1fbl.typeform.com/to/loWEY7U5',
+	// 	label: 'Career',
+	// },
 ];
 
 // ! PRIVACY POLICY
