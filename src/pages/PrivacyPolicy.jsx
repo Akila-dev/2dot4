@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
-import { CONTACT } from '../utils/data';
-import { ArrowDown, MenuButton, Slider, MenuPopup } from '../components';
+import { CONTACT, PRIVACY_POLICY } from '../utils/data';
+import { MenuButton, MenuPopup, ArrowDown } from '../components';
 
 import logo_icon from '../assets/imgs/2dot4-icon.svg';
 // import logo_white from '../assets/imgs/logo-white.svg';
@@ -22,10 +22,11 @@ import {
 } from 'react-icons/bi';
 import { PiInstagramLogoFill, PiDotsThreeOutlineFill } from 'react-icons/pi';
 
-const Main = ({ data, page, subpage, scroll_to }) => {
+const PrivacyPolicy = () => {
 	const container = useRef();
 	const menuContainer = useRef();
 	const [showMenu, setShowMenu] = useState(false);
+	const [active, setActive] = useState(0);
 
 	const { contextSafe } = useGSAP({ scope: container });
 
@@ -98,13 +99,6 @@ const Main = ({ data, page, subpage, scroll_to }) => {
 		<div ref={container} className="fixed top-0 left-0 w-full h-full">
 			<div className="flex flex-col justify-between h-full w-full items-center relative overflow-hidden scroll-snap">
 				{/* CONTENT */}
-				<Slider
-					data={data}
-					page={page}
-					subpage={subpage}
-					allowSlide={true}
-					scroll_to={scroll_to}
-				/>
 				{/* TOP */}
 				{/* TOP */}
 				<div className="h-[45px] md:h-[56.5px] flex items-center justify-center relative w-full z-10 pointer-events-none">
@@ -144,12 +138,69 @@ const Main = ({ data, page, subpage, scroll_to }) => {
 				</div>
 				{/* MIDDLE */}
 				{/* MIDDLE */}
-				<div className="relative w-full flex-1 flex justify-between items-center z-10 pointer-events-none">
-					<div className="!hidden md:!flex layout-sidebars !p-0 md:!px-8 lg:!px-10">
+				<div className="relative w-full flex-1 flex justify-between items-center z-10">
+					<div className="!hidden md:!flex layout-sidebars !p-0  overflow-y-auto overflow-x-hidden no-scrollbar !h-[calc(100vh-120px)]  !py-7">
 						{/* Side Nav space */}
+						<div className="w-full h-full flex flex-col gap-3 ">
+							{PRIVACY_POLICY.map((item, i) => (
+								<div className=" relative w-full group">
+									<a
+										href={'#' + item.title.replaceAll(' ', '')}
+										key={i}
+										onClick={() => setActive(i)}
+										className="privacy-link relative md:!px-8 lg:!px-10 block visited:!bg-red-600"
+									>
+										{item.title}
+									</a>
+									{active === i && (
+										<span
+											className={`hidden md:block absolute top-0 right-ful mt-3 h-[20px] md:w-[1.25rem] lg:w-[1.55rem] border-t-[1.5px] border-[--lines] transition duration-1000`}
+										></span>
+									)}
+								</div>
+							))}
+						</div>
 					</div>
 					<div className="w-full flex items-center justify-center flex-1">
 						{/* CSPACE FOR THE ACTUAL CONTENTS */}
+						<div className="w-full !h-[calc(100vh-120px)] overflow-y-auto overflow-x-hidden flex flex-col no-scrollbar px-5 md:px-[2rem] xl:px-[3rem] pb-7 scroll-smooth">
+							{PRIVACY_POLICY.map((item, i) => (
+								<div
+									id={item.title.replaceAll(' ', '')}
+									key={i}
+									className="flex flex-col gap-3 pt-5"
+								>
+									<h2 className="text-lg md:text-xl lg:text-2xl font-medium leading-[160%]">
+										{!item.intro && i + '.'} {item.title}
+									</h2>
+									<p className="text-[--grey]">{item.text}</p>
+									{item.list && (
+										<ul className="space-y-2">
+											{item.list.map(({ title, desc, email }, i) => (
+												<li
+													key={i}
+													className="list-disc list-inside list-item leading-[160%]"
+												>
+													{title && <b>{title}:</b>}{' '}
+													{desc && (
+														<span className="text-[--grey]">{desc}</span>
+													)}{' '}
+													{email && (
+														<a
+															href={'mailto:' + { email }}
+															className="text-amber-600/50 hover:text-amber-600"
+														>
+															{email}
+														</a>
+													)}
+												</li>
+											))}
+										</ul>
+									)}
+									{item.more && <p>{item.more}</p>}
+								</div>
+							))}
+						</div>
 					</div>
 					<div className="!hidden md:!flex layout-sidebars"></div>
 				</div>
@@ -209,14 +260,10 @@ const Main = ({ data, page, subpage, scroll_to }) => {
 				<span className="lines vertical-line border-l top-0 right-0 !h-full md:w-[--sidebar-w-md]  lg:w-[--sidebar-w] !hidden md:!block"></span>
 			</div>
 			{showMenu && (
-				<MenuPopup
-					close={() => close()}
-					container={menuContainer}
-					data={data}
-				/>
+				<MenuPopup close={() => close()} container={menuContainer} />
 			)}
 		</div>
 	);
 };
 
-export default Main;
+export default PrivacyPolicy;

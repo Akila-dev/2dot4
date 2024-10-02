@@ -524,3 +524,142 @@ export const FOOTERLINKLIST = [
 		label: 'Career',
 	},
 ];
+
+// ! PRIVACY POLICY
+export const PRIVACY_POLICY = [
+	{
+		title: 'Privacy Policy for 2dot4 Diamond',
+		text: 'At 2DOT4, we respect your privacy and are dedicated to safeguarding your personal data. This policy explains how we collect, use, and protect your information when you interact with our website or services. Please review it to understand our data practices.',
+		list: [],
+		intro: true,
+	},
+	{
+		title: 'Information We Collect',
+		text: 'We collect personal information to provide and improve our services. This includes:',
+		list: [
+			{
+				title: 'Personal Data',
+				desc: 'Name, email address, phone number, shipping address, billing information, and any other details provided during account creation, purchases, or customer service interactions.',
+			},
+			{
+				title: 'Automatically Collected Data',
+				desc: 'When you visit our website, certain information is automatically collected. This includes your IP address, browser type, operating system, referring URLs, pages viewed, and how you interact with our website.',
+			},
+		],
+	},
+	{
+		title: 'Cookies and Tracking Technologies',
+		text: 'We use cookies and similar tracking technologies to enhance your browsing experience. Cookies are small data files stored on your device that help us recognize you and remember your preferences. The types of cookies we use include:',
+		list: [
+			{
+				title: 'Essential Cookies',
+				desc: 'These are necessary for the website to function properly. They allow you to navigate the site and use essential features like secure areas and shopping carts.',
+			},
+			{
+				title: 'Performance Cookies',
+				desc: "These cookies collect information about how you use our website, such as which pages you visit. The data collected is used to improve the website's performance and user experience.",
+			},
+			{
+				title: 'Functional Cookies',
+				desc: 'These cookies remember your preferences and settings, improving your user experience on subsequent visits.',
+			},
+			{
+				title: 'Advertising Cookies',
+				desc: 'We use these cookies to deliver personalized advertisements and measure the effectiveness of our marketing campaigns.',
+			},
+		],
+		more: 'You can control cookies through your browser settings, but please note that disabling cookies may affect the functionality of our website.',
+	},
+	{
+		title: 'How We Use Your Information',
+		text: 'We use the information we collect for the following purposes:',
+		list: [
+			{
+				title: '',
+				desc: 'To process and fulfill orders',
+			},
+			{
+				title: '',
+				desc: 'To provide customer support',
+			},
+			{
+				title: '',
+				desc: 'To personalize your shopping experience',
+			},
+			{
+				title: '',
+				desc: 'To improve our website and services',
+			},
+			{
+				title: '',
+				desc: 'To send marketing communications, promotions, and updates (if you have opted in)',
+			},
+			{
+				title: '',
+				desc: 'To comply with legal obligations',
+			},
+		],
+	},
+	{
+		title: 'Data Sharing and Disclosure',
+		text: 'We do not sell or rent your personal information to third parties. However, we may share your data with:',
+		list: [
+			{
+				title: 'Service Providers',
+				desc: 'Third-party companies that assist us in operating our website, conducting our business, or serving our customers (e.g., payment processors, shipping companies).',
+			},
+			{
+				title: 'Legal Obligations',
+				desc: 'If required by law, we may disclose your data to comply with legal processes, enforce our policies, or protect the rights, property, or safety of our business and users.',
+			},
+		],
+	},
+	{
+		title: 'Data Security',
+		text: 'We take the security of your personal information seriously. We use various security measures, including encryption and secure servers, to protect your data from unauthorized access, alteration, disclosure, or destruction.',
+	},
+	{
+		title: 'Your Rights and Choices',
+		text: 'You have the following rights regarding your personal data:',
+		list: [
+			{
+				title: 'Access',
+				desc: 'You can request a copy of the personal information we hold about you.',
+			},
+			{
+				title: 'Correction',
+				desc: 'If your data is inaccurate or incomplete, you can request correction or updates.',
+			},
+			{
+				title: 'Deletion',
+				desc: 'You can request the deletion of your personal information, subject to certain legal obligations.',
+			},
+			{
+				title: 'Opt-Out',
+				desc: 'You can opt out of marketing communications at any time by following the unsubscribe instructions in the emails we send.',
+			},
+		],
+	},
+	{
+		title: 'Third-Party Links',
+		text: 'Our website may contain links to third-party websites. Please note that we are not responsible for the privacy practices of those websites. We encourage you to review the privacy policies of any external sites you visit.',
+	},
+	{
+		title: 'Data Retention',
+		text: 'We retain your personal information for as long as necessary to fulfill the purposes outlined in this privacy policy, unless a longer retention period is required or permitted by law.',
+	},
+	{
+		title: 'Changes to This Privacy Policy',
+		text: 'We reserve the right to update this privacy policy at any time. When we do, we will revise the "Last Updated" date at the bottom of this page. We encourage you to review this policy periodically to stay informed about how we are protecting your data.',
+	},
+	{
+		title: 'Contact Us',
+		text: 'If you have any questions or concerns about this privacy policy or how we handle your personal information, please contact us at:',
+		list: [
+			{
+				title: 'Email',
+				email: 'hello@2dot4diamond.com',
+			},
+		],
+	},
+];

@@ -49,6 +49,9 @@ h3 {
 p {
 	@apply text-[--grey] text-xs md:text-sm !leading-[170%] font-medium;
 }
+b {
+	@apply font-medium;
+}
 
 h1,
 h2,
@@ -111,3 +114,16 @@ button {
 .gsap-show::first-child {
 	@apply opacity-100;
 } */
+
+.no-scrollbar::-webkit-scrollbar {
+	display: none;
+}
+
+.no-scrollbar {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
+.privacy-link a:active {
+	@apply !bg-red-600;
+}
