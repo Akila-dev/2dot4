@@ -44,7 +44,11 @@ const Slide = ({ data, text, id, page, sectionId }) => {
 							// />
 							<ImgWithFallback
 								src={data.img[id]}
-								mobile={data.mobileImg[id] || data.img[id]}
+								mobile={
+									data.mobileImg && data.mobileImg[id]
+										? data.mobileImg[id]
+										: data.img[id]
+								}
 								alt={data.link + id}
 							/>
 						)}
