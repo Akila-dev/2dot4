@@ -107,7 +107,7 @@ const DiscoverContainer = ({ data, page, subpage }) => {
 							<MenuButton onClick={() => setShowMenu(true)} />
 						</div>
 						<div className="!w-full h-full flex items-center justify-center">
-							<h3 className="uppercase w-full border-x border-[--lines] md:border-none flex items-center justify-center h-full pointer-events-auto">
+							<h3 className="uppercase w-full border-none flex items-center justify-center h-full pointer-events-auto">
 								<Link
 									to="/"
 									onMouseEnter={() => scaleUp('logo')}
