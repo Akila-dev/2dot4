@@ -101,12 +101,12 @@ const PrivacyPolicy = () => {
 			<div className="flex flex-col justify-between h-full w-full items-center relative overflow-hidden scroll-snap">
 				{/* CONTENT */}
 				{/* TOP */}
-				<div className="absolute top-0 left-0 w-full h-full">
+				<div className="absolute top-0 left-0 w-full h-full bg-black">
 					<LazyLoadImage
 						height={'100%'}
 						src={privacy_bg}
 						width={'100%'}
-						className="w-screen h-screen object-cover"
+						className="w-screen h-screen object-cover opacity-30"
 					/>
 				</div>
 				{/* TOP */}
@@ -265,8 +265,8 @@ const PrivacyPolicy = () => {
 				{/* LINES */}
 				<span className="lines horizontal-line border-b top-0 left-0 !h-[45px] md:!h-[56.5px]"></span>
 				<span className="lines horizontal-line border-t bottom-0 left-0 !h-[45px] md:!h-[56.5px] "></span>
-				<span className="lines vertical-line border-r top-0 left-0 !h-full md:w-[--sidebar-w-md]  lg:w-[--sidebar-w] !hidden md:!block"></span>
-				<span className="lines vertical-line border-l top-0 right-0 !h-full md:w-[--sidebar-w-md]  lg:w-[--sidebar-w] !hidden md:!block"></span>
+				{/* <span className="lines vertical-line border-r top-0 left-0 !h-full md:w-[--sidebar-w-md]  lg:w-[--sidebar-w] !hidden md:!block"></span>
+				<span className="lines vertical-line border-l top-0 right-0 !h-full md:w-[--sidebar-w-md]  lg:w-[--sidebar-w] !hidden md:!block"></span> */}
 			</div>
 			{showMenu && (
 				<MenuPopup close={() => close()} container={menuContainer} />

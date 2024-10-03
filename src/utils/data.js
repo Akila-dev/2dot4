@@ -41,7 +41,7 @@ import technology23Mobile from '../assets/mobileSectionImages/2/23.png';
 
 //* SECTION 3: DIAMOND SECTION
 import diamondHero from '../assets/sectionImgs/3/hero.jpg';
-import diamondVid1 from '../assets/sectionImgs/1/21.webm';
+// import diamondVid1 from '../assets/sectionImgs/1/21.webm';
 import diamond11 from '../assets/sectionImgs/3/11.jpg';
 import diamond12 from '../assets/sectionImgs/3/12.jpg';
 import diamond13 from '../assets/sectionImgs/3/13.jpg';
@@ -288,19 +288,19 @@ export const DATA = [
 		imgWebp: diamondHeroWebp,
 		short: true,
 		subContent: [
-			{
-				link: 'FROM SEED TO POLISHED STONE',
-				content: [
-					{
-						title: ['FROM SEED TO POLISHED STONE'],
-						text: [''],
-					},
-				],
-				buttonText: '',
-				img: '',
-				imgWebp: '',
-				video: [diamondVid1],
-			},
+			// {
+			// 	link: 'FROM SEED TO POLISHED STONE',
+			// 	content: [
+			// 		{
+			// 			title: ['FROM SEED TO POLISHED STONE'],
+			// 			text: [''],
+			// 		},
+			// 	],
+			// 	buttonText: '',
+			// 	img: '',
+			// 	imgWebp: '',
+			// 	video: [diamondVid1],
+			// },
 			{
 				link: 'LAB GROWN DIAMONDS',
 				content: [
