@@ -7,10 +7,10 @@ import about11 from '../assets/sectionImgs/1/11.png';
 import about12 from '../assets/sectionImgs/1/12.jpg';
 import about13 from '../assets/sectionImgs/1/13.jpg';
 import about2 from '../assets/sectionImgs/1/2.jpg';
-import about21 from '../assets/sectionImgs/1/21.mp4';
+import about21 from '../assets/sectionImgs/1/21.webm';
 import about31 from '../assets/sectionImgs/1/31.jpg';
 import about4 from '../assets/sectionImgs/1/4.jpg';
-import about41 from '../assets/sectionImgs/1/41.mov';
+import about41 from '../assets/sectionImgs/1/41.webm';
 import aboutHeroWebp from '../assets/sectionImgs/1/hero.webp';
 import about1Webp from '../assets/sectionImgs/1/1.webp';
 import about2Webp from '../assets/sectionImgs/1/2.webp';
@@ -41,6 +41,7 @@ import technology23Mobile from '../assets/mobileSectionImages/2/23.png';
 
 //* SECTION 3: DIAMOND SECTION
 import diamondHero from '../assets/sectionImgs/3/hero.jpg';
+import diamondVid1 from '../assets/sectionImgs/1/21.webm';
 import diamond11 from '../assets/sectionImgs/3/11.jpg';
 import diamond12 from '../assets/sectionImgs/3/12.jpg';
 import diamond13 from '../assets/sectionImgs/3/13.jpg';
@@ -287,19 +288,19 @@ export const DATA = [
 		imgWebp: diamondHeroWebp,
 		short: true,
 		subContent: [
-			// {
-			// 	link: 'FROM SEED TO POLISHED STONE',
-			// 	content: [
-			// 		{
-			// 			title: '',
-			// 			text: [''],
-			// 		},
-			// 	],
-			// 	buttonText: '',
-			// 	img: '',
-			// 	imgWebp: '',
-			// 	video: 'video',
-			// },
+			{
+				link: 'FROM SEED TO POLISHED STONE',
+				content: [
+					{
+						title: ['FROM SEED TO POLISHED STONE'],
+						text: [''],
+					},
+				],
+				buttonText: '',
+				img: '',
+				imgWebp: '',
+				video: [diamondVid1],
+			},
 			{
 				link: 'LAB GROWN DIAMONDS',
 				content: [
@@ -327,12 +328,7 @@ export const DATA = [
 					diamond16,
 					diamond17,
 				],
-				mobileImg: [
-					diamond11Mobile,
-					diamond12Mobile,
-					diamond13Mobile,
-					diamond14Mobile,
-				],
+
 				imgWebp: [
 					diamond11Webp,
 					diamond12Webp,
@@ -362,6 +358,12 @@ export const DATA = [
 				buttonLink:
 					'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
 				img: [diamond31, diamond32, diamond33, diamond34],
+				mobileImg: [
+					diamond11Mobile,
+					diamond12Mobile,
+					diamond13Mobile,
+					diamond14Mobile,
+				],
 				imgWebp: [diamond2Webp, diamond2Webp, diamond2Webp, diamond2Webp],
 				short: false,
 				// video: '',

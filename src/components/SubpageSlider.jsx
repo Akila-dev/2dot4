@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { ImgWithFallback, CTASubSlider } from '../components';
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
 // import { useRef } from 'react';
 // import WheelReact from 'wheel-react';
 import gsap from 'gsap';
@@ -22,21 +23,25 @@ const Slide = ({ data, text, id, page, sectionId }) => {
 				>
 					<div className="absolute !bottom-0 !right-0 w-screen h-screen overflow-hidden ">
 						{data.video ? (
-							<div className="w-full h-full object-cover">
-								<video
-									className="w-full h-full object-cover"
-									// style={{
-									// 	aspectRatio: 1,
-									// 	width: '100%',
-									// }}
-									autoPlay
-									muted
-									loop
-								>
-									<source src={data.video[id]} type="video/mp4" />
-								</video>
-							</div>
+							// <div className="w-full h-full bg-black ">
+							<LazyLoadComponent visibleByDefault>
+								<div className="w-full h-full object-cover">
+									<video
+										className="w-full h-full object-cover"
+										// 	aspectRatio: 1,
+										// style={{
+										// 	width: '100%',
+										// }}
+										autoPlay
+										muted
+										loop
+									>
+										<source src={data.video[id]} type="video/webm" />
+									</video>
+								</div>
+							</LazyLoadComponent>
 						) : (
+							// </div>
 							// <ImgWithFallback
 							// 	src={data.imgWebp[id]}
 							// 	fallback={data.img[id]}
