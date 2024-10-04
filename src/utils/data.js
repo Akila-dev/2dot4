@@ -240,7 +240,7 @@ export const DATA = [
 					{
 						title: ['State-of-the-Art Reactors', '', ''],
 						text: [
-							'In the realm of cutting-edge diamond manufacturing, the cornerstone of innovation lies in the state-of-the-art CVD reactors employed by us at 2DOT4 Diamond LLC. These marvels of modern science represent the pinnacle of technological advancement, seamlessly blending precision engineering with scientific ingenuity. Behind the sleek façade lies a world of intricate processes, meticulously orchestrated to yield diamonds of unparalleled quality and brilliance.',
+							'In the realm of cutting-edge diamond manufacturing, the cornerstone of innovation lies in the state-of-the-art CVD reactors employed by us at 2DOT4 Diamond. These marvels of modern science represent the pinnacle of technological advancement, seamlessly blending precision engineering with scientific ingenuity. Behind the sleek façade lies a world of intricate processes, meticulously orchestrated to yield diamonds of unparalleled quality and brilliance.',
 							"What sets our CVD reactors apart, however, goes beyond mere surface aesthetics. It's in the subtle nuances of design refinement, the meticulous attention to detail, and the relentless pursuit of perfection that truly distinguish our reactors from the competition. With a focus on efficiency, reliability, and sustainability, our reactors effortlessly transcend the boundaries of conventional diamond production, setting new standards of excellence in the industry.",
 							"From optimized performance to enhanced scalability, every facet of our reactors is meticulously crafted to ensure optimal results, making them the preferred choice for discerning manufacturers seeking to elevate their diamond manufacturing capabilities. As pioneers in the field, we take pride in pushing the boundaries of what's possible, and our state-of-the-art CVD reactors are the embodiment of our commitment to innovation and excellence.",
 						],
@@ -463,7 +463,7 @@ export const DATA = [
 					{
 						title: ['Summary'],
 						text: [
-							'At 2DOT4 Diamonds LLC, our pursuit of excellence in the field of lab-grown diamonds extends beyond gemstone production into the realms of technical and industrial applications. Our comprehensive research and development efforts demonstrate our commitment to innovation, quality, and the future of technology. By pushing the boundaries of what is possible with lab-grown diamonds, we are not just crafting the future of our company but also contributing to the broader future of industry and science.',
+							'At 2DOT4 Diamonds, our pursuit of excellence in the field of lab-grown diamonds extends beyond gemstone production into the realms of technical and industrial applications. Our comprehensive research and development efforts demonstrate our commitment to innovation, quality, and the future of technology. By pushing the boundaries of what is possible with lab-grown diamonds, we are not just crafting the future of our company but also contributing to the broader future of industry and science.',
 						],
 					},
 				],
