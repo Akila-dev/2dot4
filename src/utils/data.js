@@ -108,7 +108,7 @@ import atelier4Mobile from '../assets/mobileSectionImages/atelier/4.png';
 import atelier5Mobile from '../assets/mobileSectionImages/atelier/5.png';
 
 // ! ATELIERS
-import discoverImg from '../assets/sectionImgs/discover.jpeg';
+import discoverImg from '../assets/sectionImgs/discover.png';
 // MOBILE
 import discoverMobile from '../assets/mobileSectionImages/discover.png';
 
