@@ -22,31 +22,28 @@ const Slide = ({ data, text, id, page, sectionId }) => {
 					className={`slide w-full h-full object-cover overflow-hidden relative scroll-content transition`}
 				>
 					<div className="absolute !bottom-0 !right-0 w-screen h-screen overflow-hidden ">
-						{data.video ? (
+						{data.video && data.video[id] ? (
 							// <div className="w-full h-full bg-black ">
 							<div className="w-full h-full object-cover">
-								<LazyLoadComponent visibleByDefault>
-									<video
+								<LazyLoadComponent>
+									<div
+										dangerouslySetInnerHTML={{
+											__html: `
+										<video
 										className="w-full h-full object-cover"
-										// 	aspectRatio: 1,
-										// style={{
-										// 	width: '100%',
-										// }}
 										autoPlay
+										playsinline
 										muted
 										loop
 									>
-										<source src={data.video[id]} type="video/webm" />
+										<source src=${data.video[id]} type="video/webm" />
 									</video>
+									`,
+										}}
+									/>
 								</LazyLoadComponent>
 							</div>
 						) : (
-							// </div>
-							// <ImgWithFallback
-							// 	src={data.imgWebp[id]}
-							// 	fallback={data.img[id]}
-							// 	alt={data.link + id}
-							// />
 							<ImgWithFallback
 								src={data.img[id]}
 								mobile={
