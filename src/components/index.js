@@ -1,6 +1,7 @@
 export { default as CTA } from './CTA';
 export { default as CTASubSlider } from './CTASubSlider';
 export { default as ImgWithFallback } from './ImgWithFallback';
+export { default as VideoPlayer } from './VideoPlayer';
 export { default as ArrowDown } from './ArrowDown';
 export { default as MenuButton } from './MenuButton';
 export { default as CloseBtn } from './CloseBtn';

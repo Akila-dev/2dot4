@@ -1,11 +1,8 @@
 /* eslint-disable react/prop-types */
-import { ImgWithFallback, CTASubSlider } from '../components';
-import { LazyLoadComponent } from 'react-lazy-load-image-component';
-// import { useRef } from 'react';
-// import WheelReact from 'wheel-react';
+import { ImgWithFallback, CTASubSlider, VideoPlayer } from '../components';
+// import { LazyLoadComponent } from 'react-lazy-load-image-component';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-// import WheelReact from 'wheel-react';
 
 import { PiCaretLeftThin, PiCaretRightThin } from 'react-icons/pi';
 
@@ -25,23 +22,9 @@ const Slide = ({ data, text, id, page, sectionId }) => {
 						{data.video && data.video[id] ? (
 							// <div className="w-full h-full bg-black ">
 							<div className="w-full h-full object-cover">
-								<LazyLoadComponent>
-									<div
-										dangerouslySetInnerHTML={{
-											__html: `
-										<video
-										className="w-full h-full object-cover"
-										autoPlay
-										playsinline
-										muted
-										loop
-									>
-										<source src=${data.video[id]} type="video/webm" />
-									</video>
-									`,
-										}}
-									/>
-								</LazyLoadComponent>
+								<div className="w-full h-full">
+									<VideoPlayer src={data.video[id]} />
+								</div>
 							</div>
 						) : (
 							<ImgWithFallback
