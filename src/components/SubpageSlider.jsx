@@ -24,8 +24,8 @@ const Slide = ({ data, text, id, page, sectionId }) => {
 					<div className="absolute !bottom-0 !right-0 w-screen h-screen overflow-hidden ">
 						{data.video ? (
 							// <div className="w-full h-full bg-black ">
-							<LazyLoadComponent visibleByDefault>
-								<div className="w-full h-full object-cover">
+							<div className="w-full h-full object-cover">
+								<LazyLoadComponent visibleByDefault>
 									<video
 										className="w-full h-full object-cover"
 										// 	aspectRatio: 1,
@@ -38,8 +38,8 @@ const Slide = ({ data, text, id, page, sectionId }) => {
 									>
 										<source src={data.video[id]} type="video/webm" />
 									</video>
-								</div>
-							</LazyLoadComponent>
+								</LazyLoadComponent>
+							</div>
 						) : (
 							// </div>
 							// <ImgWithFallback
