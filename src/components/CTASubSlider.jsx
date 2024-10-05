@@ -99,6 +99,7 @@ const CTASubSlider = ({
 							</Link>
 						) : (
 							<button
+								type="button"
 								onMouseEnter={() => hovering()}
 								onMouseLeave={() => hoverOut()}
 								onClick={onClick}

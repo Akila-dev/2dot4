@@ -90,6 +90,7 @@ const Cta = ({ title, text, btnText, href, onClick, short, makeTiny, id }) => {
 							</Link>
 						) : (
 							<button
+								type="button"
 								onMouseEnter={() => hovering()}
 								onMouseLeave={() => hoverOut()}
 								onClick={onClick}
