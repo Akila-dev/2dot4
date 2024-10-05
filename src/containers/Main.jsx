@@ -177,7 +177,7 @@ const Main = ({ data, page, subpage, scroll_to }) => {
 								</a>
 							</div>
 						</div>
-						<div className="w-full border-x border-[--lines] md:border-none flex items-center justify-center h-full">
+						<div className="w-full border-none flex items-center justify-center h-full">
 							<div className="hidden lg:block">
 								<ArrowDown onClick={() => scrollDown()} />
 							</div>
