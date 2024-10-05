@@ -21,7 +21,7 @@ export default function VideoPlayer({ src }) {
 			muted
 			playsInline
 		>
-			<source src={src} type="video/mp4" />
+			<source src={src} type="video/webm" />
 		</video>
 	);
 }
