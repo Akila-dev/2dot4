@@ -89,6 +89,7 @@ const CTASubSlider = ({
 								onMouseEnter={() => hovering()}
 								onMouseLeave={() => hoverOut()}
 								to={href}
+								target="_blank"
 								className="btn relative group overflow-hidden"
 							>
 								<span className="clip-bg"></span>

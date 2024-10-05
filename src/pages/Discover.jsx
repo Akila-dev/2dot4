@@ -5,7 +5,7 @@ import { Loading } from '../components';
 
 const Discover = () => {
 	const [isLoading, setIsLoading] = useState(true);
-	const data = discover[0].content;
+	const data = discover.subContent;
 
 	useEffect(() => {
 		setIsLoading(false);
@@ -15,7 +15,7 @@ const Discover = () => {
 		<Loading />
 	) : (
 		<div className="!h-full">
-			<DiscoverContainer data={data} page="discover" />
+			<DiscoverContainer data={data} page="discover" subpage />
 		</div>
 	);
 };

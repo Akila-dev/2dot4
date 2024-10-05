@@ -80,6 +80,7 @@ const Cta = ({ title, text, btnText, href, onClick, short, makeTiny, id }) => {
 								onMouseEnter={() => hovering()}
 								onMouseLeave={() => hoverOut()}
 								to={href}
+								// target="_blank"
 								className="btn relative group overflow-hidden"
 							>
 								<span className="clip-bg"></span>

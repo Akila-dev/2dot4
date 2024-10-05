@@ -528,20 +528,52 @@ export const ATELIER = {
 	],
 };
 
-export const discover = [
-	{
-		img: dummy,
-		content: [
-			{
-				img: [discoverImg],
-				mobileImg: [discoverMobile],
-				imgWebp: [application4Webp],
-				title: 'A NAME THAT REFLECTS OUR MANIFESTO',
-				text: '2DOT4 is the universal figure referring to the diamond refractive index, synonym of perfection amongst transparent stones. 2DOT4 is our signature, we are creating a perfect and precise standard related to brilliant technology, human intelligence and sensibility.',
-			},
-		],
-	},
-];
+export const discover = {
+	img: dummy,
+	subContent: [
+		{
+			link: 'Discover',
+			content: [
+				{
+					title: ['A NAME THAT REFLECTS OUR MANIFESTO'],
+					text: [
+						'2DOT4 is the universal figure referring to the diamond refractive index, synonym of perfection amongst transparent stones. 2DOT4 is our signature, we are creating a perfect and precise standard related to brilliant technology, human intelligence and sensibility.',
+					],
+				},
+			],
+			buttonText: 'CONTACT US',
+			buttonLink:
+				'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
+			img: [discoverImg],
+			mobileImg: [discoverMobile],
+			imgWebp: [application4Webp],
+			short: false,
+			// video: '',
+		},
+	],
+};
+
+// export const discover = {
+// 	subContent: [
+// 		{
+// 			link: 'Discover',
+// 			content: [
+// 				{
+// 					title: ['A NAME THAT REFLECTS OUR MANIFESTO'],
+// 					text: [
+// 						'2DOT4 is the universal figure referring to the diamond refractive index, synonym of perfection amongst transparent stones. 2DOT4 is our signature, we are creating a perfect and precise standard related to brilliant technology, human intelligence and sensibility.',
+// 					],
+// 				},
+// 			],
+// 			buttonText: 'CONTACT US',
+// 			buttonLink:
+// 				'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
+// 			img: [discoverImg],
+// 			mobileImg: [discoverMobile],
+// 			imgWebp: [application4Webp],
+// 		},
+// 	],
+// };
 
 export const CONTACT = {
 	brandName: '2DOT4',
