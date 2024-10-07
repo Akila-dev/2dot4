@@ -200,13 +200,13 @@ const Main = ({ data, page, subpage, scroll_to }) => {
 							<div className="!flex md:!hidden layout-sidebars layout-sidebar-r group relative">
 								<PiDotsThreeOutlineFill className="text-xl pointer-events-auto" />
 
-								<div className="absolute top-[-87.5px] flex flex-col gap-3 transition-all duration-700 scale-0 group-hover:scale-100 group-active:scale-100">
+								<div className="absolute top-[-90px] flex flex-col gap-4 transition-all duration-700 scale-0 group-hover:scale-100 group-active:scale-100">
 									{contact.socials.map((link, id) => (
 										<a
 											href={link}
 											target="_blank"
 											key={id}
-											className={`social-${id} pointer-events-auto scale-125`}
+											className={`social-${id} pointer-events-auto scale-150`}
 											onMouseEnter={() => scaleUp('social-' + id)}
 											onMouseLeave={() => scaleBack('social-' + id)}
 										>
