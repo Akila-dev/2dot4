@@ -240,7 +240,7 @@ export const DATA = [
 					{
 						title: ['State-of-the-Art Reactors', '', ''],
 						text: [
-							'In the realm of cutting-edge diamond manufacturing, the cornerstone of innovation lies in the state-of-the-art CVD reactors employed by us at 2DOT4 Diamond. These marvels of modern science represent the pinnacle of technological advancement, seamlessly blending precision engineering with scientific ingenuity. Behind the sleek façade lies a world of intricate processes, meticulously orchestrated to yield diamonds of unparalleled quality and brilliance.',
+							'In the realm of cutting-edge diamond manufacturing, the cornerstone of innovation lies in the state-of-the-art CVD reactors employed by us at 2DOT4 Diamonds. These marvels of modern science represent the pinnacle of technological advancement, seamlessly blending precision engineering with scientific ingenuity. Behind the sleek façade lies a world of intricate processes, meticulously orchestrated to yield diamonds of unparalleled quality and brilliance.',
 							"What sets our CVD reactors apart, however, goes beyond mere surface aesthetics. It's in the subtle nuances of design refinement, the meticulous attention to detail, and the relentless pursuit of perfection that truly distinguish our reactors from the competition. With a focus on efficiency, reliability, and sustainability, our reactors effortlessly transcend the boundaries of conventional diamond production, setting new standards of excellence in the industry.",
 							"From optimized performance to enhanced scalability, every facet of our reactors is meticulously crafted to ensure optimal results, making them the preferred choice for discerning manufacturers seeking to elevate their diamond manufacturing capabilities. As pioneers in the field, we take pride in pushing the boundaries of what's possible, and our state-of-the-art CVD reactors are the embodiment of our commitment to innovation and excellence.",
 						],
@@ -281,7 +281,7 @@ export const DATA = [
 	{
 		link: 'diamonds',
 		title: 'FROM SEED TO POLISHED STONE',
-		text: 'A lab-grown diamond forms through human innovation, using a refined process of pressure, heat, or carbon vapor, creating a gem that mirrors nature’s brilliance.',
+		text: 'A lab-grown diamond forms through human innovation, using a refined process of pressure, heat, and carbon vapor, creating a gem that mirrors nature’s brilliance.',
 		// text: 'Diamonds, process seeds, rough and polished',
 		buttonText: 'Explore Now',
 		img: diamondHero,
@@ -309,10 +309,10 @@ export const DATA = [
 						text: [
 							'Growing diamonds in a lab allows remarkable flexibility as size, cut, and colour can all be predetermined. We can now design our pieces first and then grow the diamonds to exact specifications, making genuinely remarkable and original jewellery pieces.',
 							"A lab-grown diamond is a marvel of modern science and innovation. Unlike traditional diamonds formed deep within the Earth's crust over millions of years, lab-grown diamonds are meticulously created in controlled laboratory environments.",
-							'At the core of these diamonds lies a tiny seed, much like the nucleus of a cell. Using advanced techniques, scientists replicate the natural conditions under which diamonds are formed, but in a fraction of the time. By introducing specific elements and applying heat and pressure, they coax these seeds to grow layer by layer, atom by atom, until they emerge as stunning diamonds.',
-							"What's truly remarkable is that these lab-grown diamonds possess the same physical, chemical, and optical properties as their mined counterparts. They exhibit the same brilliance, clarity, and durability, making them indistinguishable to the naked eye and to gemological testing equipment.",
-							'From an environmental standpoint, lab-grown diamonds offer a sustainable alternative to traditional mining practices. By eliminating the need for large-scale excavation and reducing the carbon footprint associated with mining operations, they represent a greener and more ethical choice for conscientious consumers.',
-							'In essence, lab-grown diamonds represent a harmonious convergence of science, technology, and sustainability, offering a brilliant solution for those seeking beauty without compromise.',
+							'At the core of these diamonds lies a tiny seed, much like the nucleus of a cell. Using advanced techniques, we replicate the natural conditions under which diamonds are formed, but in a fraction of the time. By introducing specific elements and applying heat and pressure, we coax these seeds to grow layer by layer, atom by atom, until they emerge as stunning diamonds.',
+							"What's truly remarkable is that our lab-grown diamonds possess the same physical, chemical, and optical properties as their mined counterparts. They exhibit the same brilliance, clarity, and durability, making them indistinguishable to the naked eye and to gemological testing equipment.",
+							'From an environmental standpoint, our lab-grown diamonds offer a sustainable alternative to traditional mining practices. By eliminating the need for large-scale excavation and reducing the carbon footprint associated with mining operations, they represent a greener and more ethical choice for conscientious consumers.',
+							'In essence, our lab-grown diamonds represent a harmonious convergence of science, technology, and sustainability, offering a brilliant solution for those seeking beauty without compromise.',
 						],
 					},
 				],
@@ -349,7 +349,7 @@ export const DATA = [
 						text: [
 							'At 2DOT4, we redefine excellence by marrying the intrinsic properties of diamonds with the precision of a perfect cut. Our unwavering commitment is to deliver unparalleled light performance through a harmonious fusion of color, clarity, and cut—the cornerstone of our revolutionary 2DOT4 standard.',
 							'Expect nothing short of brilliance as we consistently offer diamonds within the esteemed D to F color range, paired exclusively with ideal or excellent cuts. This meticulous calibration ensures optimal light performance, setting a new benchmark in the industry.',
-							'We pride ourselves on cultivating stones free from any milk or black inclusions, guaranteeing your diamond radiates the utmost brilliance and fire—the epitome of sought-after beauty in the diamond realm.',
+							'We pride ourselves on cultivating stones free from any milkiness or black inclusions, guaranteeing your diamond radiates the utmost brilliance and fire—the epitome of sought-after beauty in the diamond realm.',
 							'Join us as we boldly reshape the landscape of the diamond industry, setting a new standard of excellence with every facet, every sparkle, and every shimmering moment.',
 						],
 					},
