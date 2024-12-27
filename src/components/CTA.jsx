@@ -66,9 +66,13 @@ const Cta = ({
 	});
 
 	return (
-		<div id={id} ref={container} className="container !px-3 h-full !py-[50px]">
+		<div
+			id={id}
+			ref={container}
+			className="container !px-3 !h-full !py-[40px] !md:py-[50px]"
+		>
 			<div
-				className={`pt-[calc(20px+10vh)] md:pt-[10vh] pb-[10vh] flex flex-col items-center justify-between h-full text-center ${
+				className={`pt-[calc(40px+7vh)] md:pt-[10vh] pb-[7vh] md:pb-[10vh] flex flex-col items-center justify-between h-full text-center ${
 					short ? 'max-w-[700px]' : 'max-w-[900px]'
 				}  ${makeTiny ? 'px-0  ' : 'px-[2.5%] md:px-[100px] lg:px-[50px]'}`}
 			>

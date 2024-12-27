@@ -16,7 +16,7 @@ const Slide = ({ data, id, page }) => {
 				<div className="bg-overlay absolute top-0 left-0"></div>
 			</div>
 			{/* Content */}
-			<div className="md:py-[60px] px-5 md:px-[--sidebar-w] w-full h-full">
+			<div className="px-5 md:px-[--sidebar-w] w-full h-full">
 				<div className="w-full h-full flex items-center justify-center flex-1">
 					<CTA
 						page={page}
