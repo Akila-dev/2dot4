@@ -7,7 +7,17 @@ import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(useGSAP);
 
-const Cta = ({ title, text, btnText, href, onClick, short, makeTiny, id }) => {
+const Cta = ({
+	// page,
+	title,
+	text,
+	btnText,
+	href,
+	onClick,
+	short,
+	makeTiny,
+	id,
+}) => {
 	const container = useRef();
 	const { contextSafe } = useGSAP({ scope: container });
 
@@ -56,54 +66,57 @@ const Cta = ({ title, text, btnText, href, onClick, short, makeTiny, id }) => {
 	});
 
 	return (
-		<div id={id} ref={container} className="container !px-3 ">
+		<div id={id} ref={container} className="container !px-3 h-full !py-[50px]">
 			<div
-				className={`${
-					short ? 'max-w-[500px]' : 'max-w-[900px]'
-				} flex flex-col items-center justify-center gap-5 ${
-					makeTiny ? 'px-0  ' : 'px-[2.5%] '
-				} text-center`}
+				className={`pt-[calc(20px+10vh)] md:pt-[10vh] pb-[10vh] flex flex-col items-center justify-between h-full text-center ${
+					short ? 'max-w-[700px]' : 'max-w-[900px]'
+				}  ${makeTiny ? 'px-0  ' : 'px-[2.5%] md:px-[100px] lg:px-[50px]'}`}
 			>
-				<h1
-					className={`gsap-show ${
-						makeTiny &&
-						'text-[7vw] md:text-[3.5vw] lg:text-[2rem] leading-[130%]'
-					}`}
-				>
-					{title}
-				</h1>
-				<p className="gsap-show">{text}</p>
-				{btnText && (
-					<div className="pt-2 w-full gsap-show">
-						{href ? (
-							<Link
-								onMouseEnter={() => hovering()}
-								onMouseLeave={() => hoverOut()}
-								to={href}
-								// target="_blank"
-								className="btn relative group overflow-hidden"
-							>
-								<span className="clip-bg"></span>
-								<span className="relative z-1 group-hover:text-[--bg] duration-700">
-									{btnText}
-								</span>
-							</Link>
-						) : (
-							<button
-								type="button"
-								onMouseEnter={() => hovering()}
-								onMouseLeave={() => hoverOut()}
-								onClick={onClick}
-								className="btn relative group overflow-hidden"
-							>
-								<span className="clip-bg"></span>
-								<span className="relative z-1 group-hover:text-[--bg] duration-700">
-									{btnText}
-								</span>
-							</button>
-						)}
-					</div>
-				)}
+				<div className="space-vh">
+					{/* <p className="gsap-show page-title">{page}</p> */}
+					<h1
+						className={`gsap-show ${
+							makeTiny &&
+							'text-[7vw] md:text-[3.5vw] lg:text-[2rem] leading-[130%]'
+						}`}
+					>
+						{title}
+					</h1>
+				</div>
+				<div className="space-vh">
+					<p className="gsap-show">{text}</p>
+					{btnText && (
+						<div className="pt-2 w-full gsap-show">
+							{href ? (
+								<Link
+									onMouseEnter={() => hovering()}
+									onMouseLeave={() => hoverOut()}
+									to={href}
+									// target="_blank"
+									className="btn relative group overflow-hidden"
+								>
+									<span className="clip-bg"></span>
+									<span className="relative z-1 group-hover:text-[--bg] duration-700">
+										{btnText}
+									</span>
+								</Link>
+							) : (
+								<button
+									type="button"
+									onMouseEnter={() => hovering()}
+									onMouseLeave={() => hoverOut()}
+									onClick={onClick}
+									className="btn relative group overflow-hidden"
+								>
+									<span className="clip-bg"></span>
+									<span className="relative z-1 group-hover:text-[--bg] duration-700">
+										{btnText}
+									</span>
+								</button>
+							)}
+						</div>
+					)}
+				</div>
 			</div>
 		</div>
 	);

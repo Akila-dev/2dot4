@@ -19,7 +19,7 @@ const ImgWithFallback = ({ src, mobile, ...delegated }) => {
 					height={'100%'}
 					src={mobile}
 					width={'100%'}
-					className="w-screen h-screen object-cover"
+					className="w-screen h-screen object-cover object-center"
 				/>
 			</picture>
 			<picture className="w-screen h-screen !object-center !object-cover overflow-hidden hidden lg:block">
@@ -27,7 +27,7 @@ const ImgWithFallback = ({ src, mobile, ...delegated }) => {
 					height={'100%'}
 					src={src}
 					width={'100%'}
-					className="w-screen h-screen object-cover"
+					className="w-screen h-screen object-cover object-center"
 				/>
 			</picture>
 		</div>

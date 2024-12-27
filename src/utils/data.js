@@ -1,43 +1,36 @@
 import dummy from '../assets/dummy/1.jpg';
 
 //* SECTION 1: ABOUT SECTION
-import aboutHero from '../assets/sectionImgs/1/hero.png';
+import aboutHero from '../assets/sectionImgs/1/hero.jpg';
 // import about1 from '../assets/sectionImgs/1/1.jpg';
-import about11 from '../assets/sectionImgs/1/11.png';
+import about11 from '../assets/sectionImgs/1/11.jpg';
 import about12 from '../assets/sectionImgs/1/12.jpg';
 import about13 from '../assets/sectionImgs/1/13.jpg';
-import about2 from '../assets/sectionImgs/1/2.jpg';
-import about21 from '../assets/sectionImgs/1/21.webm';
+import about21 from '../assets/sectionImgs/1/21.jpg';
+// import about21 from '../assets/sectionImgs/1/21.webm';
 import about31 from '../assets/sectionImgs/1/31.jpg';
 import about4 from '../assets/sectionImgs/1/4.jpg';
-import about41 from '../assets/sectionImgs/1/41.webm';
-import aboutHeroWebp from '../assets/sectionImgs/1/hero.webp';
-import about1Webp from '../assets/sectionImgs/1/1.webp';
-import about2Webp from '../assets/sectionImgs/1/2.webp';
-import about3Webp from '../assets/sectionImgs/1/3.webp';
-import about4Webp from '../assets/sectionImgs/1/4.webp';
+// import about41 from '../assets/sectionImgs/1/41.webm';
 // MOBILE
-import aboutHeroMobile from '../assets/mobileSectionImages/1/hero.png';
-import about11Mobile from '../assets/mobileSectionImages/1/11.png';
-import about12Mobile from '../assets/mobileSectionImages/1/12.png';
-import about13Mobile from '../assets/mobileSectionImages/1/13.png';
-import about31Mobile from '../assets/mobileSectionImages/1/31.png';
+import aboutHeroMobile from '../assets/mobileSectionImages/1/hero.jpg';
+import about11Mobile from '../assets/mobileSectionImages/1/11.jpg';
+import about12Mobile from '../assets/mobileSectionImages/1/12.jpg';
+import about13Mobile from '../assets/mobileSectionImages/1/13.jpg';
+import about21Mobile from '../assets/mobileSectionImages/1/21.jpg';
+import about31Mobile from '../assets/mobileSectionImages/1/31.jpg';
 
 //* SECTION 2: TECHNOLOGY SECTION
 import technologyHero from '../assets/sectionImgs/2/hero.jpg';
-import technology11 from '../assets/sectionImgs/2/11.jpg';
+import technology11 from '../assets/sectionImgs/2/1.jpg';
 import technology21 from '../assets/sectionImgs/2/21.jpg';
 import technology22 from '../assets/sectionImgs/2/22.jpg';
 import technology23 from '../assets/sectionImgs/2/23.jpg';
-import technologyHeroWebp from '../assets/sectionImgs/2/hero.webp';
-import technology1Webp from '../assets/sectionImgs/2/1.webp';
-import technology2Webp from '../assets/sectionImgs/2/2.webp';
 // MOBILE
-import technologyHeroMobile from '../assets/mobileSectionImages/2/hero.png';
-import technology11Mobile from '../assets/mobileSectionImages/2/11.png';
-import technology21Mobile from '../assets/mobileSectionImages/2/21.png';
-import technology22Mobile from '../assets/mobileSectionImages/2/22.png';
-import technology23Mobile from '../assets/mobileSectionImages/2/23.png';
+import technologyHeroMobile from '../assets/mobileSectionImages/2/hero.jpg';
+import technology11Mobile from '../assets/mobileSectionImages/2/1.jpg';
+import technology21Mobile from '../assets/mobileSectionImages/2/21.jpg';
+import technology22Mobile from '../assets/mobileSectionImages/2/22.jpg';
+import technology23Mobile from '../assets/mobileSectionImages/2/23.jpg';
 
 //* SECTION 3: DIAMOND SECTION
 import diamondHero from '../assets/sectionImgs/3/hero.jpg';
@@ -48,51 +41,42 @@ import diamond13 from '../assets/sectionImgs/3/13.jpg';
 import diamond14 from '../assets/sectionImgs/3/14.jpg';
 import diamond15 from '../assets/sectionImgs/3/15.jpg';
 import diamond16 from '../assets/sectionImgs/3/16.jpg';
-import diamond17 from '../assets/sectionImgs/3/17.jpg';
-import diamond31 from '../assets/sectionImgs/3/31.jpg';
-import diamond32 from '../assets/sectionImgs/3/32.jpg';
-import diamond33 from '../assets/sectionImgs/3/33.jpg';
-import diamond34 from '../assets/sectionImgs/3/34.jpg';
-import diamondHeroWebp from '../assets/sectionImgs/3/hero.webp';
-import diamond11Webp from '../assets/sectionImgs/3/11.webp';
-import diamond12Webp from '../assets/sectionImgs/3/12.webp';
-import diamond13Webp from '../assets/sectionImgs/3/13.webp';
-import diamond14Webp from '../assets/sectionImgs/3/14.webp';
-import diamond15Webp from '../assets/sectionImgs/3/15.webp';
-import diamond16Webp from '../assets/sectionImgs/3/16.webp';
-import diamond17Webp from '../assets/sectionImgs/3/17.webp';
-import diamond2Webp from '../assets/sectionImgs/3/2.webp';
+import diamond21 from '../assets/sectionImgs/3/21.jpg';
+import diamond22 from '../assets/sectionImgs/3/22.jpg';
+import diamond23 from '../assets/sectionImgs/3/23.jpg';
+import diamond24 from '../assets/sectionImgs/3/24.jpg';
 // MOBILE
-import diamond11Mobile from '../assets/mobileSectionImages/3/21.png';
-import diamond12Mobile from '../assets/mobileSectionImages/3/22.png';
-import diamond13Mobile from '../assets/mobileSectionImages/3/23.png';
-import diamond14Mobile from '../assets/mobileSectionImages/3/24.png';
+import diamond11Mobile from '../assets/mobileSectionImages/3/11.jpg';
+import diamond12Mobile from '../assets/mobileSectionImages/3/12.jpg';
+import diamond13Mobile from '../assets/mobileSectionImages/3/13.jpg';
+import diamond14Mobile from '../assets/mobileSectionImages/3/14.jpg';
+import diamond15Mobile from '../assets/mobileSectionImages/3/15.jpg';
+import diamond16Mobile from '../assets/mobileSectionImages/3/16.jpg';
+import diamond21Mobile from '../assets/mobileSectionImages/3/21.jpg';
+import diamond22Mobile from '../assets/mobileSectionImages/3/22.jpg';
+import diamond23Mobile from '../assets/mobileSectionImages/3/23.jpg';
+import diamond24Mobile from '../assets/mobileSectionImages/3/24.jpg';
 
 //* SECTION 4: APPLICATION SECTION
 import applicationHero from '../assets/sectionImgs/4/hero.jpg';
 import application1 from '../assets/sectionImgs/4/1.jpg';
-import application2 from '../assets/sectionImgs/4/2.jpg';
-import application3 from '../assets/sectionImgs/4/3.jpg';
-// import application4 from '../assets/sectionImgs/4/4.jpg';
-import application12 from '../assets/sectionImgs/4/12.png';
-import application22 from '../assets/sectionImgs/4/22.png';
-import application32 from '../assets/sectionImgs/4/32.png';
-import application41 from '../assets/sectionImgs/4/41.png';
-import application42 from '../assets/sectionImgs/4/42.png';
+import application21 from '../assets/sectionImgs/4/21.jpg';
+import application22 from '../assets/sectionImgs/4/22.jpg';
+import application31 from '../assets/sectionImgs/4/31.jpg';
+import application32 from '../assets/sectionImgs/4/32.jpg';
+import application41 from '../assets/sectionImgs/4/41.jpg';
+import application42 from '../assets/sectionImgs/4/42.jpg';
 import application51 from '../assets/sectionImgs/4/51.jpg';
-import applicationHeroWebp from '../assets/sectionImgs/4/hero.webp';
-import application1Webp from '../assets/sectionImgs/4/1.webp';
-import application2Webp from '../assets/sectionImgs/4/2.webp';
-import application3Webp from '../assets/sectionImgs/4/3.webp';
-import application4Webp from '../assets/sectionImgs/4/4.webp';
-import application12Webp from '../assets/sectionImgs/4/12.webp';
-import application22Webp from '../assets/sectionImgs/4/22.webp';
-import application32Webp from '../assets/sectionImgs/4/32.webp';
-import application42Webp from '../assets/sectionImgs/4/42.webp';
 // MOBILE
-import applicationHeroMobile from '../assets/mobileSectionImages/4/hero.png';
-import application41Mobile from '../assets/mobileSectionImages/4/41.png';
-import application51Mobile from '../assets/mobileSectionImages/4/51.png';
+import applicationHeroMobile from '../assets/mobileSectionImages/4/hero.jpg';
+import application1Mobile from '../assets/mobileSectionImages/4/1.jpg';
+import application21Mobile from '../assets/mobileSectionImages/4/21.jpg';
+import application22Mobile from '../assets/mobileSectionImages/4/22.jpg';
+import application31Mobile from '../assets/mobileSectionImages/4/31.jpg';
+import application32Mobile from '../assets/mobileSectionImages/4/32.jpg';
+import application41Mobile from '../assets/mobileSectionImages/4/41.jpg';
+import application42Mobile from '../assets/mobileSectionImages/4/42.jpg';
+import application51Mobile from '../assets/mobileSectionImages/4/51.jpg';
 
 // ATELIER
 import atelier1 from '../assets/sectionImgs/atelier/1.jpg';
@@ -101,16 +85,18 @@ import atelier3 from '../assets/sectionImgs/atelier/3.jpg';
 import atelier4 from '../assets/sectionImgs/atelier/4.jpg';
 import atelier5 from '../assets/sectionImgs/atelier/5.jpg';
 // MOBILE
-import atelier1Mobile from '../assets/mobileSectionImages/atelier/1.png';
-import atelier2Mobile from '../assets/mobileSectionImages/atelier/2.png';
-import atelier3Mobile from '../assets/mobileSectionImages/atelier/3.png';
-import atelier4Mobile from '../assets/mobileSectionImages/atelier/4.png';
-import atelier5Mobile from '../assets/mobileSectionImages/atelier/5.png';
+import atelier1Mobile from '../assets/mobileSectionImages/atelier/1.jpg';
+import atelier2Mobile from '../assets/mobileSectionImages/atelier/2.jpg';
+import atelier3Mobile from '../assets/mobileSectionImages/atelier/3.jpg';
+import atelier4Mobile from '../assets/mobileSectionImages/atelier/4.jpg';
+import atelier5Mobile from '../assets/mobileSectionImages/atelier/5.jpg';
 
-// ! ATELIERS
+// ! MANIFESTO AND DISCOVER
 import discoverImg from '../assets/sectionImgs/discover.png';
+import manifestoImg from '../assets/sectionImgs/manifesto.jpg';
 // MOBILE
 import discoverMobile from '../assets/mobileSectionImages/discover.png';
+import manifestoMobile from '../assets/mobileSectionImages/manifesto.jpg';
 
 // export const DATA = [
 // {
@@ -144,7 +130,6 @@ export const DATA = [
 		buttonText: 'EXPLORE NOW',
 		img: aboutHero,
 		mobileImg: aboutHeroMobile,
-		imgWebp: aboutHeroWebp,
 		short: true,
 		subContent: [
 			{
@@ -153,16 +138,15 @@ export const DATA = [
 					{
 						title: ['Who we are:', 'Our Mission:', 'Why We Lead the Market:'],
 						text: [
-							'We are an innovative company dedicated to providing sustainable, cutting-edge diamond products worldwide. With a fully integrated ecosystem, our expert team designs state-of-the-art reactors to produce top-quality lab-grown diamonds. Partnering with industry leaders, we leverage global expertise to drive scalable growth.',
-							'Combining scientific prowess with creative ingenuity, we meticulously craft diamonds of unparalleled precision, ensuring superior yield and consistency. From in-house cutting to polishing, our diamonds undergo rigorous quality control, delivering excellence from the reactor to your fingertips.',
-							'In a landscape accustomed to variability, we champion industrial precision, propelled by our team of PhD-qualified nano-tech engineers, industrial experts, and seasoned cutters. Our dedication to quality sets us apart, positioning us as pioneers in the future of the diamond market.',
+							'We are a company focused on delivering sustainable, high-quality lab-grown diamonds worldwide. \nOur team designs advanced reactors within a fully integrated system, and we partner with industry leaders to support scalable growth.',
+							'With scientific precision and creative skill, we craft diamonds for superior yield and consistency.\nFrom cutting to polishing, each diamond undergoes strict quality control, ensuring excellence from reactor to fingertips.',
+							'In a landscape of variability, we champion industrial precision. With PhD-qualified nano-tech engineers, experts, and cutters, positioning us as pioneers in the diamond market.',
 						],
 					},
 				],
 				buttonText: '',
 				img: [about11, about12, about13],
 				mobileImg: [about11Mobile, about12Mobile, about13Mobile],
-				imgWebp: [about1Webp, about1Webp, about1Webp],
 				short: false,
 				// moveToBottom: [true, false, false],
 				// video: '',
@@ -173,17 +157,17 @@ export const DATA = [
 					{
 						title: ['Center of Excellence'],
 						text: [
-							"At 2DOT4, we go beyond mere certification; we cultivate a fusion of culture, emotion, and innovation. As a center of excellence, we intertwine technology with artistry and talent, fuelled by an unwavering commitment to excellence. Recently, in Dubai, the epitome of innovation in the Middle East, we proudly inaugurated the GCC's premier Lab-Grown Diamond laboratory—a monumental stride in our quest to revolutionize the diamond industry.",
+							"At 2DOT4, we blend culture, emotion, and innovation, uniting technology, artistry, and talent. Recently, in Dubai, we inaugurated the GCC's premier Lab-Grown Diamond laboratory, advancing our mission to revolutionise the diamond industry.",
 						],
 					},
 				],
 				buttonText: 'CONTACT US',
 				buttonLink:
 					'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
-				img: [about2],
-				imgWebp: [about2Webp],
+				img: [about21],
+				mobileImg: [about21Mobile],
 				short: false,
-				video: [about21],
+				// video: [about21],
 				// make_tiny: true,
 			},
 			{
@@ -192,7 +176,7 @@ export const DATA = [
 					{
 						title: ["Let's Embark on this exciting adventure together"],
 						text: [
-							'At 2DOT4 we are dedicated to providing transparent, high-standard education on lab-grown diamonds to empower individuals and businesses alike. Our strategy revolves around promoting top quality, exploring the diverse possibilities of diamond material, and fostering a deep understanding of its applications. ',
+							'At 2DOT4, we provide transparent, high-standard education on lab-grown diamonds, empowering individuals and businesses. Our strategy promotes quality, explores diamond material, and deepens understanding of its applications.',
 						],
 					},
 				],
@@ -201,7 +185,6 @@ export const DATA = [
 					'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
 				img: [about31],
 				mobileImg: [about31Mobile],
-				imgWebp: [about3Webp],
 				short: true,
 				// video: '',
 			},
@@ -211,16 +194,15 @@ export const DATA = [
 					{
 						title: ["Unlocking Diamond Alchemy through Earth's Elements"],
 						text: [
-							"In the realm of diamonds, whether lab-grown or mined, the disparity lies solely in their genesis. For 2DOT4, the path to diamond creation veers towards innovation, harnessing Earth's elements within controlled environments. Our approach doesn't disrupt nature; rather, it accelerates its processes through meticulously designed reactors.",
-							"A diamond, revered as the epitome of durability and timelessness, symbolises eternity. 2DOT4, however, strives to uphold this legacy in a more sustainable manner, harnessing the sun's power to craft diamonds of unparalleled purity. Classified as Type IIa, the most coveted variant due to its pristine carbon structure, these diamonds stand in a league of their own, with only a fraction of mined diamonds bearing comparison.",
+							'In the realm of diamonds, 2DOT4 focuses on innovation, creating diamonds in controlled environments by accelerating natural processes through designed reactors, without disrupting nature.',
+							'A diamond symbolizes eternity with its durability and timelessness. 2DOT4 upholds this legacy sustainably, using the sun’s power tocreate Type IIa diamonds of unmatched purity, with only a fraction of mined diamonds bearing comparison.',
 						],
 					},
 				],
 				buttonText: '',
 				img: [about4, about4],
-				imgWebp: [about4Webp, about4Webp],
 				short: false,
-				video: [about41, about41],
+				video: [about4, about4],
 			},
 		],
 	},
@@ -231,18 +213,21 @@ export const DATA = [
 		buttonText: 'Explore Now',
 		img: technologyHero,
 		mobileImg: technologyHeroMobile,
-		imgWebp: technologyHeroWebp,
 		short: true,
 		subContent: [
 			{
 				link: 'State of the Art Reactors',
 				content: [
 					{
-						title: ['State-of-the-Art Reactors', '', ''],
+						title: [
+							'State-of-the-Art Reactors',
+							'State-of-the-Art Reactors',
+							'State-of-the-Art Reactors',
+						],
 						text: [
-							'In the realm of cutting-edge diamond manufacturing, the cornerstone of innovation lies in the state-of-the-art CVD reactors employed by us at 2DOT4 Diamonds. These marvels of modern science represent the pinnacle of technological advancement, seamlessly blending precision engineering with scientific ingenuity. Behind the sleek façade lies a world of intricate processes, meticulously orchestrated to yield diamonds of unparalleled quality and brilliance.',
-							"What sets our CVD reactors apart, however, goes beyond mere surface aesthetics. It's in the subtle nuances of design refinement, the meticulous attention to detail, and the relentless pursuit of perfection that truly distinguish our reactors from the competition. With a focus on efficiency, reliability, and sustainability, our reactors effortlessly transcend the boundaries of conventional diamond production, setting new standards of excellence in the industry.",
-							"From optimized performance to enhanced scalability, every facet of our reactors is meticulously crafted to ensure optimal results, making them the preferred choice for discerning manufacturers seeking to elevate their diamond manufacturing capabilities. As pioneers in the field, we take pride in pushing the boundaries of what's possible, and our state-of-the-art CVD reactors are the embodiment of our commitment to innovation and excellence.",
+							'At 2DOT4 Diamonds, our CVD reactors drive innovation in diamond manufacturing. These advanced systems blend precision engineering and science, carefully producing diamonds of exceptional quality and brilliance.',
+							'Our CVD reactors are distinguished not just by aesthetics but by refined design, meticulous detail, and a pursuit of perfection. Prioritising efficiency, reliability, and sustainability, they set new standards in diamond production.',
+							'Our meticulously designed reactors deliver optimised performance and scalability, making them the top choice for manufacturers aiming to elevate their diamond production. Our state-of-the-art CVD reactors embody our commitment to innovation and excellence.',
 						],
 					},
 				],
@@ -251,7 +236,6 @@ export const DATA = [
 					'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
 				img: [technology11, technology11, technology11],
 				mobileImg: [technology11Mobile, technology11Mobile, technology11Mobile],
-				imgWebp: [technology1Webp, technology1Webp, technology1Webp],
 				short: false,
 				// video: '',
 			},
@@ -259,10 +243,14 @@ export const DATA = [
 				link: 'CVD Technology',
 				content: [
 					{
-						title: ['CVD Diamond Growth Technology', '', ''],
+						title: [
+							'CVD Diamond Growth Technology',
+							'CVD Diamond Growth Technology',
+							'CVD Diamond Growth Technology',
+						],
 						text: [
-							'At 2DOT4, we produce diamonds through Chemical Vapor Deposition (CVD), a sophisticated technique that uses our state-of-the-art reactors.',
-							'We start with a diamond seed, placed in a reactor where we introduce gases like methane and hydrogen. These gases are ionised into plasma with microwave radiation, allowing carbon atoms from the methane to bond with the seed, building the diamond layer by layer.',
+							'At 2DOT4, we produce diamonds through Chemical Vapor Deposition (CVD),a sophisticated technique that uses our state-of-the-art reactors.',
+							'We place a diamond seed in a reactor, introducing gases like methane and hydrogen, which are ionized into plasma with microwave radiation. This allows carbon atoms from methane to bond with the seed, building the diamond layer by layer.',
 							'This process is not only reliable but also more environmentally friendly compared to traditional methods. Our technology enables us to craft high-quality diamonds in various sizes and shapes, suitable for use in industries such as electronics, optics, and jewellery.',
 						],
 					},
@@ -272,7 +260,6 @@ export const DATA = [
 					'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
 				img: [technology21, technology22, technology23],
 				mobileImg: [technology21Mobile, technology22Mobile, technology23Mobile],
-				imgWebp: [technology2Webp, technology2Webp, technology2Webp],
 				short: false,
 				// video: '',
 			},
@@ -285,7 +272,6 @@ export const DATA = [
 		// text: 'Diamonds, process seeds, rough and polished',
 		buttonText: 'Explore Now',
 		img: diamondHero,
-		imgWebp: diamondHeroWebp,
 		short: true,
 		subContent: [
 			// {
@@ -298,46 +284,43 @@ export const DATA = [
 			// 	],
 			// 	buttonText: '',
 			// 	img: '',
-			// 	imgWebp: '',
 			// 	video: [diamondVid1],
 			// },
 			{
 				link: 'LAB GROWN DIAMONDS',
 				content: [
 					{
-						title: ['Lab-Grown Diamonds'],
+						title: [
+							'Lab-Grown Diamonds',
+							'Lab-Grown Diamonds',
+							'Lab-Grown Diamonds',
+							'Lab-Grown Diamonds',
+							'Lab-Grown Diamonds',
+							'Lab-Grown Diamonds',
+						],
 						text: [
-							'Growing diamonds in a lab allows remarkable flexibility as size, cut, and colour can all be predetermined. We can now design our pieces first and then grow the diamonds to exact specifications, making genuinely remarkable and original jewellery pieces.',
-							"A lab-grown diamond is a marvel of modern science and innovation. Unlike traditional diamonds formed deep within the Earth's crust over millions of years, lab-grown diamonds are meticulously created in controlled laboratory environments.",
-							'At the core of these diamonds lies a tiny seed, much like the nucleus of a cell. Using advanced techniques, we replicate the natural conditions under which diamonds are formed, but in a fraction of the time. By introducing specific elements and applying heat and pressure, we coax these seeds to grow layer by layer, atom by atom, until they emerge as stunning diamonds.',
-							"What's truly remarkable is that our lab-grown diamonds possess the same physical, chemical, and optical properties as their mined counterparts. They exhibit the same brilliance, clarity, and durability, making them indistinguishable to the naked eye and to gemological testing equipment.",
-							'From an environmental standpoint, our lab-grown diamonds offer a sustainable alternative to traditional mining practices. By eliminating the need for large-scale excavation and reducing the carbon footprint associated with mining operations, they represent a greener and more ethical choice for conscientious consumers.',
-							'In essence, our lab-grown diamonds represent a harmonious convergence of science, technology, and sustainability, offering a brilliant solution for those seeking beauty without compromise.',
+							'Lab-grown diamonds offer flexibility in size, cut, and color, allowing us to design jewellery first and grow diamonds to precise specifications for unique, extraordinary pieces.',
+							'A lab-grown diamond is a marvel of modern science, created in controlled lab settings rather than over millions of years deep in the Earth’s crust.',
+							'Starting with a tiny seed, much like a cell nucleus, we replicate natural conditions with advanced techniques. By adding elements and applying heat and pressure, the seed grows layer by layer into a stunning diamond in a fraction of the time.',
+							'Lab-grown diamonds have the same physical, chemical, and optical properties as mined diamonds, showing identical brilliance, clarity, and durability, making them indistinguishable to both the eye and gemological tests.',
+							'Lab-grown diamonds provide a sustainable alternative to mining by eliminating large-scale excavation and reducing carbon footprints, offering a greener and more ethical choice for mindful consumers.',
+							'Our lab-grown diamonds blend science, technology, and sustainability, providing a brilliant solution for those seeking beauty without compromise.',
 						],
 					},
 				],
 				buttonText: 'CONTACT US',
 				buttonLink:
 					'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
-				img: [
-					diamond11,
-					diamond12,
-					diamond13,
-					diamond14,
-					diamond15,
-					diamond16,
-					diamond17,
+				mobileImg: [
+					diamond11Mobile,
+					diamond12Mobile,
+					diamond13Mobile,
+					diamond14Mobile,
+					diamond15Mobile,
+					diamond16Mobile,
 				],
+				img: [diamond11, diamond12, diamond13, diamond14, diamond15, diamond16],
 
-				imgWebp: [
-					diamond11Webp,
-					diamond12Webp,
-					diamond13Webp,
-					diamond14Webp,
-					diamond15Webp,
-					diamond16Webp,
-					diamond17Webp,
-				],
 				short: false,
 				// video: '',
 			},
@@ -345,10 +328,15 @@ export const DATA = [
 				link: 'Our Standard',
 				content: [
 					{
-						title: ['Our Standard'],
+						title: [
+							'Our Standard',
+							'Our Standard',
+							'Our Standard',
+							'Our Standard',
+						],
 						text: [
-							'At 2DOT4, we redefine excellence by marrying the intrinsic properties of diamonds with the precision of a perfect cut. Our unwavering commitment is to deliver unparalleled light performance through a harmonious fusion of color, clarity, and cut—the cornerstone of our revolutionary 2DOT4 standard.',
-							'Expect nothing short of brilliance as we consistently offer diamonds within the esteemed D to F color range, paired exclusively with ideal or excellent cuts. This meticulous calibration ensures optimal light performance, setting a new benchmark in the industry.',
+							"At 2DOT4, we redefine excellence by combining diamonds' intrinsic properties with the precision of a perfect cut, delivering unparalleled light performance through a unique fusion of color, clarity, and cut—the foundation of our 2DOT4 standard.",
+							'Expect brilliance as we provide diamonds in the esteemed D to F color range, exclusively paired with ideal or excellent cuts. This careful calibration ensures optimal light performance, setting a new industry benchmark.',
 							'We pride ourselves on cultivating stones free from any milkiness or black inclusions, guaranteeing your diamond radiates the utmost brilliance and fire—the epitome of sought-after beauty in the diamond realm.',
 							'Join us as we boldly reshape the landscape of the diamond industry, setting a new standard of excellence with every facet, every sparkle, and every shimmering moment.',
 						],
@@ -357,14 +345,13 @@ export const DATA = [
 				buttonText: 'CONTACT US',
 				buttonLink:
 					'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
-				img: [diamond31, diamond32, diamond33, diamond34],
+				img: [diamond21, diamond22, diamond23, diamond24],
 				mobileImg: [
-					diamond11Mobile,
-					diamond12Mobile,
-					diamond13Mobile,
-					diamond14Mobile,
+					diamond21Mobile,
+					diamond22Mobile,
+					diamond23Mobile,
+					diamond24Mobile,
 				],
-				imgWebp: [diamond2Webp, diamond2Webp, diamond2Webp, diamond2Webp],
 				short: false,
 				// video: '',
 			},
@@ -373,11 +360,10 @@ export const DATA = [
 	{
 		link: 'applications',
 		title: 'Applications',
-		text: 'Our cutting-edge R&D team is revolutionizing the diamond industry. We create stunning gem diamonds and pioneer innovative industrial applications for lab-grown diamonds. Leveraging advanced technology and rigorous research, we set new standards and lead the market. Discover the future of diamonds with us.',
+		text: 'Our R&D team is transforming the diamond industry, creating stunning diamonds and pioneering lab-grown innovations. With advanced tech, we set new standards. Discover the future of diamonds with us.',
 		buttonText: 'Explore Now',
 		img: applicationHero,
 		mobileImg: applicationHeroMobile,
-		imgWebp: applicationHeroWebp,
 		short: true,
 		subContent: [
 			{
@@ -386,16 +372,16 @@ export const DATA = [
 					{
 						title: ['Diamond substrate'],
 						text: [
-							'Our research into diamond substrates is foundational to our broader R&D initiatives. These substrates are critical for a variety of research and industrial applications, serving as the perfect base for further material growth and experimental analysis. Our team has developed a meticulous process for manufacturing, cutting, and polishing these substrates in-house, ensuring they meet the high standards required for advanced applications.',
-							'Utilizing these substrates, our researchers have been able to grow epitaxial layers for semiconductor devices and conduct experiments that exploit the unique thermal, electrical, and optical properties of diamonds. This work underpins a range of innovations in electronics and photonics.',
+							'Our research into diamond substrates is foundational to our broader R&D efforts. These substrates are essential for research and industrial uses, providing an ideal base for material growth and analysis. With a meticulous in-house process, our team ensures they meet the high standards required for advanced applications.',
+							"Using these substrates, our researchers have grown epitaxial layers for semiconductor devices and conducted experiments leveraging diamonds' unique thermal, electrical, and optical properties. This work supports various innovations in electronics and photonics.",
 						],
 					},
 				],
 				buttonText: 'CONTACT US',
 				buttonLink:
 					'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
-				img: [application1, application12],
-				imgWebp: [application1Webp, application12Webp],
+				img: [application1, application1],
+				mobileImg: [application1Mobile, application1Mobile],
 				short: false,
 				// video: '',
 			},
@@ -405,7 +391,7 @@ export const DATA = [
 					{
 						title: ['Thermal Management'],
 						text: [
-							'Our work with polycrystalline diamond heat spreaders highlights our commitment to solving modern challenges in electronics. Leveraging the unparalleled thermal conductivity of diamonds, our R&D has focused on developing heat spreaders that efficiently manage thermal energy in electronic devices. This research is crucial for enhancing the performance and longevity of compact, high-heat components like transistors and laser diodes.',
+							"Our work with polycrystalline diamond heat spreaders addresses modern electronics challenges by using diamonds' exceptional thermal conductivity to enhance the performance and lifespan of high-heat components like transistors and laser diodes.",
 							'Our advancements in this area are paving the way for the next generation of electronic devices that are smaller, faster, and more energy-efficient, aligning with global sustainability goals.',
 						],
 					},
@@ -413,8 +399,8 @@ export const DATA = [
 				buttonText: 'CONTACT US',
 				buttonLink:
 					'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
-				img: [application2, application22],
-				imgWebp: [application2Webp, application22Webp],
+				img: [application21, application22],
+				mobileImg: [application21Mobile, application22Mobile],
 				short: false,
 				// video: '',
 			},
@@ -424,16 +410,16 @@ export const DATA = [
 					{
 						title: ['Diamond Cutting Tools'],
 						text: [
-							'The development of diamond cutting tools represents a significant segment of our research efforts. Our scientists and engineers have been exploring the applications of both single crystal and polycrystalline diamond (PCD) in industrial manufacturing.',
-							'These tools are celebrated for their unmatched hardness and resistance to wear, making them ideal for machining an array of materials across various industries. Our research aims to enhance the precision, surface finish, and overall durability of these tools, thereby boosting productivity and efficiency in sectors such as automotive, aerospace, and metalworking. Our commitment to this area signifies our dedication to supporting industrial advancement and innovation.',
+							'Diamond cutting tool development is a key area of our research, where our scientists and engineers explore applications of both single crystal and polycrystalline diamond (PCD) in industrial manufacturing.',
+							'These tools, known for their hardness and wear resistance, are ideal for machining materials across industries. Our research enhances precision, surface finish,and durability, boosting productivity in automotive, aerospace, and metalworking, supporting industrial innovation.',
 						],
 					},
 				],
 				buttonText: 'CONTACT US',
 				buttonLink:
 					'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
-				img: [application3, application32],
-				imgWebp: [application3Webp, application32Webp],
+				img: [application31, application32],
+				mobileImg: [application31Mobile, application32Mobile],
 				short: false,
 				// video: '',
 			},
@@ -443,7 +429,7 @@ export const DATA = [
 					{
 						title: ['Semiconductor Diamonds'],
 						text: [
-							'Semiconductor diamonds represent a thrilling frontier in our research efforts. These materials hold the promise of revolutionizing the electronics industry with their superior thermal properties, wide bandgap, and exceptional electrical characteristics. Our team is deeply engaged in exploring the potentials of semiconductor diamonds, aiming to create devices that operate at unprecedented speeds and efficiencies while withstanding extreme conditions.',
+							'Semiconductor diamonds are a thrilling frontier in our research, promising to revolutionize electronics with their superior thermal properties, wide bandgap, and exceptional electrical characteristics. Our team is focused on creating devices that operate at unprecedented speeds and efficiencies while withstanding extreme conditions.',
 							'This research not only contributes to the advancement of electronic devices but also aligns with our vision of sustainable and resilient technology development.',
 						],
 					},
@@ -452,8 +438,7 @@ export const DATA = [
 				buttonLink:
 					'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
 				img: [application41, application42],
-				mobileImg: [application41Mobile],
-				imgWebp: [application4Webp, application42Webp],
+				mobileImg: [application41Mobile, application42Mobile],
 				short: false,
 				// video: '',
 			},
@@ -463,7 +448,7 @@ export const DATA = [
 					{
 						title: ['Summary'],
 						text: [
-							'At 2DOT4 Diamonds, our pursuit of excellence in the field of lab-grown diamonds extends beyond gemstone production into the realms of technical and industrial applications. Our comprehensive research and development efforts demonstrate our commitment to innovation, quality, and the future of technology. By pushing the boundaries of what is possible with lab-grown diamonds, we are not just crafting the future of our company but also contributing to the broader future of industry and science.',
+							'At 2DOT4 Diamonds, our pursuit of excellence in lab-grown diamonds goes beyond gemstone production into technical and industrial applications. Our R&D efforts showcase our commitment to innovation, quality, and the future of technology, pushing the boundaries of lab-grown diamonds to shape the future of our company and contribute to industry and science.',
 						],
 					},
 				],
@@ -472,7 +457,6 @@ export const DATA = [
 					'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
 				img: [application51],
 				mobileImg: [application51Mobile],
-				imgWebp: [application4Webp],
 				short: false,
 				// video: '',
 			},
@@ -495,11 +479,11 @@ export const ATELIER = {
 						'What are the prices for the items of the ATELIER program?',
 					],
 					text: [
-						"Step into our exclusive atelier program, where dreams become dazzling reality. Here, we craft bespoke masterpieces tailored to your every desire. From the smallest detail to the grandest vision, we bring your imagination to life, transforming your dreams into exquisite works of art. With limitless possibilities, let us guide you on a journey to create a one-of-a-kind treasure that captures the essence of your unique story. Your dream awaits – let's make it shine together.",
-						'Embark on an enchanting journey with us, where every step is a magical moment toward your ultimate masterpiece. Our meticulous process begins with selecting the perfect model, laying the foundation for your vision. From there, we dive deep into a realm of endless creativity, refining and shaping with each iteration until your dream takes its breathtaking form. Let us guide you through this enchanting voyage, where every detail leads to the creation of a timeless treasure crafted just for you. Your journey to perfection starts here.',
-						'The timeline for completing a project can vary significantly based on its complexity, making it challenging to offer a precise estimate. Generally, projects utilizing our pre-selected options are completed more quickly than custom development projects, such as creating a completely new diamond cut, which may require several months for cutting and polishing. Rest assured, we are committed to providing accurate timelines and ensuring each project is completed to the highest standards of quality and craftsmanship.',
-						"Our Atelier program is all about crafting unique and special pieces that reflect your individual style. Because we want to give each project the attention it deserves, we have a limited number of spots available each year. If we receive more requests than we can handle right away, don't worry! We'll add you to our waiting list and keep you updated on when we can start working together. Your dream piece is worth the wait, and we're here to make it happen.",
-						'The price will be determined based on factors such as quality, materials and complexity, and would be mutually agreed upon between 2DOT4 and the client for each individual case',
+						'Discover our atelier program, where your vision becomes reality. We craft unique pieces that bring your story to life, turning dreams into extraordinary creations. Let us help you design something truly special – your journey starts here.',
+						'Begin a magical journey with us, where each step leads to your ultimate masterpiece. Starting with the perfect model, we shape your vision through endless creativity, refining every detail until your dream takes form. Let us guide you in creating a timeless treasure. Your path to perfection begins here.',
+						'Project timelines vary depending on complexity. Pre-selected options are typically completed faster, while custom projects, like developing a new diamond cut, may take months. We are dedicated to providing accurate timelines and delivering top-quality craftsmanship.',
+						"Our Atelier program creates unique pieces that reflect your style. With limited spots each year, excess requests are added to a waiting list. We'll keep you updated, ensuring your dream piece gets the attention it deserves.",
+						'The price will be determined based on factors such as quality, materials and complexity, and would be mutually agreed upon between 2DOT4 and the client for each individual case.',
 					],
 				},
 			],
@@ -513,14 +497,6 @@ export const ATELIER = {
 				atelier3Mobile,
 				atelier4Mobile,
 				atelier5Mobile,
-			],
-			imgWebp: [
-				application1Webp,
-				application12Webp,
-				application1Webp,
-				application12Webp,
-				application1Webp,
-				application12Webp,
 			],
 			short: false,
 			// video: '',
@@ -546,34 +522,35 @@ export const discover = {
 				'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
 			img: [discoverImg],
 			mobileImg: [discoverMobile],
-			imgWebp: [application4Webp],
 			short: false,
 			// video: '',
 		},
 	],
 };
 
-// export const discover = {
-// 	subContent: [
-// 		{
-// 			link: 'Discover',
-// 			content: [
-// 				{
-// 					title: ['A NAME THAT REFLECTS OUR MANIFESTO'],
-// 					text: [
-// 						'2DOT4 is the universal figure referring to the diamond refractive index, synonym of perfection amongst transparent stones. 2DOT4 is our signature, we are creating a perfect and precise standard related to brilliant technology, human intelligence and sensibility.',
-// 					],
-// 				},
-// 			],
-// 			buttonText: 'CONTACT US',
-// 			buttonLink:
-// 				'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
-// 			img: [discoverImg],
-// 			mobileImg: [discoverMobile],
-// 			imgWebp: [application4Webp],
-// 		},
-// 	],
-// };
+export const manifesto = {
+	img: dummy,
+	subContent: [
+		{
+			link: 'Manifesto',
+			content: [
+				{
+					title: ['A NAME THAT REFLECTS OUR MANIFESTO'],
+					text: [
+						'2DOT4 is the universal figure referring to the diamond refractive index, synonym of perfection amongst transparent stones. 2DOT4 is our signature, we are creating a perfect and precise standard related to brilliant technology, human intelligence and sensibility.',
+					],
+				},
+			],
+			buttonText: 'CONTACT US',
+			buttonLink:
+				'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',
+			img: [manifestoImg],
+			mobileImg: [manifestoMobile],
+			short: false,
+			// video: '',
+		},
+	],
+};
 
 export const CONTACT = {
 	brandName: '2DOT4',
@@ -588,8 +565,8 @@ export const CONTACT = {
 
 export const FOOTERLINKLIST = [
 	{
-		link: '/discover',
-		label: 'discover',
+		link: '/manifesto',
+		label: 'manifesto',
 	},
 	{
 		link: 'https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com',

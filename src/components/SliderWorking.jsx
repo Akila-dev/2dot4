@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect, useRef } from 'react';
 import { ImgWithFallback, CTA, SideNavLink } from '../components';
-import useDetectScroll from '@smakss/react-scroll-direction';
+// import useDetectScroll from '@smakss/react-scroll-direction';
 import WheelReact from 'wheel-react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -97,7 +97,7 @@ const Slider = ({ data, subpage, page }) => {
 	const [isScrolling, setIsScrolling] = useState(false);
 
 	// GET SCROLL DIRECTION
-	const { scrollDir } = useDetectScroll();
+	// const { scrollDir } = useDetectScroll();
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -333,9 +333,10 @@ const Slider = ({ data, subpage, page }) => {
 					</div>
 				))}
 			</div>
+
 			{/* Sidebar */}
 			<div className="!hidden md:!flex layout-sidebars !p-0 md:!px-8 lg:!px-10 fixed top-0 left-0 h-full gsap-fade-in">
-				<div className="md:space-y-3">
+				<div className="md-flex-y-3">
 					{data.map((item, id) => (
 						<SideNavLink
 							data={item}

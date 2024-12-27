@@ -3,6 +3,7 @@ export { default as CTASubSlider } from './CTASubSlider';
 export { default as ImgWithFallback } from './ImgWithFallback';
 export { default as VideoPlayer } from './VideoPlayer';
 export { default as ArrowDown } from './ArrowDown';
+export { default as ScrollDown } from './ScrollDown';
 export { default as MenuButton } from './MenuButton';
 export { default as CloseBtn } from './CloseBtn';
 export { default as ContactForm } from './ContactForm';

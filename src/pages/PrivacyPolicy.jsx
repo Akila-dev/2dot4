@@ -8,7 +8,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
 import { CONTACT, PRIVACY_POLICY } from '../utils/data';
-import { MenuButton, MenuPopup, ArrowDown } from '../components';
+import { MenuButton, MenuPopup, ScrollDown } from '../components';
 
 import logo_icon from '../assets/imgs/2dot4-icon.svg';
 import privacy_bg from '../assets/imgs/sandy-bg.jpg';
@@ -38,10 +38,6 @@ const PrivacyPolicy = () => {
 	];
 
 	const contact = { ...CONTACT };
-
-	const scrollDown = () => {
-		console.log('scroll down');
-	};
 
 	// !ANIMATION CODES
 	// !ANIMATION CODES
@@ -184,7 +180,7 @@ const PrivacyPolicy = () => {
 									</h2>
 									<p className="text-[--grey]">{item.text}</p>
 									{item.list && (
-										<ul className="space-y-2">
+										<ul className="flex-y-2">
 											{item.list.map(({ title, desc, email }, i) => (
 												<li
 													key={i}
@@ -237,7 +233,7 @@ const PrivacyPolicy = () => {
 						</div>
 						<div className="w-full border-x border-[--lines] md:border-none flex items-center justify-center h-full">
 							<div className="hidden lg:block">
-								<ArrowDown onClick={() => scrollDown()} />
+								<ScrollDown />
 							</div>
 						</div>
 						<div>

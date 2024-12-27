@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet');
 
 @tailwind base;
 @tailwind components;
@@ -10,7 +12,7 @@
 	--white: #fff;
 	--grey: #dfdfdf;
 	--border: rgba(255, 255, 255, 0.4);
-	--font: 'Montserrat';
+	--font: 'Plus Jakarta Sans', serif;
 
 	--sidebar-w: 225px;
 	--sidebar-w-md: 180px;
@@ -25,11 +27,18 @@ body {
 body {
 	background: var(--bg);
 	color: var(--white);
-	font-family: 'Montserrat';
+	font-family: 'Plus Jakarta Sans', serif;
 	/* height: 100vh; */
 	/* height: 200vh; */
 	width: 100%;
 	scroll-padding-top: 800%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: 'Bebas Neue', serif;
 }
 
 * {
@@ -39,7 +48,7 @@ body {
 }
 
 h1 {
-	@apply font-semibold text-2xl sm:text-[25px] md:text-[2rem] leading-[130%] uppercase text-[--white];
+	@apply font-medium text-[10vw] md:text-[7vw] lg:text-[4.5vw] xl:text-[4vw] leading-[110%] !tracking-[1px] uppercase text-[--white];
 }
 
 h3 {
@@ -48,7 +57,7 @@ h3 {
 
 p,
 li {
-	@apply text-[--grey] text-xs md:text-sm !leading-[170%] font-medium;
+	@apply text-[--grey] text-[3.25vw] md:text-sm !leading-[170%] font-normal;
 }
 b {
 	@apply font-medium;
@@ -61,9 +70,18 @@ button {
 	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.1);
 }
 
-/* p {
-	text-shadow: 1px 1px 1px rgba(234, 234, 234, 0.1);
-} */
+.logo {
+	font-family: 'Plus Jakarta Sans', serif;
+	@apply text-xs md:text-sm xl:text-base tracking-[3px];
+}
+
+.sm {
+	@apply text-sm sm:text-base;
+}
+
+p {
+	text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
 
 .btn {
 	@apply text-[10px] md:text-xs text-[--white] w-[90%] max-w-[250px] md:min-w-[300px] md:max-w-[300px] py-[14px] md:py-4 border border-[--border] font-medium block mx-auto;
@@ -127,4 +145,24 @@ button {
 
 .privacy-link a:active {
 	@apply !bg-red-600;
+}
+
+.page-title {
+	@apply uppercase;
+}
+
+.space-vh {
+	@apply flex flex-col gap-[5vh] md:gap-[5vh];
+}
+
+.flex-y-4 {
+	@apply flex flex-col gap-4;
+}
+
+.md-flex-y-3 {
+	@apply md:flex flex-col gap-3;
+}
+
+.flex-y-2 {
+	@apply flex flex-col gap-2;
 }

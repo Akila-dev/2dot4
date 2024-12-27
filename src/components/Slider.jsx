@@ -625,6 +625,8 @@ const Slider = ({ data, subpage, page, allowSlide, scroll_to }) => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [scroll_to]);
 
+	const nav_exceptions = ['discover', 'manifesto', 'atelier'];
+
 	return (
 		<div
 			ref={container}
@@ -652,12 +654,13 @@ const Slider = ({ data, subpage, page, allowSlide, scroll_to }) => {
 									data={item}
 									id={index}
 									page={page}
-									// scrollTo={subScrollTo}
-									activeId={subActiveId[index]}
-									// setActiveId={setsubActiveId}
+									// activeId={subActiveId[index]}
 									next={() => nextSubSlide()}
 									prev={() => prevSubSlide()}
 									container={container}
+									scrollTo={subScrollTo}
+									subActiveId={subActiveId}
+									currentId={activeId}
 								/>
 							) : (
 								<Slide data={item} id={index} page={page} />
@@ -669,12 +672,12 @@ const Slider = ({ data, subpage, page, allowSlide, scroll_to }) => {
 			{/* Sidebar */}
 			<div
 				className={
-					page === 'discover'
+					nav_exceptions.includes(page)
 						? 'hidden'
 						: '!hidden md:!flex layout-sidebars !p-0 md:!px-8 lg:!px-10 fixed top-0 left-0 h-full gsap-fade-in'
 				}
 			>
-				<div className="md:space-y-3">
+				<div className="md-flex-y-3">
 					{data.map((item, id) => (
 						<SideNavLink
 							data={item}
@@ -689,17 +692,17 @@ const Slider = ({ data, subpage, page, allowSlide, scroll_to }) => {
 			{/* TOP NAV FOR MOBILE */}
 			<div
 				className={
-					page === 'discover'
+					nav_exceptions.includes(page)
 						? 'hidden'
-						: 'md:hidden gsap-fade-in w-full h-[40px] border-b-0 border-[--border] fixed top-[45px] md:top-[56.5px]'
+						: 'md:hidden gsap-fade-in w-full h-[40px] border-b-0 border-[--border] fixed top-[40px] md:top-[56.5px]'
 				}
 			>
-				<div className="flex gap-5 items-center h-full w-full overflow-x-scroll no-scrollbar px-[25%]">
+				<div className="flex items-center h-full w-full overflow-x-scroll no-scrollbar justify-evenly flex-nowrap overflow-y-auto gap-[5%] px-[5%]">
 					{data.map((item, id) => (
 						<div key={id} className="block text-center">
 							<SideNavLink
 								data={item}
-								// id={id}
+								id={id}
 								key={id}
 								onClick={() => scrollTo(activeId, id)}
 								active={activeId}

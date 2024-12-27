@@ -7,7 +7,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
 import { CONTACT } from '../utils/data';
-import { ArrowDown, MenuButton, Slider, MenuPopup } from '../components';
+import { ScrollDown, MenuButton, Slider, MenuPopup } from '../components';
 
 import logo_icon from '../assets/imgs/2dot4-icon.svg';
 // import logo_white from '../assets/imgs/logo-white.svg';
@@ -36,10 +36,6 @@ const Main = ({ data, page, subpage, scroll_to }) => {
 	];
 
 	const contact = { ...CONTACT };
-
-	const scrollDown = () => {
-		console.log('scroll down');
-	};
 
 	// !ANIMATION CODES
 	// !ANIMATION CODES
@@ -107,7 +103,7 @@ const Main = ({ data, page, subpage, scroll_to }) => {
 				/>
 				{/* TOP */}
 				{/* TOP */}
-				<div className="h-[45px] md:h-[56.5px] flex items-center justify-center relative w-full z-10 pointer-events-none">
+				<div className="h-[40px] md:h-[50px] flex items-center justify-center relative w-full z-10 pointer-events-none">
 					<div className="flex justify-center items-center w-full layout-text h-full">
 						<div className="layout-sidebars layout-sidebar-l !justify-center">
 							<MenuButton onClick={() => setShowMenu(true)} />
@@ -138,7 +134,7 @@ const Main = ({ data, page, subpage, scroll_to }) => {
 									className="contact-us flex gap-[6px] items-center justify-center pointer-events-auto"
 								>
 									<span className="hidden md:inline">Contact</span>{' '}
-									<BiSolidMessageRoundedDetail className="text-xl md:text-lg md:hidden" />
+									<BiSolidMessageRoundedDetail className="text-lg md:text-lg md:hidden" />
 								</Link>
 							</div>
 						</div>
@@ -171,15 +167,15 @@ const Main = ({ data, page, subpage, scroll_to }) => {
 									<img
 										src={logo_icon}
 										alt="logo"
-										className="h-[30px] md:h-[40px] w-auto object-cover"
+										className="h-[30px] md:h-[40px] w-auto object-cover p-[2px]"
 									/>
 									{/* <span className="hidden md:inline pb-1">Discover</span> */}
 								</a>
 							</div>
 						</div>
 						<div className="w-full border-none flex items-center justify-center h-full">
-							<div className="hidden lg:block">
-								<ArrowDown onClick={() => scrollDown()} />
+							<div>
+								<ScrollDown />
 							</div>
 						</div>
 						<div>
@@ -220,8 +216,8 @@ const Main = ({ data, page, subpage, scroll_to }) => {
 				</div>
 				{/* LINES */}
 				{/* LINES */}
-				<span className="lines horizontal-line border-b top-0 left-0 !h-[45px] md:!h-[56.5px]"></span>
-				<span className="lines horizontal-line border-t bottom-0 left-0 !h-[45px] md:!h-[56.5px] "></span>
+				<span className="lines horizontal-line border-b top-0 left-0 !h-[40px] md:!h-[50px]"></span>
+				<span className="lines horizontal-line border-t bottom-0 left-0 !h-[40px] md:!h-[50px] "></span>
 				{/* <span className="lines vertical-line border-r top-0 left-0 !h-full md:w-[--sidebar-w-md]  lg:w-[--sidebar-w] !hidden md:!block"></span>
 				<span className="lines vertical-line border-l top-0 right-0 !h-full md:w-[--sidebar-w-md]  lg:w-[--sidebar-w] !hidden md:!block"></span> */}
 			</div>

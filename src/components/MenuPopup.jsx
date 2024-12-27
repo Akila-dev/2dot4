@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable react/prop-types */
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -22,9 +22,6 @@ const MenuPopup = ({ close, container }) => {
 		{
 			link: 'applications',
 		},
-		// {
-		// 	link: 'news',
-		// },
 	];
 
 	useGSAP(
@@ -39,6 +36,9 @@ const MenuPopup = ({ close, container }) => {
 		{ scope: container }
 	);
 
+	const location = useLocation();
+	const { pathname } = location;
+
 	return (
 		<div
 			ref={container}
@@ -48,44 +48,57 @@ const MenuPopup = ({ close, container }) => {
 				<CloseBtn onClick={() => close()} />
 
 				<div>
-					<div className="space-y-4">
+					<div className="flex-y-4">
 						{menu.map((item, id) => (
 							<Link
 								key={id}
 								to={'/'}
 								// to={'/' + item.link}
 								state={{ index: id }}
-								className="block uppercase text-2xl text-medium link"
+								className={`block uppercase text-2xl text-medium link ${
+									pathname === `/${item.link}`
+										? 'font-bold text-white'
+										: 'text-white/70'
+								}`}
 							>
 								{item.link}
 							</Link>
 						))}
 					</div>
 				</div>
-				<div className="grid grid-cols-5 pb-[15vh] gap-2">
-					<div className="space-y-4 col-span-2">
+				<div className="grid grid-cols-5 pb-[60px] md:pb-[70px] gap-2">
+					<div className="flex-y-4 col-span-2">
 						{FOOTERLINKLIST.slice(0, 3).map((link, id) => (
 							<Link
 								key={id}
 								to={link.link}
-								className="block capitalize text-base link"
+								className={`block uppercase sm link ${
+									pathname === link.link
+										? 'font-bold text-white'
+										: 'text-white/70'
+								}`}
 							>
 								{link.label}
 							</Link>
 						))}
 					</div>
-					<div className="space-y-4 col-span-3">
+					<div className="flex-y-4 col-span-3">
 						{FOOTERLINKLIST.slice(3, 6).map((link, id) => (
 							<Link
 								key={id}
 								to={link.link}
-								className="block capitalize text-base link"
+								className={`block uppercase sm link ${
+									pathname === link.link
+										? 'font-bold text-white'
+										: 'text-white/70'
+								}`}
 							>
 								{link.label}
 							</Link>
 						))}
 					</div>
 				</div>
+				<div className="h-[40px] md:h-[50px] border-t border-[--border] absolute bottom-0 left-0 w-full" />
 			</div>
 		</div>
 	);

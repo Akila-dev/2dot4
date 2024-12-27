@@ -15,6 +15,7 @@ import {
 	Atelier,
 	ErrorPage,
 	PrivacyPolicy,
+	Manifesto,
 } from './pages';
 
 const router = createBrowserRouter([
@@ -51,6 +52,11 @@ const router = createBrowserRouter([
 	{
 		path: '/discover',
 		element: <Discover />,
+		errorElement: <ErrorPage />,
+	},
+	{
+		path: '/manifesto',
+		element: <Manifesto />,
 		errorElement: <ErrorPage />,
 	},
 	{

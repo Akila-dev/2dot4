@@ -4,11 +4,21 @@ import { ImgWithFallback, CTASubSlider, VideoPlayer } from '../components';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
-import { PiCaretLeftThin, PiCaretRightThin } from 'react-icons/pi';
+// import { PiCaretLeftThin, PiCaretRightThin } from 'react-icons/pi';
 
 gsap.registerPlugin(useGSAP);
 
-const Slide = ({ data, text, id, page, sectionId }) => {
+const Slide = ({
+	data,
+	text,
+	id,
+	page,
+	sectionId,
+	// activeId,
+	scrollTo,
+	subActiveId,
+	currentId,
+}) => {
 	return (
 		<div
 			id={page + sectionId + id}
@@ -64,7 +74,13 @@ const Slide = ({ data, text, id, page, sectionId }) => {
 								short
 								id={page + id}
 								makeTiny={data.make_tiny}
+								page={page}
+								// activeId={activeId}
+								slide_length={data.content[0].text.length}
 								// short={data.short}
+								scrollTo={scrollTo}
+								subActiveId={subActiveId}
+								currentId={currentId}
 							/>
 						</div>
 					</div>
@@ -79,12 +95,11 @@ const SubpageSlider = ({
 	data,
 	id,
 	page,
-	// scrollTo,
-	activeId,
-	// setActiveId,
-	next,
-	prev,
+	// activeId,
 	container,
+	scrollTo,
+	subActiveId,
+	currentId,
 }) => {
 	// const container = useRef(null);
 	// const { contextSafe } = useGSAP({ scope: container });
@@ -126,58 +141,12 @@ const SubpageSlider = ({
 					sectionId={id}
 					id={index}
 					page={page}
+					// activeId={activeId}
+					scrollTo={scrollTo}
+					subActiveId={subActiveId}
+					currentId={currentId}
 				/>
 			))}
-			<div className="gsap-nav-controller hidden lg:flex w-[80px] xl:w-[100px] h-full justify-center items-center fixed lg:left-[--sidebar-w]">
-				{data.content[0].text.length > 1 && activeId !== 0 && (
-					<button className="hover:opacity-70" onClick={() => prev()}>
-						<PiCaretLeftThin className="text-4xl font-light" />
-					</button>
-				)}
-			</div>
-			<div className="gsap-nav-controller hidden lg:flex w-[80px] xl:w-[100px] h-full justify-center items-center fixed lg:right-[--sidebar-w]">
-				{data.content[0].text.length > 1 &&
-					activeId !== data.content[0].text.length - 1 && (
-						<button className="hover:opacity-70" onClick={() => next()}>
-							<PiCaretRightThin className="text-4xl font-light" />
-						</button>
-					)}
-			</div>
-			{data.content[0].text.length > 1 && (
-				<div className="gsap-nav-controller hidden lg:flex items-center justify-center !absolute w-full bottom-[57.5px] left-0 h-[50px] text-xs tracking-wider font-medium">
-					0{activeId + 1}
-					<span className="px-1">/</span>0{data.content[0].text.length}
-				</div>
-			)}
-
-			{/* MOBILE */}
-			<div className="gsap-nav-controller lg:hidden items-center justify-center !absolute w-full bottom-0 left-0 h-[45px] md:h-[57.5px] text-xs tracking-wider font-medium px-[--sidebar-w-sm] md:px-[--sidebar-w-md] ">
-				<div className=" h-full w-full flex items-center justify-center gap-5 ">
-					<div className="gsap-nav-controller lg:hidden w-[35px]  h-full flex items-center justify-start">
-						{data.content[0].text.length > 1 && activeId !== 0 && (
-							<button className="hover:opacity-70" onClick={() => prev()}>
-								<PiCaretLeftThin className="text-lg font-light" />
-							</button>
-						)}
-					</div>
-					<div className="gsap-nav-controller lg:hidden bg-green-800 h-full">
-						{data.content[0].text.length > 1 && (
-							<div className="gsap-nav-controller flex items-center justify-center !absolute w-full h-full text-xs tracking-wider font-medium">
-								0{activeId + 1}
-								<span className="px-1">/</span>0{data.content[0].text.length}
-							</div>
-						)}
-					</div>
-					<div className="gsap-nav-controller lg:hidden w-[35px]  h-full flex items-center justify-end">
-						{data.content[0].text.length > 1 &&
-							activeId !== data.content[0].text.length - 1 && (
-								<button className="hover:opacity-70" onClick={() => next()}>
-									<PiCaretRightThin className="text-lg font-light" />
-								</button>
-							)}
-					</div>
-				</div>
-			</div>
 		</div>
 	);
 };

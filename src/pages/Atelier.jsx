@@ -15,7 +15,7 @@ const Atelier = () => {
 		<Loading />
 	) : (
 		<div className="!h-full">
-			<DiscoverContainer data={data} page="discover" subpage />
+			<DiscoverContainer data={data} page="atelier" subpage />
 		</div>
 	);
 };

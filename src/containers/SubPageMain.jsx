@@ -7,7 +7,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
 import { CONTACT } from '../utils/data';
-import { ArrowDown, MenuButton, Slider, MenuPopup } from '../components';
+import { ScrollDown, MenuButton, Slider, MenuPopup } from '../components';
 
 import logo_icon from '../assets/imgs/2dot4-icon.svg';
 // import logo_white from '../assets/imgs/logo-white.svg';
@@ -36,10 +36,6 @@ const SubPageMain = ({ data, page, subpage }) => {
 	];
 
 	const contact = { ...CONTACT };
-
-	const scrollDown = () => {
-		console.log('scroll down');
-	};
 
 	// !ANIMATION CODES
 	// !ANIMATION CODES
@@ -101,7 +97,7 @@ const SubPageMain = ({ data, page, subpage }) => {
 				<Slider data={data} page={page} subpage={subpage} />
 				{/* TOP */}
 				{/* TOP */}
-				<div className="h-[45px] md:h-[56.5px] flex items-center justify-center relative w-full z-10 pointer-events-none">
+				<div className="h-[40px] md:h-[56.5px] flex items-center justify-center relative w-full z-10 pointer-events-none">
 					<div className="flex justify-between items-center w-full layout-text h-full">
 						<div className="layout-sidebars layout-sidebar-l">
 							<MenuButton onClick={() => setShowMenu(true)} />
@@ -167,7 +163,7 @@ const SubPageMain = ({ data, page, subpage }) => {
 						</div>
 						<div className="w-full border-x border-[--lines] md:border-none flex items-center justify-center h-full">
 							<div className="hidden lg:block">
-								<ArrowDown onClick={() => scrollDown()} />
+								<ScrollDown />
 							</div>
 						</div>
 						<div>

@@ -19,6 +19,7 @@ const Slide = ({ data, id, page }) => {
 			<div className="md:py-[60px] px-5 md:px-[--sidebar-w] w-full h-full">
 				<div className="w-full h-full flex items-center justify-center flex-1">
 					<CTA
+						page={page}
 						title={data.title}
 						text={data.text}
 						btnText={data.buttonText}
