@@ -168,5 +168,11 @@ p {
 }
 
 .image-pos {
-	object-position: 50% 40% !important;
+	object-position: 50% 35% !important;
+}
+
+@media (max-width: 768px) {
+	.image-pos {
+		object-position: 50% 20% !important;
+	}
 }

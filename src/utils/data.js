@@ -7,9 +7,9 @@ import about11 from '../assets/sectionImgs/1/11.jpg';
 import about12 from '../assets/sectionImgs/1/12.jpg';
 import about13 from '../assets/sectionImgs/1/13.jpg';
 import about21 from '../assets/sectionImgs/1/21.jpg';
-// import about21 from '../assets/sectionImgs/1/21.webm';
+import about2 from '../assets/sectionImgs/1/21.webm';
 import about31 from '../assets/sectionImgs/1/31.jpg';
-import about4 from '../assets/sectionImgs/1/4.jpg';
+// import about4 from '../assets/sectionImgs/1/4.jpg';
 import about41 from '../assets/sectionImgs/1/41.webm';
 // MOBILE
 import aboutHeroMobile from '../assets/mobileSectionImages/1/hero.jpg';
@@ -167,7 +167,7 @@ export const DATA = [
 				img: [about21],
 				mobileImg: [about21Mobile],
 				short: false,
-				// video: [about21],
+				video: [about2],
 				// make_tiny: true,
 			},
 			{

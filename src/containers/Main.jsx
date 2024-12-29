@@ -159,7 +159,7 @@ const Main = ({ data, page, subpage, scroll_to }) => {
 							{/* <BiSolidPaperPlane className="text-xl" /> */}
 							<div className="flex items-center justify-center w-full">
 								<a
-									href="/discover"
+									href="/manifesto"
 									className="discover flex items-end w-auto justify-center gap-[10px]"
 									onMouseEnter={() => scaleUp('discover')}
 									onMouseLeave={() => scaleBack('discover')}

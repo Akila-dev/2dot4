@@ -12,6 +12,7 @@ const Slide = ({ data, id, page }) => {
 					src={data.img}
 					mobile={data.mobileImg || data.img}
 					alt={data.link}
+					centered
 				/>
 				<div className="bg-overlay absolute top-0 left-0"></div>
 			</div>

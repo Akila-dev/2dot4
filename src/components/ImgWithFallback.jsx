@@ -11,7 +11,7 @@
 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-const ImgWithFallback = ({ src, mobile, ...delegated }) => {
+const ImgWithFallback = ({ src, mobile, centered, ...delegated }) => {
 	return (
 		<div className="w-screen h-screen !object-center !object-cover overflow-hidden">
 			<picture className="w-screen h-screen !object-center !object-cover overflow-hidden lg:hidden">
@@ -27,7 +27,9 @@ const ImgWithFallback = ({ src, mobile, ...delegated }) => {
 					height={'100%'}
 					src={src}
 					width={'100%'}
-					className="w-screen h-screen object-cover image-pos"
+					className={`w-screen h-screen object-cover ${
+						centered ? 'object-center' : 'image-pos'
+					}`}
 				/>
 			</picture>
 		</div>
