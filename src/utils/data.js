@@ -10,7 +10,7 @@ import about21 from '../assets/sectionImgs/1/21.jpg';
 // import about21 from '../assets/sectionImgs/1/21.webm';
 import about31 from '../assets/sectionImgs/1/31.jpg';
 import about4 from '../assets/sectionImgs/1/4.jpg';
-// import about41 from '../assets/sectionImgs/1/41.webm';
+import about41 from '../assets/sectionImgs/1/41.webm';
 // MOBILE
 import aboutHeroMobile from '../assets/mobileSectionImages/1/hero.jpg';
 import about11Mobile from '../assets/mobileSectionImages/1/11.jpg';
@@ -200,9 +200,9 @@ export const DATA = [
 					},
 				],
 				buttonText: '',
-				img: [about4, about4],
+				// img: [about4, about4],
 				short: false,
-				video: [about4, about4],
+				video: [about41, about41],
 			},
 		],
 	},

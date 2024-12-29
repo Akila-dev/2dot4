@@ -166,3 +166,7 @@ p {
 .flex-y-2 {
 	@apply flex flex-col gap-2;
 }
+
+.image-pos {
+	object-position: 50% 40% !important;
+}

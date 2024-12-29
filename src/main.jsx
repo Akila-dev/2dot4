@@ -50,12 +50,17 @@ const router = createBrowserRouter([
 		errorElement: <ErrorPage />,
 	},
 	{
-		path: '/discover',
+		path: '/discoverrr',
 		element: <Discover />,
 		errorElement: <ErrorPage />,
 	},
 	{
 		path: '/manifesto',
+		element: <Manifesto />,
+		errorElement: <ErrorPage />,
+	},
+	{
+		path: '/discover',
 		element: <Manifesto />,
 		errorElement: <ErrorPage />,
 	},

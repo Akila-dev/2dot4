@@ -64,7 +64,7 @@ const Slide = ({
 										? data.content[0].title[id]
 										: id === 0
 										? data.content[0].title
-										: ''
+										: data.content[0].title[0]
 								}
 								text={text}
 								btnText={
