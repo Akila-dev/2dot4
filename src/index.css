@@ -173,6 +173,6 @@ p {
 
 @media (max-width: 768px) {
 	.image-pos {
-		object-position: 50% 20% !important;
+		object-position: 50% 55% !important;
 	}
 }
