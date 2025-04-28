@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import { ImgWithFallback, CTASubSlider, VideoPlayer } from '../components';
-// import { LazyLoadComponent } from 'react-lazy-load-image-component';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
@@ -82,17 +81,11 @@ const SubpageSlider = ({
 	data,
 	id,
 	page,
-	// scrollTo,
 	activeId,
-	// setActiveId,
 	next,
 	prev,
 	container,
 }) => {
-	// const container = useRef(null);
-	// const { contextSafe } = useGSAP({ scope: container });
-	// const [isSideScrolling, setIsSideScrolling] = useState(false);
-	// console.log(id, activeId);
 
 	useGSAP(
 		() => {

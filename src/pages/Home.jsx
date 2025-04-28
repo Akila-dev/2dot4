@@ -7,7 +7,6 @@ import { Loading } from '../components';
 const Home = () => {
 	const [isLoading, setIsLoading] = useState(true);
 	let { state } = useLocation();
-	console.log(state);
 
 	useEffect(() => {
 		setIsLoading(false);

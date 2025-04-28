@@ -47,30 +47,13 @@ const ContactForm = () => {
 			formData.message !== ''
 		) {
 			// setLoading(true);
-
-			const contact = {
-				firstName: formData.firstName,
-				lastName: formData.lastName,
-				phoneNo: formData.phoneNo,
-				email: formData.email,
-				message: formData.message,
-			};
-
-			// client
-			// 	.create(contact)
-			// 	.then(() => {
-			// 		setLoading(false);
-			// 		setIsFormSubmitted(true);
-
-			// 		setShowFireworks(true);
-			// 		playAudio(clapping);
-
-			// 		setTimeout(() => {
-			// 			setShowFireworks(false);
-			// 		}, 6000);
-			// 	})
-			// 	// eslint-disable-next-line no-console
-			// 	.catch((err) => console.log(err));
+			// const contact = {
+			// 	firstName: formData.firstName,
+			// 	lastName: formData.lastName,
+			// 	phoneNo: formData.phoneNo,
+			// 	email: formData.email,
+			// 	message: formData.message,
+			// };
 		}
 	};
 

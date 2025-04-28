@@ -279,29 +279,19 @@ const Slider = ({ data, subpage, page }) => {
 
 	useEffect(() => {
 		WheelReact.config({
-			left: () => {
-				// WheelReact.clearTimeout();
-				console.log('wheel left detected.');
-			},
-			right: () => {
-				// WheelReact.clearTimeout();
-				console.log('wheel right detected.');
-			},
+			left: () => {},
+			right: () => {},
 			up: () => {
-				// WheelReact.clearTimeout();
 				if (!isScrolling) {
 					if (activeId < data.length - 1) {
-						console.log('wheel up detected.');
 						setIsScrolling(true);
 						scrollTo(activeId, activeId + 1);
 					}
 				}
 			},
 			down: () => {
-				// WheelReact.clearTimeout();
 				if (!isScrolling) {
 					if (activeId > 0) {
-						console.log('wheel down detected.');
 						setIsScrolling(true);
 						scrollTo(activeId, activeId - 1);
 					}

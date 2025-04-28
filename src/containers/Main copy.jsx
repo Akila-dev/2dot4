@@ -38,9 +38,7 @@ const Main = ({ data, page, subpage }) => {
 
 	const contact = { ...CONTACT };
 
-	const scrollDown = () => {
-		console.log('scroll down');
-	};
+	const scrollDown = () => {};
 
 	// !ANIMATION CODES
 	// !ANIMATION CODES

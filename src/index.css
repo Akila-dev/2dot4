@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet');
@@ -8,123 +8,204 @@
 @tailwind utilities;
 
 :root {
-	--bg: #010101;
-	--white: #fff;
-	--grey: #dfdfdf;
-	--border: rgba(255, 255, 255, 0.4);
-	--font: 'Plus Jakarta Sans', serif;
+  --bg: #010101;
+  --white: #fff;
+  --grey: #dfdfdf;
+  --active: #000000aa;
+  --border: rgba(255, 255, 255, 0.4);
+  --font: "Plus Jakarta Sans", serif;
 
-	--sidebar-w: 225px;
-	--sidebar-w-md: 180px;
-	--sidebar-w-sm: 70px;
+  --sidebar-w-xl: 18vw;
+  --sidebar-w: 225px;
+  --sidebar-w-md: 180px;
+  --sidebar-w-sm: 70px;
+
+  --vbar-h-xl: 3.5vw;
+  --vbar-h: 50px;
+  --vbar-h-sm: 40px;
 }
 
 html,
 body {
-	height: 100%;
-	overscroll-behavior-y: contain;
+  height: 100%;
+  overscroll-behavior-y: contain;
 }
 body {
-	background: var(--bg);
-	color: var(--white);
-	font-family: 'Plus Jakarta Sans', serif;
-	/* height: 100vh; */
-	/* height: 200vh; */
-	width: 100%;
-	scroll-padding-top: 800%;
+  background: var(--bg);
+  color: var(--white);
+  font-family: "Plus Jakarta Sans", serif;
+  /* height: 100vh; */
+  /* height: 200vh; */
+  width: 100%;
+  scroll-padding-top: 800%;
 }
 
 h1,
 h2,
 h3,
 h4 {
-	font-family: 'Bebas Neue', serif;
+  font-family: "Bebas Neue", serif;
 }
 
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
-	@apply font-medium text-[10vw] md:text-[7vw] lg:text-[4.5vw] xl:text-[4vw] leading-[110%] !tracking-[1px] uppercase text-[--white];
+  @apply font-medium text-[10vw] md:text-[7vw] lg:text-[4.5vw] xl:text-[4vw] leading-[110%] !tracking-[1px] uppercase text-[--white];
+}
+
+h2 {
+  @apply font-medium text-[8vw] md:text-[5vw] lg:text-[3.5vw] xl:text-[2.7vw] leading-[110%] !tracking-[1px];
+}
+
+h3,
+.h3 {
+  @apply text-xl xl:text-[1.3vw] font-medium;
 }
 
 h3 {
-	@apply text-xl font-medium;
+  @apply text-xl xl:text-[1.3vw] font-medium;
+}
+
+.card-title {
+  @apply text-xl md:text-2xl xl:text-[1.8vw] font-medium;
 }
 
 p,
-li {
-	@apply text-[--grey] text-[3.25vw] md:text-sm !leading-[170%] font-normal;
+li,
+.p {
+  @apply text-[--grey] text-[3.25vw] sm:text-xs lg:text-sm xl:text-[1vw] !leading-[170%] font-normal;
 }
+
+.description p,
+.description li,
+.description .p {
+  @apply text-[--grey] text-[3.25vw] sm:text-xs lg:text-sm xl:text-[1vw] !leading-[170%] font-normal;
+}
+
+.description strong,
+.description b {
+  @apply !font-bold;
+}
+
+.description {
+  @apply flex flex-col justify-start w-full items-start gap-2 md:gap-3;
+}
+
+.description li {
+  @apply pl-3 md:pl-5 list-disc list-inside;
+}
+
+.dark-text p,
+.dark-text li,
+.dark-text .p,
+.dark-text h1,
+.dark-text h2,
+.dark-text h3,
+.dark-text h4 {
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.1) !important;
+  @apply text-[--bg];
+}
+
 b {
-	@apply font-medium;
+  @apply font-medium;
+}
+
+strong {
+  @apply !font-semibold;
 }
 
 h1,
 h2,
 h3,
-button {
-	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.1);
+button:not(.no-shadow) {
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.1);
 }
 
 .logo {
-	font-family: 'Plus Jakarta Sans', serif;
-	@apply text-xs md:text-sm xl:text-base tracking-[3px];
+  font-family: "Plus Jakarta Sans", serif;
+  @apply text-xs sm:text-sm xl:text-[1.15vw] tracking-[3px];
 }
 
 .sm {
-	@apply text-sm sm:text-base;
+  @apply text-sm sm:text-base xl:text-[1.2vw];
 }
 
-p {
-	text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+p:not(.no-shadow) {
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
 
 .btn {
-	@apply text-[10px] md:text-xs text-[--white] w-[90%] max-w-[250px] md:min-w-[300px] md:max-w-[300px] py-[14px] md:py-4 border border-[--border] font-medium block mx-auto;
+  @apply text-[10px] md:text-xs xl:text-[0.9vw] text-[--white] w-[90%] max-w-[250px] md:min-w-[300px] md:max-w-[300px] xl:min-w-[20vw] xl:max-w-[20vw] py-[14px] md:py-4 border border-[--border] font-medium block mx-auto;
+}
+
+.btn-1,
+.btn-2 {
+  @apply px-4 py-2 rounded-md hover:scale-110 transition duration-500;
+}
+
+.btn-1 {
+  @apply bg-[--bg] !text-white;
+}
+
+.btn-2 {
+  @apply bg-[--white] border border-gray-200 !text-[--bg];
 }
 
 .container {
-	@apply w-full p-5 flex justify-center;
+  @apply w-full p-5 flex justify-center;
 }
 
 .lines {
-	@apply block border-[--border] absolute w-full pointer-events-none z-10;
+  @apply block border-[--border] absolute w-full pointer-events-none z-10;
 }
 
 .layout-text {
-	@apply text-[10px] md:text-xs text-[--white] font-medium;
+  @apply text-[10px] md:text-xs text-[--white] font-medium;
 }
 
 .layout-sidebars {
-	@apply min-w-[--sidebar-w-sm] md:min-w-[--sidebar-w-md]  lg:min-w-[--sidebar-w] max-w-[--sidebar-w-sm] md:max-w-[--sidebar-w-md]  lg:max-w-[--sidebar-w] px-5 md:px-10 uppercase h-full flex items-center;
+  @apply min-w-[--sidebar-w-sm] md:min-w-[--sidebar-w-md]  lg:min-w-[--sidebar-w] xl:min-w-[--sidebar-w-xl] max-w-[--sidebar-w-sm] md:max-w-[--sidebar-w-md]  lg:max-w-[--sidebar-w] px-5 md:px-10 uppercase h-full flex items-center;
+}
+
+.layout-vbars {
+  @apply min-h-[--vbar-h-sm] md:min-h-[--vbar-h] xl:min-h-[--vbar-h-xl] max-h-[--vbar-h-sm] md:max-h-[--vbar-h];
 }
 
 .layout-sidebar-l {
-	@apply flex gap-2 justify-center md:justify-start;
+  @apply flex gap-2 justify-center md:justify-start;
 }
 
 .layout-sidebar-r {
-	@apply flex gap-2 justify-center md:justify-end;
+  @apply flex gap-2 justify-center md:justify-end;
+}
+
+.container-xy,
+.container-x {
+  @apply w-full px-4 md:px-14 lg:px-20 xl:px-[9vw];
+}
+
+.container-xy {
+  @apply py-[50px] md:py-[70px] lg:py-[100px] xl:py-[5vw];
 }
 
 .social-icons {
-	@apply text-[--white] text-2xl;
+  @apply text-[--white] text-2xl;
 }
 
 .clip-bg {
-	@apply absolute translate-y-[-50%] translate-x-[-50%] top-[200px] left-[50%] w-[400px] h-[400px] rounded-full bg-[--white] scale-0;
+  @apply absolute translate-y-[-50%] translate-x-[-50%] top-[200px] left-[50%] w-[400px] h-[400px] rounded-full bg-[--white] scale-0;
 }
 
 .link {
-	@apply hover:opacity-70 hover:scale-105 transition duration-500;
+  @apply hover:opacity-70 hover:scale-105 transition duration-500;
 }
 
 .text-input {
-	@apply block w-full py-2 bg-transparent border-b border-[--border] outline-none focus:outline-none text-[--grey] text-sm placeholder:text-[--grey] placeholder:font-light;
+  @apply block w-full py-2 bg-transparent border-b border-[--border] outline-none focus:outline-none text-[--grey] text-sm placeholder:text-[--grey] placeholder:font-light;
 }
 /* 
 .gsap-show {
@@ -135,44 +216,44 @@ p {
 } */
 
 .no-scrollbar::-webkit-scrollbar {
-	display: none;
+  display: none;
 }
 
 .no-scrollbar {
-	-ms-overflow-style: none; /* IE and Edge */
-	scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .privacy-link a:active {
-	@apply !bg-red-600;
+  @apply !bg-red-600;
 }
 
 .page-title {
-	@apply uppercase;
+  @apply uppercase;
 }
 
 .space-vh {
-	@apply flex flex-col gap-[5vh] md:gap-[5vh];
+  @apply flex flex-col gap-[5vh] md:gap-[5vh];
 }
 
 .flex-y-4 {
-	@apply flex flex-col gap-4;
+  @apply flex flex-col gap-4;
 }
 
 .md-flex-y-3 {
-	@apply md:flex flex-col gap-3;
+  @apply md:flex flex-col gap-3;
 }
 
 .flex-y-2 {
-	@apply flex flex-col gap-2;
+  @apply flex flex-col gap-2;
 }
 
 .image-pos {
-	object-position: 50% 40% !important;
+  object-position: 50% 40% !important;
 }
 
 @media (max-width: 768px) {
-	.image-pos {
-		object-position: 50% 55% !important;
-	}
+  .image-pos {
+    object-position: 50% 55% !important;
+  }
 }

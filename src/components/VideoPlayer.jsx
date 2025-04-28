@@ -9,7 +9,6 @@ export default function VideoPlayer({ src }) {
 		videoRef.current.controls = false;
 		videoRef.current.autoplay = true;
 		videoRef.current.loop = true;
-		console.log(videoRef);
 	});
 
 	return (
