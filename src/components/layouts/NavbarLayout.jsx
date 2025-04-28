@@ -4,9 +4,9 @@ import { Navbar, Footer } from "../../components";
 
 const NavbarLayout = () => {
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-white min-h-screen flex flex-col">
       <Navbar />
-      <div className="dark-text">
+      <div className="dark-text flex-1">
         <Outlet />
       </div>
       <Footer />
