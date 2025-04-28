@@ -30,7 +30,7 @@ const Governance = () => {
               <button
                 key={i}
                 onClick={() => setActiveTab(i)}
-                className={`p-3 p uppercase !font-semibold whitespace-nowrap border-b-2 hover:!text-black ${
+                className={`p-3 p uppercase !font-semibold whitespace-nowrap hover:!text-black ${
                   activeTab === i
                     ? "border-black !text-black"
                     : "border-black/0 !text-black/70"
