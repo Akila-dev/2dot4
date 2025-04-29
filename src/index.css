@@ -10,8 +10,9 @@
 :root {
   --bg: #010101;
   --white: #fff;
+  --card: #1d1c1d;
   --grey: #dfdfdf;
-  --active: #000000aa;
+  --active: rgba(255, 255, 255, 0.4);
   --border: rgba(255, 255, 255, 0.4);
   --font: "Plus Jakarta Sans", serif;
 
@@ -58,16 +59,12 @@ h1 {
 }
 
 h2 {
-  @apply font-medium text-[8vw] md:text-[5vw] lg:text-[3.5vw] xl:text-[2.7vw] leading-[110%] !tracking-[1px];
+  @apply font-medium text-[8vw] md:text-[5vw] lg:text-[3.5vw] xl:text-[2.7vw] leading-[110%] !tracking-[1px] text-[--white];
 }
 
 h3,
 .h3 {
-  @apply text-xl xl:text-[1.3vw] font-medium;
-}
-
-h3 {
-  @apply text-xl xl:text-[1.3vw] font-medium;
+  @apply text-xl xl:text-[1.3vw] font-medium text-[--white];
 }
 
 .card-title {
@@ -148,11 +145,11 @@ p:not(.no-shadow) {
 }
 
 .btn-1 {
-  @apply bg-[--bg] !text-white;
+  @apply bg-[--white] !text-[--bg];
 }
 
 .btn-2 {
-  @apply bg-[--white] border border-gray-200 !text-[--bg];
+  @apply bg-[--bg] border border-[--border] !text-white/90;
 }
 
 .container {

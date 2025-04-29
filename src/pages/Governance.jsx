@@ -10,30 +10,18 @@ const Governance = () => {
 
   return (
     <div>
-      {/* Hero */}
-      {/* <div className="relative">
-        <img
-          src={bg}
-          alt="bg"
-          className="w-full h-[40vh] max-h-[350px] xl:max-h-[25vw] object-cover"
-        />
-        <div className="text-center w-full h-full absolute top-0 left-0 flex flex-col justify-center items-center container-x">
-          <h1 className="!text-white pt-[50px]">Our Esteemed Pilots</h1>
-        </div>
-      </div> */}
-
       {/* Tabs */}
-      <div className="bg-[#eaeaea] container-x mt-[50px] sticky top-[50px]">
+      <div className="bg-[--card] container-x mt-[50px] sticky top-[50px] z-10">
         <div className="flex w-full flex-nowrap overflow-x-auto no-scrollbar">
           {PERSONNELS &&
             PERSONNELS.map(({ tag }, i) => (
               <button
                 key={i}
                 onClick={() => setActiveTab(i)}
-                className={`p-3 p uppercase !font-semibold whitespace-nowrap hover:!text-black ${
+                className={`p-3 p uppercase !font-semibold whitespace-nowrap hover:!text-white ${
                   activeTab === i
-                    ? "border-black !text-black"
-                    : "border-black/0 !text-black/70"
+                    ? "border-white !text-white"
+                    : "border-white/0 !text-white/70"
                 }`}
               >
                 {tag}

@@ -15,9 +15,9 @@ const PersonnelDetails = () => {
   console.log(data);
   return (
     <div className="pt-[30px]">
-      <div className="container-xy bg-black/10 !pb-10 flex flex-col items-center !text-center">
+      <div className="container-xy bg-[--card] !pb-10 flex flex-col items-center !text-center">
         <h1>{data.name}</h1>
-        <p className="uppercase !font-medium pb-2 !text-black/50 h3">
+        <p className="uppercase !font-medium pb-2 h3 !text-[--grey]">
           {data.position}
         </p>
         <div className="flex gap-2">
@@ -27,7 +27,7 @@ const PersonnelDetails = () => {
               key={i}
               target="_blank"
               rel="noreferrer"
-              className="w-9 h-9 min-w-9 !bg-black flex justify-center items-center rounded p-1 hover:scale-125 transition duration-500 shadow-md"
+              className="w-9 h-9 min-w-9 !bg-[--bg] flex justify-center items-center rounded p-1 hover:scale-125 transition duration-500 shadow-md"
             >
               {type === "facebook" && <FaFacebookF />}
               {type === "instagram" && <FaInstagram />}

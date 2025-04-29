@@ -15,8 +15,8 @@ const JobPositionCard = ({ data }) => {
       >
         <h3 className="card-title">{data.title}</h3>
         <p className="">
-          <span className="font-semibold text-black/70">{data.type}</span>
-          <i className="text-gray-400">
+          <span className="font-semibold">{data.type}</span>
+          <i className="text-white/50">
             <FaLocationDot className="inline-block ml-3 mr-1 mt-[-3px]" />
             {data.location}
           </i>
