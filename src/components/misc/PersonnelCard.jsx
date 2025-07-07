@@ -14,10 +14,13 @@ const PersonnelCard = ({ data, link }) => {
         />
         <div className="p-3">
           <h3
-            className="card-title !leading-[1.1em]"
+            className="card-title !leading-[1.1em] ellipsis"
             dangerouslySetInnerHTML={{ __html: data.name }}
           />
-          <p className="" dangerouslySetInnerHTML={{ __html: data.position }} />
+          <p
+            className="ellipsis"
+            dangerouslySetInnerHTML={{ __html: data.position }}
+          />
         </div>
       </div>
     </Link>

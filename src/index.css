@@ -68,7 +68,11 @@ h3,
 }
 
 .card-title {
-  @apply text-xl md:text-2xl xl:text-[1.8vw] font-medium;
+  @apply text-lg md:text-2xl xl:text-[1.5vw] font-medium;
+}
+
+.ellipsis {
+  @apply text-ellipsis text-nowrap whitespace-nowrap w-full overflow-hidden;
 }
 
 p,
