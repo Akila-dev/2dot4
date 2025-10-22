@@ -13,12 +13,12 @@ const JobPositionCard = ({ data }) => {
         className="block text-left py-3 w-full"
         type="button"
       >
-        <h3 className="card-title">{data.title}</h3>
+        <h3 className="card-title">{data?.title}</h3>
         <p className="">
-          <span className="font-semibold">{data.type}</span>
+          <span className="font-semibold">{data?.employmentType}</span>
           <i className="text-white/50">
             <FaLocationDot className="inline-block ml-3 mr-1 mt-[-3px]" />
-            {data.location}
+            {data?.location}
           </i>
         </p>
       </button>

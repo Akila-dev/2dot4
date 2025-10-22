@@ -6,13 +6,13 @@ import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
-import { CONTACT } from "../utils/data";
 import {
   ScrollDown,
   MenuButton,
   Slider,
   Logo,
   HoverScale,
+  FooterSocialLinks,
 } from "../components";
 
 import logo_icon from "../assets/imgs/2dot4-icon.svg";
@@ -21,23 +21,10 @@ import logo_icon from "../assets/imgs/2dot4-icon.svg";
 gsap.registerPlugin(useGSAP);
 
 // Assets
-import {
-  BiSolidMessageRoundedDetail,
-  BiLogoLinkedinSquare,
-  BiLogoFacebookCircle,
-} from "react-icons/bi";
-import { PiInstagramLogoFill, PiDotsThreeOutlineFill } from "react-icons/pi";
+import { BiSolidMessageRoundedDetail } from "react-icons/bi";
 
 const Main = ({ data, page, subpage, scroll_to }) => {
   const container = useRef();
-
-  const socialIcons = [
-    <PiInstagramLogoFill className="social-icons" />,
-    <BiLogoLinkedinSquare className="social-icons" />,
-    <BiLogoFacebookCircle className="social-icons" />,
-  ];
-
-  const contact = { ...CONTACT };
 
   // !ANIMATION CODES
   // !ANIMATION CODES
@@ -142,38 +129,7 @@ const Main = ({ data, page, subpage, scroll_to }) => {
               </div>
             </div>
             <div>
-              {/* MD-XL ONLY */}
-              <div className="!hidden md:!flex layout-sidebars layout-sidebar-r !justify-center">
-                {contact.socials.map((link, id) => (
-                  <HoverScale key={id}>
-                    <a
-                      href={link}
-                      target="_blank"
-                      className={`pointer-events-auto`}
-                    >
-                      {socialIcons[id]}
-                    </a>
-                  </HoverScale>
-                ))}
-              </div>
-              {/* XS-SM ONLY */}
-              <div className="!flex md:!hidden layout-sidebars layout-sidebar-r group relative">
-                <PiDotsThreeOutlineFill className="text-xl pointer-events-auto" />
-
-                <div className="absolute top-[-75px] flex flex-col gap-2 transition-all duration-700 scale-0 group-hover:scale-100 group-active:scale-100">
-                  {contact.socials.map((link, id) => (
-                    <HoverScale key={id}>
-                      <a
-                        href={link}
-                        target="_blank"
-                        className={`pointer-events-auto scale-150`}
-                      >
-                        {socialIcons[id]}
-                      </a>
-                    </HoverScale>
-                  ))}
-                </div>
-              </div>
+              <FooterSocialLinks />
             </div>
           </div>
         </div>

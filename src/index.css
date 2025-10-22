@@ -258,3 +258,16 @@ p:not(.no-shadow) {
     object-position: 50% 55% !important;
   }
 }
+
+/* LOADING CARDS */
+.card-bg-1 {
+  @apply bg-gradient-to-br from-[#0d0c0d] via-[#1a1a1a] to-[#0d0c0d];
+}
+
+.card-bg-2 {
+  @apply bg-gradient-to-br from-[#0a0a0a] via-[#0d0c0d] to-[#0a0a0a];
+}
+
+.card-bg-3 {
+  @apply bg-gradient-to-br from-[--card] via-[#1f1e1f] to-[--card];
+}

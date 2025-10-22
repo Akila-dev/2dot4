@@ -98,30 +98,6 @@ import manifestoImg from "../assets/sectionImgs/manifesto.jpg";
 import discoverMobile from "../assets/mobileSectionImages/discover.png";
 import manifestoMobile from "../assets/mobileSectionImages/manifesto.jpg";
 
-// export const DATA = [
-// {
-// 	link: '',
-// 	title: '',
-// 	text: '',
-// 	buttonText: '',
-// 	img: '',
-// 	subContent: [
-// 		{
-// 			link: '',
-// 			content: [
-// 				{
-// 					title: '',
-// 					text: [''],
-// 				},
-// 			],
-// 			buttonText: '',
-// 			img: '',
-// 			// video: '',
-// 		},
-// 	],
-// },
-// ];
-
 export const DATA = [
   {
     link: "about",
@@ -138,7 +114,7 @@ export const DATA = [
           {
             title: ["Who we are:", "Our Mission:", "Why We Lead the Market:"],
             text: [
-              "At 2DOT4, we engineer advanced reactors to produce exceptional, sustainable lab-grown diamonds with unmatched precision. Our eco system ensures total quality control, while strategic partnerships drive scalable growth. Built on innovation, transparency, and excellence, we are shaping the future of diamond jewellery.",
+              "At 2DOT4, we cultivate diamonds born of light and science, crafted with precision and care. Our seamless ecosystem ensures flawless quality, while visionary partnerships expand our reach. Rooted in innovation, integrity, and excellence, we are redefining what diamond jewellery means for a new generation.",
               "With scientific precision and creative skill, we craft diamonds for superior yield and consistency.\nFrom cutting to polishing, each diamond undergoes strict quality control, ensuring excellence from reactor to fingertips.",
               "In a landscape of variability, we champion industrial precision. With PhD-qualified nano-tech engineers, experts, and cutters, positioning us as pioneers in the diamond market.",
             ],
@@ -462,18 +438,18 @@ export const DATA = [
       },
     ],
   },
-  {
-    link: "career",
-    title: "LOREM IPSUM DOLOR SIT AMET",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    buttonText: ["CONTACT US", "JOB OPENINGS"],
-    buttonLink: [
-      "https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com",
-      "/career",
-    ],
-    img: aboutHero,
-    mobileImg: aboutHeroMobile,
-  },
+  // {
+  //   link: "news",
+  //   title: "LOREM IPSUM DOLOR SIT AMET",
+  //   text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  //   buttonText: ["CONTACT US", "OPEN BLOG"],
+  //   buttonLink: [
+  //     "https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com",
+  //     "/blog",
+  //   ],
+  //   img: aboutHero,
+  //   mobileImg: aboutHeroMobile,
+  // },
 ];
 
 export const ATELIER = {
@@ -569,7 +545,7 @@ export const CONTACT = {
   socials: [
     "https://www.instagram.com/2dot4_diamonds/",
     "https://www.linkedin.com/company/2-dot-4-diamonds-llc/posts/?feedView=all",
-    // 'https://facebook.com',
+    "https://youtube.com",
   ],
   phoneNo: ["08067586986"],
   mail: ["rhemarx-dev@email.com"],
@@ -597,9 +573,13 @@ export const FOOTERLINKLIST = [
     label: "Atelier Program",
   },
   {
-    link: "/governance",
-    label: "Governance",
+    link: "/news",
+    label: "News",
   },
+  // {
+  //   link: "/governance",
+  //   label: "Governance",
+  // },
 ];
 
 // ! PRIVACY POLICY

@@ -17,6 +17,7 @@ export { default as SideNavLink } from "./SideNavLink";
 export { default as Slider } from "./Slider";
 export { default as Slide } from "./Slide";
 export { default as SubpageSlider } from "./SubpageSlider";
+export { default as FooterSocialLinks } from "./FooterSocialLinks";
 
 // MISC
 export { default as JobPositionCard } from "./misc/JobPositionCard";
@@ -24,6 +25,11 @@ export { default as Logo } from "./misc/Logo";
 export { default as HoverScale } from "./misc/HoverScale";
 export { default as PersonnelCard } from "./misc/PersonnelCard";
 export { default as JobPositionDetailsPopup } from "./misc/JobPositionDetailsPopup";
+export { default as LoadingAnim } from "./misc/LoadingAnim";
+export { default as NoDataFound } from "./misc/NoDataFound";
 
 // LAYOUT
 export { default as NavbarLayout } from "./layouts/NavbarLayout";
+
+// WRAPPERS
+export { default as DataFetchingVisuals } from "./wrappers/DataFetchingVisuals";
