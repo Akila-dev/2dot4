@@ -573,8 +573,8 @@ export const FOOTERLINKLIST = [
     label: "Atelier Program",
   },
   {
-    link: "/news",
-    label: "News",
+    link: "/blog",
+    label: "Blog",
   },
   // {
   //   link: "/governance",

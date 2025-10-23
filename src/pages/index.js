@@ -11,5 +11,7 @@ export { default as PrivacyPolicy } from "./PrivacyPolicy";
 export { default as Career } from "./Career";
 export { default as Governance } from "./Governance";
 export { default as PersonnelDetails } from "./PersonnelDetails";
+export { default as Blog } from "./Blog";
+export { default as BlogSingle } from "./BlogSingle";
 
 export { default as ErrorPage } from "./ErrorPage";

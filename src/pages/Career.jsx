@@ -16,7 +16,6 @@ const Career = () => {
       try {
         const data = await client.fetch(JOB_QUERY);
         setJobs(data);
-        console.log(data);
       } catch (error) {
         console.error("Error fetching jobs:", error);
       } finally {

@@ -160,6 +160,10 @@ p:not(.no-shadow) {
   @apply w-full p-5 flex justify-center;
 }
 
+.blog-container {
+  @apply w-full px-[1em] xl:p-[2em] max-w-[1400px] mx-auto;
+}
+
 .lines {
   @apply block border-[--border] absolute w-full pointer-events-none z-10;
 }

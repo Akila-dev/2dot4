@@ -12,44 +12,44 @@
 } */
 
 .bg-overlay {
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
 
-	filter: contrast(200%) brightness(10%);
-	background: radial-gradient(
-		circle at 50% 50%,
-		rgba(0, 0, 0, 0.2),
-		rgba(0, 0, 0, 0.3)
-	);
+  filter: contrast(200%) brightness(10%);
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.3)
+  );
 }
 
 .no-scrollbar::-webkit-scrollbar {
-	display: none;
+  display: none;
 }
 
 body::-webkit-scrollbar {
-	display: none;
+  display: none;
 }
 
 .mySwiper {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 .swiper {
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .swiper-slide {
-	scroll-snap-type: mandatory;
-	scroll-snap-points-y: repeat(100vh);
-	scroll-snap-type: y mandatory;
-	/* transition: transform 3s linear !important; */
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+  /* transition: transform 3s linear !important; */
 }
 
 .slide {
-	/* background: blue; */
-	scroll-snap-align: start;
-	scroll-snap-stop: always;
+  /* background: blue; */
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 /* .scroll-item {
@@ -60,26 +60,26 @@ body::-webkit-scrollbar {
 } */
 
 .scroll-item {
-	object-position: bottom;
-	transform-origin: bottom;
+  object-position: bottom;
+  transform-origin: bottom;
 }
 .scroll-item:first-child {
-	height: 100%;
-	width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .scroll-item-sub {
-	object-position: right;
-	transform-origin: right;
+  object-position: right;
+  transform-origin: right;
 }
 .scroll-item-sub:first-child {
-	height: 100%;
-	width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .gsap-nav-controller {
-	opacity: 0;
+  opacity: 0;
 }
 .gsap-nav-controller::first-child {
-	opacity: 1;
+  opacity: 1;
 }

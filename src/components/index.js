@@ -27,6 +27,8 @@ export { default as PersonnelCard } from "./misc/PersonnelCard";
 export { default as JobPositionDetailsPopup } from "./misc/JobPositionDetailsPopup";
 export { default as LoadingAnim } from "./misc/LoadingAnim";
 export { default as NoDataFound } from "./misc/NoDataFound";
+export { default as BlogCard } from "./misc/BlogCard";
+export { default as BlogSingle } from "./misc/BlogSingle";
 
 // LAYOUT
 export { default as NavbarLayout } from "./layouts/NavbarLayout";

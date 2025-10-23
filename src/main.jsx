@@ -19,6 +19,8 @@ import {
   Career,
   Governance,
   PersonnelDetails,
+  Blog,
+  BlogSingle,
 } from "./pages";
 
 import { NavbarLayout } from "./components";
@@ -95,6 +97,16 @@ const router = createBrowserRouter([
       {
         path: "/:tab/:id",
         element: <PersonnelDetails />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/blog",
+        element: <Blog />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/blog/:id",
+        element: <BlogSingle />,
         errorElement: <ErrorPage />,
       },
     ],
