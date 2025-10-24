@@ -5,7 +5,7 @@ import { BLOG_QUERY, SINGLE_BLOG_QUERY } from "../lib/queries";
 
 import {
   DataFetchingVisuals,
-  BlogSingle as BlogSingleCard,
+  BlogSingle as BlogPost,
   BlogCard,
 } from "../components";
 
@@ -37,7 +37,6 @@ const BlogSingle = () => {
       try {
         const data = await client.fetch(BLOG_QUERY(0, 4));
         setRecentBlogs(data);
-        console.log(data);
       } catch (error) {
         console.error("Error fetching blogs:", error);
       } finally {
@@ -55,7 +54,7 @@ const BlogSingle = () => {
           dataLength={1}
           noDataFoundText="This post is currently unavailable. Please check back later."
         >
-          <BlogSingleCard data={blog} />
+          <BlogPost data={blog} />
         </DataFetchingVisuals>
       </div>
       <div className="w-full md:min-w-[20em] md:max-w-[20em]">

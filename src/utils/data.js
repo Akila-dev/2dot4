@@ -574,7 +574,7 @@ export const FOOTERLINKLIST = [
   },
   {
     link: "/blog",
-    label: "Blog",
+    label: "News/Blog",
   },
   // {
   //   link: "/governance",
