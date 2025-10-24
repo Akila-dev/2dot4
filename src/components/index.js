@@ -29,6 +29,7 @@ export { default as LoadingAnim } from "./misc/LoadingAnim";
 export { default as NoDataFound } from "./misc/NoDataFound";
 export { default as BlogCard } from "./misc/BlogCard";
 export { default as BlogSingle } from "./misc/BlogSingle";
+export { default as ShareOn } from "./misc/ShareOn";
 
 // LAYOUT
 export { default as NavbarLayout } from "./layouts/NavbarLayout";
