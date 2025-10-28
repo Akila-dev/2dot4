@@ -47,17 +47,18 @@ const BlogSingle = () => {
   }, []);
 
   return (
-    <div className="flex gap-[2em] flex-col md:flex-row mt-[6em] container-x">
+    <div className="flex gap-[2em] flex-col lg:flex-row mt-[4.5em] md:mt-[6em] container-x">
       <div className="w-full">
         <DataFetchingVisuals
           isLoading={loading}
-          dataLength={1}
+          loadingType="postSingle"
+          dataLength={3}
           noDataFoundText="This post is currently unavailable. Please check back later."
         >
           <BlogPost data={blog} />
         </DataFetchingVisuals>
       </div>
-      <div className="w-full md:min-w-[20em] md:max-w-[20em]">
+      <div className="w-full lg:min-w-[20em] lg:max-w-[20em]">
         <DataFetchingVisuals
           isLoading={loadingRecentBlogs}
           dataLength={3}
@@ -65,7 +66,7 @@ const BlogSingle = () => {
         >
           <div className="pb-[3em] space-y-[2em]">
             <h2>Recent Blog Posts</h2>
-            <div className="space-y-[1em]">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-[1em]">
               {recentBlogs?.map((recentBlog, index) => (
                 <BlogCard data={recentBlog} key={index} mini_card />
               ))}
