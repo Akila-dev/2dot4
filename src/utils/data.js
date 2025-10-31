@@ -1,5 +1,5 @@
 import dummy from "../assets/dummy/1.jpg";
-
+import sandyBgImg from "../assets/imgs/sandy-bg.jpg";
 //* SECTION 1: ABOUT SECTION
 import aboutHero from "../assets/sectionImgs/1/hero.jpg";
 // import about1 from '../assets/sectionImgs/1/1.jpg';
@@ -101,7 +101,7 @@ import manifestoMobile from "../assets/mobileSectionImages/manifesto.jpg";
 export const DATA = [
   {
     link: "about",
-    title: "ABOVE GROUND, BEYOND STANDARD",
+    title: ["ABOVE GROUND", "BEYOND STANDARD"],
     text: "2DOT4 aims to lead a revolutionary shift in the diamond industry. Setting elevated standards, fostering innovation through a robust ecosystem and diverse industry collaboration.",
     buttonText: "EXPLORE NOW",
     img: aboutHero,
@@ -156,9 +156,8 @@ export const DATA = [
             ],
           },
         ],
-        buttonText: "CONTACT US",
-        buttonLink:
-          "https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com",
+        buttonText: "LEARN MORE",
+        buttonLink: "/blog",
         img: [about31],
         mobileImg: [about31Mobile],
         short: true,
@@ -438,18 +437,15 @@ export const DATA = [
       },
     ],
   },
-  // {
-  //   link: "news",
-  //   title: "LOREM IPSUM DOLOR SIT AMET",
-  //   text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  //   buttonText: ["CONTACT US", "OPEN BLOG"],
-  //   buttonLink: [
-  //     "https://vinwdzm1fbl.typeform.com/to/sRNc1NrB?typeform-source=2dot4.com",
-  //     "/blog",
-  //   ],
-  //   img: aboutHero,
-  //   mobileImg: aboutHeroMobile,
-  // },
+  {
+    link: "Career",
+    title: "BUILD BRILLIANCE WITH US",
+    text: "From reactor engineering and diamond growth to cutting, polishing, and design—2DOT4 is where deep tech meets fine jewellery. If you're driven by craft, data, and impact, you'll feel at home here.",
+    buttonText: "CAREER",
+    buttonLink: "/career",
+    img: sandyBgImg,
+    mobileImg: sandyBgImg,
+  },
 ];
 
 export const ATELIER = {

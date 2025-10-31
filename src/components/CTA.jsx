@@ -55,7 +55,13 @@ const Cta = ({
               "text-[7vw] md:text-[3.5vw] lg:text-[2rem] leading-[130%]"
             }`}
           >
-            {title}
+            {Array.isArray(title)
+              ? title.map((t, i) => (
+                  <span key={i}>
+                    {t} {i === title.length - 1 ? "" : <br />}
+                  </span>
+                ))
+              : title}
           </h1>
         </div>
         <div className="space-vh">

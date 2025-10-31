@@ -39,6 +39,12 @@ const Career = () => {
           <h1 className="pt-[50px]">Shine Bright With Us</h1>
         </div>
       </div>
+      {/* INTRO PARAGRAPH */}
+      <div className="container-x pt-[50px] md:pt-[70px] lg:pt-[100px] xl:pt-[5vw] text-center space-y-7">
+        <p className="!text-white max-w-[900px] xl:max-w-[65vw] mx-auto">
+          {`At 2DOT4, we create value by mastering the entire journey—growth, cutting & polishing, and world-class design—under one roof in Dubai. We're a team of builders and makers who care about details, deliver with integrity, and move fast without breaking trust. If you like ownership, high standards, and real-world impact, let's talk`}
+        </p>
+      </div>
       {/* lISTING */}
       <div className="container-xy text-[--bg] space-y-5 lg:space-y-7">
         <h2 className="text-center">Open Positions</h2>
@@ -55,7 +61,11 @@ const Career = () => {
         </div>
       </div>
       <div className="container-x pb-10 text-center space-y-7">
-        <p className="!text-white max-w-[900px] xl:max-w-[65vw] mx-auto">{`Didn't find anything to match your experience? Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.`}</p>
+        <p className="!text-white max-w-[900px] xl:max-w-[65vw] mx-auto">
+          <b className="!font-bold h3 inline-block mb-[0.5em]">{`Didn't see your role? Send a speculative application.`}</b>
+          <br />
+          {`Great people don't always fit a menu. If you're exceptional at what you do, engineering, data, brand, product, operations, or craftsmanship, tell us why we should meet. Share your superpower, work you're proud of (links welcome), and what you want to build next. We review every application and reach out when there's a match.`}
+        </p>
         <div className="text-center">
           <Button text="Open Application" href="#" />
         </div>

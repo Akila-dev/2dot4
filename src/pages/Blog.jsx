@@ -53,6 +53,7 @@ const Blog = () => {
     <div>
       <DataFetchingVisuals
         isLoading={loading}
+        loadingType="postArchive"
         dataLength={3}
         noDataFoundText="No article available at the moment. Please check back later."
       >
