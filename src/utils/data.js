@@ -541,7 +541,7 @@ export const CONTACT = {
   socials: [
     "https://www.instagram.com/2dot4_diamonds/",
     "https://www.linkedin.com/company/2-dot-4-diamonds-llc/posts/?feedView=all",
-    "https://youtube.com",
+    "https://www.youtube.com/@2dot4diamond",
   ],
   phoneNo: ["08067586986"],
   mail: ["rhemarx-dev@email.com"],
